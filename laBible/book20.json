@@ -1,0 +1,719 @@
+{
+  "bnumber": "21",
+  "CHAPTER": [
+    {
+      "VERS": [
+        {
+          "text": "Paroles de l\u0027Eccl\u00E9siaste, fils de David, roi de J\u00E9rusalem."
+        },
+        {
+          "text": "Vanit\u00E9 des vanit\u00E9s, dit l\u0027Eccl\u00E9siaste, vanit\u00E9 des vanit\u00E9s, tout est vanit\u00E9."
+        },
+        {
+          "text": "Quel avantage revient-il \u00E0 l\u0027homme de toute la peine qu\u0027il se donne sous le soleil?"
+        },
+        {
+          "text": "Une g\u00E9n\u00E9ration s\u0027en va, une autre vient, et la terre subsiste toujours."
+        },
+        {
+          "text": "Le soleil se l\u00E8ve, le soleil se couche; il soupire apr\u00E8s le lieu d\u0027o\u00F9 il se l\u00E8ve de nouveau."
+        },
+        {
+          "text": "Le vent se dirige vers le midi, tourne vers le nord; puis il tourne encore, et reprend les m\u00EAmes circuits."
+        },
+        {
+          "text": "Tous les fleuves vont \u00E0 la mer, et la mer n\u0027est point remplie; ils continuent \u00E0 aller vers le lieu o\u00F9 ils se dirigent."
+        },
+        {
+          "text": "Toutes choses sont en travail au del\u00E0 de ce qu\u0027on peut dire; l\u0027oeil ne se rassasie pas de voir, et l\u0027oreille ne se lasse pas d\u0027entendre."
+        },
+        {
+          "text": "Ce qui a \u00E9t\u00E9, c\u0027est ce qui sera, et ce qui s\u0027est fait, c\u0027est ce qui se fera, il n\u0027y a rien de nouveau sous le soleil."
+        },
+        {
+          "text": "S\u0027il est une chose dont on dise: Vois ceci, c\u0027est nouveau! cette chose existait d\u00E9j\u00E0 dans les si\u00E8cles qui nous ont pr\u00E9c\u00E9d\u00E9s."
+        },
+        {
+          "text": "On ne se souvient pas de ce qui est ancien; et ce qui arrivera dans la suite ne laissera pas de souvenir chez ceux qui vivront plus tard."
+        },
+        {
+          "text": "Moi, l\u0027Eccl\u00E9siaste, j\u0027ai \u00E9t\u00E9 roi d\u0027Isra\u00EBl \u00E0 J\u00E9rusalem."
+        },
+        {
+          "text": "J\u0027ai appliqu\u00E9 mon coeur \u00E0 rechercher et \u00E0 sonder par la sagesse tout ce qui se fait sous les cieux: c\u0027est l\u00E0 une occupation p\u00E9nible, \u00E0 laquelle Dieu soumet les fils de l\u0027homme."
+        },
+        {
+          "text": "J\u0027ai vu tout ce qui se fait sous le soleil; et voici, tout est vanit\u00E9 et poursuite du vent."
+        },
+        {
+          "text": "Ce qui est courb\u00E9 ne peut se redresser, et ce qui manque ne peut \u00EAtre compt\u00E9."
+        },
+        {
+          "text": "J\u0027ai dit en mon coeur: Voici, j\u0027ai grandi et surpass\u00E9 en sagesse tous ceux qui ont domin\u00E9 avant moi sur J\u00E9rusalem, et mon coeur a vu beaucoup de sagesse et de science."
+        },
+        {
+          "text": "J\u0027ai appliqu\u00E9 mon coeur \u00E0 conna\u00EEtre la sagesse, et \u00E0 conna\u00EEtre la sottise et la folie; j\u0027ai compris que cela aussi c\u0027est la poursuite du vent."
+        },
+        {
+          "text": "Car avec beaucoup de sagesse on a beaucoup de chagrin, et celui qui augmente sa science augmente sa douleur."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "J\u0027ai dit en mon coeur: Allons! je t\u0027\u00E9prouverai par la joie, et tu go\u00FBteras le bonheur. Et voici, c\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "J\u0027ai dit du rire: Insens\u00E9! et de la joie: A quoi sert-elle?"
+        },
+        {
+          "text": "Je r\u00E9solus en mon coeur de livrer ma chair au vin, tandis que mon coeur me conduirait avec sagesse, et de m\u0027attacher \u00E0 la folie jusqu\u0027\u00E0 ce que je visse ce qu\u0027il est bon pour les fils de l\u0027homme de faire sous les cieux pendant le nombre des jours de leur vie."
+        },
+        {
+          "text": "J\u0027ex\u00E9cutai de grands ouvrages: je me b\u00E2tis des maisons; je me plantai des vignes;"
+        },
+        {
+          "text": "je me fis des jardins et des vergers, et j\u0027y plantai des arbres \u00E0 fruit de toute esp\u00E8ce;"
+        },
+        {
+          "text": "je me cr\u00E9ai des \u00E9tangs, pour arroser la for\u00EAt o\u00F9 croissaient les arbres."
+        },
+        {
+          "text": "J\u0027achetai des serviteurs et des servantes, et j\u0027eus leurs enfants n\u00E9s dans la maison; je poss\u00E9dai des troupeaux de boeufs et de brebis, plus que tous ceux qui \u00E9taient avant moi dans J\u00E9rusalem."
+        },
+        {
+          "text": "Je m\u0027amassai de l\u0027argent et de l\u0027or, et les richesses des rois et des provinces. Je me procurai des chanteurs et des chanteuses, et les d\u00E9lices des fils de l\u0027homme, des femmes en grand nombre."
+        },
+        {
+          "text": "Je devins grand, plus grand que tous ceux qui \u00E9taient avant moi dans J\u00E9rusalem. Et m\u00EAme ma sagesse demeura avec moi."
+        },
+        {
+          "text": "Tout ce que mes yeux avaient d\u00E9sir\u00E9, je ne les en ai point priv\u00E9s; je n\u0027ai refus\u00E9 \u00E0 mon coeur aucune joie; car mon coeur prenait plaisir \u00E0 tout mon travail, et c\u0027est la part qui m\u0027en est revenue."
+        },
+        {
+          "text": "Puis, j\u0027ai consid\u00E9r\u00E9 tous les ouvrages que mes mains avaient faits, et la peine que j\u0027avais prise \u00E0 les ex\u00E9cuter; et voici, tout est vanit\u00E9 et poursuite du vent, et il n\u0027y a aucun avantage \u00E0 tirer de ce qu\u0027on fait sous le soleil."
+        },
+        {
+          "text": "Alors j\u0027ai tourn\u00E9 mes regards vers la sagesse, et vers la sottise et la folie. -Car que fera l\u0027homme qui succ\u00E9dera au roi? Ce qu\u0027on a d\u00E9j\u00E0 fait."
+        },
+        {
+          "text": "Et j\u0027ai vu que la sagesse a de l\u0027avantage sur la folie, comme la lumi\u00E8re a de l\u0027avantage sur les t\u00E9n\u00E8bres;"
+        },
+        {
+          "text": "le sage a ses yeux \u00E0 la t\u00EAte, et l\u0027insens\u00E9 marche dans les t\u00E9n\u00E8bres. Mais j\u0027ai reconnu aussi qu\u0027ils ont l\u0027un et l\u0027autre un m\u00EAme sort."
+        },
+        {
+          "text": "Et j\u0027ai dit en mon coeur: J\u0027aurai le m\u00EAme sort que l\u0027insens\u00E9; pourquoi donc ai-je \u00E9t\u00E9 plus sage? Et j\u0027ai dit en mon coeur que c\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "Car la m\u00E9moire du sage n\u0027est pas plus \u00E9ternelle que celle de l\u0027insens\u00E9, puisque d\u00E9j\u00E0 les jours qui suivent, tout est oubli\u00E9. Eh quoi! le sage meurt aussi bien que l\u0027insens\u00E9!"
+        },
+        {
+          "text": "Et j\u0027ai ha\u00EF la vie, car ce qui se fait sous le soleil m\u0027a d\u00E9plu, car tout est vanit\u00E9 et poursuite du vent."
+        },
+        {
+          "text": "J\u0027ai ha\u00EF tout le travail que j\u0027ai fait sous le soleil, et dont je dois laisser la jouissance \u00E0 l\u0027homme qui me succ\u00E9dera."
+        },
+        {
+          "text": "Et qui sait s\u0027il sera sage ou insens\u00E9? Cependant il sera ma\u00EEtre de tout mon travail, de tout le fruit de ma sagesse sous le soleil. C\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "Et j\u0027en suis venu \u00E0 livrer mon coeur au d\u00E9sespoir, \u00E0 cause de tout le travail que j\u0027ai fait sous le soleil."
+        },
+        {
+          "text": "Car tel homme a travaill\u00E9 avec sagesse et science et avec succ\u00E8s, et il laisse le produit de son travail \u00E0 un homme qui ne s\u0027en est point occup\u00E9. C\u0027est encore l\u00E0 une vanit\u00E9 et un grand mal."
+        },
+        {
+          "text": "Que revient-il, en effet, \u00E0 l\u0027homme de tout son travail et de la pr\u00E9occupation de son coeur, objet de ses fatigues sous le soleil?"
+        },
+        {
+          "text": "Tous ses jours ne sont que douleur, et son partage n\u0027est que chagrin; m\u00EAme la nuit son coeur ne repose pas. C\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "Il n\u0027y a de bonheur pour l\u0027homme qu\u0027\u00E0 manger et \u00E0 boire, et \u00E0 faire jouir son \u00E2me du bien-\u00EAtre, au milieu de son travail; mais j\u0027ai vu que cela aussi vient de la main de Dieu."
+        },
+        {
+          "text": "Qui, en effet, peut manger et jouir, si ce n\u0027est moi?"
+        },
+        {
+          "text": "Car il donne \u00E0 l\u0027homme qui lui est agr\u00E9able la sagesse, la science et la joie; mais il donne au p\u00E9cheur le soin de recueillir et d\u0027amasser, afin de donner \u00E0 celui qui est agr\u00E9able \u00E0 Dieu. C\u0027est encore l\u00E0 une vanit\u00E9 et la poursuite du vent."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Il y a un temps pour tout, un temps pour toute chose sous les cieux:"
+        },
+        {
+          "text": "un temps pour na\u00EEtre, et un temps pour mourir; un temps pour planter, et un temps pour arracher ce qui a \u00E9t\u00E9 plant\u00E9;"
+        },
+        {
+          "text": "un temps pour tuer, et un temps pour gu\u00E9rir; un temps pour abattre, et un temps pour b\u00E2tir;"
+        },
+        {
+          "text": "un temps pour pleurer, et un temps pour rire; un temps pour se lamenter, et un temps pour danser;"
+        },
+        {
+          "text": "un temps pour lancer des pierres, et un temps pour ramasser des pierres; un temps pour embrasser, et un temps pour s\u0027\u00E9loigner des embrassements;"
+        },
+        {
+          "text": "un temps pour chercher, et un temps pour perdre; un temps pour garder, et un temps pour jeter;"
+        },
+        {
+          "text": "un temps pour d\u00E9chirer, et un temps pour coudre; un temps pour se taire, et un temps pour parler;"
+        },
+        {
+          "text": "un temps pour aimer, et un temps pour ha\u00EFr; un temps pour la guerre, et un temps pour la paix."
+        },
+        {
+          "text": "Quel avantage celui qui travaille retire-t-il de sa peine?"
+        },
+        {
+          "text": "J\u0027ai vu \u00E0 quelle occupation Dieu soumet les fils de l\u0027homme."
+        },
+        {
+          "text": "Il fait toute chose bonne en son temps; m\u00EAme il a mis dans leur coeur la pens\u00E9e de l\u0027\u00E9ternit\u00E9, bien que l\u0027homme ne puisse pas saisir l\u0027oeuvre que Dieu fait, du commencement jusqu\u0027\u00E0 la fin."
+        },
+        {
+          "text": "J\u0027ai reconnu qu\u0027il n\u0027y a de bonheur pour eux qu\u0027\u00E0 se r\u00E9jouir et \u00E0 se donner du bien-\u00EAtre pendant leur vie;"
+        },
+        {
+          "text": "mais que, si un homme mange et boit et jouit du bien-\u00EAtre au milieu de tout son travail, c\u0027est l\u00E0 un don de Dieu."
+        },
+        {
+          "text": "J\u0027ai reconnu que tout ce que Dieu fait durera toujours, qu\u0027il n\u0027y a rien \u00E0 y ajouter et rien \u00E0 en retrancher, et que Dieu agit ainsi afin qu\u0027on le craigne."
+        },
+        {
+          "text": "Ce qui est a d\u00E9j\u00E0 \u00E9t\u00E9, et ce qui sera a d\u00E9j\u00E0 \u00E9t\u00E9, et Dieu ram\u00E8ne ce qui est pass\u00E9."
+        },
+        {
+          "text": "J\u0027ai encore vu sous le soleil qu\u0027au lieu \u00E9tabli pour juger il y a de la m\u00E9chancet\u00E9, et qu\u0027au lieu \u00E9tabli pour la justice il y a de la m\u00E9chancet\u00E9."
+        },
+        {
+          "text": "J\u0027ai dit en mon coeur: Dieu jugera le juste et le m\u00E9chant; car il y a l\u00E0 un temps pour toute chose et pour toute oeuvre."
+        },
+        {
+          "text": "J\u0027ai dit en mon coeur, au sujet des fils de l\u0027homme, que Dieu les \u00E9prouverait, et qu\u0027eux-m\u00EAmes verraient qu\u0027ils ne sont que des b\u00EAtes."
+        },
+        {
+          "text": "Car le sort des fils de l\u0027homme et celui de la b\u00EAte sont pour eux un m\u00EAme sort; comme meurt l\u0027un, ainsi meurt l\u0027autre, ils ont tous un m\u00EAme souffle, et la sup\u00E9riorit\u00E9 de l\u0027homme sur la b\u00EAte est nulle; car tout est vanit\u00E9."
+        },
+        {
+          "text": "Tout va dans un m\u00EAme lieu; tout a \u00E9t\u00E9 fait de la poussi\u00E8re, et tout retourne \u00E0 la poussi\u00E8re."
+        },
+        {
+          "text": "Qui sait si le souffle des fils de l\u0027homme monte en haut, et si le souffle de la b\u00EAte descend en bas dans la terre?"
+        },
+        {
+          "text": "Et j\u0027ai vu qu\u0027il n\u0027y a rien de mieux pour l\u0027homme que de se r\u00E9jouir de ses oeuvres: c\u0027est l\u00E0 sa part. Car qui le fera jouir de ce qui sera apr\u00E8s lui?"
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "J\u0027ai consid\u00E9r\u00E9 ensuite toutes les oppressions qui se commettent sous le soleil; et voici, les opprim\u00E9s sont dans les larmes, et personne qui les console! ils sont en butte \u00E0 la violence de leurs oppresseurs, et personne qui les console!"
+        },
+        {
+          "text": "Et j\u0027ai trouv\u00E9 les morts qui sont d\u00E9j\u00E0 morts plus heureux que les vivants qui sont encore vivants,"
+        },
+        {
+          "text": "et plus heureux que les uns et les autres celui qui n\u0027a point encore exist\u00E9 et qui n\u0027a pas vu les mauvaises actions qui se commettent sous le soleil."
+        },
+        {
+          "text": "J\u0027ai vu que tout travail et toute habilet\u00E9 dans le travail n\u0027est que jalousie de l\u0027homme \u00E0 l\u0027\u00E9gard de son prochain. C\u0027est encore l\u00E0 une vanit\u00E9 et la poursuite du vent."
+        },
+        {
+          "text": "L\u0027insens\u00E9 se croise les mains, et mange sa propre chair."
+        },
+        {
+          "text": "Mieux vaut une main pleine avec repos, que les deux mains pleines avec travail et poursuite du vent."
+        },
+        {
+          "text": "J\u0027ai consid\u00E9r\u00E9 une autre vanit\u00E9 sous le soleil."
+        },
+        {
+          "text": "Tel homme est seul et sans personne qui lui tienne de pr\u00E8s, il n\u0027a ni fils ni fr\u00E8re, et pourtant son travail n\u0027a point de fin et ses yeux ne sont jamais rassasi\u00E9s de richesses. Pour qui donc est-ce que je travaille, et que je prive mon \u00E2me de jouissances? C\u0027est encore l\u00E0 une vanit\u00E9 et une chose mauvaise."
+        },
+        {
+          "text": "Deux valent mieux qu\u0027un, parce qu\u0027ils retirent un bon salaire de leur travail."
+        },
+        {
+          "text": "Car, s\u0027ils tombent, l\u0027un rel\u00E8ve son compagnon; mais malheur \u00E0 celui qui est seul et qui tombe, sans avoir un second pour le relever!"
+        },
+        {
+          "text": "De m\u00EAme, si deux couchent ensemble, ils auront chaud; mais celui qui est seul, comment aura-t-il chaud?"
+        },
+        {
+          "text": "Et si quelqu\u0027un est plus fort qu\u0027un seul, les deux peuvent lui r\u00E9sister; et la corde \u00E0 trois fils ne se rompt pas facilement."
+        },
+        {
+          "text": "Mieux vaut un enfant pauvre et sage qu\u0027un roi vieux et insens\u00E9 qui ne sait plus \u00E9couter les avis;"
+        },
+        {
+          "text": "car il peut sortir de prison pour r\u00E9gner, et m\u00EAme \u00EAtre n\u00E9 pauvre dans son royaume."
+        },
+        {
+          "text": "J\u0027ai vu tous les vivants qui marchent sous le soleil entourer l\u0027enfant qui devait succ\u00E9der au roi et r\u00E9gner \u00E0 sa place."
+        },
+        {
+          "text": "Il n\u0027y avait point de fin \u00E0 tout ce peuple, \u00E0 tous ceux \u00E0 la t\u00EAte desquels il \u00E9tait. Et toutefois, ceux qui viendront apr\u00E8s ne se r\u00E9jouiront pas \u00E0 son sujet. Car c\u0027est encore l\u00E0 une vanit\u00E9 et la poursuite du vent."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "(4:17) Prends garde \u00E0 ton pied, lorsque tu entres dans la maison de Dieu; approche-toi pour \u00E9couter, plut\u00F4t que pour offrir le sacrifice des insens\u00E9s, car ils ne savent pas qu\u0027ils font mal."
+        },
+        {
+          "text": "(5:1) Ne te presse pas d\u0027ouvrir la bouche, et que ton coeur ne se h\u00E2te pas d\u0027exprimer une parole devant Dieu; car Dieu est au ciel, et toi sur la terre: que tes paroles soient donc peu nombreuses."
+        },
+        {
+          "text": "(5:2) Car, si les songes naissent de la multitude des occupations, la voix de l\u0027insens\u00E9 se fait entendre dans la multitude des paroles."
+        },
+        {
+          "text": "(5:3) Lorsque tu as fait un voeu \u00E0 Dieu, ne tarde pas \u00E0 l\u0027accomplir, car il n\u0027aime pas les insens\u00E9s: accomplis le voeu que tu as fait."
+        },
+        {
+          "text": "(5:4) Mieux vaut pour toi ne point faire de voeu, que d\u0027en faire un et de ne pas l\u0027accomplir."
+        },
+        {
+          "text": "(5:5) Ne permets pas \u00E0 ta bouche de faire p\u00E9cher ta chair, et ne dis pas en pr\u00E9sence de l\u0027envoy\u00E9 que c\u0027est une inadvertance. Pourquoi Dieu s\u0027irriterait-il de tes paroles, et d\u00E9truirait-il l\u0027ouvrage de tes mains?"
+        },
+        {
+          "text": "(5:6) Car, s\u0027il y a des vanit\u00E9s dans la multitude des songes, il y en a aussi dans beaucoup de paroles; c\u0027est pourquoi, crains Dieu."
+        },
+        {
+          "text": "(5:7) Si tu vois dans une province le pauvre opprim\u00E9 et la violation du droit et de la justice, ne t\u0027en \u00E9tonne point; car un homme \u00E9lev\u00E9 est plac\u00E9 sous la surveillance d\u0027un autre plus \u00E9lev\u00E9, et au-dessus d\u0027eux il en est de plus \u00E9lev\u00E9s encore."
+        },
+        {
+          "text": "(5:8) Un avantage pour le pays \u00E0 tous \u00E9gards, c\u0027est un roi honor\u00E9 du pays."
+        },
+        {
+          "text": "(5:9) Celui qui aime l\u0027argent n\u0027est pas rassasi\u00E9 par l\u0027argent, et celui qui aime les richesses n\u0027en profite pas. C\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "(5:10) Quand le bien abonde, ceux qui le mangent abondent; et quel avantage en revient-il \u00E0 son possesseur, sinon qu\u0027il le voit de ses yeux?"
+        },
+        {
+          "text": "(5:11) Le sommeil du travailleur est doux, qu\u0027il ait peu ou beaucoup \u00E0 manger; mais le rassasiement du riche ne le laisse pas dormir."
+        },
+        {
+          "text": "(5:12) Il est un mal grave que j\u0027ai vu sous le soleil: des richesses conserv\u00E9es, pour son malheur, par celui qui les poss\u00E8de."
+        },
+        {
+          "text": "(5:13) Ces richesses se perdent par quelque \u00E9v\u00E9nement f\u00E2cheux; il a engendr\u00E9 un fils, et il ne reste rien entre ses mains."
+        },
+        {
+          "text": "(5:14) Comme il est sorti du ventre de sa m\u00E8re, il s\u0027en retourne nu ainsi qu\u0027il \u00E9tait venu, et pour son travail n\u0027emporte rien qu\u0027il puisse prendre dans sa main."
+        },
+        {
+          "text": "(5:15) C\u0027est encore l\u00E0 un mal grave. Il s\u0027en va comme il \u00E9tait venu; et quel avantage lui revient-il d\u0027avoir travaill\u00E9 pour du vent?"
+        },
+        {
+          "text": "(5:16) De plus, toute sa vie il mange dans les t\u00E9n\u00E8bres, et il a beaucoup de chagrin, de maux et d\u0027irritation."
+        },
+        {
+          "text": "(5:17) Voici ce que j\u0027ai vu: c\u0027est pour l\u0027homme une chose bonne et belle de manger et de boire, et de jouir du bien-\u00EAtre au milieu de tout le travail qu\u0027il fait sous le soleil, pendant le nombre des jours de vie que Dieu lui a donn\u00E9s; car c\u0027est l\u00E0 sa part."
+        },
+        {
+          "text": "(5:18) Mais, si Dieu a donn\u00E9 \u00E0 un homme des richesses et des biens, s\u0027il l\u0027a rendu ma\u00EEtre d\u0027en manger, d\u0027en prendre sa part, et de se r\u00E9jouir au milieu de son travail, c\u0027est l\u00E0 un don de Dieu."
+        },
+        {
+          "text": "(5:19) Car il ne se souviendra pas beaucoup des jours de sa vie, parce que Dieu r\u00E9pand la joie dans son coeur."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Il est un mal que j\u0027ai vu sous le soleil, et qui est fr\u00E9quent parmi les hommes."
+        },
+        {
+          "text": "Il y a tel homme \u00E0 qui Dieu a donn\u00E9 des richesses, des biens, et de la gloire, et qui ne manque pour son \u00E2me de rien de ce qu\u0027il d\u00E9sire, mais que Dieu ne laisse pas ma\u00EEtre d\u0027en jouir, car c\u0027est un \u00E9tranger qui en jouira. C\u0027est l\u00E0 une vanit\u00E9 et un mal grave."
+        },
+        {
+          "text": "Quand un homme aurait cent fils, vivrait un grand nombre d\u0027ann\u00E9es, et que les jours de ses ann\u00E9es se multiplieraient, si son \u00E2me ne s\u0027est point rassasi\u00E9e de bonheur, et si de plus il n\u0027a point de s\u00E9pulture, je dis qu\u0027un avorton est plus heureux que lui."
+        },
+        {
+          "text": "Car il est venu en vain, il s\u0027en va dans les t\u00E9n\u00E8bres, et son nom reste couvert de t\u00E9n\u00E8bres;"
+        },
+        {
+          "text": "il n\u0027a point vu, il n\u0027a point connu le soleil; il a plus de repos que cet homme."
+        },
+        {
+          "text": "Et quand celui-ci vivrait deux fois mille ans, sans jouir du bonheur, tout ne va-t-il pas dans un m\u00EAme lieu?"
+        },
+        {
+          "text": "Tout le travail de l\u0027homme est pour sa bouche, et cependant ses d\u00E9sirs ne sont jamais satisfaits."
+        },
+        {
+          "text": "Car quel avantage le sage a-t-il sur l\u0027insens\u00E9? quel avantage a le malheureux qui sait se conduire en pr\u00E9sence des vivants?"
+        },
+        {
+          "text": "Ce que les yeux voient est pr\u00E9f\u00E9rable \u00E0 l\u0027agitation des d\u00E9sirs: c\u0027est encore l\u00E0 une vanit\u00E9 et la poursuite du vent."
+        },
+        {
+          "text": "Ce qui existe a d\u00E9j\u00E0 \u00E9t\u00E9 appel\u00E9 par son nom; et l\u0027on sait que celui qui est homme ne peut contester avec un plus fort que lui."
+        },
+        {
+          "text": "S\u0027il y a beaucoup de choses, il y a beaucoup de vanit\u00E9s: quel avantage en revient-il \u00E0 l\u0027homme?"
+        },
+        {
+          "text": "Car qui sait ce qui est bon pour l\u0027homme dans la vie, pendant le nombre des jours de sa vie de vanit\u00E9, qu\u0027il passe comme une ombre? Et qui peut dire \u00E0 l\u0027homme ce qui sera apr\u00E8s lui sous le soleil?"
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Une bonne r\u00E9putation vaut mieux que le bon parfum, et le jour de la mort que le jour de la naissance."
+        },
+        {
+          "text": "Mieux vaut aller dans une maison de deuil que d\u0027aller dans une maison de festin; car c\u0027est l\u00E0 la fin de tout homme, et celui qui vit prend la chose \u00E0 coeur."
+        },
+        {
+          "text": "Mieux vaut le chagrin que le rire; car avec un visage triste le coeur peut \u00EAtre content."
+        },
+        {
+          "text": "Le coeur des sages est dans la maison de deuil, et le coeur des insens\u00E9s dans la maison de joie."
+        },
+        {
+          "text": "Mieux vaut entendre la r\u00E9primande du sage que d\u0027entendre le chant des insens\u00E9s."
+        },
+        {
+          "text": "Car comme le bruit des \u00E9pines sous la chaudi\u00E8re, ainsi est le rire des insens\u00E9s. C\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "L\u0027oppression rend insens\u00E9 le sage, et les pr\u00E9sents corrompent le coeur."
+        },
+        {
+          "text": "Mieux vaut la fin d\u0027une chose que son commencement; mieux vaut un esprit patient qu\u0027un esprit hautain."
+        },
+        {
+          "text": "Ne te h\u00E2te pas en ton esprit de t\u0027irriter, car l\u0027irritation repose dans le sein des insens\u00E9s."
+        },
+        {
+          "text": "Ne dis pas: D\u0027o\u00F9 vient que les jours pass\u00E9s \u00E9taient meilleurs que ceux ci? Car ce n\u0027est point par sagesse que tu demandes cela."
+        },
+        {
+          "text": "La sagesse vaut autant qu\u0027un h\u00E9ritage, et m\u00EAme plus pour ceux qui voient le soleil."
+        },
+        {
+          "text": "Car \u00E0 l\u0027ombre de la sagesse on est abrit\u00E9 comme \u00E0 l\u0027ombre de l\u0027argent; mais un avantage de la science, c\u0027est que la sagesse fait vivre ceux qui la poss\u00E8dent."
+        },
+        {
+          "text": "Regarde l\u0027oeuvre de Dieu: qui pourra redresser ce qu\u0027il a courb\u00E9?"
+        },
+        {
+          "text": "Au jour du bonheur, sois heureux, et au jour du malheur, r\u00E9fl\u00E9chis: Dieu a fait l\u0027un comme l\u0027autre, afin que l\u0027homme ne d\u00E9couvre en rien ce qui sera apr\u00E8s lui."
+        },
+        {
+          "text": "J\u0027ai vu tout cela pendant les jours de ma vanit\u00E9. Il y a tel juste qui p\u00E9rit dans sa justice, et il y a tel m\u00E9chant qui prolonge son existence dans sa m\u00E9chancet\u00E9."
+        },
+        {
+          "text": "Ne sois pas juste \u00E0 l\u0027exc\u00E8s, et ne te montre pas trop sage: pourquoi te d\u00E9truirais-tu?"
+        },
+        {
+          "text": "Ne sois pas m\u00E9chant \u00E0 l\u0027exc\u00E8s, et ne sois pas insens\u00E9: pourquoi mourrais-tu avant ton temps?"
+        },
+        {
+          "text": "Il est bon que tu retiennes ceci, et que tu ne n\u00E9gliges point cela; car celui qui craint Dieu \u00E9chappe \u00E0 toutes ces choses."
+        },
+        {
+          "text": "La sagesse rend le sage plus fort que dix chefs qui sont dans une ville."
+        },
+        {
+          "text": "Non, il n\u0027y a sur la terre point d\u0027homme juste qui fasse le bien et qui ne p\u00E8che jamais."
+        },
+        {
+          "text": "Ne fais donc pas attention \u00E0 toutes les paroles qu\u0027on dit, de peur que tu n\u0027entendes ton serviteur te maudire;"
+        },
+        {
+          "text": "car ton coeur a senti bien des fois que tu as toi-m\u00EAme maudit les autres."
+        },
+        {
+          "text": "J\u0027ai \u00E9prouv\u00E9 tout cela par la sagesse. J\u0027ai dit: Je serai sage. Et la sagesse est rest\u00E9e loin de moi."
+        },
+        {
+          "text": "Ce qui est loin, ce qui est profond, profond, qui peut l\u0027atteindre?"
+        },
+        {
+          "text": "Je me suis appliqu\u00E9 dans mon coeur \u00E0 conna\u00EEtre, \u00E0 sonder, et \u00E0 chercher la sagesse et la raison des choses, et \u00E0 conna\u00EEtre la folie de la m\u00E9chancet\u00E9 et la stupidit\u00E9 de la sottise."
+        },
+        {
+          "text": "Et j\u0027ai trouv\u00E9 plus am\u00E8re que la mort la femme dont le coeur est un pi\u00E8ge et un filet, et dont les mains sont des liens; celui qui est agr\u00E9able \u00E0 Dieu lui \u00E9chappe, mais le p\u00E9cheur est pris par elle."
+        },
+        {
+          "text": "Voici ce que j\u0027ai trouv\u00E9, dit l\u0027Eccl\u00E9siaste, en examinant les choses une \u00E0 une pour en saisir la raison;"
+        },
+        {
+          "text": "voici ce que mon \u00E2me cherche encore, et que je n\u0027ai point trouv\u00E9. J\u0027ai trouv\u00E9 un homme entre mille; mais je n\u0027ai pas trouv\u00E9 une femme entre elles toutes."
+        },
+        {
+          "text": "Seulement, voici ce que j\u0027ai trouv\u00E9, c\u0027est que Dieu a fait les hommes droits; mais ils ont cherch\u00E9 beaucoup de d\u00E9tours."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Qui est comme le sage, et qui conna\u00EEt l\u0027explication des choses? La sagesse d\u0027un homme fait briller son visage, et la s\u00E9v\u00E9rit\u00E9 de sa face est chang\u00E9e."
+        },
+        {
+          "text": "Je te dis: Observe les ordres du roi, et cela \u00E0 cause du serment fait \u00E0 Dieu."
+        },
+        {
+          "text": "Ne te h\u00E2te pas de t\u0027\u00E9loigner de lui, et ne persiste pas dans une chose mauvaise: car il peut faire tout ce qui lui pla\u00EEt,"
+        },
+        {
+          "text": "parce que la parole du roi est puissante; et qui lui dira: Que fais-tu?"
+        },
+        {
+          "text": "Celui qui observe le commandement ne conna\u00EEt point de chose mauvaise, et le coeur du sage conna\u00EEt le temps et le jugement."
+        },
+        {
+          "text": "Car il y a pour toute chose un temps et un jugement, quand le malheur accable l\u0027homme."
+        },
+        {
+          "text": "Mais il ne sait point ce qui arrivera, et qui lui dira comment cela arrivera?"
+        },
+        {
+          "text": "L\u0027homme n\u0027est pas ma\u00EEtre de son souffle pour pouvoir le retenir, et il n\u0027a aucune puissance sur le jour de la mort; il n\u0027y a point de d\u00E9livrance dans ce combat, et la m\u00E9chancet\u00E9 ne saurait sauver les m\u00E9chants."
+        },
+        {
+          "text": "J\u0027ai vu tout cela, et j\u0027ai appliqu\u00E9 mon coeur \u00E0 tout ce qui se fait sous le soleil. Il y a un temps o\u00F9 l\u0027homme domine sur l\u0027homme pour le rendre malheureux."
+        },
+        {
+          "text": "Alors j\u0027ai vu des m\u00E9chants recevoir la s\u00E9pulture et entrer dans leur repos, et ceux qui avaient agi avec droiture s\u0027en aller loin du lieu saint et \u00EAtre oubli\u00E9s dans la ville. C\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "Parce qu\u0027une sentence contre les mauvaises actions ne s\u0027ex\u00E9cute pas promptement, le coeur des fils de l\u0027homme se remplit en eux du d\u00E9sir de faire le mal."
+        },
+        {
+          "text": "Cependant, quoique le p\u00E9cheur fasse cent fois le mal et qu\u0027il y pers\u00E9v\u00E8re longtemps, je sais aussi que le bonheur est pour ceux qui craignent Dieu, parce qu\u0027ils ont de la crainte devant lui."
+        },
+        {
+          "text": "Mais le bonheur n\u0027est pas pour le m\u00E9chant, et il ne prolongera point ses jours, pas plus que l\u0027ombre, parce qu\u0027il n\u0027a pas de la crainte devant Dieu."
+        },
+        {
+          "text": "Il est une vanit\u00E9 qui a lieu sur la terre: c\u0027est qu\u0027il y a des justes auxquels il arrive selon l\u0027oeuvre des m\u00E9chants, et des m\u00E9chants auxquels il arrive selon l\u0027oeuvre des justes. Je dis que c\u0027est encore l\u00E0 une vanit\u00E9."
+        },
+        {
+          "text": "J\u0027ai donc lou\u00E9 la joie, parce qu\u0027il n\u0027y a de bonheur pour l\u0027homme sous le soleil qu\u0027\u00E0 manger et \u00E0 boire et \u00E0 se r\u00E9jouir; c\u0027est l\u00E0 ce qui doit l\u0027accompagner au milieu de son travail, pendant les jours de vie que Dieu lui donne sous le soleil."
+        },
+        {
+          "text": "Lorsque j\u0027ai appliqu\u00E9 mon coeur \u00E0 conna\u00EEtre la sagesse et \u00E0 consid\u00E9rer les choses qui se passent sur la terre, -car les yeux de l\u0027homme ne go\u00FBtent le sommeil ni jour ni nuit,"
+        },
+        {
+          "text": "j\u0027ai vu toute l\u0027oeuvre de Dieu, j\u0027ai vu que l\u0027homme ne peut pas trouver ce qui se fait sous le soleil; il a beau se fatiguer \u00E0 chercher, il ne trouve pas; et m\u00EAme si le sage veut conna\u00EEtre, il ne peut pas trouver."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Oui, j\u0027ai appliqu\u00E9 mon coeur \u00E0 tout cela, j\u0027ai fait de tout cela l\u0027objet de mon examen, et j\u0027ai vu que les justes et les sages, et leurs travaux, sont dans la main de Dieu, et l\u0027amour aussi bien que la haine; les hommes ne savent rien: tout est devant eux."
+        },
+        {
+          "text": "Tout arrive \u00E9galement \u00E0 tous; m\u00EAme sort pour le juste et pour le m\u00E9chant, pour celui qui est bon et pur et pour celui qui est impur, pour celui qui sacrifie et pour celui qui ne sacrifie pas; il en est du bon comme du p\u00E9cheur, de celui qui jure comme de celui qui craint de jurer."
+        },
+        {
+          "text": "Ceci est un mal parmi tout ce qui se fait sous le soleil, c\u0027est qu\u0027il y a pour tous un m\u00EAme sort; aussi le coeur des fils de l\u0027homme est-il plein de m\u00E9chancet\u00E9, et la folie est dans leur coeur pendant leur vie; apr\u00E8s quoi, ils vont chez les morts. Car, qui est except\u00E9?"
+        },
+        {
+          "text": "Pour tous ceux qui vivent il y a de l\u0027esp\u00E9rance; et m\u00EAme un chien vivant vaut mieux qu\u0027un lion mort."
+        },
+        {
+          "text": "Les vivants, en effet, savent qu\u0027ils mourront; mais les morts ne savent rien, et il n\u0027y a pour eux plus de salaire, puisque leur m\u00E9moire est oubli\u00E9e."
+        },
+        {
+          "text": "Et leur amour, et leur haine, et leur envie, ont d\u00E9j\u00E0 p\u00E9ri; et ils n\u0027auront plus jamais aucune part \u00E0 tout ce qui se fait sous le soleil."
+        },
+        {
+          "text": "Va, mange avec joie ton pain, et bois gaiement ton vin; car d\u00E8s longtemps Dieu prend plaisir \u00E0 ce que tu fais."
+        },
+        {
+          "text": "Qu\u0027en tout temps tes v\u00EAtements soient blancs, et que l\u0027huile ne manque point sur ta t\u00EAte."
+        },
+        {
+          "text": "Jouis de la vie avec la femme que tu aimes, pendant tous les jours de ta vie de vanit\u00E9, que Dieu t\u0027a donn\u00E9s sous le soleil, pendant tous les jours de ta vanit\u00E9; car c\u0027est ta part dans la vie, au milieu de ton travail que tu fais sous le soleil."
+        },
+        {
+          "text": "Tout ce que ta main trouve \u00E0 faire avec ta force, fais-le; car il n\u0027y a ni oeuvre, ni pens\u00E9e, ni science, ni sagesse, dans le s\u00E9jour des morts, o\u00F9 tu vas."
+        },
+        {
+          "text": "J\u0027ai encore vu sous le soleil que la course n\u0027est point aux agiles ni la guerre aux vaillants, ni le pain aux sages, ni la richesse aux intelligents, ni la faveur aux savants; car tout d\u00E9pend pour eux du temps et des circonstances."
+        },
+        {
+          "text": "L\u0027homme ne conna\u00EEt pas non plus son heure, pareil aux poissons qui sont pris au filet fatal, et aux oiseaux qui sont pris au pi\u00E8ge; comme eux, les fils de l\u0027homme sont enlac\u00E9s au temps du malheur, lorsqu\u0027il tombe sur eux tout \u00E0 coup."
+        },
+        {
+          "text": "J\u0027ai aussi vu sous le soleil ce trait d\u0027une sagesse qui m\u0027a paru grande."
+        },
+        {
+          "text": "Il y avait une petite ville, avec peu d\u0027hommes dans son sein; un roi puissant marcha sur elle, l\u0027investit, et \u00E9leva contre elle de grands forts."
+        },
+        {
+          "text": "Il s\u0027y trouvait un homme pauvre et sage, qui sauva la ville par sa sagesse. Et personne ne s\u0027est souvenu de cet homme pauvre."
+        },
+        {
+          "text": "Et j\u0027ai dit: La sagesse vaut mieux que la force. Cependant la sagesse du pauvre est m\u00E9pris\u00E9e, et ses paroles ne sont pas \u00E9cout\u00E9es."
+        },
+        {
+          "text": "Les paroles des sages tranquillement \u00E9cout\u00E9es valent mieux que les cris de celui qui domine parmi les insens\u00E9s."
+        },
+        {
+          "text": "La sagesse vaut mieux que les instruments de guerre; mais un seul p\u00E9cheur d\u00E9truit beaucoup de bien."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Les mouches mortes infectent et font fermenter l\u0027huile du parfumeur; un peu de folie l\u0027emporte sur la sagesse et sur la gloire."
+        },
+        {
+          "text": "Le coeur du sage est \u00E0 sa droite, et le coeur de l\u0027insens\u00E9 \u00E0 sa gauche."
+        },
+        {
+          "text": "Quand l\u0027insens\u00E9 marche dans un chemin, le sens lui manque, et il dit de chacun: Voil\u00E0 un fou!"
+        },
+        {
+          "text": "Si l\u0027esprit de celui qui domine s\u0027\u00E9l\u00E8ve contre toi, ne quitte point ta place; car le calme pr\u00E9vient de grands p\u00E9ch\u00E9s."
+        },
+        {
+          "text": "Il est un mal que j\u0027ai vu sous le soleil, comme une erreur provenant de celui qui gouverne:"
+        },
+        {
+          "text": "la folie occupe des postes tr\u00E8s \u00E9lev\u00E9s, et des riches sont assis dans l\u0027abaissement."
+        },
+        {
+          "text": "J\u0027ai vu des esclaves sur des chevaux, et des princes marchant sur terre comme des esclaves."
+        },
+        {
+          "text": "Celui qui creuse une fosse y tombera, et celui qui renverse une muraille sera mordu par un serpent."
+        },
+        {
+          "text": "Celui qui remue des pierres en sera bless\u00E9, et celui qui fend du bois en \u00E9prouvera du danger."
+        },
+        {
+          "text": "S\u0027il a \u00E9mouss\u00E9 le fer, et s\u0027il n\u0027en a pas aiguis\u00E9 le tranchant, il devra redoubler de force; mais la sagesse a l\u0027avantage du succ\u00E8s."
+        },
+        {
+          "text": "Si le serpent mord faute d\u0027enchantement, il n\u0027y a point d\u0027avantage pour l\u0027enchanteur."
+        },
+        {
+          "text": "Les paroles de la bouche du sage sont pleines de gr\u00E2ce; mais les l\u00E8vres de l\u0027insens\u00E9 causent sa perte."
+        },
+        {
+          "text": "Le commencement des paroles de sa bouche est folie, et la fin de son discours est une m\u00E9chante folie."
+        },
+        {
+          "text": "L\u0027insens\u00E9 multiplie les paroles. L\u0027homme ne sait point ce qui arrivera, et qui lui dira ce qui sera apr\u00E8s lui?"
+        },
+        {
+          "text": "Le travail de l\u0027insens\u00E9 le fatigue, parce qu\u0027il ne sait pas aller \u00E0 la ville."
+        },
+        {
+          "text": "Malheur \u00E0 toi, pays dont le roi est un enfant, et dont les princes mangent d\u00E8s le matin!"
+        },
+        {
+          "text": "Heureux toi, pays dont le roi est de race illustre, et dont les princes mangent au temps convenable, pour soutenir leurs forces, et non pour se livrer \u00E0 la boisson!"
+        },
+        {
+          "text": "Quand les mains sont paresseuses, la charpente s\u0027affaisse; et quand les mains sont l\u00E2ches, la maison a des goutti\u00E8res."
+        },
+        {
+          "text": "On fait des repas pour se divertir, le vin rend la vie joyeuse, et l\u0027argent r\u00E9pond \u00E0 tout."
+        },
+        {
+          "text": "Ne maudis pas le roi, m\u00EAme dans ta pens\u00E9e, et ne maudis pas le riche dans la chambre o\u00F9 tu couches; car l\u0027oiseau du ciel emporterait ta voix, l\u0027animal ail\u00E9 publierait tes paroles."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "Jette ton pain sur la face des eaux, car avec le temps tu le retrouveras;"
+        },
+        {
+          "text": "donnes-en une part \u00E0 sept et m\u00EAme \u00E0 huit, car tu ne sais pas quel malheur peut arriver sur la terre."
+        },
+        {
+          "text": "Quand les nuages sont pleins de pluie, ils la r\u00E9pandent sur la terre; et si un arbre tombe, au midi ou au nord, il reste \u00E0 la place o\u00F9 il est tomb\u00E9."
+        },
+        {
+          "text": "Celui qui observe le vent ne s\u00E8mera point, et celui qui regarde les nuages ne moissonnera point."
+        },
+        {
+          "text": "Comme tu ne sais pas quel est le chemin du vent, ni comment se forment les os dans le ventre de la femme enceinte, tu ne connais pas non plus l\u0027oeuvre de Dieu qui fait tout."
+        },
+        {
+          "text": "D\u00E8s le matin s\u00E8me ta semence, et le soir ne laisse pas reposer ta main; car tu ne sais point ce qui r\u00E9ussira, ceci ou cela, ou si l\u0027un et l\u0027autre sont \u00E9galement bons."
+        },
+        {
+          "text": "La lumi\u00E8re est douce, et il est agr\u00E9able aux yeux de voir le soleil."
+        },
+        {
+          "text": "Si donc un homme vit beaucoup d\u0027ann\u00E9es, qu\u0027il se r\u00E9jouisse pendant toutes ces ann\u00E9es, et qu\u0027il pense aux jours de t\u00E9n\u00E8bres qui seront nombreux; tout ce qui arrivera est vanit\u00E9."
+        },
+        {
+          "text": "(12:1) Jeune homme, r\u00E9jouis-toi dans ta jeunesse, livre ton coeur \u00E0 la joie pendant les jours de ta jeunesse, marche dans les voies de ton coeur et selon les regards de tes yeux; mais sache que pour tout cela Dieu t\u0027appellera en jugement."
+        },
+        {
+          "text": "(12:2) Bannis de ton coeur le chagrin, et \u00E9loigne le mal de ton corps; car la jeunesse et l\u0027aurore sont vanit\u00E9."
+        }
+      ]
+    },
+    {
+      "VERS": [
+        {
+          "text": "(12:3) Mais souviens-toi de ton cr\u00E9ateur pendant les jours de ta jeunesse, avant que les jours mauvais arrivent et que les ann\u00E9es s\u0027approchent o\u00F9 tu diras: Je n\u0027y prends point de plaisir;"
+        },
+        {
+          "text": "(12:4) avant que s\u0027obscurcissent le soleil et la lumi\u00E8re, la lune et les \u00E9toiles, et que les nuages reviennent apr\u00E8s la pluie,"
+        },
+        {
+          "text": "(12:5) temps o\u00F9 les gardiens de la maison tremblent, o\u00F9 les hommes forts se courbent, o\u00F9 celles qui moulent s\u0027arr\u00EAtent parce qu\u0027elles sont diminu\u00E9es, o\u00F9 ceux qui regardent par les fen\u00EAtres sont obscurcis,"
+        },
+        {
+          "text": "(12:6) o\u00F9 les deux battants de la porte se ferment sur la rue quand s\u0027abaisse le bruit de la meule, o\u00F9 l\u0027on se l\u00E8ve au chant de l\u0027oiseau, o\u00F9 s\u0027affaiblissent toutes les filles du chant,"
+        },
+        {
+          "text": "(12:7) o\u00F9 l\u0027on redoute ce qui est \u00E9lev\u00E9, o\u00F9 l\u0027on a des terreurs en chemin, o\u00F9 l\u0027amandier fleurit, o\u00F9 la sauterelle devient pesante, et o\u00F9 la c\u00E2pre n\u0027a plus d\u0027effet, car l\u0027homme s\u0027en va vers sa demeure \u00E9ternelle, et les pleureurs parcourent les rues;"
+        },
+        {
+          "text": "(12:8) avant que le cordon d\u0027argent se d\u00E9tache, que le vase d\u0027or se brise, que le seau se rompe sur la source, et que la roue se casse sur la citerne;"
+        },
+        {
+          "text": "(12:9) avant que la poussi\u00E8re retourne \u00E0 la terre, comme elle y \u00E9tait, et que l\u0027esprit retourne \u00E0 Dieu qui l\u0027a donn\u00E9."
+        },
+        {
+          "text": "(12:10) Vanit\u00E9 des vanit\u00E9s, dit l\u0027Eccl\u00E9siaste, tout est vanit\u00E9."
+        },
+        {
+          "text": "(12:11) Outre que l\u0027Eccl\u00E9siaste fut un sage, il a encore enseign\u00E9 la science au peuple, et il a examin\u00E9, sond\u00E9, mis en ordre un grand nombre de sentences."
+        },
+        {
+          "text": "(12:12) L\u0027Eccl\u00E9siaste s\u0027est efforc\u00E9 de trouver des paroles agr\u00E9ables; et ce qui a \u00E9t\u00E9 \u00E9crit avec droiture, ce sont des paroles de v\u00E9rit\u00E9."
+        },
+        {
+          "text": "(12:13) Les paroles des sages sont comme des aiguillons; et, rassembl\u00E9es en un recueil, elles sont comme des clous plant\u00E9s, donn\u00E9es par un seul ma\u00EEtre."
+        },
+        {
+          "text": "(12:14) Du reste, mon fils, tire instruction de ces choses; on ne finirait pas, si l\u0027on voulait faire un grand nombre de livres, et beaucoup d\u0027\u00E9tude est une fatigue pour le corps."
+        },
+        {
+          "text": "(12:15) \u00C9coutons la fin du discours: Crains Dieu et observe ses commandements. C\u0027est l\u00E0 ce que doit faire tout homme."
+        },
+        {
+          "text": "(12:16) Car Dieu am\u00E8nera toute oeuvre en jugement, au sujet de tout ce qui est cach\u00E9, soit bien, soit mal."
+        }
+      ]
+    }
+  ]
+}
