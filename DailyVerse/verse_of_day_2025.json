@@ -1,0 +1,2561 @@
+{
+  "year": 2025,
+  "description": "Verse of the day for 2025 with seasonal relevance and varied book distribution",
+  "verses": [
+    {
+      "bookIndex": 0,
+      "chapterIndex": 0,
+      "verseIndex": 0,
+      "verseName": "Jenèz 1:1",
+      "date": "2025-01-01T00:00:00Z"
+    },
+    {
+      "date": "2025-01-02T00:00:00Z",
+      "verseName": "Lik 9:3",
+      "bookIndex": 41,
+      "chapterIndex": 8,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-03T00:00:00Z",
+      "verseName": "Oze 9:4",
+      "bookIndex": 27,
+      "chapterIndex": 8,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-01-04T00:00:00Z",
+      "verseName": "Lamantasyon 2:5",
+      "bookIndex": 24,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-05T00:00:00Z",
+      "verseName": "Filipyen 3:3",
+      "bookIndex": 49,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-06T00:00:00Z",
+      "verseName": "Ezekyèl 5:5",
+      "bookIndex": 25,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-07T00:00:00Z",
+      "verseName": "Efezyen 1:3",
+      "bookIndex": 48,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-08T00:00:00Z",
+      "verseName": "1 Jan 5:4",
+      "bookIndex": 61,
+      "chapterIndex": 4,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-01-09T00:00:00Z",
+      "verseName": "Women 8:2",
+      "bookIndex": 44,
+      "chapterIndex": 7,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-10T00:00:00Z",
+      "verseName": "2 Tesalonisyen 1:1",
+      "bookIndex": 52,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-01-11T00:00:00Z",
+      "verseName": "Revelasyon 4:2",
+      "bookIndex": 65,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-12T00:00:00Z",
+      "verseName": "1 Tesalonisyen 5:1",
+      "bookIndex": 51,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-01-13T00:00:00Z",
+      "verseName": "Kolosyen 1:5",
+      "bookIndex": 50,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-14T00:00:00Z",
+      "verseName": "Jowèl 3:2",
+      "bookIndex": 28,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-15T00:00:00Z",
+      "verseName": "Pwovèb 1:2",
+      "bookIndex": 19,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-16T00:00:00Z",
+      "verseName": "1 Piè 2:4",
+      "bookIndex": 59,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-01-17T00:00:00Z",
+      "verseName": "Danyèl 10:3",
+      "bookIndex": 26,
+      "chapterIndex": 9,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-18T00:00:00Z",
+      "verseName": "1 Wa 5:2",
+      "bookIndex": 10,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-19T00:00:00Z",
+      "verseName": "2 Kwonik 8:5",
+      "bookIndex": 13,
+      "chapterIndex": 7,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-20T00:00:00Z",
+      "verseName": "Levitik 7:5",
+      "bookIndex": 2,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-21T00:00:00Z",
+      "verseName": "Jan 6:2",
+      "bookIndex": 42,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-22T00:00:00Z",
+      "verseName": "Egzòd 8:1",
+      "bookIndex": 1,
+      "chapterIndex": 7,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-01-23T00:00:00Z",
+      "verseName": "Eklezyas 7:3",
+      "bookIndex": 20,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-24T00:00:00Z",
+      "verseName": "Abdyas 1:1",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-01-25T00:00:00Z",
+      "verseName": "2 Timote 1:5",
+      "bookIndex": 54,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-26T00:00:00Z",
+      "verseName": "Abakòk 1:2",
+      "bookIndex": 34,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-01-27T00:00:00Z",
+      "verseName": "Matye 7:4",
+      "bookIndex": 39,
+      "chapterIndex": 6,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-01-28T00:00:00Z",
+      "verseName": "Nawoum 2:1",
+      "bookIndex": 33,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-01-29T00:00:00Z",
+      "verseName": "Travay 7:5",
+      "bookIndex": 43,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-01-30T00:00:00Z",
+      "verseName": "Aje 1:3",
+      "bookIndex": 36,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-01-31T00:00:00Z",
+      "verseName": "Jeremi 10:2",
+      "bookIndex": 23,
+      "chapterIndex": 9,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-01T00:00:00Z",
+      "verseName": "Zakari 11:1",
+      "bookIndex": 37,
+      "chapterIndex": 10,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-02-02T00:00:00Z",
+      "verseName": "Estè 7:5",
+      "bookIndex": 16,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-03T00:00:00Z",
+      "verseName": "Oze 4:1",
+      "bookIndex": 27,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-02-04T00:00:00Z",
+      "verseName": "Ezayi 8:2",
+      "bookIndex": 22,
+      "chapterIndex": 7,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-05T00:00:00Z",
+      "verseName": "Jonas 3:2",
+      "bookIndex": 31,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-06T00:00:00Z",
+      "verseName": "Malaki 4:5",
+      "bookIndex": 38,
+      "chapterIndex": 3,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-07T00:00:00Z",
+      "verseName": "Abakòk 3:5",
+      "bookIndex": 34,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-08T00:00:00Z",
+      "verseName": "Eklezyas 4:2",
+      "bookIndex": 20,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-09T00:00:00Z",
+      "verseName": "Rit 1:5",
+      "bookIndex": 7,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-10T00:00:00Z",
+      "verseName": "Jid 1:1",
+      "bookIndex": 64,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-02-11T00:00:00Z",
+      "verseName": "Egzòd 3:4",
+      "bookIndex": 1,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-02-12T00:00:00Z",
+      "verseName": "Som 4:5",
+      "bookIndex": 18,
+      "chapterIndex": 3,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-13T00:00:00Z",
+      "verseName": "Kolosyen 4:1",
+      "bookIndex": 50,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-02-14T00:00:00Z",
+      "verseName": "Mike 6:2",
+      "bookIndex": 32,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-15T00:00:00Z",
+      "verseName": "Zakari 4:4",
+      "bookIndex": 37,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-02-16T00:00:00Z",
+      "verseName": "Lamantasyon 3:4",
+      "bookIndex": 24,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-02-17T00:00:00Z",
+      "verseName": "Travay 7:3",
+      "bookIndex": 43,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-02-18T00:00:00Z",
+      "verseName": "Nòm 8:2",
+      "bookIndex": 3,
+      "chapterIndex": 7,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-19T00:00:00Z",
+      "verseName": "Pwovèb 9:4",
+      "bookIndex": 19,
+      "chapterIndex": 8,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-02-20T00:00:00Z",
+      "verseName": "Mak 4:3",
+      "bookIndex": 40,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-02-21T00:00:00Z",
+      "verseName": "Kantik 1:2",
+      "bookIndex": 21,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-02-22T00:00:00Z",
+      "verseName": "Oze 11:4",
+      "bookIndex": 27,
+      "chapterIndex": 10,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-02-23T00:00:00Z",
+      "verseName": "Jij 5:5",
+      "bookIndex": 6,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-24T00:00:00Z",
+      "verseName": "Jonas 2:5",
+      "bookIndex": 31,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-25T00:00:00Z",
+      "verseName": "Jak 2:3",
+      "bookIndex": 58,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-02-26T00:00:00Z",
+      "verseName": "Tit 3:5",
+      "bookIndex": 55,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-02-27T00:00:00Z",
+      "verseName": "Zakari 7:1",
+      "bookIndex": 37,
+      "chapterIndex": 6,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-02-28T00:00:00Z",
+      "verseName": "Levitik 10:1",
+      "bookIndex": 2,
+      "chapterIndex": 9,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-01T00:00:00Z",
+      "verseName": "2 Kwonik 10:1",
+      "bookIndex": 13,
+      "chapterIndex": 9,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-02T00:00:00Z",
+      "verseName": "Malaki 4:4",
+      "bookIndex": 38,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-03T00:00:00Z",
+      "verseName": "Jan 2:5",
+      "bookIndex": 42,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-03-04T00:00:00Z",
+      "verseName": "2 Tesalonisyen 3:1",
+      "bookIndex": 52,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-05T00:00:00Z",
+      "verseName": "Danyèl 3:2",
+      "bookIndex": 26,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-06T00:00:00Z",
+      "verseName": "1 Timote 5:2",
+      "bookIndex": 53,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-07T00:00:00Z",
+      "verseName": "Esdras 5:1",
+      "bookIndex": 14,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-08T00:00:00Z",
+      "verseName": "1 Piè 4:1",
+      "bookIndex": 59,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-09T00:00:00Z",
+      "verseName": "Matye 5:2",
+      "bookIndex": 39,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-10T00:00:00Z",
+      "verseName": "Ezayi 4:3",
+      "bookIndex": 22,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-03-11T00:00:00Z",
+      "verseName": "2 Wa 6:2",
+      "bookIndex": 11,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-12T00:00:00Z",
+      "verseName": "1 Korentyen 7:4",
+      "bookIndex": 45,
+      "chapterIndex": 6,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-13T00:00:00Z",
+      "verseName": "Jowèl 2:1",
+      "bookIndex": 28,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-14T00:00:00Z",
+      "verseName": "Eklezyas 7:1",
+      "bookIndex": 20,
+      "chapterIndex": 6,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-03-15T00:00:00Z",
+      "verseName": "Nòm 1:4",
+      "bookIndex": 3,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-16T00:00:00Z",
+      "verseName": "Pwovèb 4:2",
+      "bookIndex": 19,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-17T00:00:00Z",
+      "verseName": "Jan 8:3",
+      "bookIndex": 42,
+      "chapterIndex": 7,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-03-18T00:00:00Z",
+      "verseName": "Nawoum 3:2",
+      "bookIndex": 33,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-19T00:00:00Z",
+      "verseName": "1 Kwonik 8:3",
+      "bookIndex": 12,
+      "chapterIndex": 7,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-03-20T00:00:00Z",
+      "verseName": "Efezyen 6:2",
+      "bookIndex": 48,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-21T00:00:00Z",
+      "verseName": "Ezayi 3:5",
+      "bookIndex": 22,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-03-22T00:00:00Z",
+      "verseName": "Jid 1:2",
+      "bookIndex": 64,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-23T00:00:00Z",
+      "verseName": "1 Korentyen 8:4",
+      "bookIndex": 45,
+      "chapterIndex": 7,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-24T00:00:00Z",
+      "verseName": "Jonas 3:4",
+      "bookIndex": 31,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-25T00:00:00Z",
+      "verseName": "Lamantasyon 3:3",
+      "bookIndex": 24,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-03-26T00:00:00Z",
+      "verseName": "Sofonyas 3:2",
+      "bookIndex": 35,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-27T00:00:00Z",
+      "verseName": "1 Tesalonisyen 4:5",
+      "bookIndex": 51,
+      "chapterIndex": 3,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-03-28T00:00:00Z",
+      "verseName": "Aje 1:2",
+      "bookIndex": 36,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-29T00:00:00Z",
+      "verseName": "Jowèl 3:4",
+      "bookIndex": 28,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-03-30T00:00:00Z",
+      "verseName": "Abakòk 2:2",
+      "bookIndex": 34,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-03-31T00:00:00Z",
+      "verseName": "Jozye 4:4",
+      "bookIndex": 5,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-01T00:00:00Z",
+      "verseName": "Lik 9:5",
+      "bookIndex": 41,
+      "chapterIndex": 8,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-02T00:00:00Z",
+      "verseName": "Jan 10:3",
+      "bookIndex": 42,
+      "chapterIndex": 9,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-03T00:00:00Z",
+      "verseName": "Levitik 8:4",
+      "bookIndex": 2,
+      "chapterIndex": 7,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-04T00:00:00Z",
+      "verseName": "2 Tesalonisyen 2:5",
+      "bookIndex": 52,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-05T00:00:00Z",
+      "verseName": "Travay 11:2",
+      "bookIndex": 43,
+      "chapterIndex": 10,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-04-06T00:00:00Z",
+      "verseName": "Sofonyas 3:3",
+      "bookIndex": 35,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-07T00:00:00Z",
+      "verseName": "2 Wa 10:1",
+      "bookIndex": 11,
+      "chapterIndex": 9,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-04-08T00:00:00Z",
+      "verseName": "1 Timote 3:4",
+      "bookIndex": 53,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-09T00:00:00Z",
+      "verseName": "Amòs 7:5",
+      "bookIndex": 29,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-10T00:00:00Z",
+      "verseName": "Jak 5:2",
+      "bookIndex": 58,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-04-11T00:00:00Z",
+      "verseName": "Som 7:1",
+      "bookIndex": 18,
+      "chapterIndex": 6,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-04-12T00:00:00Z",
+      "verseName": "Lamantasyon 5:3",
+      "bookIndex": 24,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-13T00:00:00Z",
+      "verseName": "Galasyen 5:2",
+      "bookIndex": 47,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-04-14T00:00:00Z",
+      "verseName": "Eklezyas 9:3",
+      "bookIndex": 20,
+      "chapterIndex": 8,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-15T00:00:00Z",
+      "verseName": "Tit 1:2",
+      "bookIndex": 55,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-04-16T00:00:00Z",
+      "verseName": "Jonas 4:4",
+      "bookIndex": 31,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-17T00:00:00Z",
+      "verseName": "2 Tesalonisyen 1:5",
+      "bookIndex": 52,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-18T00:00:00Z",
+      "verseName": "Aje 2:5",
+      "bookIndex": 36,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-19T00:00:00Z",
+      "verseName": "Neemi 8:2",
+      "bookIndex": 15,
+      "chapterIndex": 7,
+      "verseIndex": 1
+    },
+    {
+      "bookIndex": 42,
+      "chapterIndex": 19,
+      "verseIndex": 0,
+      "verseName": "Jan 19:1",
+      "date": "2025-04-20T00:00:00Z"
+    },
+    {
+      "date": "2025-04-21T00:00:00Z",
+      "verseName": "Ezayi 11:5",
+      "bookIndex": 22,
+      "chapterIndex": 10,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-04-22T00:00:00Z",
+      "verseName": "Kantik 5:4",
+      "bookIndex": 21,
+      "chapterIndex": 4,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-23T00:00:00Z",
+      "verseName": "1 Timote 3:4",
+      "bookIndex": 53,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-24T00:00:00Z",
+      "verseName": "Amòs 3:4",
+      "bookIndex": 29,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-25T00:00:00Z",
+      "verseName": "2 Wa 6:1",
+      "bookIndex": 11,
+      "chapterIndex": 5,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-04-26T00:00:00Z",
+      "verseName": "2 Timote 4:3",
+      "bookIndex": 54,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-27T00:00:00Z",
+      "verseName": "2 Piè 2:2",
+      "bookIndex": 60,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-04-28T00:00:00Z",
+      "verseName": "Jeremi 7:4",
+      "bookIndex": 23,
+      "chapterIndex": 6,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-04-29T00:00:00Z",
+      "verseName": "Travay 6:3",
+      "bookIndex": 43,
+      "chapterIndex": 5,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-04-30T00:00:00Z",
+      "verseName": "Filipyen 4:4",
+      "bookIndex": 49,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-05-01T00:00:00Z",
+      "verseName": "Jòb 5:1",
+      "bookIndex": 17,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-02T00:00:00Z",
+      "verseName": "1 Jan 2:2",
+      "bookIndex": 61,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-05-03T00:00:00Z",
+      "verseName": "Women 4:5",
+      "bookIndex": 44,
+      "chapterIndex": 3,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-04T00:00:00Z",
+      "verseName": "2 Jan 1:4",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-05-05T00:00:00Z",
+      "verseName": "Jowèl 1:5",
+      "bookIndex": 28,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-06T00:00:00Z",
+      "verseName": "Efezyen 1:1",
+      "bookIndex": 48,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-07T00:00:00Z",
+      "verseName": "Danyèl 2:1",
+      "bookIndex": 26,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-08T00:00:00Z",
+      "verseName": "1 Timote 1:4",
+      "bookIndex": 53,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-05-09T00:00:00Z",
+      "verseName": "Pwovèb 6:1",
+      "bookIndex": 19,
+      "chapterIndex": 5,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-10T00:00:00Z",
+      "verseName": "2 Kwonik 2:3",
+      "bookIndex": 13,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-05-11T00:00:00Z",
+      "verseName": "Nawoum 1:4",
+      "bookIndex": 33,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-05-12T00:00:00Z",
+      "verseName": "Abdyas 1:5",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-13T00:00:00Z",
+      "verseName": "Aje 2:1",
+      "bookIndex": 36,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-14T00:00:00Z",
+      "verseName": "2 Wa 7:1",
+      "bookIndex": 11,
+      "chapterIndex": 6,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-15T00:00:00Z",
+      "verseName": "Sofonyas 1:2",
+      "bookIndex": 35,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-05-16T00:00:00Z",
+      "verseName": "Jòb 8:1",
+      "bookIndex": 17,
+      "chapterIndex": 7,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-17T00:00:00Z",
+      "verseName": "Malaki 1:5",
+      "bookIndex": 38,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-18T00:00:00Z",
+      "verseName": "3 Jan 1:5",
+      "bookIndex": 63,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-19T00:00:00Z",
+      "verseName": "1 Tesalonisyen 4:3",
+      "bookIndex": 51,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-05-20T00:00:00Z",
+      "verseName": "2 Timote 1:4",
+      "bookIndex": 54,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-05-21T00:00:00Z",
+      "verseName": "Travay 11:2",
+      "bookIndex": 43,
+      "chapterIndex": 10,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-05-22T00:00:00Z",
+      "verseName": "Revelasyon 5:5",
+      "bookIndex": 65,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-23T00:00:00Z",
+      "verseName": "Som 11:5",
+      "bookIndex": 18,
+      "chapterIndex": 10,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-24T00:00:00Z",
+      "verseName": "2 Korentyen 3:5",
+      "bookIndex": 46,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-25T00:00:00Z",
+      "verseName": "Ebre 3:1",
+      "bookIndex": 57,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-26T00:00:00Z",
+      "verseName": "2 Wa 5:3",
+      "bookIndex": 11,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-05-27T00:00:00Z",
+      "verseName": "Ezayi 9:1",
+      "bookIndex": 22,
+      "chapterIndex": 8,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-05-28T00:00:00Z",
+      "verseName": "Kolosyen 2:3",
+      "bookIndex": 50,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-05-29T00:00:00Z",
+      "verseName": "Abakòk 2:2",
+      "bookIndex": 34,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-05-30T00:00:00Z",
+      "verseName": "2 Jan 1:5",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-05-31T00:00:00Z",
+      "verseName": "Neemi 8:3",
+      "bookIndex": 15,
+      "chapterIndex": 7,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-01T00:00:00Z",
+      "verseName": "2 Timote 3:3",
+      "bookIndex": 54,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-02T00:00:00Z",
+      "verseName": "1 Kwonik 5:3",
+      "bookIndex": 12,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-03T00:00:00Z",
+      "verseName": "Jòb 6:5",
+      "bookIndex": 17,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-04T00:00:00Z",
+      "verseName": "Oze 3:2",
+      "bookIndex": 27,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-06-05T00:00:00Z",
+      "verseName": "Mike 1:1",
+      "bookIndex": 32,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-06T00:00:00Z",
+      "verseName": "Jij 7:5",
+      "bookIndex": 6,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-07T00:00:00Z",
+      "verseName": "1 Timote 3:5",
+      "bookIndex": 53,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-08T00:00:00Z",
+      "verseName": "Lik 5:1",
+      "bookIndex": 41,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-09T00:00:00Z",
+      "verseName": "2 Kwonik 10:4",
+      "bookIndex": 13,
+      "chapterIndex": 9,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-06-10T00:00:00Z",
+      "verseName": "Jonas 3:5",
+      "bookIndex": 31,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-11T00:00:00Z",
+      "verseName": "Galasyen 5:1",
+      "bookIndex": 47,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-12T00:00:00Z",
+      "verseName": "Mak 1:5",
+      "bookIndex": 40,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-13T00:00:00Z",
+      "verseName": "Rit 2:4",
+      "bookIndex": 7,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-06-14T00:00:00Z",
+      "verseName": "Filipyen 4:1",
+      "bookIndex": 49,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-15T00:00:00Z",
+      "verseName": "Women 7:1",
+      "bookIndex": 44,
+      "chapterIndex": 6,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-16T00:00:00Z",
+      "verseName": "3 Jan 1:5",
+      "bookIndex": 63,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-17T00:00:00Z",
+      "verseName": "Travay 5:2",
+      "bookIndex": 43,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-06-18T00:00:00Z",
+      "verseName": "Egzòd 7:3",
+      "bookIndex": 1,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-19T00:00:00Z",
+      "verseName": "Zakari 3:3",
+      "bookIndex": 37,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-20T00:00:00Z",
+      "verseName": "2 Samyèl 10:5",
+      "bookIndex": 9,
+      "chapterIndex": 9,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-21T00:00:00Z",
+      "verseName": "1 Wa 8:3",
+      "bookIndex": 10,
+      "chapterIndex": 7,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-06-22T00:00:00Z",
+      "verseName": "Galasyen 1:5",
+      "bookIndex": 47,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-23T00:00:00Z",
+      "verseName": "2 Jan 1:5",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-24T00:00:00Z",
+      "verseName": "Revelasyon 5:2",
+      "bookIndex": 65,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-06-25T00:00:00Z",
+      "verseName": "Oze 9:1",
+      "bookIndex": 27,
+      "chapterIndex": 8,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-26T00:00:00Z",
+      "verseName": "Danyèl 3:4",
+      "bookIndex": 26,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-06-27T00:00:00Z",
+      "verseName": "2 Timote 2:5",
+      "bookIndex": 54,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-06-28T00:00:00Z",
+      "verseName": "Malaki 2:2",
+      "bookIndex": 38,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-06-29T00:00:00Z",
+      "verseName": "Lamantasyon 1:1",
+      "bookIndex": 24,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-06-30T00:00:00Z",
+      "verseName": "Estè 6:4",
+      "bookIndex": 16,
+      "chapterIndex": 5,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-01T00:00:00Z",
+      "verseName": "Mak 2:4",
+      "bookIndex": 40,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-02T00:00:00Z",
+      "verseName": "Mike 5:5",
+      "bookIndex": 32,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-03T00:00:00Z",
+      "verseName": "Abdyas 1:4",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-04T00:00:00Z",
+      "verseName": "Kantik 4:2",
+      "bookIndex": 21,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-07-05T00:00:00Z",
+      "verseName": "Zakari 2:4",
+      "bookIndex": 37,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-06T00:00:00Z",
+      "verseName": "Women 3:4",
+      "bookIndex": 44,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-07T00:00:00Z",
+      "verseName": "Ezayi 4:2",
+      "bookIndex": 22,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-07-08T00:00:00Z",
+      "verseName": "Nawoum 2:5",
+      "bookIndex": 33,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-09T00:00:00Z",
+      "verseName": "2 Piè 3:1",
+      "bookIndex": 60,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-10T00:00:00Z",
+      "verseName": "1 Kwonik 6:4",
+      "bookIndex": 12,
+      "chapterIndex": 5,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-11T00:00:00Z",
+      "verseName": "Oze 6:5",
+      "bookIndex": 27,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-12T00:00:00Z",
+      "verseName": "3 Jan 1:4",
+      "bookIndex": 63,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-13T00:00:00Z",
+      "verseName": "Travay 7:2",
+      "bookIndex": 43,
+      "chapterIndex": 6,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-07-14T00:00:00Z",
+      "verseName": "Sofonyas 3:5",
+      "bookIndex": 35,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-15T00:00:00Z",
+      "verseName": "Ezekyèl 4:4",
+      "bookIndex": 25,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-16T00:00:00Z",
+      "verseName": "1 Samyèl 7:5",
+      "bookIndex": 8,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-17T00:00:00Z",
+      "verseName": "2 Jan 1:2",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-07-18T00:00:00Z",
+      "verseName": "Women 2:1",
+      "bookIndex": 44,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-19T00:00:00Z",
+      "verseName": "Estè 8:1",
+      "bookIndex": 16,
+      "chapterIndex": 7,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-20T00:00:00Z",
+      "verseName": "Nawoum 2:3",
+      "bookIndex": 33,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-07-21T00:00:00Z",
+      "verseName": "Jeremi 6:1",
+      "bookIndex": 23,
+      "chapterIndex": 5,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-22T00:00:00Z",
+      "verseName": "1 Tesalonisyen 4:4",
+      "bookIndex": 51,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-23T00:00:00Z",
+      "verseName": "Zakari 6:1",
+      "bookIndex": 37,
+      "chapterIndex": 5,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-24T00:00:00Z",
+      "verseName": "Lik 5:3",
+      "bookIndex": 41,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-07-25T00:00:00Z",
+      "verseName": "1 Timote 1:1",
+      "bookIndex": 53,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-26T00:00:00Z",
+      "verseName": "Levitik 6:5",
+      "bookIndex": 2,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-07-27T00:00:00Z",
+      "verseName": "Efezyen 3:1",
+      "bookIndex": 48,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-07-28T00:00:00Z",
+      "verseName": "Abdyas 1:2",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-07-29T00:00:00Z",
+      "verseName": "Malaki 2:3",
+      "bookIndex": 38,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-07-30T00:00:00Z",
+      "verseName": "Ezayi 7:4",
+      "bookIndex": 22,
+      "chapterIndex": 6,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-07-31T00:00:00Z",
+      "verseName": "2 Kwonik 7:3",
+      "bookIndex": 13,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-01T00:00:00Z",
+      "verseName": "Jòb 5:5",
+      "bookIndex": 17,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-02T00:00:00Z",
+      "verseName": "Aje 1:3",
+      "bookIndex": 36,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-03T00:00:00Z",
+      "verseName": "Lamantasyon 1:5",
+      "bookIndex": 24,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-04T00:00:00Z",
+      "verseName": "Travay 3:4",
+      "bookIndex": 43,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-08-05T00:00:00Z",
+      "verseName": "2 Jan 1:5",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-06T00:00:00Z",
+      "verseName": "Deteronòm 3:1",
+      "bookIndex": 4,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-07T00:00:00Z",
+      "verseName": "Esdras 5:1",
+      "bookIndex": 14,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-08T00:00:00Z",
+      "verseName": "Estè 5:3",
+      "bookIndex": 16,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-09T00:00:00Z",
+      "verseName": "Nòm 3:4",
+      "bookIndex": 3,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-08-10T00:00:00Z",
+      "verseName": "Tit 3:3",
+      "bookIndex": 55,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-11T00:00:00Z",
+      "verseName": "Som 11:3",
+      "bookIndex": 18,
+      "chapterIndex": 10,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-12T00:00:00Z",
+      "verseName": "1 Wa 4:1",
+      "bookIndex": 10,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-13T00:00:00Z",
+      "verseName": "Abakòk 3:5",
+      "bookIndex": 34,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-14T00:00:00Z",
+      "verseName": "Rit 2:1",
+      "bookIndex": 7,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-15T00:00:00Z",
+      "verseName": "Oze 5:4",
+      "bookIndex": 27,
+      "chapterIndex": 4,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-08-16T00:00:00Z",
+      "verseName": "1 Jan 4:2",
+      "bookIndex": 61,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-08-17T00:00:00Z",
+      "verseName": "2 Piè 2:3",
+      "bookIndex": 60,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-18T00:00:00Z",
+      "verseName": "Sofonyas 3:1",
+      "bookIndex": 35,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-19T00:00:00Z",
+      "verseName": "Mike 3:5",
+      "bookIndex": 32,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-20T00:00:00Z",
+      "verseName": "1 Piè 4:5",
+      "bookIndex": 59,
+      "chapterIndex": 3,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-21T00:00:00Z",
+      "verseName": "Jonas 1:4",
+      "bookIndex": 31,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-08-22T00:00:00Z",
+      "verseName": "Jozye 1:2",
+      "bookIndex": 5,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-08-23T00:00:00Z",
+      "verseName": "Jan 6:5",
+      "bookIndex": 42,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-24T00:00:00Z",
+      "verseName": "2 Korentyen 6:3",
+      "bookIndex": 46,
+      "chapterIndex": 5,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-25T00:00:00Z",
+      "verseName": "1 Korentyen 7:3",
+      "bookIndex": 45,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-26T00:00:00Z",
+      "verseName": "Nòm 5:3",
+      "bookIndex": 3,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-27T00:00:00Z",
+      "verseName": "Eklezyas 6:5",
+      "bookIndex": 20,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-28T00:00:00Z",
+      "verseName": "Jij 3:1",
+      "bookIndex": 6,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-08-29T00:00:00Z",
+      "verseName": "Ezayi 7:5",
+      "bookIndex": 22,
+      "chapterIndex": 6,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-08-30T00:00:00Z",
+      "verseName": "Jòb 9:3",
+      "bookIndex": 17,
+      "chapterIndex": 8,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-08-31T00:00:00Z",
+      "verseName": "1 Wa 3:1",
+      "bookIndex": 10,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-01T00:00:00Z",
+      "verseName": "Revelasyon 10:1",
+      "bookIndex": 65,
+      "chapterIndex": 9,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-02T00:00:00Z",
+      "verseName": "Nawoum 2:5",
+      "bookIndex": 33,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-03T00:00:00Z",
+      "verseName": "Aje 2:5",
+      "bookIndex": 36,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-04T00:00:00Z",
+      "verseName": "Som 10:4",
+      "bookIndex": 18,
+      "chapterIndex": 9,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-05T00:00:00Z",
+      "verseName": "2 Timote 3:4",
+      "bookIndex": 54,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-06T00:00:00Z",
+      "verseName": "1 Kwonik 5:5",
+      "bookIndex": 12,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-07T00:00:00Z",
+      "verseName": "2 Jan 1:4",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-08T00:00:00Z",
+      "verseName": "Sofonyas 1:1",
+      "bookIndex": 35,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-09T00:00:00Z",
+      "verseName": "1 Piè 2:3",
+      "bookIndex": 59,
+      "chapterIndex": 1,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-09-10T00:00:00Z",
+      "verseName": "2 Samyèl 11:5",
+      "bookIndex": 9,
+      "chapterIndex": 10,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-11T00:00:00Z",
+      "verseName": "Filemon 1:4",
+      "bookIndex": 56,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-12T00:00:00Z",
+      "verseName": "2 Kwonik 4:1",
+      "bookIndex": 13,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-13T00:00:00Z",
+      "verseName": "1 Jan 3:1",
+      "bookIndex": 61,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-14T00:00:00Z",
+      "verseName": "1 Timote 3:2",
+      "bookIndex": 53,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-15T00:00:00Z",
+      "verseName": "Jid 1:5",
+      "bookIndex": 64,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-16T00:00:00Z",
+      "verseName": "Jowèl 3:2",
+      "bookIndex": 28,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-17T00:00:00Z",
+      "verseName": "Abdyas 1:4",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-18T00:00:00Z",
+      "verseName": "Matye 1:4",
+      "bookIndex": 39,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-09-19T00:00:00Z",
+      "verseName": "2 Korentyen 2:5",
+      "bookIndex": 46,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-20T00:00:00Z",
+      "verseName": "Jòb 4:3",
+      "bookIndex": 17,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-09-21T00:00:00Z",
+      "verseName": "Travay 3:1",
+      "bookIndex": 43,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-22T00:00:00Z",
+      "verseName": "Levitik 10:2",
+      "bookIndex": 2,
+      "chapterIndex": 9,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-23T00:00:00Z",
+      "verseName": "Nòm 3:2",
+      "bookIndex": 3,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-24T00:00:00Z",
+      "verseName": "Revelasyon 1:2",
+      "bookIndex": 65,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-25T00:00:00Z",
+      "verseName": "Kantik 2:5",
+      "bookIndex": 21,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-09-26T00:00:00Z",
+      "verseName": "1 Jan 3:1",
+      "bookIndex": 61,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-09-27T00:00:00Z",
+      "verseName": "Eklezyas 10:2",
+      "bookIndex": 20,
+      "chapterIndex": 9,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-28T00:00:00Z",
+      "verseName": "Filemon 1:3",
+      "bookIndex": 56,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-09-29T00:00:00Z",
+      "verseName": "2 Wa 5:2",
+      "bookIndex": 11,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-09-30T00:00:00Z",
+      "verseName": "Som 11:3",
+      "bookIndex": 18,
+      "chapterIndex": 10,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-01T00:00:00Z",
+      "verseName": "Nawoum 1:1",
+      "bookIndex": 33,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-02T00:00:00Z",
+      "verseName": "Jenèz 3:2",
+      "bookIndex": 0,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-10-03T00:00:00Z",
+      "verseName": "Malaki 2:1",
+      "bookIndex": 38,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-04T00:00:00Z",
+      "verseName": "Deteronòm 6:5",
+      "bookIndex": 4,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-05T00:00:00Z",
+      "verseName": "2 Samyèl 6:4",
+      "bookIndex": 9,
+      "chapterIndex": 5,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-06T00:00:00Z",
+      "verseName": "Filipyen 4:3",
+      "bookIndex": 49,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-07T00:00:00Z",
+      "verseName": "1 Samyèl 6:2",
+      "bookIndex": 8,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-10-08T00:00:00Z",
+      "verseName": "2 Kwonik 2:1",
+      "bookIndex": 13,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-09T00:00:00Z",
+      "verseName": "Amòs 9:3",
+      "bookIndex": 29,
+      "chapterIndex": 8,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-10T00:00:00Z",
+      "verseName": "Ebre 7:3",
+      "bookIndex": 57,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-11T00:00:00Z",
+      "verseName": "2 Wa 9:1",
+      "bookIndex": 11,
+      "chapterIndex": 8,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-12T00:00:00Z",
+      "verseName": "Lamantasyon 5:5",
+      "bookIndex": 24,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-13T00:00:00Z",
+      "verseName": "Rit 1:5",
+      "bookIndex": 7,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-14T00:00:00Z",
+      "verseName": "Efezyen 4:4",
+      "bookIndex": 48,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-15T00:00:00Z",
+      "verseName": "Estè 2:4",
+      "bookIndex": 16,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-16T00:00:00Z",
+      "verseName": "3 Jan 1:4",
+      "bookIndex": 63,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-17T00:00:00Z",
+      "verseName": "1 Tesalonisyen 5:2",
+      "bookIndex": 51,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-10-18T00:00:00Z",
+      "verseName": "2 Korentyen 9:4",
+      "bookIndex": 46,
+      "chapterIndex": 8,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-19T00:00:00Z",
+      "verseName": "Levitik 11:3",
+      "bookIndex": 2,
+      "chapterIndex": 10,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-20T00:00:00Z",
+      "verseName": "Women 7:4",
+      "bookIndex": 44,
+      "chapterIndex": 6,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-10-21T00:00:00Z",
+      "verseName": "Zakari 9:1",
+      "bookIndex": 37,
+      "chapterIndex": 8,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-22T00:00:00Z",
+      "verseName": "Travay 5:5",
+      "bookIndex": 43,
+      "chapterIndex": 4,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-23T00:00:00Z",
+      "verseName": "Pwovèb 3:5",
+      "bookIndex": 19,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-24T00:00:00Z",
+      "verseName": "Jan 4:3",
+      "bookIndex": 42,
+      "chapterIndex": 3,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-25T00:00:00Z",
+      "verseName": "Filipyen 1:3",
+      "bookIndex": 49,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-10-26T00:00:00Z",
+      "verseName": "Jenèz 1:1",
+      "bookIndex": 0,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-27T00:00:00Z",
+      "verseName": "Esdras 10:5",
+      "bookIndex": 14,
+      "chapterIndex": 9,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-10-28T00:00:00Z",
+      "verseName": "Filemon 1:1",
+      "bookIndex": 56,
+      "chapterIndex": 0,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-29T00:00:00Z",
+      "verseName": "Jij 6:2",
+      "bookIndex": 6,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-10-30T00:00:00Z",
+      "verseName": "Jowèl 3:1",
+      "bookIndex": 28,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-10-31T00:00:00Z",
+      "verseName": "Jeremi 11:5",
+      "bookIndex": 23,
+      "chapterIndex": 10,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-01T00:00:00Z",
+      "verseName": "1 Wa 1:2",
+      "bookIndex": 10,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-02T00:00:00Z",
+      "verseName": "2 Samyèl 5:2",
+      "bookIndex": 9,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-03T00:00:00Z",
+      "verseName": "2 Tesalonisyen 1:2",
+      "bookIndex": 52,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-04T00:00:00Z",
+      "verseName": "Lik 8:4",
+      "bookIndex": 41,
+      "chapterIndex": 7,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-05T00:00:00Z",
+      "verseName": "1 Kwonik 1:5",
+      "bookIndex": 12,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-06T00:00:00Z",
+      "verseName": "Ezayi 11:1",
+      "bookIndex": 22,
+      "chapterIndex": 10,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-11-07T00:00:00Z",
+      "verseName": "1 Jan 4:2",
+      "bookIndex": 61,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-08T00:00:00Z",
+      "verseName": "Travay 9:5",
+      "bookIndex": 43,
+      "chapterIndex": 8,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-09T00:00:00Z",
+      "verseName": "1 Samyèl 4:4",
+      "bookIndex": 8,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-10T00:00:00Z",
+      "verseName": "Jenèz 5:4",
+      "bookIndex": 0,
+      "chapterIndex": 4,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-11T00:00:00Z",
+      "verseName": "Zakari 5:3",
+      "bookIndex": 37,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-11-12T00:00:00Z",
+      "verseName": "2 Piè 3:1",
+      "bookIndex": 60,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-11-13T00:00:00Z",
+      "verseName": "Abdyas 1:2",
+      "bookIndex": 30,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-14T00:00:00Z",
+      "verseName": "Amòs 9:5",
+      "bookIndex": 29,
+      "chapterIndex": 8,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-15T00:00:00Z",
+      "verseName": "Filemon 1:5",
+      "bookIndex": 56,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-16T00:00:00Z",
+      "verseName": "2 Kwonik 1:4",
+      "bookIndex": 13,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-17T00:00:00Z",
+      "verseName": "Danyèl 11:3",
+      "bookIndex": 26,
+      "chapterIndex": 10,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-11-18T00:00:00Z",
+      "verseName": "Nawoum 2:1",
+      "bookIndex": 33,
+      "chapterIndex": 1,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-11-19T00:00:00Z",
+      "verseName": "Efezyen 5:2",
+      "bookIndex": 48,
+      "chapterIndex": 4,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-20T00:00:00Z",
+      "verseName": "1 Korentyen 6:2",
+      "bookIndex": 45,
+      "chapterIndex": 5,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-21T00:00:00Z",
+      "verseName": "Jowèl 3:5",
+      "bookIndex": 28,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-22T00:00:00Z",
+      "verseName": "2 Jan 1:5",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-11-23T00:00:00Z",
+      "verseName": "3 Jan 1:2",
+      "bookIndex": 63,
+      "chapterIndex": 0,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-24T00:00:00Z",
+      "verseName": "Levitik 3:4",
+      "bookIndex": 2,
+      "chapterIndex": 2,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-25T00:00:00Z",
+      "verseName": "Jonas 3:1",
+      "bookIndex": 31,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-11-26T00:00:00Z",
+      "verseName": "1 Piè 4:2",
+      "bookIndex": 59,
+      "chapterIndex": 3,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-27T00:00:00Z",
+      "verseName": "Ebre 6:4",
+      "bookIndex": 57,
+      "chapterIndex": 5,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-11-28T00:00:00Z",
+      "verseName": "1 Samyèl 3:2",
+      "bookIndex": 8,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-11-29T00:00:00Z",
+      "verseName": "2 Timote 1:3",
+      "bookIndex": 54,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-11-30T00:00:00Z",
+      "verseName": "Nawoum 3:1",
+      "bookIndex": 33,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-01T00:00:00Z",
+      "verseName": "Filemon 1:5",
+      "bookIndex": 56,
+      "chapterIndex": 0,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-02T00:00:00Z",
+      "verseName": "Rit 3:3",
+      "bookIndex": 7,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-03T00:00:00Z",
+      "verseName": "Neemi 4:1",
+      "bookIndex": 15,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-04T00:00:00Z",
+      "verseName": "Nòm 5:3",
+      "bookIndex": 3,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-05T00:00:00Z",
+      "verseName": "2 Jan 1:4",
+      "bookIndex": 62,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-06T00:00:00Z",
+      "verseName": "Galasyen 3:2",
+      "bookIndex": 47,
+      "chapterIndex": 2,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-12-07T00:00:00Z",
+      "verseName": "Egzòd 9:4",
+      "bookIndex": 1,
+      "chapterIndex": 8,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-08T00:00:00Z",
+      "verseName": "Matye 9:5",
+      "bookIndex": 39,
+      "chapterIndex": 8,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-09T00:00:00Z",
+      "verseName": "Efezyen 4:4",
+      "bookIndex": 48,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-10T00:00:00Z",
+      "verseName": "Amòs 6:5",
+      "bookIndex": 29,
+      "chapterIndex": 5,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-11T00:00:00Z",
+      "verseName": "Jeremi 11:3",
+      "bookIndex": 23,
+      "chapterIndex": 10,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-12T00:00:00Z",
+      "verseName": "Jòb 5:3",
+      "bookIndex": 17,
+      "chapterIndex": 4,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-13T00:00:00Z",
+      "verseName": "Abakòk 1:4",
+      "bookIndex": 34,
+      "chapterIndex": 0,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-14T00:00:00Z",
+      "verseName": "Lamantasyon 3:1",
+      "bookIndex": 24,
+      "chapterIndex": 2,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-15T00:00:00Z",
+      "verseName": "Oze 11:4",
+      "bookIndex": 27,
+      "chapterIndex": 10,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-16T00:00:00Z",
+      "verseName": "Levitik 10:5",
+      "bookIndex": 2,
+      "chapterIndex": 9,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-17T00:00:00Z",
+      "verseName": "1 Jan 2:2",
+      "bookIndex": 61,
+      "chapterIndex": 1,
+      "verseIndex": 1
+    },
+    {
+      "date": "2025-12-18T00:00:00Z",
+      "verseName": "Aje 2:4",
+      "bookIndex": 36,
+      "chapterIndex": 1,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-19T00:00:00Z",
+      "verseName": "Matye 10:1",
+      "bookIndex": 39,
+      "chapterIndex": 9,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-20T00:00:00Z",
+      "verseName": "Filipyen 4:4",
+      "bookIndex": 49,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-21T00:00:00Z",
+      "verseName": "1 Tesalonisyen 4:1",
+      "bookIndex": 51,
+      "chapterIndex": 3,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-22T00:00:00Z",
+      "verseName": "Mike 3:5",
+      "bookIndex": 32,
+      "chapterIndex": 2,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-23T00:00:00Z",
+      "verseName": "Egzòd 6:4",
+      "bookIndex": 1,
+      "chapterIndex": 5,
+      "verseIndex": 3
+    },
+    {
+      "date": "2025-12-24T00:00:00Z",
+      "verseName": "Jenèz 7:3",
+      "bookIndex": 0,
+      "chapterIndex": 6,
+      "verseIndex": 2
+    },
+    {
+      "bookIndex": 39,
+      "chapterIndex": 1,
+      "verseIndex": 0,
+      "verseName": "Matye 1:1",
+      "date": "2025-12-25T00:00:00Z"
+    },
+    {
+      "date": "2025-12-26T00:00:00Z",
+      "verseName": "Jonas 1:3",
+      "bookIndex": 31,
+      "chapterIndex": 0,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-27T00:00:00Z",
+      "verseName": "Lik 3:3",
+      "bookIndex": 41,
+      "chapterIndex": 2,
+      "verseIndex": 2
+    },
+    {
+      "date": "2025-12-28T00:00:00Z",
+      "verseName": "1 Wa 5:1",
+      "bookIndex": 10,
+      "chapterIndex": 4,
+      "verseIndex": 0
+    },
+    {
+      "date": "2025-12-29T00:00:00Z",
+      "verseName": "2 Samyèl 2:5",
+      "bookIndex": 9,
+      "chapterIndex": 1,
+      "verseIndex": 4
+    },
+    {
+      "date": "2025-12-30T00:00:00Z",
+      "verseName": "Jeremi 4:4",
+      "bookIndex": 23,
+      "chapterIndex": 3,
+      "verseIndex": 3
+    },
+    {
+      "bookIndex": 63,
+      "chapterIndex": 21,
+      "verseIndex": 0,
+      "verseName": "Revelasyon 21:1",
+      "date": "2025-12-31T00:00:00Z"
+    }
+  ]
+}
