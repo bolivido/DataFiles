@@ -4256,17 +4256,370 @@ print(f"0! = {faktoryèl_boucle(0)}")  # 1
 
 ---
 
-## Chapit 3: Kalite Done Debaz
+## Chapit 3: Kalite Done Debaz (Basic Data Types) - Eksplikasyon Detaye pou Debitan
 
-### Nimewo antye (Integers)
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann tout kalite done Python** - String, Integer, Float, Boolean
+- **Sèvi ak operasyon ak chak kalite done** - Metòd ak fonksyon yo
+- **Konvèti ant diferan kalite done** - Chanje kalite enfòmasyon
+- **Sèvi ak string operations avanse** - Slicing, formatting, methods
+- **Devlope yon konvèti sistèm nimewo** - Pwojè pratik
 
-#### Kisa se nimewo antye?
-Nimewo antye yo se nimewo ki pa gen pwen desimal:
+> **💡 TIP:** Chak kalite done gen karakteristik espesyal. Konprann yo byen se kle pou ekri kòd efikas.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Kalite Done Fondamantal**
+- **String (str)** - Tèks, mo, ak fraz
+- **Integer (int)** - Nimewo antye
+- **Float (float)** - Nimewo desimal
+- **Boolean (bool)** - Vre oswa Fo
+
+#### **String Operations**
+- **Slicing** - Koupe ak jwenn pati string
+- **Concatenation** - Konbine string yo
+- **Formatting** - Fòma string yo
+- **Methods** - Fonksyon string yo
+
+#### **Type Conversion**
+- **Explicit** - Konvèsyon manuel
+- **Implicit** - Konvèsyon otomatik
+- **Validation** - Verifye kalite done
+
+---
+
+### 🔢 Nimewo Antye (Integers) - Detay Konplè
+
+#### 🎯 Kisa se nimewo antye (Integer)?
+
+**Integer** se nimewo antye ki pa gen pwen desimal. Yo ka pozitif, negatif, oswa zewo.
+
+> **💡 TIP:** Integer yo se nimewo konplè tankou 1, 2, 3, -5, 0. Yo pa gen pwen desimal.
+
+#### 📋 Karakteristik Integer
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Pozitif** | Nimewo plis | `1`, `25`, `1000` |
+| **Negatif** | Nimewo mwens | `-1`, `-25`, `-1000` |
+| **Zewo** | Nimewo zewo | `0` |
+| **Gwo nimewo** | Nimewo ki gen anpil chif | `1000000`, `999999999` |
+
+#### 🔧 Operasyon ak Integer
+
+**1. Operatè Matematik Fondamantal:**
 
 ```python
-# Nimewo antye pozitif
-age = 25
-anivèrsè = 2024
+# Egzanp nimewo antye
+laj = 25
+negatif = -10
+zewo = 0
+gwo_nimewo = 1000000
+
+# Operasyon matematik
+print("=== OPERASYON MATEMATIK ===")
+print(f"Laj: {laj}")
+print(f"Negatif: {negatif}")
+
+# Adisyon
+sòm = 5 + 3
+print(f"5 + 3 = {sòm}")  # 8
+
+# Soustraksyon
+diferans = 10 - 4
+print(f"10 - 4 = {diferans}")  # 6
+
+# Miltiplikasyon
+pwodui = 6 * 7
+print(f"6 * 7 = {pwodui}")  # 42
+
+# Divizyon (retounen float)
+pwopòsyon = 15 / 3
+print(f"15 / 3 = {pwopòsyon}")  # 5.0
+
+# Divizyon antyè (retounen integer)
+divizyon_antyè = 15 // 3
+print(f"15 // 3 = {divizyon_antyè}")  # 5
+
+# Rès divizyon (modulo)
+rès = 17 % 5
+print(f"17 % 5 = {rès}")  # 2
+
+# Pisans
+pisans = 2 ** 3
+print(f"2 ** 3 = {pisans}")  # 8
+```
+
+**2. Operatè Konparezon:**
+
+```python
+# Konparezon integer
+a = 10
+b = 5
+
+print("=== OPERATÈ KONPAREZON ===")
+print(f"a = {a}, b = {b}")
+print(f"a == b: {a == b}")  # False
+print(f"a != b: {a != b}")  # True
+print(f"a > b: {a > b}")    # True
+print(f"a < b: {a < b}")    # False
+print(f"a >= b: {a >= b}")  # True
+print(f"a <= b: {a <= b}")  # False
+```
+
+**3. Fonksyon Entegre ak Integer:**
+
+```python
+# Fonksyon entegre
+lis_nimewo = [5, 2, 8, 1, 9]
+
+print("=== FONKSYON ENTEGRE ===")
+print(f"Lis: {lis_nimewo}")
+print(f"Min: {min(lis_nimewo)}")  # 1
+print(f"Max: {max(lis_nimewo)}")  # 9
+print(f"Sum: {sum(lis_nimewo)}")  # 25
+print(f"Abs(-5): {abs(-5)}")      # 5
+print(f"Pow(2, 3): {pow(2, 3)}")  # 8
+print(f"Round(3.7): {round(3.7)}") # 4
+```
+
+#### ⚠️ Erè Komen ak Integer
+
+```python
+# ❌ ERÈ KOMEN
+
+# 1. Divize pa zewo
+try:
+    rezilta = 10 / 0
+except ZeroDivisionError:
+    print("❌ Pa ka divize pa zewo!")
+
+# 2. Konvèti string ki pa nimewo
+try:
+    nimewo = int("abc")
+except ValueError:
+    print("❌ 'abc' pa ka konvèti nan nimewo!")
+
+# ✅ SOLISYON SÈKIRITE
+
+def divize_sekir(a, b):
+    """Divize ak kontwòl erè"""
+    if b == 0:
+        print("⚠️ Pa ka divize pa zewo!")
+        return None
+    return a / b
+
+def konvèti_sekir(tèks):
+    """Konvèti tèks nan nimewo ak kontwòl erè"""
+    try:
+        return int(tèks)
+    except ValueError:
+        print(f"⚠️ '{tèks}' pa ka konvèti nan nimewo!")
+        return None
+
+# Teste fonksyon sekirite yo
+print(divize_sekir(10, 2))    # 5.0
+print(divize_sekir(10, 0))    # None
+print(konvèti_sekir("123"))   # 123
+print(konvèti_sekir("abc"))   # None
+```
+
+---
+
+### 🎯 Float (Nimewo Desimal) - Detay Konplè
+
+#### 🎯 Kisa se Float?
+
+**Float** se nimewo desimal ki gen pwen desimal. Yo reprezante nimewo reyèl.
+
+> **💡 TIP:** Float yo se nimewo ki gen pwen desimal tankou 3.14, 2.5, -1.7.
+
+#### 📋 Karakteristik Float
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Pozitif** | Nimewo desimal plis | `3.14`, `2.5`, `0.1` |
+| **Negatif** | Nimewo desimal mwens | `-3.14`, `-2.5` |
+| **Zewo** | Zewo desimal | `0.0` |
+| **Syantifik** | Nimewo ak eksponan | `1e5` (100000), `2e-3` (0.002) |
+
+#### 🔧 Operasyon ak Float
+
+```python
+# Egzanp float
+pri = 25.99
+pwa = 65.5
+pi = 3.14159
+negatif_float = -2.5
+
+print("=== OPERASYON AK FLOAT ===")
+print(f"Pri: {pri}")
+print(f"Pwa: {pwa}")
+print(f"Pi: {pi}")
+
+# Operasyon matematik
+kalkil = 3.14 + 2.86
+print(f"3.14 + 2.86 = {kalkil}")  # 6.0
+
+divizyon = 10 / 3
+print(f"10 / 3 = {divizyon}")     # 3.3333333333333335
+
+# Wonde
+won_2 = round(3.14159, 2)
+print(f"round(3.14159, 2) = {won_2}")  # 3.14
+
+# Fonksyon matematik
+import math
+print(f"sqrt(16) = {math.sqrt(16)}")    # 4.0
+print(f"ceil(3.2) = {math.ceil(3.2)}")  # 4
+print(f"floor(3.8) = {math.floor(3.8)}") # 3
+```
+
+> **⚠️ ATANSYON:** Float yo pa toujou presi 100%. Sa se nòmal nan pwogramasyon.
+
+---
+
+### 🔤 String (Tèks) - Detay Konplè
+
+#### 🎯 Kisa se String?
+
+**String** se kalite done pou tèks. Yo ka genyen lèt, nimewo, espas, ak karaktè espesyal.
+
+> **💡 TIP:** String yo se tèks tankou "Bonjou", "Marie", "123 ABC".
+
+#### 📋 Kreye String
+
+```python
+# Fason diferan pou kreye string
+string1 = "Bonjou"           # Kòm doub
+string2 = 'Mond'             # Kòm sèl
+string3 = """Bonjou
+Mond"""                      # String multiline
+string4 = 'Li di: "Bonjou"'  # Kòm nan string
+
+print("=== KREYE STRING ===")
+print(f"String 1: {string1}")
+print(f"String 2: {string2}")
+print(f"String 3: {string3}")
+print(f"String 4: {string4}")
+```
+
+#### 🔧 String Slicing (Koupe ak Jwenn Pati)
+
+**Slicing** pèmèt ou jwenn pati espesifik nan yon string.
+
+```python
+# String pou egzanp
+tèks = "Bonjou Mond"
+
+print("=== STRING SLICING ===")
+print(f"Tèks konplè: '{tèks}'")
+print(f"Longè: {len(tèks)}")
+
+# Aksede karaktè endividyèl
+print(f"Premye karaktè: '{tèks[0]}'")    # B
+print(f"Dezyèm karaktè: '{tèks[1]}'")    # o
+print(f"Dènye karaktè: '{tèks[-1]}'")    # d
+
+# Slicing ak range
+print(f"Pati 0-5: '{tèks[0:5]}'")       # Bonjo
+print(f"Pati 6-11: '{tèks[6:11]}'")     # Mond
+print(f"Pati 0-6: '{tèks[:6]}'")        # Bonjou
+print(f"Pati 6-fin: '{tèks[6:]}'")      # Mond
+
+# Slicing ak step
+print(f"Chak 2 karaktè: '{tèks[::2]}'") # Bno od
+print(f"Ranvèse: '{tèks[::-1]}'")       # dnoM uojnoB
+```
+
+#### 🔧 String Methods (Metòd String)
+
+```python
+# String pou teste
+tèks = "  Bonjou Mond  "
+
+print("=== STRING METHODS ===")
+print(f"Tèks orijinal: '{tèks}'")
+
+# Metòd fondamantal
+print(f"Upper: '{tèks.upper()}'")        # BONJOU MOND
+print(f"Lower: '{tèks.lower()}'")        # bonjou mond
+print(f"Strip: '{tèks.strip()}'")        # Bonjou Mond
+print(f"Capitalize: '{tèks.capitalize()}'") #   bonjou mond
+print(f"Title: '{tèks.title()}'")        #   Bonjou Mond
+
+# Metòd chèche
+print(f"Find 'Mond': {tèks.find('Mond')}")  # 9
+print(f"Count 'o': {tèks.count('o')}")      # 2
+print(f"Startswith 'Bon': {tèks.startswith('Bon')}")  # False
+print(f"Endswith 'd': {tèks.endswith('d')}")          # True
+
+# Metòd modifye
+print(f"Replace: '{tèks.replace('Mond', 'Ayiti')}'")  #   Bonjou Ayiti
+print(f"Split: {tèks.split()}")                       # ['Bonjou', 'Mond']
+```
+
+#### 🔧 String Formatting (Fòma String)
+
+```python
+# Fòma string ak f-strings (pi popilè)
+non = "Marie"
+laj = 25
+vil = "Pòtoprens"
+
+print("=== STRING FORMATTING ===")
+
+# F-string (rekomande)
+mesaj1 = f"Bonjou {non}, ou gen {laj} ane, ou rete nan {vil}"
+print(f"F-string: {mesaj1}")
+
+# Format method
+mesaj2 = "Bonjou {}, ou gen {} ane, ou rete nan {}".format(non, laj, vil)
+print(f"Format method: {mesaj2}")
+
+# Format ak index
+mesaj3 = "Bonjou {0}, ou gen {1} ane, ou rete nan {2}".format(non, laj, vil)
+print(f"Format ak index: {mesaj3}")
+
+# Format ak non
+mesaj4 = "Bonjou {nom}, ou gen {age} ane, ou rete nan {city}".format(nom=non, age=laj, city=vil)
+print(f"Format ak non: {mesaj4}")
+
+# Format nimewo
+pri = 25.99
+print(f"Pri: ${pri:.2f}")           # $25.99
+print(f"Pousantaj: {0.75:.1%}")     # 75.0%
+print(f"Nimewo: {1234:,}")          # 1,234
+```
+
+#### 🔧 String Concatenation (Konbine String)
+
+```python
+# Konbine string yo
+premye = "Bonjou"
+dezyèm = "Mond"
+
+print("=== STRING CONCATENATION ===")
+
+# Metòd 1: Operatè +
+konbine1 = premye + " " + dezyèm
+print(f"Operatè +: {konbine1}")
+
+# Metòd 2: join()
+lis = [premye, dezyèm]
+konbine2 = " ".join(lis)
+print(f"Join method: {konbine2}")
+
+# Metòd 3: f-string
+konbine3 = f"{premye} {dezyèm}"
+print(f"F-string: {konbine3}")
+
+# Konbine plizyè string
+mo_yo = ["Bonjou", "tout", "moun", "nan", "Ayiti"]
+fraz = " ".join(mo_yo)
+print(f"Fraz konplè: {fraz}")
+```
 kantite = 100
 
 # Nimewo antye negatif
@@ -4906,21 +5259,551 @@ for hex_val in test_yo:
 
 ---
 
-## Chapit 4: Estrikti Done Debaz
+## Chapit 4: Estrikti Done Debaz (Basic Data Structures) - Eksplikasyon Detaye pou Debitan
+
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann estrikti done Python** - Lis, Tuple, Set, Diksyone
+- **Sèvi ak operasyon koleksyon** - Ajoute, retire, modifye eleman
+- **Konprann diferans ant estrikti yo** - Lè sèvi ak chak kalite
+- **Sèvi ak comprehensions** - Fòma kout pou kreye koleksyon
+- **Devlope yon sistèm jesyon kontak** - Pwojè pratik
+
+> **💡 TIP:** Estrikti done yo se fondasyon pou òganize enfòmasyon nan Python. Chak genyen avantaj espesyal.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Estrikti Done Fondamantal**
+- **List** - Koleksyon òdone ki ka chanje
+- **Tuple** - Koleksyon òdone ki pa ka chanje
+- **Set** - Koleksyon ak eleman inik
+- **Dictionary** - Koleksyon ak kle-valè
+
+#### **Operasyon Koleksyon**
+- **Indexing** - Aksede eleman pa pozisyon
+- **Slicing** - Koupe koleksyon
+- **Methods** - Fonksyon koleksyon yo
+- **Comprehensions** - Fòma kout
+
+#### **Karakteristik**
+- **Mutable** - Ka chanje (List, Set, Dictionary)
+- **Immutable** - Pa ka chanje (Tuple)
+- **Ordered** - Genyen lòd (List, Tuple, Dictionary)
+- **Unordered** - Pa genyen lòd (Set)
+
+---
 
 ### 📋 Lis (Lists) - Eksplikasyon Detaye pou Debitan
 
-**Kisa se "Lis"?**
+#### 🎯 Kisa se "Lis" (List)?
 
-Lis se yon koleksyon eleman ki òdone ak ki ka chanje. Pensez a sa tankou yon lis achte nan yon magazen - ou ka ajoute, retire, ak chanje bagay yo nan lòd la.
+**Lis** se yon koleksyon eleman ki òdone ak ki ka chanje (mutable). Pensez a sa tankou yon lis achte nan yon magazen - ou ka ajoute, retire, ak chanje bagay yo nan lòd la.
+
+> **💡 TIP:** Lis yo se tankou yon ranje bwat ki gen nimewo. Ou ka ajoute bwat nouvo, retire bwat, ak chanje sa ki nan bwat yo.
 
 ![Lists visualization](https://images.unsplash.com/photo-1551288049-bebda4e38f71)
 *Source: [Unsplash](https://unsplash.com/photos/lists) - Photo by [Luca Bravo]*
+
+#### 📋 Karakteristik Lis
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Òdone** | Genyen pozisyon fiks | `[0, 1, 2, 3]` |
+| **Mutable** | Ka chanje apre kreasyon | `lis[0] = "nouvo"` |
+| **Duplicate** | Ka genyen eleman doub | `[1, 1, 2, 2]` |
+| **Mixed** | Ka genyen kalite diferan | `[1, "tèks", True]` |
+
+#### 🔧 Kreye Lis
+
+```python
+# Fason diferan pou kreye lis
+print("=== KREYE LIS ===")
+
+# Lis vid
+lis_vid = []
+print(f"Lis vid: {lis_vid}")
+
+# Lis ak eleman
+lis_nimewo = [1, 2, 3, 4, 5]
+print(f"Lis nimewo: {lis_nimewo}")
+
+# Lis ak tèks
+lis_tèks = ["Bonjou", "Mond", "Python"]
+print(f"Lis tèks: {lis_tèks}")
+
+# Lis mixed (kalite diferan)
+lis_mixed = [1, "Bonjou", 3.14, True]
+print(f"Lis mixed: {lis_mixed}")
+
+# Lis ak list() function
+lis_fonksyon = list("Python")
+print(f"Lis ak list(): {lis_fonksyon}")  # ['P', 'y', 't', 'h', 'o', 'n']
+```
+
+#### 🔧 Aksede Eleman nan Lis
+
+```python
+# Lis pou egzanp
+lis = ["Pom", "Banan", "Zoranj", "Grenad"]
+
+print("=== AKSEDE ELEMAN ===")
+print(f"Lis konplè: {lis}")
+
+# Aksede pa index (kòmanse nan 0)
+print(f"Premye eleman: {lis[0]}")    # Pom
+print(f"Dezyèm eleman: {lis[1]}")    # Banan
+print(f"Dènye eleman: {lis[-1]}")    # Grenad
+print(f"Avant-dènye: {lis[-2]}")     # Zoranj
+
+# Slicing (koupe lis)
+print(f"Pati 0-2: {lis[0:2]}")       # ['Pom', 'Banan']
+print(f"Pati 1-3: {lis[1:3]}")       # ['Banan', 'Zoranj']
+print(f"Pati 0-3: {lis[:3]}")        # ['Pom', 'Banan', 'Zoranj']
+print(f"Pati 2-fin: {lis[2:]}")      # ['Zoranj', 'Grenad']
+
+# Slicing ak step
+print(f"Chak 2 eleman: {lis[::2]}")  # ['Pom', 'Zoranj']
+print(f"Ranvèse: {lis[::-1]}")       # ['Grenad', 'Zoranj', 'Banan', 'Pom']
+```
+
+#### 🔧 Modifye Lis
+
+```python
+# Lis pou modifye
+lis = ["Pom", "Banan", "Zoranj"]
+
+print("=== MODIFYE LIS ===")
+print(f"Lis orijinal: {lis}")
+
+# Chanje eleman pa index
+lis[0] = "Mango"
+print(f"Apre chanje [0]: {lis}")
+
+# Ajoute eleman nan fen
+lis.append("Grenad")
+print(f"Apre append: {lis}")
+
+# Ajoute eleman nan pozisyon espesifik
+lis.insert(1, "Anana")
+print(f"Apre insert(1): {lis}")
+
+# Retire eleman pa valè
+lis.remove("Banan")
+print(f"Apre remove('Banan'): {lis}")
+
+# Retire eleman pa index
+eleman_retire = lis.pop(0)
+print(f"Eleman retire: {eleman_retire}")
+print(f"Apre pop(0): {lis}")
+
+# Ajoute plizyè eleman
+lis.extend(["Fig", "Dat"])
+print(f"Apre extend: {lis}")
+
+# Vider lis
+lis.clear()
+print(f"Apre clear: {lis}")
+```
+
+#### 🔧 Metòd Lis Enpòtan
+
+```python
+# Lis pou teste metòd yo
+lis = [3, 1, 4, 1, 5, 9, 2, 6]
+
+print("=== METÒD LIS ENPÒTAN ===")
+print(f"Lis orijinal: {lis}")
+
+# Metòd enfòmasyon
+print(f"Longè: {len(lis)}")
+print(f"Konte 1: {lis.count(1)}")
+print(f"Index 4: {lis.index(4)}")
+
+# Metòd modifye
+lis.sort()
+print(f"Apre sort: {lis}")
+
+lis.reverse()
+print(f"Apre reverse: {lis}")
+
+# Metòd kopi
+lis_kopi = lis.copy()
+print(f"Kopi: {lis_kopi}")
+
+# Teste si eleman nan lis
+print(f"4 nan lis: {4 in lis}")
+print(f"10 nan lis: {10 in lis}")
+```
+
+#### 🔧 Lis Comprehension
+
+```python
+# Lis comprehension - fòma kout pou kreye lis
+print("=== LIS COMPREHENSION ===")
+
+# Kreye lis nimewo kare
+kare = [x**2 for x in range(1, 6)]
+print(f"Nimewo kare: {kare}")  # [1, 4, 9, 16, 25]
+
+# Kreye lis ak kondisyon
+nimewo_pè = [x for x in range(1, 11) if x % 2 == 0]
+print(f"Nimewo pè: {nimewo_pè}")  # [2, 4, 6, 8, 10]
+
+# Kreye lis string
+mo_yo = ["bonjou", "mond", "python"]
+mo_majiskil = [mo.upper() for mo in mo_yo]
+print(f"Mo majiskil: {mo_majiskil}")  # ['BONJOU', 'MOND', 'PYTHON']
+
+# Lis comprehension ak kondisyon konplèks
+nimewo_filtre = [x**2 for x in range(1, 11) if x % 2 == 0 and x > 4]
+print(f"Nimewo filtre: {nimewo_filtre}")  # [36, 64, 100]
+```
 
 **Analoji ki fasil konprann:**
 - **Lis** = Tankou yon lis achte nan yon magazen
 - **Eleman** = Chak bagay nan lis la
 - **Pozisyon** = Nimewo chak bagay (kòmanse nan 0)
+
+---
+
+### 📦 Tuple - Lis ki pa ka chanje
+
+#### 🎯 Kisa se "Tuple"?
+
+**Tuple** se yon koleksyon eleman ki òdone men ki pa ka chanje (immutable). Pensez a sa tankou yon adrès - ou ka li li men ou pa ka chanje li.
+
+> **💡 TIP:** Tuple yo se tankou lis yo men yo pa ka chanje. Yo se "read-only" (sèlman li).
+
+#### 📋 Karakteristik Tuple
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Òdone** | Genyen pozisyon fiks | `(0, 1, 2, 3)` |
+| **Immutable** | Pa ka chanje apre kreasyon | ❌ `tuple[0] = "nouvo"` |
+| **Duplicate** | Ka genyen eleman doub | `(1, 1, 2, 2)` |
+| **Mixed** | Ka genyen kalite diferan | `(1, "tèks", True)` |
+
+#### 🔧 Kreye Tuple
+
+```python
+# Fason diferan pou kreye tuple
+print("=== KREYE TUPLE ===")
+
+# Tuple vid
+tuple_vid = ()
+print(f"Tuple vid: {tuple_vid}")
+
+# Tuple ak eleman
+tuple_nimewo = (1, 2, 3, 4, 5)
+print(f"Tuple nimewo: {tuple_nimewo}")
+
+# Tuple ak tèks
+tuple_tèks = ("Bonjou", "Mond", "Python")
+print(f"Tuple tèks: {tuple_tèks}")
+
+# Tuple mixed
+tuple_mixed = (1, "Bonjou", 3.14, True)
+print(f"Tuple mixed: {tuple_mixed}")
+
+# Tuple ak yon sèl eleman (gen bezwen virgul)
+tuple_sèl = (42,)
+print(f"Tuple sèl: {tuple_sèl}")
+
+# Tuple ak tuple() function
+tuple_fonksyon = tuple("Python")
+print(f"Tuple ak tuple(): {tuple_fonksyon}")  # ('P', 'y', 't', 'h', 'o', 'n')
+```
+
+#### 🔧 Aksede Eleman nan Tuple
+
+```python
+# Tuple pou egzanp
+tuple_egzanp = ("Pom", "Banan", "Zoranj", "Grenad")
+
+print("=== AKSEDE ELEMAN TUPLE ===")
+print(f"Tuple konplè: {tuple_egzanp}")
+
+# Aksede pa index
+print(f"Premye eleman: {tuple_egzanp[0]}")    # Pom
+print(f"Dezyèm eleman: {tuple_egzanp[1]}")    # Banan
+print(f"Dènye eleman: {tuple_egzanp[-1]}")    # Grenad
+
+# Slicing
+print(f"Pati 0-2: {tuple_egzanp[0:2]}")       # ('Pom', 'Banan')
+print(f"Pati 1-3: {tuple_egzanp[1:3]}")       # ('Banan', 'Zoranj')
+print(f"Pati 0-3: {tuple_egzanp[:3]}")        # ('Pom', 'Banan', 'Zoranj')
+print(f"Pati 2-fin: {tuple_egzanp[2:]}")      # ('Zoranj', 'Grenad')
+```
+
+#### 🔧 Metòd Tuple
+
+```python
+# Tuple pou teste metòd yo
+tuple_test = (3, 1, 4, 1, 5, 9, 2, 6)
+
+print("=== METÒD TUPLE ===")
+print(f"Tuple orijinal: {tuple_test}")
+
+# Metòd enfòmasyon
+print(f"Longè: {len(tuple_test)}")
+print(f"Konte 1: {tuple_test.count(1)}")
+print(f"Index 4: {tuple_test.index(4)}")
+
+# Teste si eleman nan tuple
+print(f"4 nan tuple: {4 in tuple_test}")
+print(f"10 nan tuple: {10 in tuple_test}")
+```
+
+> **⚠️ ATANSYON:** Ou pa ka modifye tuple yo. Si ou bezwen chanje eleman yo, kreye yon nouvo tuple.
+
+---
+
+### 🎯 Set - Koleksyon ak Eleman Inik
+
+#### 🎯 Kisa se "Set"?
+
+**Set** se yon koleksyon eleman ki pa genyen lòd ak ki pa ka genyen doublon. Pensez a sa tankou yon sak ki gen bagay diferan - chak bagay ka sèlman yon fwa.
+
+> **💡 TIP:** Set yo se tankou yon koleksyon ki retire doublon otomatikman.
+
+#### 📋 Karakteristik Set
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Unordered** | Pa genyen lòd fiks | `{3, 1, 2}` |
+| **Unique** | Pa genyen doublon | `{1, 1, 2}` → `{1, 2}` |
+| **Mutable** | Ka chanje apre kreasyon | ✅ `set.add()` |
+| **No Index** | Pa ka aksede pa index | ❌ `set[0]` |
+
+#### 🔧 Kreye Set
+
+```python
+# Fason diferan pou kreye set
+print("=== KREYE SET ===")
+
+# Set vid
+set_vid = set()
+print(f"Set vid: {set_vid}")
+
+# Set ak eleman
+set_nimewo = {1, 2, 3, 4, 5}
+print(f"Set nimewo: {set_nimewo}")
+
+# Set ak tèks
+set_tèks = {"Bonjou", "Mond", "Python"}
+print(f"Set tèks: {set_tèks}")
+
+# Set ak doublon (yo pral retire)
+set_doublon = {1, 2, 2, 3, 3, 3}
+print(f"Set ak doublon: {set_doublon}")  # {1, 2, 3}
+
+# Set ak set() function
+set_fonksyon = set("Python")
+print(f"Set ak set(): {set_fonksyon}")  # {'P', 'y', 't', 'h', 'o', 'n'}
+```
+
+#### 🔧 Operasyon Set
+
+```python
+# Set pou egzanp
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+print("=== OPERASYON SET ===")
+print(f"Set 1: {set1}")
+print(f"Set 2: {set2}")
+
+# Ajoute eleman
+set1.add(6)
+print(f"Apre add(6): {set1}")
+
+# Retire eleman
+set1.remove(1)
+print(f"Apre remove(1): {set1}")
+
+# Union (konbine set yo)
+union = set1 | set2
+print(f"Union: {union}")
+
+# Intersection (eleman komen)
+intersection = set1 & set2
+print(f"Intersection: {intersection}")
+
+# Difference (eleman ki pa komen)
+difference = set1 - set2
+print(f"Difference: {difference}")
+
+# Symmetric difference (eleman ki pa komen nan tou de)
+symmetric = set1 ^ set2
+print(f"Symmetric difference: {symmetric}")
+```
+
+#### 🔧 Metòd Set
+
+```python
+# Set pou teste metòd yo
+set_test = {3, 1, 4, 1, 5, 9, 2, 6}
+
+print("=== METÒD SET ===")
+print(f"Set orijinal: {set_test}")
+
+# Metòd enfòmasyon
+print(f"Longè: {len(set_test)}")
+
+# Teste si eleman nan set
+print(f"4 nan set: {4 in set_test}")
+print(f"10 nan set: {10 in set_test}")
+
+# Metòd modifye
+set_test.add(10)
+print(f"Apre add(10): {set_test}")
+
+set_test.discard(1)
+print(f"Apre discard(1): {set_test}")
+
+# Kopi set
+set_kopi = set_test.copy()
+print(f"Kopi: {set_kopi}")
+```
+
+---
+
+### 📚 Dictionary - Asosyasyon Kle-Valè
+
+#### 🎯 Kisa se "Dictionary"?
+
+**Dictionary** se yon koleksyon ak asosyasyon kle-valè. Pensez a sa tankou yon diksyonè - chak mo (kle) gen yon definisyon (valè).
+
+> **💡 TIP:** Dictionary yo se tankou yon lis kontak - chak non gen yon nimewo telefòn.
+
+#### 📋 Karakteristik Dictionary
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Key-Value** | Asosyasyon kle-valè | `{"non": "Marie"}` |
+| **Mutable** | Ka chanje apre kreasyon | ✅ `dict["nouvo"] = "valè"` |
+| **No Duplicate Keys** | Pa ka genyen kle doub | `{"a": 1, "a": 2}` → `{"a": 2}` |
+| **Ordered** | Genyen lòd (Python 3.7+) | Lòd kreasyon prezève |
+
+#### 🔧 Kreye Dictionary
+
+```python
+# Fason diferan pou kreye dictionary
+print("=== KREYE DICTIONARY ===")
+
+# Dictionary vid
+dict_vid = {}
+print(f"Dictionary vid: {dict_vid}")
+
+# Dictionary ak eleman
+dict_kontak = {
+    "Marie": "123-456-7890",
+    "Jean": "098-765-4321",
+    "Sara": "555-123-4567"
+}
+print(f"Dictionary kontak: {dict_vid}")
+
+# Dictionary ak kalite diferan
+dict_mixed = {
+    "non": "Marie",
+    "laj": 25,
+    "prezan": True,
+    "lis": [1, 2, 3]
+}
+print(f"Dictionary mixed: {dict_mixed}")
+
+# Dictionary ak dict() function
+dict_fonksyon = dict(non="Jean", laj=30, vil="Pòtoprens")
+print(f"Dictionary ak dict(): {dict_fonksyon}")
+```
+
+#### 🔧 Aksede ak Modifye Dictionary
+
+```python
+# Dictionary pou egzanp
+kontak = {
+    "Marie": "123-456-7890",
+    "Jean": "098-765-4321",
+    "Sara": "555-123-4567"
+}
+
+print("=== AKSEDE AK MODIFYE DICTIONARY ===")
+print(f"Dictionary orijinal: {kontak}")
+
+# Aksede valè
+print(f"Telefòn Marie: {kontak['Marie']}")
+print(f"Telefòn Jean: {kontak.get('Jean', 'Pa jwenn')}")
+
+# Modifye valè
+kontak["Marie"] = "999-888-7777"
+print(f"Apre chanje Marie: {kontak}")
+
+# Ajoute nouvo eleman
+kontak["Pierre"] = "111-222-3333"
+print(f"Apre ajoute Pierre: {kontak}")
+
+# Retire eleman
+telefòn_retire = kontak.pop("Jean")
+print(f"Telefòn retire: {telefòn_retire}")
+print(f"Apre retire Jean: {kontak}")
+
+# Retire ak del
+del kontak["Sara"]
+print(f"Apre del Sara: {kontak}")
+```
+
+#### 🔧 Metòd Dictionary
+
+```python
+# Dictionary pou teste metòd yo
+dict_test = {
+    "non": "Marie",
+    "laj": 25,
+    "vil": "Pòtoprens",
+    "travay": "Devlopè"
+}
+
+print("=== METÒD DICTIONARY ===")
+print(f"Dictionary orijinal: {dict_test}")
+
+# Metòd enfòmasyon
+print(f"Longè: {len(dict_test)}")
+print(f"Kle yo: {list(dict_test.keys())}")
+print(f"Valè yo: {list(dict_test.values())}")
+print(f"Eleman yo: {list(dict_test.items())}")
+
+# Teste si kle nan dictionary
+print(f"'non' nan dict: {'non' in dict_test}")
+print(f"'adrès' nan dict: {'adrès' in dict_test}")
+
+# Kopi dictionary
+dict_kopi = dict_test.copy()
+print(f"Kopi: {dict_kopi}")
+
+# Vider dictionary
+dict_test.clear()
+print(f"Apre clear: {dict_test}")
+```
+
+#### 🔧 Dictionary Comprehension
+
+```python
+# Dictionary comprehension - fòma kout pou kreye dictionary
+print("=== DICTIONARY COMPREHENSION ===")
+
+# Kreye dictionary ak nimewo ak kare yo
+kare_dict = {x: x**2 for x in range(1, 6)}
+print(f"Dictionary kare: {kare_dict}")  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# Kreye dictionary ak kondisyon
+nimewo_pè = {x: x*2 for x in range(1, 6) if x % 2 == 0}
+print(f"Nimewo pè: {nimewo_pè}")  # {2: 4, 4: 8}
+
+# Kreye dictionary ak string
+mo_yo = ["bonjou", "mond", "python"]
+mo_longè = {mo: len(mo) for mo in mo_yo}
+print(f"Mo ak longè: {mo_longè}")  # {'bonjou': 6, 'mond': 4, 'python': 6}
+```
 - **Modifye** = Ou ka chanje, ajoute, oswa retire bagay yo
 
 #### 📋 Kisa se yon Lis? - Eksplikasyon Detaye
@@ -5914,15 +6797,746 @@ print(rekonstwi)
 
 ## Chapit 5: Kontwòl Akouman (Control Flow) - Eksplikasyon Detaye pou Debitan
 
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann kontwòl akouman nan Python** - If/Else, Elif, While, For
+- **Sèvi ak kondisyon konplèks** - AND, OR, NOT ak konparezon
+- **Kontwòle boucle yo** - Break, Continue, ak boucle imbriquées
+- **Devlope yon jwèt devine nimewo** - Pwojè pratik ak meni entèaktif
+- **Konprann lòjik pwogramasyon** - Fason konpitè a panse
+
+> **💡 TIP:** Kontwòl akouman se fondasyon pou tout pwogramasyon. San li, pwogram yo pa ka pran desizyon.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Kontwòl Akouman Fondamantal**
+- **If/Else** - Desizyon debaz
+- **Elif** - Kondisyon adisyonèl
+- **While** - Boucle ak kondisyon
+- **For** - Boucle pou iterasyon
+
+#### **Operatè Lojik**
+- **AND** - Tou de kondisyon dwe vre
+- **OR** - Yon kondisyon dwe vre
+- **NOT** - Invese kondisyon an
+
+#### **Kontwòl Boucle**
+- **Break** - Sòti nan boucle
+- **Continue** - Kontinye nan pwochen iterasyon
+- **Pass** - Pa fè anyen (placeholder)
+
+---
+
 ### 🎯 Kisa se "Kontwòl Akouman" (Control Flow)?
 
 **Definisyon Detaye:**
 
 **Kontwòl Akouman** se fason konpitè a deside ki kòd pou li ak ki lòd. Li pèmèt pwogram nan pran desizyon epi fè aksyon diferan depann sou kondisyon yo.
 
+> **💡 TIP:** Pensez a kontwòl akouman tankou yon trafik - li dirije kòd la nan direksyon ki bon.
+
+#### 📊 Diagram Kontwòl Akouman
+
+```mermaid
+flowchart TD
+    A[Kòd Kòmanse] --> B{Kondisyon}
+    B -->|Vre| C[Ekzekute Kòd]
+    B -->|Fo| D[Skip Kòd]
+    C --> E[Kontinye]
+    D --> E
+    E --> F[Kòd Fini]
+```
+
+![Control Flow Visualization](https://images.unsplash.com/photo-1551288049-bebda4e38f71)
+*Source: [Unsplash](https://unsplash.com/photos/flow-control) - Photo by [Luca Bravo]*
+
 **Poukisa Kontwòl Akouman Enpòtan?**
 
 1. **Desizyon**: Pwogram nan ka pran desizyon
+2. **Repètisyon**: Li ka repete aksyon yo
+3. **Lojik**: Li ka fè kalkil konplèks
+4. **Entèaktivite**: Li ka reponn ak itilizatè
+
+---
+
+### 🔍 If/Else - Desizyon Debaz
+
+#### 🎯 Kisa se "If/Else"?
+
+**If/Else** se fason pwogram nan pran desizyon. Li teste yon kondisyon epi fè aksyon diferan depann sou rezilta a.
+
+> **💡 TIP:** If/Else se tankou yon pon ki gen de chemen - yon sèl pou "vre", yon lòt pou "fo".
+
+#### 📋 Sentaks If/Else
+
+```python
+# Sentaks debaz
+if kondisyon:
+    # Kòd pou ekzekute si kondisyon vre
+    print("Kondisyon vre!")
+else:
+    # Kòd pou ekzekute si kondisyon fo
+    print("Kondisyon fo!")
+```
+
+#### 🔧 Egzanp Detaye If/Else
+
+**Egzanp 1: Teste Laj**
+
+```python
+print("=== EGZANP 1: TESTE LAJ ===")
+
+# Resevwa laj nan itilizatè
+laj = int(input("Antre laj w: "))
+
+# Teste laj ak if/else
+if laj >= 18:
+    print("✅ Ou ka vote!")
+    print("Ou genyen dwa pou vote nan eleksyon yo.")
+else:
+    print("❌ Ou pa ka vote ankò.")
+    print(f"Ou bezwen tann {18 - laj} ane plis.")
+
+print("Kòd la kontinye...")
+```
+
+**Egzanp 2: Teste Nòt**
+
+```python
+print("=== EGZANP 2: TESTE NÒT ===")
+
+# Resevwa nòt nan itilizatè
+nòt = float(input("Antre nòt w (0-100): "))
+
+# Teste nòt ak if/else
+if nòt >= 60:
+    print("🎉 Fèlikitasyon! Ou pase!")
+    print("Ou ka kontinye nan pwochen nivo.")
+else:
+    print("😔 Ou pa pase.")
+    print("Ou bezwen etidye plis pou pwochen egzamen an.")
+
+print("Kòd la kontinye...")
+```
+
+**Egzanp 3: Teste Nimewo**
+
+```python
+print("=== EGZANP 3: TESTE NIMEWO ===")
+
+# Resevwa nimewo nan itilizatè
+nimewo = int(input("Antre yon nimewo: "))
+
+# Teste si nimewo a pozitif oswa negatif
+if nimewo > 0:
+    print(f"✅ {nimewo} se yon nimewo pozitif.")
+    print("Li pi gran pase zewo.")
+elif nimewo < 0:
+    print(f"❌ {nimewo} se yon nimewo negatif.")
+    print("Li pi piti pase zewo.")
+else:
+    print(f"🔵 {nimewo} se zewo.")
+    print("Li pa pozitif ni negatif.")
+```
+
+#### ⚠️ Erè Komen ak If/Else
+
+```python
+# ❌ ERÈ KOMEN
+
+# 1. Oubliye de pwen (:)
+# if laj >= 18  # ❌ Erè! Bezwen :
+#     print("Ou ka vote")
+
+# 2. Pa respekte indentation
+# if laj >= 18:
+# print("Ou ka vote")  # ❌ Erè! Bezwen indentation
+
+# 3. Sèvi ak = olye ==
+# if laj = 18:  # ❌ Erè! Bezwen ==
+#     print("Ou ka vote")
+
+# ✅ SOLISYON KORÈK
+
+if laj >= 18:
+    print("Ou ka vote")
+```
+
+---
+
+### 🔄 Elif - Kondisyon Adisyonèl
+
+#### 🎯 Kisa se "Elif"?
+
+**Elif** se kondisyon adisyonèl ki pèmèt ou teste plizyè kondisyon. Li se kout pou "else if".
+
+> **💡 TIP:** Elif se tankou yon pon ki gen plizyè chemen - chak kondisyon genyen chemen pa li.
+
+#### 📋 Sentaks Elif
+
+```python
+# Sentaks elif
+if kondisyon1:
+    # Kòd pou kondisyon1
+    print("Kondisyon 1 vre!")
+elif kondisyon2:
+    # Kòd pou kondisyon2
+    print("Kondisyon 2 vre!")
+elif kondisyon3:
+    # Kòd pou kondisyon3
+    print("Kondisyon 3 vre!")
+else:
+    # Kòd pou tout lòt ka
+    print("Okenn kondisyon pa vre!")
+```
+
+#### 🔧 Egzanp Detaye Elif
+
+**Egzanp 1: Sistèm Nòt Lekòl**
+
+```python
+print("=== EGZANP 1: SISTÈM NÒT LEKÒL ===")
+
+# Resevwa nòt nan itilizatè
+nòt = float(input("Antre nòt w (0-100): "))
+
+# Teste nòt ak elif
+if nòt >= 90:
+    print("🏆 Ekselans! Nòt A")
+    print("Ou fè yon travay eksepsyonèl!")
+elif nòt >= 80:
+    print("🥇 Trè bon! Nòt B")
+    print("Ou fè yon bon travay!")
+elif nòt >= 70:
+    print("🥈 Bon! Nòt C")
+    print("Ou fè yon travay satisfezan!")
+elif nòt >= 60:
+    print("🥉 Pase! Nòt D")
+    print("Ou pase men ou ka fè pi bon!")
+else:
+    print("❌ Pa pase! Nòt F")
+    print("Ou bezwen etidye plis pou pwochen egzamen an.")
+```
+
+**Egzanp 2: Kalkilatris Operatè**
+
+```python
+print("=== EGZANP 2: KALKILATRIS OPERATÈ ===")
+
+# Resevwa enfòmasyon nan itilizatè
+nimewo1 = float(input("Antre premye nimewo: "))
+nimewo2 = float(input("Antre dezyèm nimewo: "))
+operatè = input("Antre operatè (+, -, *, /): ")
+
+# Teste operatè ak elif
+if operatè == "+":
+    rezilta = nimewo1 + nimewo2
+    print(f"Adisyon: {nimewo1} + {nimewo2} = {rezilta}")
+elif operatè == "-":
+    rezilta = nimewo1 - nimewo2
+    print(f"Soustraksyon: {nimewo1} - {nimewo2} = {rezilta}")
+elif operatè == "*":
+    rezilta = nimewo1 * nimewo2
+    print(f"Miltiplikasyon: {nimewo1} * {nimewo2} = {rezilta}")
+elif operatè == "/":
+    if nimewo2 != 0:
+        rezilta = nimewo1 / nimewo2
+        print(f"Divizyon: {nimewo1} / {nimewo2} = {rezilta}")
+    else:
+        print("❌ Erè! Pa ka divize pa zewo.")
+else:
+    print("❌ Erè! Operatè pa valab.")
+    print("Operatè valab yo se: +, -, *, /")
+```
+
+**Egzanp 3: Sistèm Meni**
+
+```python
+print("=== EGZANP 3: SISTÈM MENI ===")
+
+# Afiche meni
+print("=== MENI PRENSIPAL ===")
+print("1. Jwèt")
+print("2. Mizik")
+print("3. Fim")
+print("4. Sòti")
+
+# Resevwa chwa nan itilizatè
+chwa = input("Antre chwa w (1-4): ")
+
+# Teste chwa ak elif
+if chwa == "1":
+    print("🎮 Ou chwazi Jwèt!")
+    print("Kòmanse jwèt la...")
+elif chwa == "2":
+    print("🎵 Ou chwazi Mizik!")
+    print("Jwe mizik la...")
+elif chwa == "3":
+    print("🎬 Ou chwazi Fim!")
+    print("Kòmanse fim nan...")
+elif chwa == "4":
+    print("👋 Orevwa!")
+    print("Mèsi pou sèvi ak pwogram nan!")
+else:
+    print("❌ Chwa pa valab!")
+    print("Tanpri antre yon nimewo ant 1 ak 4.")
+```
+
+#### 📊 Diagram If/Else/Elif
+
+```mermaid
+flowchart TD
+    A[Kòd Kòmanse] --> B{Kondisyon 1}
+    B -->|Vre| C[Ekzekute Kòd 1]
+    B -->|Fo| D{Kondisyon 2}
+    D -->|Vre| E[Ekzekute Kòd 2]
+    D -->|Fo| F{Kondisyon 3}
+    F -->|Vre| G[Ekzekute Kòd 3]
+    F -->|Fo| H[Ekzekute Else]
+    C --> I[Kontinye]
+    E --> I
+    G --> I
+    H --> I
+    I --> J[Kòd Fini]
+```
+
+---
+
+### 🔄 While Loop - Boucle Tantke
+
+#### 🎯 Kisa se "While Loop"?
+
+**While Loop** se yon boucle ki kontinye ekzekute kòd la tantke yon kondisyon vre. Li sispann sèlman lè kondisyon an vin fo.
+
+> **💡 TIP:** While Loop se tankou yon moun ki repete yon aksyon tantke yon kondisyon vre.
+
+#### 📋 Sentaks While Loop
+
+```python
+# Sentaks debaz
+while kondisyon:
+    # Kòd pou ekzekute
+    print("Kòd la ekzekute!")
+    # Enpòtan: Chanje kondisyon an pou evite boucle enfini
+```
+
+#### 🔧 Egzanp Detaye While Loop
+
+**Egzanp 1: Konte 1 a 5**
+
+```python
+print("=== EGZANP 1: KONTE 1 A 5 ===")
+
+# Inisyalize varyab
+kontè = 1
+
+# While loop pou konte
+while kontè <= 5:
+    print(f"Konte: {kontè}")
+    kontè += 1  # Enpòtan: Ogmante kontè a
+
+print("Boucle la fini!")
+```
+
+**Egzanp 2: Devine Nimewo**
+
+```python
+print("=== EGZANP 2: DEVINE NIMEWO ===")
+
+# Nimewo sekrè
+nimewo_sekrè = 42
+devine = 0
+
+# While loop pou devine
+while devine != nimewo_sekrè:
+    devine = int(input("Devine nimewo a (1-100): "))
+    
+    if devine < nimewo_sekrè:
+        print("📈 Nimewo a pi gran!")
+    elif devine > nimewo_sekrè:
+        print("📉 Nimewo a pi piti!")
+    else:
+        print("🎉 Kòrèk! Ou devine nimewo a!")
+
+print("Jwèt la fini!")
+```
+
+**Egzanp 3: Meni Entèaktif**
+
+```python
+print("=== EGZANP 3: MENI ENTÈAKTIF ===")
+
+# Varyab pou kontwòle boucle
+kontinye = True
+
+# While loop pou meni
+while kontinye:
+    print("\n=== MENI ===")
+    print("1. Afiche mesaj")
+    print("2. Kalkile kare")
+    print("3. Sòti")
+    
+    chwa = input("Antre chwa w: ")
+    
+    if chwa == "1":
+        print("📝 Mesaj: Bonjou nan Python!")
+    elif chwa == "2":
+        nimewo = int(input("Antre yon nimewo: "))
+        kare = nimewo ** 2
+        print(f"Kare {nimewo} = {kare}")
+    elif chwa == "3":
+        print("👋 Orevwa!")
+        kontinye = False
+    else:
+        print("❌ Chwa pa valab!")
+
+print("Pwogram nan fini!")
+```
+
+#### ⚠️ Boucle Enfini
+
+```python
+# ❌ BOUCLE ENFINI - PA FÈ SA!
+
+# kontè = 1
+# while kontè <= 5:
+#     print(f"Konte: {kontè}")
+#     # ❌ Oubliye ogmante kontè a!
+
+# ✅ SOLISYON KORÈK
+
+kontè = 1
+while kontè <= 5:
+    print(f"Konte: {kontè}")
+    kontè += 1  # ✅ Ogmante kontè a
+```
+
+---
+
+### 🔄 For Loop - Boucle Pou
+
+#### 🎯 Kisa se "For Loop"?
+
+**For Loop** se yon boucle ki ekzekute kòd la pou chak eleman nan yon koleksyon. Li pi fasil pou sèvi ak li pase While Loop.
+
+> **💡 TIP:** For Loop se tankou yon moun ki vize chak bagay nan yon lis epi fè yon aksyon pou chak bagay.
+
+#### 📋 Sentaks For Loop
+
+```python
+# Sentaks debaz
+for eleman in koleksyon:
+    # Kòd pou ekzekute pou chak eleman
+    print(f"Eleman: {eleman}")
+```
+
+#### 🔧 Egzanp Detaye For Loop
+
+**Egzanp 1: Itere sou Lis**
+
+```python
+print("=== EGZANP 1: ITERE SOU LIS ===")
+
+# Lis fwi
+fwi = ["Pom", "Banan", "Zoranj", "Grenad"]
+
+# For loop pou afiche fwi yo
+for fwi_separe in fwi:
+    print(f"🍎 {fwi_separe}")
+
+print("Lis fwi yo fini!")
+```
+
+**Egzanp 2: Itere ak Range**
+
+```python
+print("=== EGZANP 2: ITERE AK RANGE ===")
+
+# For loop ak range
+for nimewo in range(1, 6):
+    print(f"Konte: {nimewo}")
+
+print("\n=== RANGE AK STEP ===")
+# For loop ak range ak step
+for nimewo in range(0, 10, 2):
+    print(f"Nimewo pè: {nimewo}")
+
+print("\n=== RANGE RANVÈSE ===")
+# For loop ak range ranvèse
+for nimewo in range(5, 0, -1):
+    print(f"Konte ranvèse: {nimewo}")
+```
+
+**Egzanp 3: Itere sou String**
+
+```python
+print("=== EGZANP 3: ITERE SOU STRING ===")
+
+# String pou teste
+mo = "Python"
+
+# For loop pou afiche chak karaktè
+for karaktè in mo:
+    print(f"Karaktè: {karaktè}")
+
+print("\n=== ENUMERATE ===")
+# For loop ak enumerate
+for index, karaktè in enumerate(mo):
+    print(f"Pozisyon {index}: {karaktè}")
+```
+
+**Egzanp 4: Itere sou Dictionary**
+
+```python
+print("=== EGZANP 4: ITERE SOU DICTIONARY ===")
+
+# Dictionary kontak
+kontak = {
+    "Marie": "123-456-7890",
+    "Jean": "098-765-4321",
+    "Sara": "555-123-4567"
+}
+
+# For loop pou afiche kontak yo
+print("=== KLE AK VALÈ ===")
+for non, telefòn in kontak.items():
+    print(f"{non}: {telefòn}")
+
+print("\n=== SÈLMAN KLE ===")
+for non in kontak.keys():
+    print(f"Non: {non}")
+
+print("\n=== SÈLMAN VALÈ ===")
+for telefòn in kontak.values():
+    print(f"Telefòn: {telefòn}")
+```
+
+#### 📊 Diagram For Loop
+
+```mermaid
+flowchart TD
+    A[Kòd Kòmanse] --> B[Koleksyon]
+    B --> C[Eleman 1]
+    C --> D[Ekzekute Kòd]
+    D --> E[Eleman 2]
+    E --> F[Ekzekute Kòd]
+    F --> G[Eleman 3]
+    G --> H[Ekzekute Kòd]
+    H --> I[Eleman N]
+    I --> J[Ekzekute Kòd]
+    J --> K[Boucle Fini]
+    K --> L[Kontinye]
+```
+
+---
+
+### 🔄 Break ak Continue
+
+#### 🎯 Kisa se "Break" ak "Continue"?
+
+**Break** sispann boucle la konplètman.
+**Continue** sote pwochen iterasyon an.
+
+> **💡 TIP:** Break se tankou sòti nan yon bilding. Continue se tankou sote yon etaj.
+
+#### 🔧 Egzanp Detaye Break ak Continue
+
+**Egzanp 1: Break**
+
+```python
+print("=== EGZANP 1: BREAK ===")
+
+# For loop ak break
+for nimewo in range(1, 11):
+    if nimewo == 5:
+        print("🛑 Jwenn 5! Sispann boucle la!")
+        break
+    print(f"Konte: {nimewo}")
+
+print("Boucle la fini!")
+```
+
+**Egzanp 2: Continue**
+
+```python
+print("=== EGZANP 2: CONTINUE ===")
+
+# For loop ak continue
+for nimewo in range(1, 11):
+    if nimewo % 2 == 0:
+        print(f"⏭️ Sote nimewo pè: {nimewo}")
+        continue
+    print(f"Konte nimewo enpè: {nimewo}")
+
+print("Boucle la fini!")
+```
+
+**Egzanp 3: Break ak Continue nan While Loop**
+
+```python
+print("=== EGZANP 3: BREAK AK CONTINUE NAN WHILE ===")
+
+kontè = 0
+while kontè < 10:
+    kontè += 1
+    
+    if kontè == 3:
+        print("⏭️ Sote 3!")
+        continue
+    
+    if kontè == 7:
+        print("🛑 Jwenn 7! Sispann!")
+        break
+    
+    print(f"Konte: {kontè}")
+
+print("Boucle la fini!")
+```
+
+---
+
+### 🔄 Boucle Imbriquées
+
+#### 🎯 Kisa se "Boucle Imbriquées"?
+
+**Boucle Imbriquées** se boucle ki nan lòt boucle. Yo pèmèt ou travay ak done ki genyen plizyè dimansyon.
+
+> **💡 TIP:** Boucle Imbriquées se tankou yon tablo ak ranje ak kolòn - ou ka vize chak selil.
+
+#### 🔧 Egzanp Detaye Boucle Imbriquées
+
+**Egzanp 1: Tablo Miltiplikasyon**
+
+```python
+print("=== EGZANP 1: TABLO MILTIPLIKASYON ===")
+
+# Boucle imbriquées pou tablo miltiplikasyon
+for i in range(1, 6):
+    for j in range(1, 6):
+        rezilta = i * j
+        print(f"{i} × {j} = {rezilta}", end="  ")
+    print()  # Nouvo liy apre chak ranje
+
+print("Tablo miltiplikasyon fini!")
+```
+
+**Egzanp 2: Matris Nimewo**
+
+```python
+print("=== EGZANP 2: MATRIS NIMEWO ===")
+
+# Kreye matris 3x3
+matris = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Boucle imbriquées pou afiche matris
+for ranje in matris:
+    for eleman in ranje:
+        print(f"{eleman:2}", end=" ")
+    print()  # Nouvo liy apre chak ranje
+
+print("Matris fini!")
+```
+
+**Egzanp 3: Jwèt Devine ak Meni**
+
+```python
+print("=== EGZANP 3: JWÈT DEVINE AK MENI ===")
+
+# Boucle prensipal pou meni
+while True:
+    print("\n=== MENI JWÈT ===")
+    print("1. Jwe devine nimewo")
+    print("2. Jwe devine mo")
+    print("3. Sòti")
+    
+    chwa = input("Antre chwa w: ")
+    
+    if chwa == "1":
+        print("\n🎯 JWÈT DEVINE NIMEWO")
+        nimewo_sekrè = 42
+        
+        # Boucle pou devine nimewo
+        while True:
+            devine = int(input("Devine nimewo a (1-100): "))
+            
+            if devine == nimewo_sekrè:
+                print("🎉 Kòrèk! Ou devine nimewo a!")
+                break
+            elif devine < nimewo_sekrè:
+                print("📈 Nimewo a pi gran!")
+            else:
+                print("📉 Nimewo a pi piti!")
+    
+    elif chwa == "2":
+        print("\n🎯 JWÈT DEVINE MO")
+        mo_sekrè = "Python"
+        
+        # Boucle pou devine mo
+        while True:
+            devine = input("Devine mo a (6 lèt): ")
+            
+            if devine.lower() == mo_sekrè.lower():
+                print("🎉 Kòrèk! Ou devine mo a!")
+                break
+            else:
+                print("❌ Pa kòrèk! Eseye ankò!")
+    
+    elif chwa == "3":
+        print("👋 Orevwa!")
+        break
+    
+    else:
+        print("❌ Chwa pa valab!")
+```
+
+---
+
+### 📊 Resime Kontwòl Akouman
+
+#### 🎯 Tèm Enpòtan yo
+
+| Tèm | Deskripsyon | Egzanp |
+|-----|-------------|---------|
+| **If/Else** | Desizyon debaz | `if laj >= 18: print("Vote")` |
+| **Elif** | Kondisyon adisyonèl | `elif nòt >= 80: print("B")` |
+| **While** | Boucle ak kondisyon | `while kontè <= 5:` |
+| **For** | Boucle pou iterasyon | `for eleman in lis:` |
+| **Break** | Sispann boucle | `if kondisyon: break` |
+| **Continue** | Sote iterasyon | `if kondisyon: continue` |
+
+#### 🔧 Règ Enpòtan
+
+1. **Indentation**: Respekte indentation Python
+2. **Colon**: Toujou mete `:` apre kondisyon
+3. **Break Condition**: Asire w ke boucle yo ka fini
+4. **Logic**: Verifye lojik kondisyon yo
+
+#### ⚠️ Erè Komen
+
+1. **Oubliye colon (:)** apre kondisyon
+2. **Pa respekte indentation**
+3. **Boucle enfini** nan while loop
+4. **Sèvi ak = olye ==** nan kondisyon
+
+---
+
+### 🎮 Egzèsis Pratik
+
+**Egzèsis 1: Kalkilatris Meni**
+Kreye yon kalkilatris ki gen meni ak operasyon matematik.
+
+**Egzèsis 2: Jwèt Devine**
+Kreye yon jwèt devine nimewo ak endikasyon.
+
+**Egzèsis 3: Sistèm Nòt**
+Kreye yon sistèm ki evalye nòt elèv yo.
+
+**Egzèsis 4: Lis Kontak**
+Kreye yon sistèm jesyon kontak ak meni entèaktif.
 2. **Kondisyon**: Fè diferan bagay depann sou sitiyasyon an
 3. **Lojik**: Aplike rezonman lojik
 4. **Fleksibilite**: Pwogram nan ka adapte ak diferan sitiyasyon
