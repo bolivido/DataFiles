@@ -11382,15 +11382,872 @@ for fòm in fòm_yo:
 
 ## Chapit 8: Jesyon Erè ak Eksepsyon (Error Handling and Exceptions) - Eksplikasyon Detaye pou Debitan
 
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann diferan kalite erè** - SyntaxError, TypeError, ValueError, ak lòt
+- **Sèvi ak try/except** - Kaptire ak jere erè yo
+- **Konprann else ak finally** - Blòk adisyonèl pou jesyon erè
+- **Kreye eksepsyon koutim** - Defini erè pèsonalize
+- **Devlope yon sistèm validasyon** - Pwojè pratik ak jesyon erè
+
+> **💡 TIP:** Jesyon erè se fondasyon pou pwogram solid. Li pèmèt ou kreye pwogram ki pa kraze lè yon bagay ale mal.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Erè Fondamantal**
+- **Error** - Pwoblèm nan kòd la
+- **Exception** - Erè ki rive pandan ekzekisyon
+- **Try** - Blòk kòd pou teste
+- **Except** - Blòk pou kaptire erè
+- **Finally** - Blòk ki toujou ekzekite
+
+#### **Kalite Erè**
+- **SyntaxError** - Erè nan sentaks
+- **TypeError** - Erè nan kalite done
+- **ValueError** - Erè nan valè
+- **NameError** - Varyab pa defini
+- **IndexError** - Endèks pa egziste
+- **KeyError** - Kle pa egziste
+- **ZeroDivisionError** - Divizyon pa zewo
+- **FileNotFoundError** - Fichier pa jwenn
+
+#### **Jesyon Erè**
+- **Raise** - Lanse yon erè
+- **Custom Exception** - Erè pèsonalize
+- **Exception Hierarchy** - Jerachi erè yo
+
+---
+
 ### 🎯 Kisa se "Erè" (Error) nan Pwogramasyon?
 
 **Definisyon Detaye:**
 
 **Erè** se pwoblèm ki rive nan kòd la ki anpeche pwogram nan travay kòrèkteman. Li se tankou yon pwoblèm nan yon rejèt ki fè manje a pa bon.
 
+> **💡 TIP:** Pensez a erè tankou yon pwoblèm nan yon machin - ou ka jwenn li, konprann li, epi korije li pou machin nan travay ankò.
+
+#### 📊 Diagram Jesyon Erè
+
+```mermaid
+flowchart TD
+    A[Kòd Nòmal] --> B[Erè Rive]
+    B --> C[Try/Except]
+    C --> D{Erè Kaptire?}
+    D -->|Wi| E[Jere Erè]
+    D -->|Non| F[Pwogram Kraze]
+    E --> G[Kontinye]
+    F --> H[Fin]
+    G --> I[Kontinye Nòmal]
+```
+
+![Error Handling Visualization](https://images.unsplash.com/photo-1551288049-bebda4e38f71)
+*Source: [Unsplash](https://unsplash.com/photos/error) - Photo by [Luca Bravo]*
+
 **Poukisa Erè Enpòtan?**
 
 1. **Kòrèksyon**: Ou ka jwenn ak korije pwoblèm yo
+2. **Stabilite**: Pwogram nan pa kraze lè yon bagay ale mal
+3. **Eksperyans**: Itilizatè yo genyen yon eksperyans pi bon
+4. **Debogaj**: Pi fasil pou jwenn pwoblèm yo
+5. **Kòd Solid**: Pwogram nan vin pi fiable
+6. **Pwodiktivite**: Ou pa pèdi tan ak pwoblèm yo
+
+---
+
+### 🔧 Kalite Erè yo
+
+#### 🎯 Kisa se "Diferan Kalite Erè"?
+
+**Erè** yo genyen diferan kalite selon kote yo rive ak kisa ki lakòz yo. Chak kalite erè genyen yon siyifikasyon espesifik.
+
+> **💡 TIP:** Erè yo se tankou diferan kalite maladi - chak genyen yon kòz ak yon tretman diferan.
+
+#### 📋 Kalite Erè Enpòtan
+
+| Kalite | Deskripsyon | Kòz | Egzanp |
+|--------|-------------|-----|---------|
+| **SyntaxError** | Erè nan sentaks kòd | Kòd mal ekri | `if x = 5:` |
+| **TypeError** | Erè nan kalite done | Kalite pa matche | `"5" + 3` |
+| **ValueError** | Erè nan valè | Valè pa bon | `int("abc")` |
+| **NameError** | Varyab pa defini | Varyab pa egziste | `print(x)` |
+| **IndexError** | Endèks pa egziste | Endèks depase limit | `lis[10]` |
+| **KeyError** | Kle pa egziste | Kle pa nan diksyonè | `dik["x"]` |
+| **ZeroDivisionError** | Divizyon pa zewo | Divize pa 0 | `5 / 0` |
+| **FileNotFoundError** | Fichier pa jwenn | Fichier pa egziste | `open("x.txt")` |
+
+#### 🔧 Egzanp Detaye Kalite Erè
+
+**Egzanp 1: SyntaxError**
+
+```python
+print("=== EGZANP 1: SYNTAXERROR ===")
+
+# ❌ Erè: Oubliye de pwen nan if
+# if x = 5:
+#     print("Bon")
+
+# ✅ Kòrèk: Sèvi ak == pou konparezon
+x = 5
+if x == 5:
+    print("Bon")
+
+# ❌ Erè: Parantèz pa fèmen
+# print("Bon"
+
+# ✅ Kòrèk: Fèmen tout parantèz
+print("Bon")
+
+# ❌ Erè: Indentasyon pa bon
+# if x == 5:
+# print("Bon")
+
+# ✅ Kòrèk: Indentasyon kòrèk
+if x == 5:
+    print("Bon")
+```
+
+**Egzanp 2: TypeError**
+
+```python
+print("=== EGZANP 2: TYPEERROR ===")
+
+# ❌ Erè: Pa ka ajoute string ak nimewo
+try:
+    rezilta = "5" + 3
+except TypeError as e:
+    print(f"TypeError: {e}")
+
+# ✅ Kòrèk: Konvèti string nan nimewo
+rezilta = int("5") + 3
+print(f"Rezilta: {rezilta}")
+
+# ❌ Erè: Pa ka miltipliye string ak nimewo
+try:
+    rezilta = "Hello" * "World"
+except TypeError as e:
+    print(f"TypeError: {e}")
+
+# ✅ Kòrèk: Miltipliye string ak nimewo
+rezilta = "Hello" * 3
+print(f"Rezilta: {rezilta}")
+```
+
+**Egzanp 3: ValueError**
+
+```python
+print("=== EGZANP 3: VALUERROR ===")
+
+# ❌ Erè: Pa ka konvèti string nan nimewo
+try:
+    nimewo = int("abc")
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+# ✅ Kòrèk: Sèvi ak string ki ka konvèti
+nimewo = int("123")
+print(f"Nimewo: {nimewo}")
+
+# ❌ Erè: Pa ka konvèti string nan float
+try:
+    nimewo = float("xyz")
+except ValueError as e:
+    print(f"ValueError: {e}")
+
+# ✅ Kòrèk: Sèvi ak string ki ka konvèti
+nimewo = float("3.14")
+print(f"Nimewo: {nimewo}")
+```
+
+**Egzanp 4: NameError**
+
+```python
+print("=== EGZANP 4: NAMEERROR ===")
+
+# ❌ Erè: Varyab pa defini
+try:
+    print(varyab_pa_defini)
+except NameError as e:
+    print(f"NameError: {e}")
+
+# ✅ Kòrèk: Defini varyab anvan sèvi ak li
+varyab_defini = "Bonjou"
+print(f"Varyab: {varyab_defini}")
+
+# ❌ Erè: Fonksyon pa defini
+try:
+    fonksyon_pa_defini()
+except NameError as e:
+    print(f"NameError: {e}")
+
+# ✅ Kòrèk: Defini fonksyon anvan sèvi ak li
+def fonksyon_defini():
+    return "Fonksyon travay"
+
+print(fonksyon_defini())
+```
+
+**Egzanp 5: IndexError**
+
+```python
+print("=== EGZANP 5: INDEXERROR ===")
+
+# Lis ak 5 eleman (endèks 0-4)
+lis = [1, 2, 3, 4, 5]
+
+# ❌ Erè: Endèks depase limit
+try:
+    eleman = lis[10]
+except IndexError as e:
+    print(f"IndexError: {e}")
+
+# ✅ Kòrèk: Sèvi ak endèks ki egziste
+eleman = lis[2]
+print(f"Eleman nan pozisyon 2: {eleman}")
+
+# ❌ Erè: Endèks negatif depase limit
+try:
+    eleman = lis[-10]
+except IndexError as e:
+    print(f"IndexError: {e}")
+
+# ✅ Kòrèk: Sèvi ak endèks negatif ki egziste
+eleman = lis[-1]
+print(f"Dènye eleman: {eleman}")
+```
+
+**Egzanp 6: KeyError**
+
+```python
+print("=== EGZANP 6: KEYERROR ===")
+
+# Diksyonè ak kèk kle
+dik = {"non": "Marie", "laj": 25, "vil": "Pòtoprens"}
+
+# ❌ Erè: Kle pa egziste
+try:
+    valè = dik["telefòn"]
+except KeyError as e:
+    print(f"KeyError: {e}")
+
+# ✅ Kòrèk: Sèvi ak kle ki egziste
+valè = dik["non"]
+print(f"Non: {valè}")
+
+# ✅ Kòrèk: Sèvi ak .get() pou evite KeyError
+valè = dik.get("telefòn", "Pa defini")
+print(f"Telefòn: {valè}")
+```
+
+**Egzanp 7: ZeroDivisionError**
+
+```python
+print("=== EGZANP 7: ZERODIVISIONERROR ===")
+
+# ❌ Erè: Divize pa zewo
+try:
+    rezilta = 10 / 0
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError: {e}")
+
+# ✅ Kòrèk: Tcheke si divizè pa zewo
+divizè = 0
+if divizè != 0:
+    rezilta = 10 / divizè
+    print(f"Rezilta: {rezilta}")
+else:
+    print("Pa ka divize pa zewo")
+
+# ✅ Kòrèk: Sèvi ak try/except
+try:
+    rezilta = 10 / divizè
+    print(f"Rezilta: {rezilta}")
+except ZeroDivisionError:
+    print("Pa ka divize pa zewo")
+```
+
+**Egzanp 8: FileNotFoundError**
+
+```python
+print("=== EGZANP 8: FILENOTFOUNDERROR ===")
+
+# ❌ Erè: Fichier pa egziste
+try:
+    with open("fichier_pa_egziste.txt", "r") as f:
+        kontni = f.read()
+except FileNotFoundError as e:
+    print(f"FileNotFoundError: {e}")
+
+# ✅ Kòrèk: Tcheke si fichier egziste
+import os
+non_fichier = "fichier_pa_egziste.txt"
+if os.path.exists(non_fichier):
+    with open(non_fichier, "r") as f:
+        kontni = f.read()
+    print(f"Kontni: {kontni}")
+else:
+    print(f"Fichier {non_fichier} pa egziste")
+
+# ✅ Kòrèk: Sèvi ak try/except
+try:
+    with open(non_fichier, "r") as f:
+        kontni = f.read()
+    print(f"Kontni: {kontni}")
+except FileNotFoundError:
+    print(f"Fichier {non_fichier} pa egziste")
+```
+
+---
+
+### 🔧 Try/Except/Else/Finally
+
+#### 🎯 Kisa se "Try/Except/Else/Finally"?
+
+**Try/Except/Else/Finally** se estrikti pou jere erè yo. Yo pèmèt ou teste kòd, kaptire erè, epi ekzekite blòk espesifik selon rezilta a.
+
+> **💡 TIP:** Try/Except se tankou yon sekirite - ou ka teste yon bagay, epi si li ale mal, ou ka jere pwoblèm nan.
+
+#### 📋 Sentaks Try/Except/Else/Finally
+
+```python
+try:
+    # Kòd pou teste
+    kòd_pou_teste()
+except ErèEspesifik as e:
+    # Jere erè espesifik
+    jere_erè()
+except ErèLòt as e:
+    # Jere lòt erè
+    jere_lòt_erè()
+else:
+    # Ekzekite si pa gen erè
+    kòd_si_pa_gen_erè()
+finally:
+    # Toujou ekzekite
+    kòd_toujou_ekzekite()
+```
+
+#### 🔧 Egzanp Detaye Try/Except/Else/Finally
+
+**Egzanp 1: Try/Except Debaz**
+
+```python
+print("=== EGZANP 1: TRY/EXCEPT DEBAZ ===")
+
+def divize(nimewo1, nimewo2):
+    """
+    Divize de nimewo
+    
+    Args:
+        nimewo1 (float): Premye nimewo
+        nimewo2 (float): Dezyèm nimewo
+    
+    Returns:
+        float: Rezilta divizyon an
+    """
+    try:
+        rezilta = nimewo1 / nimewo2
+        return rezilta
+    except ZeroDivisionError:
+        print("Erè: Pa ka divize pa zewo")
+        return None
+    except TypeError:
+        print("Erè: Paramèt yo dwe nimewo")
+        return None
+
+# Teste fonksyon an
+print(f"10 / 2 = {divize(10, 2)}")
+print(f"10 / 0 = {divize(10, 0)}")
+print(f"10 / 'a' = {divize(10, 'a')}")
+```
+
+**Egzanp 2: Try/Except ak Plizyè Erè**
+
+```python
+print("=== EGZANP 2: TRY/EXCEPT AK PLIZYÈ ERÈ ===")
+
+def kalkile_kare(nimewo):
+    """
+    Kalkile kare yon nimewo
+    
+    Args:
+        nimewo: Nimewo pou kalkile kare
+    
+    Returns:
+        float: Kare nimewo a
+    """
+    try:
+        # Tcheke si se string
+        if isinstance(nimewo, str):
+            nimewo = float(nimewo)
+        
+        # Tcheke si se nimewo
+        if not isinstance(nimewo, (int, float)):
+            raise TypeError("Paramèt la dwe yon nimewo")
+        
+        # Kalkile kare
+        kare = nimewo ** 2
+        return kare
+    
+    except ValueError as e:
+        print(f"ValueError: {e}")
+        return None
+    except TypeError as e:
+        print(f"TypeError: {e}")
+        return None
+    except Exception as e:
+        print(f"Erè inatandi: {e}")
+        return None
+
+# Teste fonksyon an
+print(f"Kare 5 = {kalkile_kare(5)}")
+print(f"Kare '3.14' = {kalkile_kare('3.14')}")
+print(f"Kare 'abc' = {kalkile_kare('abc')}")
+print(f"Kare [1,2,3] = {kalkile_kare([1,2,3])}")
+```
+
+**Egzanp 3: Try/Except/Else**
+
+```python
+print("=== EGZANP 3: TRY/EXCEPT/ELSE ===")
+
+def li_fichier(non_fichier):
+    """
+    Li kontni yon fichier
+    
+    Args:
+        non_fichier (str): Non fichier la
+    
+    Returns:
+        str: Kontni fichier la
+    """
+    try:
+        with open(non_fichier, "r", encoding="utf-8") as f:
+            kontni = f.read()
+    except FileNotFoundError:
+        print(f"Fichier {non_fichier} pa jwenn")
+        return None
+    except PermissionError:
+        print(f"Pa gen pèmisyon pou li fichier {non_fichier}")
+        return None
+    except UnicodeDecodeError:
+        print(f"Pa ka dekode fichier {non_fichier}")
+        return None
+    else:
+        print(f"Fichier {non_fichier} li ak siksè")
+        return kontni
+
+# Teste fonksyon an
+kontni = li_fichier("fichier_pa_egziste.txt")
+if kontni:
+    print(f"Kontni: {kontni[:100]}...")
+```
+
+**Egzanp 4: Try/Except/Finally**
+
+```python
+print("=== EGZANP 4: TRY/EXCEPT/FINALLY ===")
+
+def jere_fichier(non_fichier, kontni):
+    """
+    Ekri kontni nan yon fichier
+    
+    Args:
+        non_fichier (str): Non fichier la
+        kontni (str): Kontni pou ekri
+    """
+    fichier = None
+    try:
+        fichier = open(non_fichier, "w", encoding="utf-8")
+        fichier.write(kontni)
+        print(f"Kontni ekri nan {non_fichier}")
+    except PermissionError:
+        print(f"Pa gen pèmisyon pou ekri nan {non_fichier}")
+    except Exception as e:
+        print(f"Erè inatandi: {e}")
+    finally:
+        if fichier:
+            fichier.close()
+            print(f"Fichier {non_fichier} fèmen")
+
+# Teste fonksyon an
+jere_fichier("test.txt", "Bonjou nan Python!")
+```
+
+**Egzanp 5: Try/Except/Else/Finally Konplè**
+
+```python
+print("=== EGZANP 5: TRY/EXCEPT/ELSE/FINALLY KONPLÈ ===")
+
+def kalkile_mwayèn(lis_nimewo):
+    """
+    Kalkile mwayèn yon lis nimewo
+    
+    Args:
+        lis_nimewo (list): Lis nimewo yo
+    
+    Returns:
+        float: Mwayèn nimewo yo
+    """
+    try:
+        # Tcheke si lis la vid
+        if not lis_nimewo:
+            raise ValueError("Lis la vid")
+        
+        # Tcheke si tout eleman yo se nimewo
+        for i, nimewo in enumerate(lis_nimewo):
+            if not isinstance(nimewo, (int, float)):
+                raise TypeError(f"Eleman nan pozisyon {i} pa se nimewo")
+        
+        # Kalkile mwayèn
+        sòm = sum(lis_nimewo)
+        mwayèn = sòm / len(lis_nimewo)
+        
+    except ValueError as e:
+        print(f"ValueError: {e}")
+        return None
+    except TypeError as e:
+        print(f"TypeError: {e}")
+        return None
+    except Exception as e:
+        print(f"Erè inatandi: {e}")
+        return None
+    else:
+        print(f"Kalkil reyisi pou {len(lis_nimewo)} nimewo")
+        return mwayèn
+    finally:
+        print("Kalkil fini")
+
+# Teste fonksyon an
+print(f"Mwayèn [1,2,3,4,5]: {kalkile_mwayèn([1,2,3,4,5])}")
+print(f"Mwayèn []: {kalkile_mwayèn([])}")
+print(f"Mwayèn [1,'a',3]: {kalkile_mwayèn([1,'a',3])}")
+```
+
+---
+
+### 🔧 Eksepsyon Koutim
+
+#### 🎯 Kisa se "Eksepsyon Koutim"?
+
+**Eksepsyon Koutim** se erè pèsonalize ke ou kreye pou sitiyasyon espesifik nan pwogram ou an. Yo pèmèt ou kreye erè ki genyen siyifikasyon espesifik pou aplikasyon ou an.
+
+> **💡 TIP:** Eksepsyon koutim se tankou yon mesaj erè pèsonalize - ou ka kreye mesaj ki espesifik pou pwogram ou an.
+
+#### 📋 Sentaks Eksepsyon Koutim
+
+```python
+class NonEksepsyon(Exception):
+    """
+    Eksepsyon koutim
+    """
+    def __init__(self, mesaj):
+        self.mesaj = mesaj
+        super().__init__(self.mesaj)
+
+# Sèvi ak eksepsyon koutim
+raise NonEksepsyon("Mesaj erè")
+```
+
+#### 🔧 Egzanp Detaye Eksepsyon Koutim
+
+**Egzanp 1: Eksepsyon Koutim Debaz**
+
+```python
+print("=== EGZANP 1: EKSEPSYON KOUTIM DEBAZ ===")
+
+class ErèLaj(Exception):
+    """
+    Eksepsyon pou laj ki pa valab
+    """
+    def __init__(self, laj):
+        self.laj = laj
+        super().__init__(f"Laj {laj} pa valab. Laj la dwe ant 0 ak 150")
+
+class ErèNon(Exception):
+    """
+    Eksepsyon pou non ki pa valab
+    """
+    def __init__(self, non):
+        self.non = non
+        super().__init__(f"Non '{non}' pa valab. Non la dwe genyen omwen 2 karaktè")
+
+def valide_pèson(non, laj):
+    """
+    Valide enfòmasyon pèson
+    
+    Args:
+        non (str): Non pèson nan
+        laj (int): Laj pèson nan
+    """
+    # Valide non
+    if not non or len(non) < 2:
+        raise ErèNon(non)
+    
+    # Valide laj
+    if not isinstance(laj, int) or laj < 0 or laj > 150:
+        raise ErèLaj(laj)
+    
+    print(f"Enfòmasyon valide: {non}, {laj} ane")
+
+# Teste fonksyon an
+try:
+    valide_pèson("Marie", 25)
+except ErèNon as e:
+    print(f"Erè Non: {e}")
+except ErèLaj as e:
+    print(f"Erè Laj: {e}")
+
+try:
+    valide_pèson("A", 25)
+except ErèNon as e:
+    print(f"Erè Non: {e}")
+except ErèLaj as e:
+    print(f"Erè Laj: {e}")
+
+try:
+    valide_pèson("Marie", -5)
+except ErèNon as e:
+    print(f"Erè Non: {e}")
+except ErèLaj as e:
+    print(f"Erè Laj: {e}")
+```
+
+**Egzanp 2: Eksepsyon Koutim Konplèks**
+
+```python
+print("=== EGZANP 2: EKSEPSYON KOUTIM KONPLÈKS ===")
+
+class ErèKontBankè(Exception):
+    """
+    Eksepsyon debaz pou kont bankè
+    """
+    pass
+
+class ErèBalansEnsuisan(ErèKontBankè):
+    """
+    Eksepsyon pou balans ensuisan
+    """
+    def __init__(self, balans, kantite):
+        self.balans = balans
+        self.kantite = kantite
+        super().__init__(f"Balans ensuisan: ${balans:.2f}, Bezwen: ${kantite:.2f}")
+
+class ErèKantiteNegatif(ErèKontBankè):
+    """
+    Eksepsyon pou kantite negatif
+    """
+    def __init__(self, kantite):
+        self.kantite = kantite
+        super().__init__(f"Kantite negatif pa pèmèt: ${kantite:.2f}")
+
+class ErèKantiteTwòGwo(ErèKontBankè):
+    """
+    Eksepsyon pou kantite twò gwo
+    """
+    def __init__(self, kantite, limit):
+        self.kantite = kantite
+        self.limit = limit
+        super().__init__(f"Kantite twò gwo: ${kantite:.2f}, Limit: ${limit:.2f}")
+
+class KontBankè:
+    """
+    Klas pou kont bankè
+    """
+    
+    def __init__(self, non, balans_initial=0, limit_retire=1000):
+        self.non = non
+        self.balans = balans_initial
+        self.limit_retire = limit_retire
+        print(f"Kont kreye pou {self.non} ak balans ${self.balans:.2f}")
+    
+    def depoze(self, kantite):
+        """
+        Depoze lajan nan kont la
+        
+        Args:
+            kantite (float): Kantite lajan pou depoze
+        """
+        if kantite < 0:
+            raise ErèKantiteNegatif(kantite)
+        
+        self.balans += kantite
+        print(f"${kantite:.2f} depoze. Nouvo balans: ${self.balans:.2f}")
+    
+    def retire(self, kantite):
+        """
+        Retire lajan nan kont la
+        
+        Args:
+            kantite (float): Kantite lajan pou retire
+        """
+        if kantite < 0:
+            raise ErèKantiteNegatif(kantite)
+        
+        if kantite > self.limit_retire:
+            raise ErèKantiteTwòGwo(kantite, self.limit_retire)
+        
+        if kantite > self.balans:
+            raise ErèBalansEnsuisan(self.balans, kantite)
+        
+        self.balans -= kantite
+        print(f"${kantite:.2f} retire. Nouvo balans: ${self.balans:.2f}")
+
+# Teste kont bankè
+kont = KontBankè("Marie", 1000, 500)
+
+try:
+    kont.depoze(200)
+except ErèKontBankè as e:
+    print(f"Erè Kont: {e}")
+
+try:
+    kont.retire(300)
+except ErèKontBankè as e:
+    print(f"Erè Kont: {e}")
+
+try:
+    kont.retire(600)
+except ErèKontBankè as e:
+    print(f"Erè Kont: {e}")
+
+try:
+    kont.retire(-100)
+except ErèKontBankè as e:
+    print(f"Erè Kont: {e}")
+```
+
+**Egzanp 3: Eksepsyon ak Jerachi**
+
+```python
+print("=== EGZANP 3: EKSEPSYON AK JERACHI ===")
+
+class ErèValidasyon(Exception):
+    """
+    Eksepsyon debaz pou validasyon
+    """
+    pass
+
+class ErèFòma(ErèValidasyon):
+    """
+    Eksepsyon pou fòma ki pa bon
+    """
+    pass
+
+class ErèEmail(ErèFòma):
+    """
+    Eksepsyon pou email ki pa valab
+    """
+    def __init__(self, email):
+        self.email = email
+        super().__init__(f"Email '{email}' pa valab")
+
+class ErèTelefòn(ErèFòma):
+    """
+    Eksepsyon pou telefòn ki pa valab
+    """
+    def __init__(self, telefòn):
+        self.telefòn = telefòn
+        super().__init__(f"Telefòn '{telefòn}' pa valab")
+
+def valide_email(email):
+    """
+    Valide adrès email
+    
+    Args:
+        email (str): Adrès email la
+    """
+    if "@" not in email or "." not in email:
+        raise ErèEmail(email)
+    
+    print(f"Email '{email}' valide")
+
+def valide_telefòn(telefòn):
+    """
+    Valide nimewo telefòn
+    
+    Args:
+        telefòn (str): Nimewo telefòn la
+    """
+    # Tcheke si se jis chif
+    if not telefòn.isdigit():
+        raise ErèTelefòn(telefòn)
+    
+    # Tcheke longè
+    if len(telefòn) != 10:
+        raise ErèTelefòn(telefòn)
+    
+    print(f"Telefòn '{telefòn}' valide")
+
+# Teste validasyon
+try:
+    valide_email("marie@example.com")
+except ErèValidasyon as e:
+    print(f"Erè Validasyon: {e}")
+
+try:
+    valide_email("email_pa_valab")
+except ErèValidasyon as e:
+    print(f"Erè Validasyon: {e}")
+
+try:
+    valide_telefòn("1234567890")
+except ErèValidasyon as e:
+    print(f"Erè Validasyon: {e}")
+
+try:
+    valide_telefòn("123abc")
+except ErèValidasyon as e:
+    print(f"Erè Validasyon: {e}")
+```
+
+---
+
+### 📊 Resime Jesyon Erè
+
+#### 🎯 Tèm Enpòtan yo
+
+| Tèm | Deskripsyon | Egzanp |
+|-----|-------------|---------|
+| **Error** | Pwoblèm nan kòd la | `SyntaxError` |
+| **Exception** | Erè ki rive pandan ekzekisyon | `TypeError` |
+| **Try** | Blòk kòd pou teste | `try:` |
+| **Except** | Blòk pou kaptire erè | `except TypeError:` |
+| **Else** | Blòk si pa gen erè | `else:` |
+| **Finally** | Blòk ki toujou ekzekite | `finally:` |
+| **Raise** | Lanse yon erè | `raise ValueError()` |
+| **Custom Exception** | Erè pèsonalize | `class ErèKoutim(Exception)` |
+
+#### 🔧 Règ Enpòtan
+
+1. **Try/Except**: Toujou sèvi ak try/except pou kòd ki ka ale mal
+2. **Specific Exceptions**: Kaptire erè espesifik anvan erè jeneral
+3. **Custom Exceptions**: Kreye erè pèsonalize pou sitiyasyon espesifik
+4. **Finally**: Sèvi ak finally pou netwayaj
+5. **Error Messages**: Ekri mesaj erè ki klè ak itil
+
+#### ⚠️ Erè Komen
+
+1. **Pa sèvi ak try/except** pou kòd ki ka ale mal
+2. **Kaptire erè jeneral** anvan erè espesifik
+3. **Pa ekri mesaj erè** ki pa klè
+4. **Oubliye finally** pou netwayaj
+5. **Pa teste kòd** ak diferan kalite erè
+
+---
+
+### 🎮 Egzèsis Pratik
+
+**Egzèsis 1: Kalkilatris ak Jesyon Erè**
+Kreye yon kalkilatris ki jere tout kalite erè.
+
+**Egzèsis 2: Sistèm Validasyon**
+Kreye yon sistèm validasyon ak eksepsyon koutim.
+
+**Egzèsis 3: Gestionè Fichier**
+Kreye yon gestionè fichier ki jere erè yo.
+
+**Egzèsis 4: Jwèt ak Jesyon Erè**
+Kreye yon jwèt ki jere erè yo gracieusement.
 2. **Sekirite**: Pwogram nan pa kraze
 3. **Eksperyans**: Itilizatè a pa jwenn mesaj konfizyon
 4. **Devlopman**: Ou ka aprann nan erè yo
