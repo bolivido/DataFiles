@@ -15649,15 +15649,2060 @@ print(orijinal_chaje)
 
 ## Chapit 11: Packaging Python ak Jere Argumant (Python Packaging and Command Line Arguments) - Eksplikasyon Detaye pou Debitan
 
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann packaging Python** - Kòman òganize kòd an modil ak pake
+- **Jere argumant liy kòmand** - Resevwa ak trete enfòmasyon nan kòmand yo
+- **Kreye modil ak package** - Òganize kòd pou reutilizasyon
+- **Distribye pwogram** - Pataje kòd ak lòt moun
+- **Devlope yon sistèm distribisyon** - Pwojè pratik ak packaging
+
+> **💡 TIP:** Packaging ak argumant liy kòmand se fondasyon pou pwogram pwofesyonèl. Li pèmèt ou kreye aplikasyon ki ka òganize kòd ak resevwa enfòmasyon nan kòmand yo.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Packaging Fondamantal**
+- **Module** - Fichier Python ak fonksyon yo
+- **Package** - Katè ak modil yo
+- **Import** - Pote modil nan pwogram la
+- **Namespace** - Espas non pou evite konfli
+- **Distribution** - Fason pataje pwogram la
+
+#### **Argumant Liy Kòmand**
+- **Command Line** - Liy kòmand nan tèminal la
+- **Argument** - Enfòmasyon ke itilizatè a bay
+- **Option** - Paramèt opsyonèl
+- **Flag** - Switch pou aktive/fèmen fonksyon
+- **Parser** - Trete ak valide argumant yo
+
+#### **Distribisyon**
+- **Setup.py** - Fichier konfigirasyon
+- **Requirements.txt** - Depandans pwogram la
+- **PyPI** - Python Package Index
+- **pip** - Zouti pou enstale pake yo
+- **Virtual Environment** - Anviwònman izole
+
+#### **Jesyon Kòd**
+- **Version Control** - Kontwòl vèsyon kòd la
+- **Repository** - Depo kòd la
+- **Documentation** - Dokimantasyon pwogram la
+- **Testing** - Tèst pwogram la
+- **Deployment** - Distribye pwogram la
+
+---
+
 ### 🎯 Kisa se "Packaging Python ak Jere Argumant"?
 
 **Definisyon Detaye:**
 
 **Packaging Python ak Jere Argumant** se teknik pou òganize kòd Python an modil ak pake, epi pou jere enfòmasyon ke itilizatè a bay lè yo kouri pwogram nan. Li se tankou òganize yon magazen ak resevwa kòmannde kliyan yo.
 
+> **💡 TIP:** Pensez a packaging tankou òganize yon bibliyotèk - chak modil se yon liv, chak package se yon etajè, epi argumant yo se kòmannde kliyan yo.
+
+#### 📊 Diagram Packaging ak Argumant
+
+```mermaid
+flowchart TD
+    A[Kòd Python] --> B[Modil]
+    B --> C[Package]
+    C --> D[Distribution]
+    
+    E[Kòmand Liy] --> F[Argumant]
+    F --> G[Parser]
+    G --> H[Pwogram]
+    
+    I[Setup.py] --> J[PyPI]
+    J --> K[pip install]
+    
+    style A fill:#e1f5fe
+    style E fill:#f3e5f5
+    style I fill:#e8f5e8
+```
+
+![Python Packaging Visualization](https://images.unsplash.com/photo-1555066931-4365d14bab8c)
+*Source: [Unsplash](https://unsplash.com/photos/code) - Photo by [Fotis Fotopoulos]*
+
 **Poukisa Packaging ak Argumant Enpòtan?**
 
 1. **Òganizasyon**: Divize kòd la an pati lojik
+2. **Reutilizasyon**: Sèvi ak kòd nan plizyè pwogram
+3. **Kolaborasyon**: Travay ak lòt devlopè yo
+4. **Distribisyon**: Pataje pwogram ak lòt moun
+5. **Mantenans**: Fasilite modifye ak ajoute fonksyon
+6. **Konfigirasyon**: Resevwa paramèt nan kòmand yo
+7. **Otomatizasyon**: Kouri pwogram nan tèminal la
+8. **Integrasyon**: Konekte ak lòt sistèm yo
+
+---
+
+### 🔧 Argumant Liy Kòmand ak argparse
+
+#### 🎯 Kisa se "Argumant Liy Kòmand"?
+
+**Argumant Liy Kòmand** se enfòmasyon ke itilizatè a bay lè yo kouri pwogram nan tèminal la. Yo se tankou paramèt ke ou bay yon fonksyon.
+
+> **💡 TIP:** Argumant liy kòmand se tankou bay direksyon yon chofè - ou ka di li kote pou li ale, ki vitès pou li pran, ak ki wout pou li swiv.
+
+#### 📋 Kalite Argumant
+
+| Kalite | Deskripsyon | Egzanp |
+|--------|-------------|---------|
+| **Positional** | Argumant obligatwa | `python script.py fichier.txt` |
+| **Optional** | Argumant opsyonèl | `python script.py --help` |
+| **Flag** | Switch pou aktive/fèmen | `python script.py --verbose` |
+| **Value** | Argumant ak valè | `python script.py --count 5` |
+
+#### 🔧 Egzanp Detaye argparse
+
+**Egzanp 1: Argumant Debaz**
+
+```python
+print("=== EGZANP 1: ARGUMANT DEBAZ ===")
+
+import argparse
+import sys
+
+# Metòd 1: Sèvi ak sys.argv
+print("--- Metòd 1: Sèvi ak sys.argv ---")
+print(f"Argumant yo: {sys.argv}")
+print(f"Non script la: {sys.argv[0] if sys.argv else 'Pa gen argumant'}")
+
+if len(sys.argv) > 1:
+    print(f"Premye argumant: {sys.argv[1]}")
+if len(sys.argv) > 2:
+    print(f"Dezyèm argumant: {sys.argv[2]}")
+
+# Metòd 2: Sèvi ak argparse
+print("\n--- Metòd 2: Sèvi ak argparse ---")
+parser = argparse.ArgumentParser(description="Egzanp argparse debaz")
+parser.add_argument("non", help="Non itilizatè a")
+parser.add_argument("laj", type=int, help="Laj itilizatè a")
+
+# Parse argumant yo
+args = parser.parse_args()
+print(f"Bonjou {args.non}, w genyen {args.laj} ane!")
+```
+
+**Egzanp 2: Argumant Opsyonèl ak Flag**
+
+```python
+print("=== EGZANP 2: ARGUMANT OPSYONÈL AK FLAG ===")
+
+import argparse
+
+def kreye_parser():
+    """
+    Kreye parser pou argumant liy kòmand
+    
+    Returns:
+        argparse.ArgumentParser: Parser a
+    """
+    parser = argparse.ArgumentParser(
+        description="Sistèm Jesyon Kontak",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Egzanp itilizasyon:
+  python kontak.py ajoute --non Marie --telefon 123-456-7890
+  python kontak.py chèche --non Jean
+  python kontak.py lise --format json
+        """
+    )
+    
+    # Subcommands
+    subparsers = parser.add_subparsers(dest='kòmand', help='Kòman disponib yo')
+    
+    # Kòmand ajoute
+    ajoute_parser = subparsers.add_parser('ajoute', help='Ajoute yon kontak')
+    ajoute_parser.add_argument('--non', required=True, help='Non kontak la')
+    ajoute_parser.add_argument('--telefon', required=True, help='Nimewo telefòn la')
+    ajoute_parser.add_argument('--email', help='Adrès imèl la')
+    ajoute_parser.add_argument('--adrès', help='Adrès kontak la')
+    
+    # Kòmand chèche
+    chèche_parser = subparsers.add_parser('chèche', help='Chèche yon kontak')
+    chèche_parser.add_argument('--non', help='Non pou chèche')
+    chèche_parser.add_argument('--telefon', help='Nimewo telefòn pou chèche')
+    chèche_parser.add_argument('--email', help='Adrès imèl pou chèche')
+    
+    # Kòmand lise
+    lise_parser = subparsers.add_parser('lise', help='Lise tout kontak yo')
+    lise_parser.add_argument('--format', choices=['txt', 'json', 'csv'], 
+                           default='txt', help='Fòma pou afiche')
+    lise_parser.add_argument('--triye', choices=['non', 'telefon', 'email'], 
+                           default='non', help='Kòman pou triye')
+    
+    # Argumant global
+    parser.add_argument('--verbose', '-v', action='store_true', 
+                       help='Afiche plis enfòmasyon')
+    parser.add_argument('--debug', action='store_true', 
+                       help='Mode debug')
+    parser.add_argument('--config', default='config.json', 
+                       help='Fichier konfigirasyon (default: config.json)')
+    
+    return parser
+
+def ekzekute_kòmand(args):
+    """
+    Ekzekute kòmand nan
+    
+    Args:
+        args: Argumant parse yo
+    """
+    if args.verbose:
+        print("Mode verbose aktive")
+    
+    if args.debug:
+        print("Mode debug aktive")
+    
+    print(f"Fichier konfigirasyon: {args.config}")
+    
+    if args.kòmand == 'ajoute':
+        print(f"Ajoute kontak: {args.non}")
+        print(f"Telefòn: {args.telefon}")
+        if hasattr(args, 'email') and args.email:
+            print(f"Imèl: {args.email}")
+        if hasattr(args, 'adrès') and args.adrès:
+            print(f"Adrès: {args.adrès}")
+    
+    elif args.kòmand == 'chèche':
+        if hasattr(args, 'non') and args.non:
+            print(f"Chèche kontak ak non: {args.non}")
+        elif hasattr(args, 'telefon') and args.telefon:
+            print(f"Chèche kontak ak telefòn: {args.telefon}")
+        elif hasattr(args, 'email') and args.email:
+            print(f"Chèche kontak ak imèl: {args.email}")
+        else:
+            print("Pa gen kritè chèche")
+    
+    elif args.kòmand == 'lise':
+        format_type = args.format if hasattr(args, 'format') else 'txt'
+        triye_type = args.triye if hasattr(args, 'triye') else 'non'
+        print(f"Lise kontak yo nan fòma {format_type}, triye pa {triye_type}")
+    
+    else:
+        print("Pa gen kòmand valab")
+
+# Teste parser la
+if __name__ == "__main__":
+    parser = kreye_parser()
+    
+    # Simule argumant yo
+    test_args = [
+        ['ajoute', '--non', 'Marie', '--telefon', '123-456-7890', '--email', 'marie@example.com'],
+        ['chèche', '--non', 'Jean', '--verbose'],
+        ['lise', '--format', 'json', '--triye', 'telefon', '--debug']
+    ]
+    
+    for test_arg in test_args:
+        print(f"\n--- Teste argumant: {' '.join(test_arg)} ---")
+        try:
+            args = parser.parse_args(test_arg)
+            ekzekute_kòmand(args)
+        except SystemExit:
+            print("Erè nan argumant yo")
+```
+
+**Egzanp 3: Parser Avanse ak Validasyon**
+
+```python
+print("=== EGZANP 3: PARSER AVANSE AK VALIDASYON ===")
+
+import argparse
+import os
+import re
+from datetime import datetime
+
+class ValidatèArgumant:
+    """
+    Klas pou valide argumant yo
+    """
+    
+    @staticmethod
+    def valide_email(email):
+        """
+        Valide adrès imèl la
+        
+        Args:
+            email (str): Adrès imèl la
+        
+        Returns:
+            str: Adrès imèl la si li valab
+        """
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        if re.match(pattern, email):
+            return email
+        else:
+            raise argparse.ArgumentTypeError(f"Adrès imèl {email} pa valab")
+    
+    @staticmethod
+    def valide_telefon(telefon):
+        """
+        Valide nimewo telefòn la
+        
+        Args:
+            telefon (str): Nimewo telefòn la
+        
+        Returns:
+            str: Nimewo telefòn la si li valab
+        """
+        # Retire tout karaktè ki pa nimewo
+        nimewo_nèt = re.sub(r'[^\d]', '', telefon)
+        
+        if len(nimewo_nèt) >= 10:
+            return telefon
+        else:
+            raise argparse.ArgumentTypeError(f"Nimewo telefòn {telefon} pa valab")
+    
+    @staticmethod
+    def valide_fichier(fichier):
+        """
+        Valide si fichier la egziste
+        
+        Args:
+            fichier (str): Chemin fichier la
+        
+        Returns:
+            str: Chemin fichier la si li egziste
+        """
+        if os.path.exists(fichier):
+            return fichier
+        else:
+            raise argparse.ArgumentTypeError(f"Fichier {fichier} pa egziste")
+    
+    @staticmethod
+    def valide_laj(laj_str):
+        """
+        Valide laj la
+        
+        Args:
+            laj_str (str): Laj la nan string
+        
+        Returns:
+            int: Laj la si li valab
+        """
+        try:
+            laj = int(laj_str)
+            if 0 <= laj <= 150:
+                return laj
+            else:
+                raise argparse.ArgumentTypeError(f"Laj {laj} pa nan ranje valab (0-150)")
+        except ValueError:
+            raise argparse.ArgumentTypeError(f"Laj {laj_str} pa yon nimewo valab")
+
+def kreye_parser_avanse():
+    """
+    Kreye parser avanse ak validasyon
+    
+    Returns:
+        argparse.ArgumentParser: Parser a
+    """
+    parser = argparse.ArgumentParser(
+        description="Sistèm Jesyon Elèv Avanse",
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    
+    # Subcommands
+    subparsers = parser.add_subparsers(dest='kòmand', help='Kòman disponib yo')
+    
+    # Kòmand ajoute elèv
+    ajoute_parser = subparsers.add_parser('ajoute', help='Ajoute yon elèv')
+    ajoute_parser.add_argument('--non', required=True, help='Non elèv la')
+    ajoute_parser.add_argument('--laj', type=ValidatèArgumant.valide_laj, 
+                              required=True, help='Laj elèv la (0-150)')
+    ajoute_parser.add_argument('--klas', required=True, help='Klas elèv la')
+    ajoute_parser.add_argument('--email', type=ValidatèArgumant.valide_email, 
+                              help='Adrès imèl elèv la')
+    ajoute_parser.add_argument('--telefon', type=ValidatèArgumant.valide_telefon, 
+                              help='Nimewo telefòn elèv la')
+    
+    # Kòmand modifye elèv
+    modifye_parser = subparsers.add_parser('modifye', help='Modifye yon elèv')
+    modifye_parser.add_argument('--id', required=True, help='ID elèv la')
+    modifye_parser.add_argument('--non', help='Nouvo non elèv la')
+    modifye_parser.add_argument('--laj', type=ValidatèArgumant.valide_laj, 
+                               help='Nouvo laj elèv la')
+    modifye_parser.add_argument('--klas', help='Nouvo klas elèv la')
+    modifye_parser.add_argument('--email', type=ValidatèArgumant.valide_email, 
+                               help='Nouvo adrès imèl elèv la')
+    
+    # Kòmand ekspòte done
+    ekspòte_parser = subparsers.add_parser('ekspòte', help='Ekspòte done elèv yo')
+    ekspòte_parser.add_argument('--format', choices=['csv', 'json', 'xlsx'], 
+                               default='csv', help='Fòma ekspòt la')
+    ekspòte_parser.add_argument('--fichier', help='Non fichier ekspòt la')
+    ekspòte_parser.add_argument('--klas', help='Ekspòte sèlman elèv yo nan klas sa a')
+    
+    # Kòmand enpòte done
+    enpòte_parser = subparsers.add_parser('enpòte', help='Enpòte done elèv yo')
+    enpòte_parser.add_argument('--fichier', type=ValidatèArgumant.valide_fichier, 
+                              required=True, help='Fichier pou enpòte')
+    enpòte_parser.add_argument('--format', choices=['csv', 'json'], 
+                              default='csv', help='Fòma fichier la')
+    enpòte_parser.add_argument('--skip-header', action='store_true', 
+                              help='Sote premye liy la (header)')
+    
+    # Argumant global
+    parser.add_argument('--verbose', '-v', action='store_true', 
+                       help='Afiche plis enfòmasyon')
+    parser.add_argument('--log-file', help='Fichier pou ekri log yo')
+    parser.add_argument('--config', type=ValidatèArgumant.valide_fichier, 
+                       default='config.json', help='Fichier konfigirasyon')
+    
+    return parser
+
+def ekzekute_kòmand_avanse(args):
+    """
+    Ekzekute kòmand avanse nan
+    
+    Args:
+        args: Argumant parse yo
+    """
+    # Afiche enfòmasyon debaz
+    if args.verbose:
+        print(f"Kòmand: {args.kòmand}")
+        print(f"Timestamp: {datetime.now().isoformat()}")
+    
+    if args.log_file:
+        print(f"Log yo pral ekri nan: {args.log_file}")
+    
+    # Ekzekute kòmand espesifik
+    if args.kòmand == 'ajoute':
+        print(f"Ajoute elèv: {args.non}")
+        print(f"Laj: {args.laj}")
+        print(f"Klas: {args.klas}")
+        if hasattr(args, 'email') and args.email:
+            print(f"Imèl: {args.email}")
+        if hasattr(args, 'telefon') and args.telefon:
+            print(f"Telefòn: {args.telefon}")
+    
+    elif args.kòmand == 'modifye':
+        print(f"Modifye elèv ID: {args.id}")
+        if hasattr(args, 'non') and args.non:
+            print(f"Nouvo non: {args.non}")
+        if hasattr(args, 'laj') and args.laj:
+            print(f"Nouvo laj: {args.laj}")
+        if hasattr(args, 'klas') and args.klas:
+            print(f"Nouvo klas: {args.klas}")
+        if hasattr(args, 'email') and args.email:
+            print(f"Nouvo imèl: {args.email}")
+    
+    elif args.kòmand == 'ekspòte':
+        format_type = args.format if hasattr(args, 'format') else 'csv'
+        fichier = args.fichier if hasattr(args, 'fichier') else f'elèv_yo.{format_type}'
+        klas = args.klas if hasattr(args, 'klas') else 'tout klas yo'
+        print(f"Ekspòte done nan fòma {format_type}")
+        print(f"Fichier: {fichier}")
+        print(f"Klas: {klas}")
+    
+    elif args.kòmand == 'enpòte':
+        fichier = args.fichier
+        format_type = args.format if hasattr(args, 'format') else 'csv'
+        skip_header = args.skip_header if hasattr(args, 'skip_header') else False
+        print(f"Enpòte done nan fòma {format_type}")
+        print(f"Fichier: {fichier}")
+        print(f"Sote header: {skip_header}")
+
+# Teste parser avanse a
+if __name__ == "__main__":
+    parser = kreye_parser_avanse()
+    
+    # Simule argumant yo
+    test_args = [
+        ['ajoute', '--non', 'Marie', '--laj', '15', '--klas', '3e ane', '--email', 'marie@example.com'],
+        ['modifye', '--id', '123', '--non', 'Marie Dupont', '--laj', '16'],
+        ['ekspòte', '--format', 'json', '--fichier', 'elèv_yo.json', '--klas', '3e ane'],
+        ['enpòte', '--fichier', 'nouvo_elèv_yo.csv', '--format', 'csv', '--skip-header']
+    ]
+    
+    for test_arg in test_args:
+        print(f"\n--- Teste argumant: {' '.join(test_arg)} ---")
+        try:
+            args = parser.parse_args(test_arg + ['--verbose'])
+            ekzekute_kòmand_avanse(args)
+        except SystemExit:
+            print("Erè nan argumant yo")
+        except Exception as e:
+            print(f"Erè: {e}")
+```
+
+---
+
+### 🔧 Kreye Modil ak Package
+
+#### 🎯 Kisa se "Modil ak Package"?
+
+**Modil** se yon fichier Python ak fonksyon, klas, ak varyab yo.
+**Package** se yon katè ak modil yo òganize anba yon non komen.
+
+> **💡 TIP:** Modil se tankou yon liv ak chapit yo, package se tankou yon bibliyotèk ak liv yo òganize pa sijè.
+
+#### 📋 Estrikti Package
+
+| Nivo | Deskripsyon | Egzanp |
+|------|-------------|---------|
+| **Module** | Fichier Python | `kontak.py` |
+| **Package** | Katè ak `__init__.py` | `kontak/` |
+| **Subpackage** | Package nan package | `kontak/database/` |
+| **Namespace** | Espas non pou evite konfli | `kontak.database.mysql` |
+
+#### 🔧 Egzanp Detaye Modil ak Package
+
+**Egzanp 1: Kreye Modil Debaz**
+
+```python
+print("=== EGZANP 1: KREYE MODIL DEBAZ ===")
+
+# Modil: matematik.py
+matematik_kòd = '''
+"""
+Modil Matematik - Fonksyon matematik debaz
+"""
+
+def adisyon(a, b):
+    """
+    Fè adisyon de nimewo
+    
+    Args:
+        a (float): Premye nimewo
+        b (float): Dezyèm nimewo
+    
+    Returns:
+        float: Sòm de nimewo yo
+    """
+    return a + b
+
+def soustraksyon(a, b):
+    """
+    Fè soustraksyon de nimewo
+    
+    Args:
+        a (float): Premye nimewo
+        b (float): Dezyèm nimewo
+    
+    Returns:
+        float: Diferans de nimewo yo
+    """
+    return a - b
+
+def miltiplikasyon(a, b):
+    """
+    Fè miltiplikasyon de nimewo
+    
+    Args:
+        a (float): Premye nimewo
+        b (float): Dezyèm nimewo
+    
+    Returns:
+        float: Pwodui de nimewo yo
+    """
+    return a * b
+
+def divizyon(a, b):
+    """
+    Fè divizyon de nimewo
+    
+    Args:
+        a (float): Premye nimewo
+        b (float): Dezyèm nimewo
+    
+    Returns:
+        float: Quotient de nimewo yo
+    
+    Raises:
+        ValueError: Si b se zewo
+    """
+    if b == 0:
+        raise ValueError("Pa ka divize pa zewo")
+    return a / b
+
+# Varyab global
+PI = 3.14159
+E = 2.71828
+
+# Lis fonksyon yo
+__all__ = ['adisyon', 'soustraksyon', 'miltiplikasyon', 'divizyon', 'PI', 'E']
+'''
+
+# Ekri modil la
+with open('matematik.py', 'w', encoding='utf-8') as f:
+    f.write(matematik_kòd)
+
+print("Modil matematik.py kreye!")
+
+# Teste modil la
+import matematik
+
+print(f"PI = {matematik.PI}")
+print(f"E = {matematik.E}")
+print(f"2 + 3 = {matematik.adisyon(2, 3)}")
+print(f"10 - 4 = {matematik.soustraksyon(10, 4)}")
+print(f"5 * 6 = {matematik.miltiplikasyon(5, 6)}")
+print(f"15 / 3 = {matematik.divizyon(15, 3)}")
+
+try:
+    matematik.divizyon(10, 0)
+except ValueError as e:
+    print(f"Erè: {e}")
+```
+
+**Egzanp 2: Kreye Package Konplèks**
+
+```python
+print("=== EGZANP 2: KREYE PACKAGE KONPLÈKS ===")
+
+import os
+
+# Kreye estrikti package
+package_structure = {
+    'kontak': {
+        '__init__.py': '''
+"""
+Package Kontak - Sistèm jesyon kontak
+"""
+
+from .database import DatabaseManager
+from .kontak import KontakManager
+from .utils import valide_email, valide_telefon
+
+__version__ = "1.0.0"
+__author__ = "Python Kreyol"
+__all__ = ['DatabaseManager', 'KontakManager', 'valide_email', 'valide_telefon']
+''',
+        'kontak.py': '''
+"""
+Modil KontakManager - Jere kontak yo
+"""
+
+from .database import DatabaseManager
+from .utils import valide_email, valide_telefon
+
+class KontakManager:
+    """
+    Klas pou jere kontak yo
+    """
+    
+    def __init__(self, db_path="kontak.db"):
+        """
+        Konstriktè pou KontakManager
+        
+        Args:
+            db_path (str): Chemin baz done a
+        """
+        self.db = DatabaseManager(db_path)
+        self.kontak_yo = []
+    
+    def ajoute_kontak(self, non, telefon, email=None, adrès=None):
+        """
+        Ajoute yon kontak
+        
+        Args:
+            non (str): Non kontak la
+            telefon (str): Nimewo telefòn la
+            email (str, optional): Adrès imèl la
+            adrès (str, optional): Adrès kontak la
+        
+        Returns:
+            bool: True si kontak la ajoute ak siksè
+        """
+        try:
+            # Valide done yo
+            if not valide_telefon(telefon):
+                raise ValueError("Nimewo telefòn pa valab")
+            
+            if email and not valide_email(email):
+                raise ValueError("Adrès imèl pa valab")
+            
+            # Kreye kontak la
+            kontak = {
+                'non': non,
+                'telefon': telefon,
+                'email': email,
+                'adrès': adrès
+            }
+            
+            # Sere nan baz done a
+            kontak_id = self.db.ajoute_kontak(kontak)
+            self.kontak_yo.append({**kontak, 'id': kontak_id})
+            
+            print(f"✅ Kontak {non} ajoute ak siksè")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Erè lè ajoute kontak: {e}")
+            return False
+    
+    def chèche_kontak(self, kritè, valè):
+        """
+        Chèche kontak yo
+        
+        Args:
+            kritè (str): Kritè chèche (non, telefon, email)
+            valè (str): Valè pou chèche
+        
+        Returns:
+            list: Lis kontak yo ki matche
+        """
+        try:
+            rezilta = self.db.chèche_kontak(kritè, valè)
+            print(f"Jwenn {len(rezilta)} kontak ak {kritè}: {valè}")
+            return rezilta
+            
+        except Exception as e:
+            print(f"❌ Erè lè chèche kontak: {e}")
+            return []
+    
+    def modifye_kontak(self, kontak_id, done_nouvèl):
+        """
+        Modifye yon kontak
+        
+        Args:
+            kontak_id (int): ID kontak la
+            done_nouvèl (dict): Done nouvo yo
+        
+        Returns:
+            bool: True si kontak la modifye ak siksè
+        """
+        try:
+            if self.db.modifye_kontak(kontak_id, done_nouvèl):
+                print(f"✅ Kontak ID {kontak_id} modifye ak siksè")
+                return True
+            else:
+                print(f"❌ Pa ka modifye kontak ID {kontak_id}")
+                return False
+                
+        except Exception as e:
+            print(f"❌ Erè lè modifye kontak: {e}")
+            return False
+    
+    def efase_kontak(self, kontak_id):
+        """
+        Efase yon kontak
+        
+        Args:
+            kontak_id (int): ID kontak la
+        
+        Returns:
+            bool: True si kontak la efase ak siksè
+        """
+        try:
+            if self.db.efase_kontak(kontak_id):
+                print(f"✅ Kontak ID {kontak_id} efase ak siksè")
+                return True
+            else:
+                print(f"❌ Pa ka efase kontak ID {kontak_id}")
+                return False
+                
+        except Exception as e:
+            print(f"❌ Erè lè efase kontak: {e}")
+            return False
+    
+    def lise_kontak(self):
+        """
+        Lise tout kontak yo
+        
+        Returns:
+            list: Lis tout kontak yo
+        """
+        try:
+            kontak_yo = self.db.lise_kontak()
+            print(f"Total kontak: {len(kontak_yo)}")
+            return kontak_yo
+            
+        except Exception as e:
+            print(f"❌ Erè lè lise kontak: {e}")
+            return []
+''',
+        'database': {
+            '__init__.py': '''
+"""
+Subpackage Database - Jere baz done
+"""
+
+from .manager import DatabaseManager
+
+__all__ = ['DatabaseManager']
+''',
+            'manager.py': '''
+"""
+Modil DatabaseManager - Jere baz done
+"""
+
+import sqlite3
+import json
+from datetime import datetime
+
+class DatabaseManager:
+    """
+    Klas pou jere baz done
+    """
+    
+    def __init__(self, db_path):
+        """
+        Konstriktè pou DatabaseManager
+        
+        Args:
+            db_path (str): Chemin baz done a
+        """
+        self.db_path = db_path
+        self.koneksyon = None
+        self.konekte()
+    
+    def konekte(self):
+        """
+        Konekte ak baz done a
+        """
+        try:
+            self.koneksyon = sqlite3.connect(self.db_path)
+            self.koneksyon.row_factory = sqlite3.Row
+            self.kreye_tab()
+            print(f"✅ Konekte ak baz done: {self.db_path}")
+        except Exception as e:
+            print(f"❌ Erè koneksyon baz done: {e}")
+    
+    def kreye_tab(self):
+        """
+        Kreye tab kontak yo
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS kontak (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    non TEXT NOT NULL,
+                    telefon TEXT NOT NULL,
+                    email TEXT,
+                    adrès TEXT,
+                    kreyasyon TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            self.koneksyon.commit()
+            print("✅ Tab kontak kreye")
+        except Exception as e:
+            print(f"❌ Erè kreye tab: {e}")
+    
+    def ajoute_kontak(self, kontak):
+        """
+        Ajoute yon kontak nan baz done a
+        
+        Args:
+            kontak (dict): Done kontak la
+        
+        Returns:
+            int: ID kontak la
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            cursor.execute('''
+                INSERT INTO kontak (non, telefon, email, adrès)
+                VALUES (?, ?, ?, ?)
+            ''', (kontak['non'], kontak['telefon'], kontak['email'], kontak['adrès']))
+            
+            self.koneksyon.commit()
+            kontak_id = cursor.lastrowid
+            print(f"✅ Kontak ajoute nan baz done, ID: {kontak_id}")
+            return kontak_id
+            
+        except Exception as e:
+            print(f"❌ Erè ajoute kontak nan baz done: {e}")
+            return None
+    
+    def chèche_kontak(self, kritè, valè):
+        """
+        Chèche kontak yo nan baz done a
+        
+        Args:
+            kritè (str): Kritè chèche
+            valè (str): Valè pou chèche
+        
+        Returns:
+            list: Lis kontak yo ki matche
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            
+            if kritè == 'non':
+                cursor.execute('SELECT * FROM kontak WHERE non LIKE ?', (f'%{valè}%',))
+            elif kritè == 'telefon':
+                cursor.execute('SELECT * FROM kontak WHERE telefon LIKE ?', (f'%{valè}%',))
+            elif kritè == 'email':
+                cursor.execute('SELECT * FROM kontak WHERE email LIKE ?', (f'%{valè}%',))
+            else:
+                return []
+            
+            rezilta = [dict(row) for row in cursor.fetchall()]
+            return rezilta
+            
+        except Exception as e:
+            print(f"❌ Erè chèche kontak nan baz done: {e}")
+            return []
+    
+    def modifye_kontak(self, kontak_id, done_nouvèl):
+        """
+        Modifye yon kontak nan baz done a
+        
+        Args:
+            kontak_id (int): ID kontak la
+            done_nouvèl (dict): Done nouvo yo
+        
+        Returns:
+            bool: True si kontak la modifye ak siksè
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            
+            # Konstwi query la
+            set_clauses = []
+            valè_yo = []
+            
+            for kle, valè in done_nouvèl.items():
+                if kle in ['non', 'telefon', 'email', 'adrès']:
+                    set_clauses.append(f"{kle} = ?")
+                    valè_yo.append(valè)
+            
+            if not set_clauses:
+                return False
+            
+            valè_yo.append(kontak_id)
+            query = f"UPDATE kontak SET {', '.join(set_clauses)} WHERE id = ?"
+            
+            cursor.execute(query, valè_yo)
+            self.koneksyon.commit()
+            
+            return cursor.rowcount > 0
+            
+        except Exception as e:
+            print(f"❌ Erè modifye kontak nan baz done: {e}")
+            return False
+    
+    def efase_kontak(self, kontak_id):
+        """
+        Efase yon kontak nan baz done a
+        
+        Args:
+            kontak_id (int): ID kontak la
+        
+        Returns:
+            bool: True si kontak la efase ak siksè
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            cursor.execute('DELETE FROM kontak WHERE id = ?', (kontak_id,))
+            self.koneksyon.commit()
+            
+            return cursor.rowcount > 0
+            
+        except Exception as e:
+            print(f"❌ Erè efase kontak nan baz done: {e}")
+            return False
+    
+    def lise_kontak(self):
+        """
+        Lise tout kontak yo nan baz done a
+        
+        Returns:
+            list: Lis tout kontak yo
+        """
+        try:
+            cursor = self.koneksyon.cursor()
+            cursor.execute('SELECT * FROM kontak ORDER BY non')
+            rezilta = [dict(row) for row in cursor.fetchall()]
+            return rezilta
+            
+        except Exception as e:
+            print(f"❌ Erè lise kontak nan baz done: {e}")
+            return []
+    
+    def fèmen(self):
+        """
+        Fèmen koneksyon baz done a
+        """
+        if self.koneksyon:
+            self.koneksyon.close()
+            print("✅ Koneksyon baz done fèmen")
+''',
+        },
+        'utils.py': '''
+"""
+Modil Utils - Fonksyon itil
+"""
+
+import re
+
+def valide_email(email):
+    """
+    Valide adrès imèl la
+    
+    Args:
+        email (str): Adrès imèl la
+    
+    Returns:
+        bool: True si adrès imèl la valab
+    """
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, email))
+
+def valide_telefon(telefon):
+    """
+    Valide nimewo telefòn la
+    
+    Args:
+        telefon (str): Nimewo telefòn la
+    
+    Returns:
+        bool: True si nimewo telefòn la valab
+    """
+    # Retire tout karaktè ki pa nimewo
+    nimewo_nèt = re.sub(r'[^\d]', '', telefon)
+    return len(nimewo_nèt) >= 10
+
+def fòmat_telefon(telefon):
+    """
+    Fòmat nimewo telefòn la
+    
+    Args:
+        telefon (str): Nimewo telefòn la
+    
+    Returns:
+        str: Nimewo telefòn la fòmat
+    """
+    nimewo_nèt = re.sub(r'[^\d]', '', telefon)
+    
+    if len(nimewo_nèt) == 10:
+        return f"{nimewo_nèt[:3]}-{nimewo_nèt[3:6]}-{nimewo_nèt[6:]}"
+    elif len(nimewo_nèt) == 11 and nimewo_nèt[0] == '1':
+        return f"+1 {nimewo_nèt[1:4]}-{nimewo_nèt[4:7]}-{nimewo_nèt[7:]}"
+    else:
+        return telefon
+
+def valide_non(non):
+    """
+    Valide non la
+    
+    Args:
+        non (str): Non la
+    
+    Returns:
+        bool: True si non la valab
+    """
+    return len(non.strip()) >= 2 and non.replace(' ', '').isalpha()
+''',
+        'config.py': '''
+"""
+Modil Config - Konfigirasyon sistèm
+"""
+
+import os
+import json
+from pathlib import Path
+
+class Config:
+    """
+    Klas pou jere konfigirasyon sistèm
+    """
+    
+    def __init__(self, config_file="config.json"):
+        """
+        Konstriktè pou Config
+        
+        Args:
+            config_file (str): Fichier konfigirasyon
+        """
+        self.config_file = config_file
+        self.config = self.chaje_konfigirasyon()
+    
+    def chaje_konfigirasyon(self):
+        """
+        Chaje konfigirasyon nan
+        
+        Returns:
+            dict: Konfigirasyon sistèm
+        """
+        default_config = {
+            "database": {
+                "path": "kontak.db",
+                "backup_interval": 24  # èdtan
+            },
+            "kontak": {
+                "max_kontak": 1000,
+                "auto_backup": True
+            },
+            "ui": {
+                "language": "kreyol",
+                "theme": "light"
+            }
+        }
+        
+        if os.path.exists(self.config_file):
+            try:
+                with open(self.config_file, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+                print(f"✅ Konfigirasyon chaje: {self.config_file}")
+                return config
+            except Exception as e:
+                print(f"❌ Erè chaje konfigirasyon: {e}")
+                return default_config
+        else:
+            self.kreye_konfigirasyon_defò(default_config)
+            return default_config
+    
+    def kreye_konfigirasyon_defò(self, config):
+        """
+        Kreye konfigirasyon defò
+        
+        Args:
+            config (dict): Konfigirasyon defò
+        """
+        try:
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                json.dump(config, f, indent=2, ensure_ascii=False)
+            print(f"✅ Konfigirasyon defò kreye: {self.config_file}")
+        except Exception as e:
+            print(f"❌ Erè kreye konfigirasyon defò: {e}")
+    
+    def jwenn_valè(self, kle, default=None):
+        """
+        Jwenn valè konfigirasyon
+        
+        Args:
+            kle (str): Kle konfigirasyon
+            default: Valè defò
+        
+        Returns:
+            Valè konfigirasyon
+        """
+        keys = kle.split('.')
+        valè = self.config
+        
+        for k in keys:
+            if isinstance(valè, dict) and k in valè:
+                valè = valè[k]
+            else:
+                return default
+        
+        return valè
+    
+    def mete_valè(self, kle, valè):
+        """
+        Mete valè konfigirasyon
+        
+        Args:
+            kle (str): Kle konfigirasyon
+            valè: Valè a
+        """
+        keys = kle.split('.')
+        config = self.config
+        
+        for k in keys[:-1]:
+            if k not in config:
+                config[k] = {}
+            config = config[k]
+        
+        config[keys[-1]] = valè
+        self.sere_konfigirasyon()
+    
+    def sere_konfigirasyon(self):
+        """
+        Sere konfigirasyon nan
+        """
+        try:
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                json.dump(self.config, f, indent=2, ensure_ascii=False)
+            print(f"✅ Konfigirasyon sere: {self.config_file}")
+        except Exception as e:
+            print(f"❌ Erè sere konfigirasyon: {e}")
+'''
+    }
+}
+
+# Fonksyon pou kreye estrikti package
+def kreye_package_structure(structure, base_path="."):
+    """
+    Kreye estrikti package
+    
+    Args:
+        structure (dict): Estrikti package
+        base_path (str): Chemin debaz
+    """
+    for name, content in structure.items():
+        path = os.path.join(base_path, name)
+        
+        if isinstance(content, dict):
+            # Kreye katè
+            os.makedirs(path, exist_ok=True)
+            kreye_package_structure(content, path)
+        else:
+            # Kreye fichier
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"✅ Fichier kreye: {path}")
+
+# Kreye package la
+print("Kreye package kontak...")
+kreye_package_structure(package_structure)
+
+# Teste package la
+print("\n--- Teste package kontak ---")
+try:
+    from kontak import KontakManager, valide_email, valide_telefon
+    
+    # Teste fonksyon validation
+    print(f"Email valab: {valide_email('test@example.com')}")
+    print(f"Telefòn valab: {valide_telefon('123-456-7890')}")
+    
+    # Teste KontakManager
+    manager = KontakManager("test_kontak.db")
+    
+    # Ajoute kontak yo
+    manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com", "Pòtoprens")
+    manager.ajoute_kontak("Jean", "098-765-4321", "jean@example.com", "Kap Ayisyen")
+    
+    # Chèche kontak yo
+    rezilta = manager.chèche_kontak("non", "Marie")
+    print(f"Kontak jwenn: {rezilta}")
+    
+    # Lise kontak yo
+    tout_kontak = manager.lise_kontak()
+    print(f"Total kontak: {len(tout_kontak)}")
+    
+    # Fèmen baz done a
+    manager.db.fèmen()
+    
+except ImportError as e:
+    print(f"❌ Erè import: {e}")
+except Exception as e:
+    print(f"❌ Erè: {e}")
+```
+
+---
+
+### 🔧 Distribye Pwogram ou
+
+#### 🎯 Kisa se "Distribye Pwogram"?
+
+**Distribye Pwogram** se fason pataje kòd Python ak lòt moun pou yo ka enstale ak sèvi ak li. Li se tankou pibliye yon liv nan yon libreri.
+
+> **💡 TIP:** Distribye pwogram se tankou pibliye yon liv - ou bezwen prepare li byen, ekri dokimantasyon, epi mete li nan yon kote kote moun ka jwenn li.
+
+#### 📋 Komponan Distribisyon
+
+| Komponan | Deskripsyon | Egzanp |
+|----------|-------------|---------|
+| **setup.py** | Fichier konfigirasyon | `setup.py` |
+| **requirements.txt** | Depandans | `requirements.txt` |
+| **README.md** | Dokimantasyon | `README.md` |
+| **MANIFEST.in** | Fichier enkli | `MANIFEST.in` |
+| **LICENSE** | Lisans | `LICENSE` |
+
+#### 🔧 Egzanp Detaye Distribisyon
+
+**Egzanp 1: Setup.py Debaz**
+
+```python
+print("=== EGZANP 1: SETUP.PY DEBAZ ===")
+
+setup_py_kòd = '''
+"""
+Setup.py pou package kontak
+"""
+
+from setuptools import setup, find_packages
+import os
+
+# Li README.md
+def li_readme():
+    """
+    Li kontni README.md
+    
+    Returns:
+        str: Kontni README.md
+    """
+    try:
+        with open("README.md", "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "Package jesyon kontak"
+
+# Li requirements.txt
+def li_requirements():
+    """
+    Li depandans yo
+    
+    Returns:
+        list: Lis depandans yo
+    """
+    try:
+        with open("requirements.txt", "r", encoding="utf-8") as f:
+            return [line.strip() for line in f if line.strip() and not line.startswith("#")]
+    except FileNotFoundError:
+        return []
+
+setup(
+    name="kontak-kreyol",
+    version="1.0.0",
+    author="Python Kreyol",
+    author_email="kontak@pythonkreyol.com",
+    description="Sistèm jesyon kontak nan Kreyol Ayisyen",
+    long_description=li_readme(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/pythonkreyol/kontak",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Database",
+        "Natural Language :: Haitian Creole",
+    ],
+    python_requires=">=3.7",
+    install_requires=li_requirements(),
+    extras_require={
+        "dev": [
+            "pytest>=6.0",
+            "black>=21.0",
+            "flake8>=3.8",
+            "mypy>=0.800",
+        ],
+        "test": [
+            "pytest>=6.0",
+            "pytest-cov>=2.0",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "kontak=kontak.cli:main",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+    keywords="kontak, database, kreyol, haitian, creole",
+    project_urls={
+        "Bug Reports": "https://github.com/pythonkreyol/kontak/issues",
+        "Source": "https://github.com/pythonkreyol/kontak",
+        "Documentation": "https://pythonkreyol.github.io/kontak/",
+    },
+)
+'''
+
+# Ekri setup.py
+with open('setup.py', 'w', encoding='utf-8') as f:
+    f.write(setup_py_kòd)
+
+print("setup.py kreye!")
+
+# Kreye requirements.txt
+requirements_kòd = '''
+# Depandans debaz
+sqlite3  # Baz done SQLite (entegre nan Python)
+
+# Depandans opsyonèl
+pytest>=6.0.0  # Pou tèst
+black>=21.0.0  # Pou format kòd
+flake8>=3.8.0  # Pou linting
+mypy>=0.800.0  # Pou type checking
+'''
+
+with open('requirements.txt', 'w', encoding='utf-8') as f:
+    f.write(requirements_kòd)
+
+print("requirements.txt kreye!")
+
+# Kreye README.md
+readme_kòd = '''
+# Kontak Kreyol
+
+Sistèm jesyon kontak nan Kreyol Ayisyen.
+
+## Enstalasyon
+
+```bash
+pip install kontak-kreyol
+```
+
+## Itilizasyon
+
+```python
+from kontak import KontakManager
+
+# Kreye yon manager
+manager = KontakManager()
+
+# Ajoute yon kontak
+manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com")
+
+# Chèche kontak yo
+rezilta = manager.chèche_kontak("non", "Marie")
+```
+
+## Dokimantasyon
+
+Gade dokimantasyon konplè a: https://pythonkreyol.github.io/kontak/
+
+## Lisans
+
+MIT License
+'''
+
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(readme_kòd)
+
+print("README.md kreye!")
+
+# Kreye MANIFEST.in
+manifest_kòd = '''
+include README.md
+include requirements.txt
+include LICENSE
+recursive-include kontak *.py
+recursive-include kontak *.json
+recursive-include kontak *.md
+'''
+
+with open('MANIFEST.in', 'w', encoding='utf-8') as f:
+    f.write(manifest_kòd)
+
+print("MANIFEST.in kreye!")
+
+# Kreye LICENSE
+license_kòd = '''
+MIT License
+
+Copyright (c) 2024 Python Kreyol
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+
+with open('LICENSE', 'w', encoding='utf-8') as f:
+    f.write(license_kòd)
+
+print("LICENSE kreye!")
+```
+
+**Egzanp 2: CLI ak Entry Points**
+
+```python
+print("=== EGZANP 2: CLI AK ENTRY POINTS ===")
+
+# Kreye CLI modil
+cli_kòd = '''
+"""
+CLI pou package kontak
+"""
+
+import argparse
+import sys
+from kontak import KontakManager
+
+def kreye_parser():
+    """
+    Kreye parser pou CLI
+    
+    Returns:
+        argparse.ArgumentParser: Parser a
+    """
+    parser = argparse.ArgumentParser(
+        description="Sistèm Jesyon Kontak nan Kreyol Ayisyen",
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    
+    parser.add_argument('--version', action='version', version='kontak-kreyol 1.0.0')
+    parser.add_argument('--db', default='kontak.db', help='Chemin baz done a')
+    parser.add_argument('--verbose', '-v', action='store_true', help='Afiche plis enfòmasyon')
+    
+    # Subcommands
+    subparsers = parser.add_subparsers(dest='kòmand', help='Kòman disponib yo')
+    
+    # Kòmand ajoute
+    ajoute_parser = subparsers.add_parser('ajoute', help='Ajoute yon kontak')
+    ajoute_parser.add_argument('--non', required=True, help='Non kontak la')
+    ajoute_parser.add_argument('--telefon', required=True, help='Nimewo telefòn la')
+    ajoute_parser.add_argument('--email', help='Adrès imèl la')
+    ajoute_parser.add_argument('--adrès', help='Adrès kontak la')
+    
+    # Kòmand chèche
+    chèche_parser = subparsers.add_parser('chèche', help='Chèche yon kontak')
+    chèche_parser.add_argument('--non', help='Non pou chèche')
+    chèche_parser.add_argument('--telefon', help='Nimewo telefòn pou chèche')
+    chèche_parser.add_argument('--email', help='Adrès imèl pou chèche')
+    
+    # Kòmand lise
+    lise_parser = subparsers.add_parser('lise', help='Lise tout kontak yo')
+    lise_parser.add_argument('--format', choices=['txt', 'json', 'csv'], 
+                           default='txt', help='Fòma pou afiche')
+    
+    return parser
+
+def ekzekute_kòmand(args):
+    """
+    Ekzekute kòmand nan
+    
+    Args:
+        args: Argumant parse yo
+    """
+    try:
+        # Kreye manager
+        manager = KontakManager(args.db)
+        
+        if args.kòmand == 'ajoute':
+            manager.ajoute_kontak(args.non, args.telefon, args.email, args.adrès)
+        
+        elif args.kòmand == 'chèche':
+            if args.non:
+                rezilta = manager.chèche_kontak('non', args.non)
+            elif args.telefon:
+                rezilta = manager.chèche_kontak('telefon', args.telefon)
+            elif args.email:
+                rezilta = manager.chèche_kontak('email', args.email)
+            else:
+                print("❌ Ou dwe bay yon kritè chèche")
+                return
+            
+            if rezilta:
+                for kontak in rezilta:
+                    print(f"ID: {kontak['id']}")
+                    print(f"Non: {kontak['non']}")
+                    print(f"Telefòn: {kontak['telefon']}")
+                    if kontak['email']:
+                        print(f"Imèl: {kontak['email']}")
+                    if kontak['adrès']:
+                        print(f"Adrès: {kontak['adrès']}")
+                    print("---")
+            else:
+                print("Pa gen kontak ki matche")
+        
+        elif args.kòmand == 'lise':
+            kontak_yo = manager.lise_kontak()
+            
+            if args.format == 'json':
+                import json
+                print(json.dumps(kontak_yo, indent=2, ensure_ascii=False))
+            elif args.format == 'csv':
+                import csv
+                import io
+                output = io.StringIO()
+                if kontak_yo:
+                    writer = csv.DictWriter(output, fieldnames=kontak_yo[0].keys())
+                    writer.writeheader()
+                    writer.writerows(kontak_yo)
+                print(output.getvalue())
+            else:  # txt
+                for kontak in kontak_yo:
+                    print(f"ID: {kontak['id']}")
+                    print(f"Non: {kontak['non']}")
+                    print(f"Telefòn: {kontak['telefon']}")
+                    if kontak['email']:
+                        print(f"Imèl: {kontak['email']}")
+                    if kontak['adrès']:
+                        print(f"Adrès: {kontak['adrès']}")
+                    print("---")
+        
+        else:
+            print("❌ Pa gen kòmand valab")
+    
+    except Exception as e:
+        print(f"❌ Erè: {e}")
+        if args.verbose:
+            import traceback
+            traceback.print_exc()
+    
+    finally:
+        # Fèmen baz done a
+        if 'manager' in locals():
+            manager.db.fèmen()
+
+def main():
+    """
+    Fonksyon prensipal pou CLI
+    """
+    parser = kreye_parser()
+    args = parser.parse_args()
+    
+    if not args.kòmand:
+        parser.print_help()
+        return
+    
+    ekzekute_kòmand(args)
+
+if __name__ == "__main__":
+    main()
+'''
+
+# Kreye CLI modil
+os.makedirs('kontak', exist_ok=True)
+with open('kontak/cli.py', 'w', encoding='utf-8') as f:
+    f.write(cli_kòd)
+
+print("kontak/cli.py kreye!")
+
+# Teste CLI a
+print("\n--- Teste CLI ---")
+try:
+    # Simule argumant CLI
+    sys.argv = ['kontak', 'ajoute', '--non', 'Marie', '--telefon', '123-456-7890', '--email', 'marie@example.com']
+    
+    from kontak.cli import main
+    main()
+    
+except Exception as e:
+    print(f"❌ Erè CLI: {e}")
+```
+
+**Egzanp 3: PyPI ak Distribution**
+
+```python
+print("=== EGZANP 3: PYPI AK DISTRIBUTION ===")
+
+# Kreye pyproject.toml (modèn)
+pyproject_kòd = '''
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kontak-kreyol"
+dynamic = ["version"]
+description = "Sistèm jesyon kontak nan Kreyol Ayisyen"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Python Kreyol", email = "kontak@pythonkreyol.com"},
+]
+maintainers = [
+    {name = "Python Kreyol", email = "kontak@pythonkreyol.com"},
+]
+keywords = ["kontak", "database", "kreyol", "haitian", "creole"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "Natural Language :: Haitian Creole",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+]
+test = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+]
+
+[project.scripts]
+kontak = "kontak.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/pythonkreyol/kontak"
+Documentation = "https://pythonkreyol.github.io/kontak/"
+Repository = "https://github.com/pythonkreyol/kontak.git"
+"Bug Tracker" = "https://github.com/pythonkreyol/kontak/issues"
+
+[tool.setuptools]
+packages = ["kontak"]
+
+[tool.setuptools_scm]
+write_to = "kontak/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \\.eggs
+  | \\.git
+  | \\.hg
+  | \\.mypy_cache
+  | \\.tox
+  | \\.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+'''
+
+with open('pyproject.toml', 'w', encoding='utf-8') as f:
+    f.write(pyproject_kòd)
+
+print("pyproject.toml kreye!")
+
+# Kreye Makefile pou otomatizasyon
+makefile_kòd = '''
+.PHONY: help install install-dev test lint format clean build upload
+
+help:  ## Afiche èd la
+	@echo "Kòman disponib yo:"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\\033[36m%-20s\\033[0m %s\\n", $$1, $$2}'
+
+install:  ## Enstale package la
+	pip install .
+
+install-dev:  ## Enstale package la nan mode dev
+	pip install -e .[dev]
+
+test:  ## Kouri tèst yo
+	pytest
+
+lint:  ## Kouri linting
+	flake8 kontak tests
+	mypy kontak
+
+format:  ## Fòmat kòd la
+	black kontak tests
+
+clean:  ## Netwaye fichier yo
+	rm -rf build/
+	rm -rf dist/
+	rm -rf *.egg-info/
+	find . -type d -name __pycache__ -delete
+	find . -type f -name "*.pyc" -delete
+
+build: clean  ## Bati package la
+	python -m build
+
+upload-test: build  ## Upload nan Test PyPI
+	python -m twine upload --repository testpypi dist/*
+
+upload: build  ## Upload nan PyPI
+	python -m twine upload dist/*
+'''
+
+with open('Makefile', 'w', encoding='utf-8') as f:
+    f.write(makefile_kòd)
+
+print("Makefile kreye!")
+
+# Kreye GitHub Actions workflow
+github_workflow_kòd = '''
+name: CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9, "3.10", "3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[dev,test]
+    
+    - name: Lint with flake8
+      run: |
+        flake8 kontak tests
+    
+    - name: Type check with mypy
+      run: |
+        mypy kontak
+    
+    - name: Test with pytest
+      run: |
+        pytest
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Upload to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        python -m twine upload dist/*
+'''
+
+# Kreye .github/workflows
+os.makedirs('.github/workflows', exist_ok=True)
+with open('.github/workflows/ci.yml', 'w', encoding='utf-8') as f:
+    f.write(github_workflow_kòd)
+
+print(".github/workflows/ci.yml kreye!")
+
+# Kreye tèst yo
+test_kòd = '''
+"""
+Tèst pou package kontak
+"""
+
+import pytest
+import tempfile
+import os
+from kontak import KontakManager, valide_email, valide_telefon
+
+class TestValidation:
+    """Tèst pou fonksyon validation"""
+    
+    def test_valide_email(self):
+        """Tèst valide_email"""
+        assert valide_email("test@example.com") == True
+        assert valide_email("invalid-email") == False
+        assert valide_email("user@domain.co.uk") == True
+        assert valide_email("") == False
+    
+    def test_valide_telefon(self):
+        """Tèst valide_telefon"""
+        assert valide_telefon("123-456-7890") == True
+        assert valide_telefon("(123) 456-7890") == True
+        assert valide_telefon("1234567890") == True
+        assert valide_telefon("123") == False
+        assert valide_telefon("") == False
+
+class TestKontakManager:
+    """Tèst pou KontakManager"""
+    
+    @pytest.fixture
+    def manager(self):
+        """Fixture pou KontakManager"""
+        with tempfile.NamedTemporaryFile(suffix='.db', delete=False) as f:
+            db_path = f.name
+        
+        manager = KontakManager(db_path)
+        yield manager
+        
+        # Netwaye apre tèst la
+        manager.db.fèmen()
+        os.unlink(db_path)
+    
+    def test_ajoute_kontak(self, manager):
+        """Tèst ajoute_kontak"""
+        result = manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com")
+        assert result == True
+        
+        # Tcheke si kontak la ajoute
+        kontak_yo = manager.lise_kontak()
+        assert len(kontak_yo) == 1
+        assert kontak_yo[0]['non'] == "Marie"
+    
+    def test_chèche_kontak(self, manager):
+        """Tèst chèche_kontak"""
+        # Ajoute kontak yo
+        manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com")
+        manager.ajoute_kontak("Jean", "098-765-4321", "jean@example.com")
+        
+        # Chèche kontak yo
+        rezilta = manager.chèche_kontak("non", "Marie")
+        assert len(rezilta) == 1
+        assert rezilta[0]['non'] == "Marie"
+        
+        rezilta = manager.chèche_kontak("telefon", "098-765-4321")
+        assert len(rezilta) == 1
+        assert rezilta[0]['non'] == "Jean"
+    
+    def test_modifye_kontak(self, manager):
+        """Tèst modifye_kontak"""
+        # Ajoute kontak la
+        manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com")
+        
+        # Jwenn ID kontak la
+        kontak_yo = manager.lise_kontak()
+        kontak_id = kontak_yo[0]['id']
+        
+        # Modifye kontak la
+        result = manager.modifye_kontak(kontak_id, {"non": "Marie Dupont"})
+        assert result == True
+        
+        # Tcheke si kontak la modifye
+        kontak_yo = manager.lise_kontak()
+        assert kontak_yo[0]['non'] == "Marie Dupont"
+    
+    def test_efase_kontak(self, manager):
+        """Tèst efase_kontak"""
+        # Ajoute kontak la
+        manager.ajoute_kontak("Marie", "123-456-7890", "marie@example.com")
+        
+        # Jwenn ID kontak la
+        kontak_yo = manager.lise_kontak()
+        kontak_id = kontak_yo[0]['id']
+        
+        # Efase kontak la
+        result = manager.efase_kontak(kontak_id)
+        assert result == True
+        
+        # Tcheke si kontak la efase
+        kontak_yo = manager.lise_kontak()
+        assert len(kontak_yo) == 0
+
+if __name__ == "__main__":
+    pytest.main([__file__])
+'''
+
+# Kreye tests/
+os.makedirs('tests', exist_ok=True)
+with open('tests/test_kontak.py', 'w', encoding='utf-8') as f:
+    f.write(test_kòd)
+
+print("tests/test_kontak.py kreye!")
+
+print("\n=== PACKAGE KONPLÈKS KREYE ===")
+print("Fichier yo kreye:")
+print("- setup.py")
+print("- pyproject.toml")
+print("- requirements.txt")
+print("- README.md")
+print("- MANIFEST.in")
+print("- LICENSE")
+print("- Makefile")
+print("- .github/workflows/ci.yml")
+print("- tests/test_kontak.py")
+print("- kontak/ (package konplèks)")
+
+print("\n=== KÒMAN DISTRIBYE ===")
+print("1. Bati package la:")
+print("   make build")
+print("2. Upload nan Test PyPI:")
+print("   make upload-test")
+print("3. Upload nan PyPI:")
+print("   make upload")
+print("4. Enstale package la:")
+print("   pip install kontak-kreyol")
+```
+
+---
+
+### 📊 Resime Packaging ak Argumant
+
+#### 🎯 Tèm Enpòtan yo
+
+| Tèm | Deskripsyon | Egzanp |
+|-----|-------------|---------|
+| **Module** | Fichier Python ak fonksyon yo | `matematik.py` |
+| **Package** | Katè ak modil yo | `kontak/` |
+| **Import** | Pote modil nan pwogram la | `import kontak` |
+| **Argument** | Enfòmasyon nan kòmand la | `python script.py arg1` |
+| **Parser** | Trete argumant yo | `argparse.ArgumentParser()` |
+| **Distribution** | Fason pataje pwogram la | `setup.py` |
+| **PyPI** | Depo package Python yo | `pip install package` |
+
+#### 🔧 Règ Enpòtan
+
+1. **Òganize kòd la** an modil ak package
+2. **Sèvi ak argparse** pou argumant liy kòmand
+3. **Valide argumant yo** anvan sèvi ak yo
+4. **Ekri dokimantasyon** pou package la
+5. **Kreye tèst** pou package la
+6. **Sèvi ak version control** pou kòd la
+7. **Distribye nan PyPI** pou pataje
+
+#### ⚠️ Erè Komen
+
+1. **Pa òganize kòd la** an modil ak package
+2. **Pa valide argumant yo** anvan sèvi ak yo
+3. **Pa ekri dokimantasyon** pou package la
+4. **Pa kreye tèst** pou package la
+5. **Pa sèvi ak version control** pou kòd la
+6. **Pa distribye nan PyPI** pou pataje
+
+---
+
+### 🎮 Egzèsis Pratik
+
+**Egzèsis 1: Kreye Package**
+Kreye yon package pou jere liv yo.
+
+**Egzèsis 2: CLI Avanse**
+Kreye yon CLI avanse ak subcommands.
+
+**Egzèsis 3: Distribye Package**
+Distribye package la nan PyPI.
+
+**Egzèsis 4: Tèst Package**
+Kreye tèst konplèks pou package la.
 2. **Reutilizasyon**: Sèvi ak kòd la nan lòt pwojè
 3. **Pataje**: Pataje kòd la ak lòt moun
 4. **Fleksibilite**: Itilizatè a ka bay enfòmasyon diferan
