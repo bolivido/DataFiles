@@ -1,0 +1,31 @@
+# Dependencies pou jenere PDF nan liv Python Essential Training nan Kreyòl Ayisyen
+
+# Pou konvèti Markdown nan HTML ak PDF
+markdown==3.5.1
+pdfkit==1.0.0
+
+# Pou travay ak fichier ak chemin
+pathlib2==2.3.7
+
+# Pou kòd syntax highlighting
+Pygments==2.17.2
+
+# Pou tablo ak fòma
+tabulate==0.9.0
+
+# Pou jere encoding
+chardet==5.2.0
+
+# Pou travay ak dat ak tan
+python-dateutil==2.8.2
+
+# Pou validasyon
+jsonschema==4.20.0
+
+# Pou testing (opsyonèl)
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Pou development (opsyonèl)
+black==23.11.0
+flake8==6.1.0
