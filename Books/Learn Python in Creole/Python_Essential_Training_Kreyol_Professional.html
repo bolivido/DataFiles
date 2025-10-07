@@ -12510,17 +12510,845 @@ for nòt_yo in test_kas_yo:
 </ol>
 <hr />
 <h2 id="chapit-9-threads-ak-pwosesis-multithreading-and-multiprocessing-eksplikasyon-detaye-pou-debitan">Chapit 9: Threads ak Pwosesis (Multithreading and Multiprocessing) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="objektif-chapit_8">🎯 Objektif Chapit</h3>
+<p>Apre w fini chapit sa a, w pral kapab:
+- <strong>Konprann diferans threads ak pwosesis</strong> - Kisa yo ye ak poukisa yo enpòtan
+- <strong>Sèvi ak multithreading</strong> - Fè plizyè travay an menm tan nan yon pwogram
+- <strong>Konprann synchronization</strong> - Evite konfli lè plizyè threads travay ansanm
+- <strong>Sèvi ak multiprocessing</strong> - Sèvi ak plizyè pwosesis pou travay pi vit
+- <strong>Devlope yon sistèm monitò</strong> - Pwojè pratik ak paralelizasyon</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Threads ak pwosesis se fason pi efikas pou fè travay ki pran tan. Yo pèmèt ou sèvi ak tout kapasite konpitè a.</p>
+</blockquote>
+<h3 id="tem-kle-pou-chapit-sa-a_7">🔧 Tèm Kle Pou Chapit Sa A</h3>
+<h4 id="threads-fondamantal"><strong>Threads Fondamantal</strong></h4>
+<ul>
+<li><strong>Thread</strong> - Yon fil ekzekisyon nan yon pwogram</li>
+<li><strong>Multithreading</strong> - Plizyè threads travay ansanm</li>
+<li><strong>Synchronization</strong> - Kontwòl aksè nan resous partaje</li>
+<li><strong>Lock</strong> - Mekanik pou evite konfli</li>
+<li><strong>Queue</strong> - Kanal pou kominikasyon ant threads</li>
+</ul>
+<h4 id="pwosesis-fondamantal"><strong>Pwosesis Fondamantal</strong></h4>
+<ul>
+<li><strong>Process</strong> - Yon pwogram ki kouri endependan</li>
+<li><strong>Multiprocessing</strong> - Plizyè pwosesis travay ansanm</li>
+<li><strong>Pool</strong> - Gwoup pwosesis pou travay</li>
+<li><strong>Pipe</strong> - Kanal pou kominikasyon ant pwosesis</li>
+<li><strong>Manager</strong> - Jere done partaje ant pwosesis</li>
+</ul>
+<h4 id="konsep-avanse"><strong>Konsep Avanse</strong></h4>
+<ul>
+<li><strong>Concurrency</strong> - Fè plizyè bagay an menm tan</li>
+<li><strong>Parallelism</strong> - Fè plizyè bagay vreman an menm tan</li>
+<li><strong>Race Condition</strong> - Konfli lè plizyè threads aksede menm done</li>
+<li><strong>Deadlock</strong> - Threads yo bloke youn lòt</li>
+<li><strong>GIL</strong> - Global Interpreter Lock nan Python</li>
+</ul>
+<hr />
 <h3 id="kisa-se-threads-ak-pwosesis">🎯 Kisa se "Threads ak Pwosesis"?</h3>
 <p><strong>Definisyon Detaye:</strong></p>
 <p><strong>Threads ak Pwosesis</strong> se teknik Python yo ki pèmèt pwogram nan fè plizyè bagay an menm tan. Li se tankou gen plizyè moun ki travay sou menm pwojè a nan menm tan.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Pensez a threads tankou plizyè moun ki travay nan menm ofis la, epi pwosesis tankou plizyè ofis ki travay sou menm pwojè a.</p>
+</blockquote>
+<h4 id="diagram-threads-vs-pwosesis">📊 Diagram Threads vs Pwosesis</h4>
+<pre class="codehilite"><code class="language-mermaid">flowchart TD
+    A[Pwogram Prensipal] --&gt; B[Thread 1]
+    A --&gt; C[Thread 2]
+    A --&gt; D[Thread 3]
+    B --&gt; E[Travay 1]
+    C --&gt; F[Travay 2]
+    D --&gt; G[Travay 3]
+
+    H[Pwosesis 1] --&gt; I[Travay 1]
+    J[Pwosesis 2] --&gt; K[Travay 2]
+    L[Pwosesis 3] --&gt; M[Travay 3]
+
+    style A fill:#e1f5fe
+    style H fill:#f3e5f5
+    style J fill:#f3e5f5
+    style L fill:#f3e5f5
+</code></pre>
+
+<p><img alt="Threads and Processes Visualization" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
+<em>Source: <a href="https://unsplash.com/photos/parallel">Unsplash</a> - Photo by [Luca Bravo]</em></p>
 <p><strong>Poukisa Threads ak Pwosesis Enpòtan?</strong></p>
 <ol>
 <li><strong>Vitès</strong>: Fè travay yo pi vit</li>
 <li><strong>Efikasite</strong>: Sèvi ak tout kapasite konpitè a</li>
-<li><strong>Reponsivite</strong>: Pwogram nan pa bloke</li>
-<li><strong>Paralèl</strong>: Fè plizyè bagay ansanm</li>
-<li><strong>Modèn</strong>: Teknik modèn pou pwogramasyon</li>
+<li><strong>Repons</strong>: Pwogram nan reponn pi vit</li>
+<li><strong>Scalabilité</strong>: Kapab jere plis travay</li>
+<li><strong>Eksperyans</strong>: Itilizatè yo pa tann</li>
+<li><strong>Pwodiktivite</strong>: Fè plis nan mwens tan</li>
 </ol>
+<hr />
+<h3 id="diferans-threads-vs-pwosesis">🔧 Diferans Threads vs Pwosesis</h3>
+<h4 id="kisa-se-diferans-threads-ak-pwosesis">🎯 Kisa se "Diferans Threads ak Pwosesis"?</h4>
+<p><strong>Threads</strong> se fil ekzekisyon nan yon menm pwogram ki pataje memwa.
+<strong>Pwosesis</strong> se pwogram endependan ki genyen memwa pa yo.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Threads se tankou plizyè moun ki travay nan menm chanm la, pwosesis se tankou plizyè moun ki travay nan chanm diferan.</p>
+</blockquote>
+<h4 id="konparezon-threads-vs-pwosesis">📋 Konparezon Threads vs Pwosesis</h4>
+<table>
+<thead>
+<tr>
+<th>Karakteristik</th>
+<th>Threads</th>
+<th>Pwosesis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Memwa</strong></td>
+<td>Pataje</td>
+<td>Endependan</td>
+</tr>
+<tr>
+<td><strong>Kominikasyon</strong></td>
+<td>Fasil</td>
+<td>Pi difisil</td>
+</tr>
+<tr>
+<td><strong>Kreasyon</strong></td>
+<td>Pi vit</td>
+<td>Pi dousman</td>
+</tr>
+<tr>
+<td><strong>Sekirite</strong></td>
+<td>Pi pè</td>
+<td>Pi sekirize</td>
+</tr>
+<tr>
+<td><strong>GIL</strong></td>
+<td>Afekte</td>
+<td>Pa afekte</td>
+</tr>
+<tr>
+<td><strong>I/O</strong></td>
+<td>Bon</td>
+<td>Bon</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>Limite</td>
+<td>Pi bon</td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-diferans">🔧 Egzanp Detaye Diferans</h4>
+<p><strong>Egzanp 1: Threads Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: THREADS DEBAZ ===&quot;)
+
+import threading
+import time
+
+def travay_thread(non, kantite):
+    &quot;&quot;&quot;
+    Fonksyon pou travay nan thread
+
+    Args:
+        non (str): Non thread la
+        kantite (int): Kantite travay pou fè
+    &quot;&quot;&quot;
+    print(f&quot;Thread {non} kòmanse&quot;)
+    for i in range(kantite):
+        print(f&quot;Thread {non}: Travay {i+1}&quot;)
+        time.sleep(0.1)  # Simule travay ki pran tan
+    print(f&quot;Thread {non} fini&quot;)
+
+# Kreye threads
+thread1 = threading.Thread(target=travay_thread, args=(&quot;A&quot;, 5))
+thread2 = threading.Thread(target=travay_thread, args=(&quot;B&quot;, 3))
+
+# Kòmanse threads
+print(&quot;Kòmanse threads...&quot;)
+thread1.start()
+thread2.start()
+
+# Tann threads yo fini
+thread1.join()
+thread2.join()
+
+print(&quot;Tout threads fini!&quot;)
+</code></pre>
+
+<p><strong>Egzanp 2: Pwosesis Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: PWOSESIS DEBAZ ===&quot;)
+
+import multiprocessing
+import time
+
+def travay_pwosesis(non, kantite):
+    &quot;&quot;&quot;
+    Fonksyon pou travay nan pwosesis
+
+    Args:
+        non (str): Non pwosesis la
+        kantite (int): Kantite travay pou fè
+    &quot;&quot;&quot;
+    print(f&quot;Pwosesis {non} kòmanse&quot;)
+    for i in range(kantite):
+        print(f&quot;Pwosesis {non}: Travay {i+1}&quot;)
+        time.sleep(0.1)  # Simule travay ki pran tan
+    print(f&quot;Pwosesis {non} fini&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    # Kreye pwosesis yo
+    pwosesis1 = multiprocessing.Process(target=travay_pwosesis, args=(&quot;X&quot;, 5))
+    pwosesis2 = multiprocessing.Process(target=travay_pwosesis, args=(&quot;Y&quot;, 3))
+
+    # Kòmanse pwosesis yo
+    print(&quot;Kòmanse pwosesis...&quot;)
+    pwosesis1.start()
+    pwosesis2.start()
+
+    # Tann pwosesis yo fini
+    pwosesis1.join()
+    pwosesis2.join()
+
+    print(&quot;Tout pwosesis fini!&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Konparezon Vitès</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: KONPAREZON VITÈS ===&quot;)
+
+import threading
+import multiprocessing
+import time
+
+def kalkile_kare(nimewo):
+    &quot;&quot;&quot;
+    Kalkile kare yon nimewo (travay ki pran tan)
+
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+
+    Returns:
+        int: Kare nimewo a
+    &quot;&quot;&quot;
+    # Simule travay ki pran tan
+    time.sleep(0.1)
+    return nimewo ** 2
+
+def teste_sans_paralelizasyon():
+    &quot;&quot;&quot;
+    Teste san paralelizasyon
+    &quot;&quot;&quot;
+    print(&quot;=== SAN PARALELIZASYON ===&quot;)
+    kòmanse = time.time()
+
+    rezilta = []
+    for i in range(10):
+        rezilta.append(kalkile_kare(i))
+
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+
+def teste_ak_threads():
+    &quot;&quot;&quot;
+    Teste ak threads
+    &quot;&quot;&quot;
+    print(&quot;=== AK THREADS ===&quot;)
+    kòmanse = time.time()
+
+    threads = []
+    rezilta = []
+
+    def travay_thread(nimewo):
+        rezilta.append(kalkile_kare(nimewo))
+
+    for i in range(10):
+        thread = threading.Thread(target=travay_thread, args=(i,))
+        threads.append(thread)
+        thread.start()
+
+    for thread in threads:
+        thread.join()
+
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+
+def teste_ak_pwosesis():
+    &quot;&quot;&quot;
+    Teste ak pwosesis
+    &quot;&quot;&quot;
+    print(&quot;=== AK PWOSESIS ===&quot;)
+    kòmanse = time.time()
+
+    pwosesis_yo = []
+    rezilta = []
+
+    def travay_pwosesis(nimewo):
+        rezilta.append(kalkile_kare(nimewo))
+
+    for i in range(10):
+        pwosesis = multiprocessing.Process(target=travay_pwosesis, args=(i,))
+        pwosesis_yo.append(pwosesis)
+        pwosesis.start()
+
+    for pwosesis in pwosesis_yo:
+        pwosesis.join()
+
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+
+# Teste tout metòd yo
+teste_sans_paralelizasyon()
+teste_ak_threads()
+teste_ak_pwosesis()
+</code></pre>
+
+<hr />
+<h3 id="multithreading-ak-synchronization">🔧 Multithreading ak Synchronization</h3>
+<h4 id="kisa-se-synchronization">🎯 Kisa se "Synchronization"?</h4>
+<p><strong>Synchronization</strong> se teknik pou kontwòl aksè nan resous partaje ant plizyè threads. Li evite konfli lè plizyè threads eseye modifye menm done a an menm tan.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Synchronization se tankou yon semafò nan lari - li pèmèt sèlman yon machin pase nan yon tan pou evite aksidan.</p>
+</blockquote>
+<h4 id="mekanik-synchronization">📋 Mekanik Synchronization</h4>
+<table>
+<thead>
+<tr>
+<th>Mekanik</th>
+<th>Deskripsyon</th>
+<th>Lè Sèvi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lock</strong></td>
+<td>Bloke aksè nan resous</td>
+<td>Modifye done partaje</td>
+</tr>
+<tr>
+<td><strong>Semaphore</strong></td>
+<td>Limite kantite aksè</td>
+<td>Resous limite</td>
+</tr>
+<tr>
+<td><strong>Event</strong></td>
+<td>Signal ant threads</td>
+<td>Kominikasyon</td>
+</tr>
+<tr>
+<td><strong>Condition</strong></td>
+<td>Atann kondisyon</td>
+<td>Synchronization avanse</td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>Kanal kominikasyon</td>
+<td>Pase done ant threads</td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-synchronization">🔧 Egzanp Detaye Synchronization</h4>
+<p><strong>Egzanp 1: Lock Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: LOCK DEBAZ ===&quot;)
+
+import threading
+import time
+
+# Varyab partaje
+kontè = 0
+lock = threading.Lock()
+
+def ogmante_kontè(non_thread):
+    &quot;&quot;&quot;
+    Ogmante kontè ak lock
+
+    Args:
+        non_thread (str): Non thread la
+    &quot;&quot;&quot;
+    global kontè
+
+    for i in range(5):
+        # Pran lock anvan modifye kontè
+        lock.acquire()
+        try:
+            # Modifye kontè
+            kontè += 1
+            print(f&quot;Thread {non_thread}: Kontè = {kontè}&quot;)
+            time.sleep(0.1)
+        finally:
+            # Lage lock apre modifye
+            lock.release()
+
+# Kreye threads
+thread1 = threading.Thread(target=ogmante_kontè, args=(&quot;A&quot;,))
+thread2 = threading.Thread(target=ogmante_kontè, args=(&quot;B&quot;,))
+
+# Kòmanse threads
+thread1.start()
+thread2.start()
+
+# Tann threads yo fini
+thread1.join()
+thread2.join()
+
+print(f&quot;Kontè final: {kontè}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 2: Queue pou Kominikasyon</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: QUEUE POU KOMINIKASYON ===&quot;)
+
+import threading
+import queue
+import time
+
+def pwodiktè(queue_obj, non):
+    &quot;&quot;&quot;
+    Pwodiktè ki mete done nan queue
+
+    Args:
+        queue_obj: Queue objè
+        non (str): Non pwodiktè a
+    &quot;&quot;&quot;
+    for i in range(5):
+        done = f&quot;Done {i+1} nan {non}&quot;
+        queue_obj.put(done)
+        print(f&quot;Pwodiktè {non}: Mete {done}&quot;)
+        time.sleep(0.2)
+
+def konsomatè(queue_obj, non):
+    &quot;&quot;&quot;
+    Konsomatè ki pran done nan queue
+
+    Args:
+        queue_obj: Queue objè
+        non (str): Non konsomatè a
+    &quot;&quot;&quot;
+    while True:
+        try:
+            # Pran done nan queue (tann 1 segonn)
+            done = queue_obj.get(timeout=1)
+            print(f&quot;Konsomatè {non}: Pran {done}&quot;)
+            time.sleep(0.3)
+            queue_obj.task_done()
+        except queue.Empty:
+            print(f&quot;Konsomatè {non}: Queue vid, fini&quot;)
+            break
+
+# Kreye queue
+queue_obj = queue.Queue()
+
+# Kreye threads
+pwodiktè1 = threading.Thread(target=pwodiktè, args=(queue_obj, &quot;P1&quot;))
+pwodiktè2 = threading.Thread(target=pwodiktè, args=(queue_obj, &quot;P2&quot;))
+konsomatè1 = threading.Thread(target=konsomatè, args=(queue_obj, &quot;K1&quot;))
+
+# Kòmanse threads
+pwodiktè1.start()
+pwodiktè2.start()
+konsomatè1.start()
+
+# Tann pwodiktè yo fini
+pwodiktè1.join()
+pwodiktè2.join()
+
+# Tann queue a vid
+queue_obj.join()
+
+# Fini konsomatè a
+konsomatè1.join()
+</code></pre>
+
+<p><strong>Egzanp 3: Event pou Kominikasyon</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: EVENT POU KOMINIKASYON ===&quot;)
+
+import threading
+import time
+
+# Event pou signal
+event = threading.Event()
+
+def atann_signal(non):
+    &quot;&quot;&quot;
+    Thread ki atann signal
+
+    Args:
+        non (str): Non thread la
+    &quot;&quot;&quot;
+    print(f&quot;Thread {non}: Atann signal...&quot;)
+    event.wait()  # Atann signal
+    print(f&quot;Thread {non}: Signal resevwa! Kontinye...&quot;)
+
+def voye_signal():
+    &quot;&quot;&quot;
+    Thread ki voye signal
+    &quot;&quot;&quot;
+    print(&quot;Thread Signal: Atann 3 segonn...&quot;)
+    time.sleep(3)
+    print(&quot;Thread Signal: Voye signal!&quot;)
+    event.set()  # Voye signal
+
+# Kreye threads
+thread1 = threading.Thread(target=atann_signal, args=(&quot;A&quot;,))
+thread2 = threading.Thread(target=atann_signal, args=(&quot;B&quot;,))
+thread3 = threading.Thread(target=atann_signal, args=(&quot;C&quot;,))
+thread_signal = threading.Thread(target=voye_signal)
+
+# Kòmanse threads
+thread1.start()
+thread2.start()
+thread3.start()
+thread_signal.start()
+
+# Tann tout threads yo fini
+thread1.join()
+thread2.join()
+thread3.join()
+thread_signal.join()
+
+print(&quot;Tout threads fini!&quot;)
+</code></pre>
+
+<p><strong>Egzanp 4: Semaphore</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 4: SEMAPHORE ===&quot;)
+
+import threading
+import time
+
+# Semaphore ki pèmèt 2 threads nan menm tan
+semaphore = threading.Semaphore(2)
+
+def aksede_resous(non):
+    &quot;&quot;&quot;
+    Aksede resous ak semaphore
+
+    Args:
+        non (str): Non thread la
+    &quot;&quot;&quot;
+    print(f&quot;Thread {non}: Eseye aksede resous...&quot;)
+
+    # Pran semaphore
+    semaphore.acquire()
+    try:
+        print(f&quot;Thread {non}: Aksede resous! Travay...&quot;)
+        time.sleep(2)  # Simule travay
+        print(f&quot;Thread {non}: Fini travay!&quot;)
+    finally:
+        # Lage semaphore
+        semaphore.release()
+        print(f&quot;Thread {non}: Lage resous&quot;)
+
+# Kreye 5 threads
+threads = []
+for i in range(5):
+    thread = threading.Thread(target=aksede_resous, args=(f&quot;T{i+1}&quot;,))
+    threads.append(thread)
+    thread.start()
+
+# Tann tout threads yo fini
+for thread in threads:
+    thread.join()
+
+print(&quot;Tout threads fini!&quot;)
+</code></pre>
+
+<hr />
+<h3 id="multiprocessing-ak-pool">🔧 Multiprocessing ak Pool</h3>
+<h4 id="kisa-se-multiprocessing-ak-pool">🎯 Kisa se "Multiprocessing ak Pool"?</h4>
+<p><strong>Multiprocessing</strong> se teknik pou sèvi ak plizyè pwosesis endependan pou fè travay yo pi vit.
+<strong>Pool</strong> se yon gwoup pwosesis ki ka travay sou travay diferan.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Multiprocessing se tankou gen plizyè ofis ki travay sou menm pwojè a, Pool se tankou yon ekip ki ka pran travay diferan.</p>
+</blockquote>
+<h4 id="avantaj-multiprocessing">📋 Avantaj Multiprocessing</h4>
+<table>
+<thead>
+<tr>
+<th>Avantaj</th>
+<th>Deskripsyon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vre Paralelizasyon</strong></td>
+<td>Pa afekte pa GIL</td>
+</tr>
+<tr>
+<td><strong>Sekirite</strong></td>
+<td>Chak pwosesis endependan</td>
+</tr>
+<tr>
+<td><strong>Scalabilité</strong></td>
+<td>Kapab sèvi ak plizyè CPU</td>
+</tr>
+<tr>
+<td><strong>Fault Tolerance</strong></td>
+<td>Yon pwosesis ka kraze san afekte lòt yo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-multiprocessing">🔧 Egzanp Detaye Multiprocessing</h4>
+<p><strong>Egzanp 1: Multiprocessing Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: MULTIPROCESSING DEBAZ ===&quot;)
+
+import multiprocessing
+import time
+
+def kalkile_kare(nimewo):
+    &quot;&quot;&quot;
+    Kalkile kare yon nimewo
+
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+
+    Returns:
+        tuple: (nimewo, kare)
+    &quot;&quot;&quot;
+    print(f&quot;Pwosesis {multiprocessing.current_process().name}: Kalkile kare {nimewo}&quot;)
+    time.sleep(0.5)  # Simule travay ki pran tan
+    return (nimewo, nimewo ** 2)
+
+if __name__ == &quot;__main__&quot;:
+    # Lis nimewo yo
+    nimewo_yo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    print(&quot;=== SAN MULTIPROCESSING ===&quot;)
+    kòmanse = time.time()
+    rezilta_sans = []
+    for n in nimewo_yo:
+        rezilta_sans.append(kalkile_kare(n))
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta_sans}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+
+    print(&quot;\n=== AK MULTIPROCESSING ===&quot;)
+    kòmanse = time.time()
+
+    # Kreye pwosesis yo
+    pwosesis_yo = []
+    for n in nimewo_yo:
+        pwosesis = multiprocessing.Process(target=kalkile_kare, args=(n,))
+        pwosesis_yo.append(pwosesis)
+        pwosesis.start()
+
+    # Tann tout pwosesis yo fini
+    for pwosesis in pwosesis_yo:
+        pwosesis.join()
+
+    fini = time.time()
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+</code></pre>
+
+<p><strong>Egzanp 2: Pool ak Map</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: POOL AK MAP ===&quot;)
+
+import multiprocessing
+import time
+
+def kalkile_kare(nimewo):
+    &quot;&quot;&quot;
+    Kalkile kare yon nimewo
+
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+
+    Returns:
+        int: Kare nimewo a
+    &quot;&quot;&quot;
+    print(f&quot;Pwosesis {multiprocessing.current_process().name}: Kalkile kare {nimewo}&quot;)
+    time.sleep(0.5)  # Simule travay ki pran tan
+    return nimewo ** 2
+
+if __name__ == &quot;__main__&quot;:
+    # Lis nimewo yo
+    nimewo_yo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    print(&quot;=== AK POOL ===&quot;)
+    kòmanse = time.time()
+
+    # Kreye pool ak 4 pwosesis
+    with multiprocessing.Pool(processes=4) as pool:
+        rezilta = pool.map(kalkile_kare, nimewo_yo)
+
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Pool ak Apply_async</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: POOL AK APPLY_ASYNC ===&quot;)
+
+import multiprocessing
+import time
+
+def kalkile_kare(nimewo):
+    &quot;&quot;&quot;
+    Kalkile kare yon nimewo
+
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+
+    Returns:
+        int: Kare nimewo a
+    &quot;&quot;&quot;
+    print(f&quot;Pwosesis {multiprocessing.current_process().name}: Kalkile kare {nimewo}&quot;)
+    time.sleep(0.5)  # Simule travay ki pran tan
+    return nimewo ** 2
+
+if __name__ == &quot;__main__&quot;:
+    # Lis nimewo yo
+    nimewo_yo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    print(&quot;=== AK APPLY_ASYNC ===&quot;)
+    kòmanse = time.time()
+
+    # Kreye pool ak 4 pwosesis
+    with multiprocessing.Pool(processes=4) as pool:
+        # Sèvi ak apply_async pou travay asenkron
+        rezilta_async = [pool.apply_async(kalkile_kare, (n,)) for n in nimewo_yo]
+
+        # Tann tout rezilta yo
+        rezilta = [r.get() for r in rezilta_async]
+
+    fini = time.time()
+    print(f&quot;Rezilta: {rezilta}&quot;)
+    print(f&quot;Tan pran: {fini - kòmanse:.2f} segonn&quot;)
+</code></pre>
+
+<p><strong>Egzanp 4: Kominikasyon ant Pwosesis</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 4: KOMINIKASYON ANT PWOSESIS ===&quot;)
+
+import multiprocessing
+import time
+
+def pwodiktè(pipe):
+    &quot;&quot;&quot;
+    Pwodiktè ki voye done nan pipe
+
+    Args:
+        pipe: Pipe pou kominikasyon
+    &quot;&quot;&quot;
+    for i in range(5):
+        done = f&quot;Done {i+1}&quot;
+        pipe.send(done)
+        print(f&quot;Pwodiktè: Voye {done}&quot;)
+        time.sleep(0.5)
+
+    pipe.close()
+
+def konsomatè(pipe):
+    &quot;&quot;&quot;
+    Konsomatè ki resevwa done nan pipe
+
+    Args:
+        pipe: Pipe pou kominikasyon
+    &quot;&quot;&quot;
+    while True:
+        try:
+            done = pipe.recv()
+            print(f&quot;Konsomatè: Resevwa {done}&quot;)
+            time.sleep(0.3)
+        except EOFError:
+            print(&quot;Konsomatè: Pipe fèmen, fini&quot;)
+            break
+
+if __name__ == &quot;__main__&quot;:
+    # Kreye pipe
+    pipe_pwodiktè, pipe_konsomatè = multiprocessing.Pipe()
+
+    # Kreye pwosesis yo
+    pwosesis_pwodiktè = multiprocessing.Process(target=pwodiktè, args=(pipe_pwodiktè,))
+    pwosesis_konsomatè = multiprocessing.Process(target=konsomatè, args=(pipe_konsomatè,))
+
+    # Kòmanse pwosesis yo
+    pwosesis_pwodiktè.start()
+    pwosesis_konsomatè.start()
+
+    # Tann tout pwosesis yo fini
+    pwosesis_pwodiktè.join()
+    pwosesis_konsomatè.join()
+
+    print(&quot;Tout pwosesis fini!&quot;)
+</code></pre>
+
+<hr />
+<h3 id="resime-threads-ak-pwosesis">📊 Resime Threads ak Pwosesis</h3>
+<h4 id="tem-enpotan-yo_4">🎯 Tèm Enpòtan yo</h4>
+<table>
+<thead>
+<tr>
+<th>Tèm</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Thread</strong></td>
+<td>Fil ekzekisyon nan pwogram</td>
+<td><code>threading.Thread()</code></td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>Pwogram endependan</td>
+<td><code>multiprocessing.Process()</code></td>
+</tr>
+<tr>
+<td><strong>Lock</strong></td>
+<td>Kontwòl aksè nan resous</td>
+<td><code>threading.Lock()</code></td>
+</tr>
+<tr>
+<td><strong>Queue</strong></td>
+<td>Kanal kominikasyon</td>
+<td><code>queue.Queue()</code></td>
+</tr>
+<tr>
+<td><strong>Pool</strong></td>
+<td>Gwoup pwosesis</td>
+<td><code>multiprocessing.Pool()</code></td>
+</tr>
+<tr>
+<td><strong>Synchronization</strong></td>
+<td>Kontwòl aksè nan resous</td>
+<td>Lock, Semaphore, Event</td>
+</tr>
+<tr>
+<td><strong>GIL</strong></td>
+<td>Global Interpreter Lock</td>
+<td>Limite threads nan Python</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reg-enpotan_4">🔧 Règ Enpòtan</h4>
+<ol>
+<li><strong>Threads</strong>: Bon pou I/O, pa bon pou CPU-intensive</li>
+<li><strong>Pwosesis</strong>: Bon pou CPU-intensive, pa bon pou I/O</li>
+<li><strong>Synchronization</strong>: Toujou sèvi ak lè modifye done partaje</li>
+<li><strong>Pool</strong>: Sèvi ak pou travay ki ka divize</li>
+<li><strong>Kominikasyon</strong>: Sèvi ak Queue pou threads, Pipe pou pwosesis</li>
+</ol>
+<h4 id="ere-komen_4">⚠️ Erè Komen</h4>
+<ol>
+<li><strong>Pa sèvi ak synchronization</strong> lè modifye done partaje</li>
+<li><strong>Pa sèvi ak threads</strong> pou travay CPU-intensive</li>
+<li><strong>Pa sèvi ak pwosesis</strong> pou travay I/O-intensive</li>
+<li><strong>Pa oubliye join()</strong> pou tann threads/pwosesis yo fini</li>
+<li><strong>Pa sèvi ak done partaje</strong> san synchronization</li>
+</ol>
+<hr />
+<h3 id="egzesis-pratik_4">🎮 Egzèsis Pratik</h3>
+<p><strong>Egzèsis 1: Kalkilatris Paralèl</strong>
+Kreye yon kalkilatris ki sèvi ak threads ak pwosesis.</p>
+<p><strong>Egzèsis 2: Sistèm Monitò</strong>
+Kreye yon sistèm ki monitò plizyè resous an menm tan.</p>
+<p><strong>Egzèsis 3: Jwèt Multiplayer</strong>
+Kreye yon jwèt ki ka jere plizyè jwè an menm tan.</p>
+<p><strong>Egzèsis 4: Sistèm Telechaje</strong>
+Kreye yon sistèm ki ka telechaje plizyè fichier an menm tan.
+2. <strong>Efikasite</strong>: Sèvi ak tout kapasite konpitè a
+3. <strong>Reponsivite</strong>: Pwogram nan pa bloke
+4. <strong>Paralèl</strong>: Fè plizyè bagay ansanm
+5. <strong>Modèn</strong>: Teknik modèn pou pwogramasyon</p>
 <p><strong>Analoji ki fasil konprann:</strong>
 - <strong>Thread</strong> = Tankou yon travayè nan yon ekip
 - <strong>Process</strong> = Tankou yon ekip konplè
