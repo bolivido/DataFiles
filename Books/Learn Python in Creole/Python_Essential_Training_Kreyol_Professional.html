@@ -6610,29 +6610,359 @@ for i in range(1, 6):
 <li><strong>Chalèj</strong>: Rezoud pwoblèm nimewo triyang la ak de metòd diferan</li>
 </ol>
 <hr />
-<h2 id="chapit-7-klas-ak-obje_1">Chapit 7: Klas ak Objè</h2>
-<h3 id="anatomi-yon-klas">Anatomi yon klas</h3>
-<h4 id="klas-debaz">Klas debaz</h4>
+<h2 id="chapit-7-klas-ak-obje-classes-and-objects-eksplikasyon-detaye-pou-debitan">Chapit 7: Klas ak Objè (Classes and Objects) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-se-programasyon-oryantasyon-obje-oop_1">🎯 Kisa se "Programasyon Oryantasyon Objè" (OOP)?</h3>
+<p><strong>Definisyon Detaye:</strong></p>
+<p><strong>Programasyon Oryantasyon Objè (OOP)</strong> se yon fason pou òganize kòd la ki imite fason moun yo panse. Olye ekri kòd lineyè, nou kreye objè ki gen karakteristik ak aksyon.</p>
+<p><strong>Poukisa OOP Enpòtan?</strong></p>
+<ol>
+<li><strong>Modilè</strong>: Divize gwo pwoblèm yo an ti pati</li>
+<li><strong>Reutilizasyon</strong>: Sèvi ak menm kòd la plizyè fwa</li>
+<li><strong>Kenbe</strong>: Pi fasil pou chanje ak amelyore</li>
+<li><strong>Entelijan</strong>: Kòd la imite reyalite a</li>
+<li><strong>Evolisyon</strong>: Pi fasil pou ajoute nouvo karakteristik</li>
+</ol>
+<p><strong>Analoji ki fasil konprann:</strong>
+- <strong>Klas</strong> = Tankou yon plan pou yon machin
+- <strong>Objè</strong> = Tankou machin reyèl yo ki fèt dapre plan an
+- <strong>Atribi</strong> = Karakteristik yo (koulè, gwosè, etc.)
+- <strong>Metòd</strong> = Aksyon yo ka fè (kondwi, frene, etc.)</p>
+<h3 id="tem-fondamantal-nan-oop">🔧 Tèm Fondamantal nan OOP</h3>
+<h4 id="1-class-klas-plan-pou-kreye-obje">1. <strong>Class</strong> (Klas) - Plan Pou Kreye Objè</h4>
+<p><strong>Kisa se "Class"?</strong></p>
+<p><strong>Class</strong> se yon plan oswa modèl pou kreye objè. Li defini ki karakteristik ak aksyon objè yo pral genyen.</p>
+<p><strong>Poukisa Class Enpòtan?</strong>
+- Li se plan nan pou kreye objè yo
+- Li defini tout karakteristik ak aksyon yo
+- Ou ka kreye plizyè objè dapre menm plan an</p>
+<p><strong>Egzanp Class:</strong></p>
+<pre class="codehilite"><code class="language-python">class Elèv:
+    &quot;&quot;&quot;Klas Elèv - Plan pou kreye elèv yo&quot;&quot;&quot;
+
+    def __init__(self, non, laj, klas):
+        &quot;&quot;&quot;Konstriktè - Kreye yon elèv nouvo&quot;&quot;&quot;
+        self.non = non        # Atribi: non elèv la
+        self.laj = laj        # Atribi: laj elèv la
+        self.klas = klas      # Atribi: klas elèv la
+        self.nòt_yo = []      # Atribi: lis nòt elèv la
+</code></pre>
+
+<p><strong>Règ Class:</strong>
+- Kòmanse ak mo kle <code>class</code>
+- Non klas la dwe kòmanse ak lèt majiskil
+- Chak klas gen karakteristik ak aksyon</p>
+<h4 id="2-object-obje-eksemple-reyel">2. <strong>Object</strong> (Objè) - Eksemplè Reyèl</h4>
+<p><strong>Kisa se "Object"?</strong></p>
+<p><strong>Object</strong> se yon eksemplè reyèl ki fèt dapre yon klas. Li se tankou yon machin reyèl ki fèt dapre plan machin an.</p>
+<p><strong>Poukisa Object Enpòtan?</strong>
+- Sa se bagay reyèl la ke ou sèvi
+- Chak objè gen enfòmasyon ak aksyon pa li
+- Ou ka kreye plizyè objè dapre menm klas la</p>
+<p><strong>Egzanp Object:</strong></p>
+<pre class="codehilite"><code class="language-python"># Kreye objè yo dapre klas Elèv
+marie = Elèv(&quot;Marie&quot;, 20, &quot;3e ane&quot;)    # Objè: marie
+jean = Elèv(&quot;Jean&quot;, 19, &quot;2e ane&quot;)      # Objè: jean
+sara = Elèv(&quot;Sara&quot;, 21, &quot;4e ane&quot;)      # Objè: sara
+</code></pre>
+
+<h4 id="3-constructor-konstrikte-fonkisyon-kreasyon">3. <strong>Constructor</strong> (Konstriktè) - Fonkisyon Kreasyon</h4>
+<p><strong>Kisa se "Constructor"?</strong></p>
+<p><strong>Constructor</strong> se yon fonksyon espesyal nan yon klas ki rele otomatikman lè ou kreye yon nouvo objè. Li se tankou yon chef ki prepare yon plat nouvo.</p>
+<p><strong>Poukisa Constructor Enpòtan?</strong>
+- Li prepare nouvo objè a
+- Li bay valè inisyal pou atribi yo
+- Li rele otomatikman lè objè a kreye</p>
+<p><strong>Egzanp Constructor:</strong></p>
+<pre class="codehilite"><code class="language-python">def __init__(self, non, laj, klas):
+    &quot;&quot;&quot;Konstriktè - Prepare nouvo elèv la&quot;&quot;&quot;
+    print(f&quot;Kreye elèv: {non}&quot;)
+    self.non = non        # Bay non elèv la
+    self.laj = laj        # Bay laj elèv la
+    self.klas = klas      # Bay klas elèv la
+    self.nòt_yo = []      # Kòmanse ak lis nòt vid
+</code></pre>
+
+<p><strong>Règ Constructor:</strong>
+- Non li se toujou <code>__init__</code>
+- Premye paramèt li se toujou <code>self</code>
+- Li rele otomatikman lè objè a kreye</p>
+<h4 id="4-self-referans-obje">4. <strong>self</strong> - Referans Objè</h4>
+<p><strong>Kisa se "self"?</strong></p>
+<p><strong>self</strong> se referans nan objè aktyèl la nan yon klas. Li se tankou di "mwen menm" nan yon konvèsasyon.</p>
+<p><strong>Poukisa self Enpòtan?</strong>
+- Li di Python ki objè ou ap travay ak
+- Li pèmèt aksè atribi ak metòd objè a
+- Chak objè gen <code>self</code> pa li</p>
+<p><strong>Egzanp self:</strong></p>
+<pre class="codehilite"><code class="language-python">def ajoute_nòt(self, nòt):
+    &quot;&quot;&quot;Ajoute nòt nan lis elèv la&quot;&quot;&quot;
+    self.nòt_yo.append(nòt)    # self.nòt_yo = nòt yo nan objè sa a
+    print(f&quot;{self.non} jwenn nòt: {nòt}&quot;)  # self.non = non objè sa a
+</code></pre>
+
+<h4 id="5-attribute-atribi-karakteristik-obje">5. <strong>Attribute</strong> (Atribi) - Karakteristik Objè</h4>
+<p><strong>Kisa se "Attribute"?</strong></p>
+<p><strong>Attribute</strong> se yon karakteristik ke yon objè genyen. Li se tankou yon karakteristik ke yon moun genyen (non, laj, wotè, etc.).</p>
+<p><strong>Poukisa Attribute Enpòtan?</strong>
+- Yo defini karakteristik objè a
+- Chak objè gen atribi pa li
+- Ou ka chanje atribi yo</p>
+<p><strong>Egzanp Attribute:</strong></p>
 <pre class="codehilite"><code class="language-python">class Elèv:
     def __init__(self, non, laj, klas):
+        self.non = non        # Atribi: non elèv la
+        self.laj = laj        # Atribi: laj elèv la
+        self.klas = klas      # Atribi: klas elèv la
+        self.nòt_yo = []      # Atribi: lis nòt elèv la
+        self.prezan = True    # Atribi: si elèv la prezan
+
+# Aksede atribi yo
+print(marie.non)          # Afiche non elèv la
+print(marie.laj)          # Afiche laj elèv la
+print(marie.klas)         # Afiche klas elèv la
+</code></pre>
+
+<h4 id="6-method-metod-aksyon-obje">6. <strong>Method</strong> (Metòd) - Aksyon Objè</h4>
+<p><strong>Kisa se "Method"?</strong></p>
+<p><strong>Method</strong> se yon fonksyon ke yon objè ka sèvi. Li se tankou yon aksyon ke yon moun ka fè (kondwi, manje, dòmi, etc.).</p>
+<p><strong>Poukisa Method Enpòtan?</strong>
+- Yo defini aksyon objè a ka fè
+- Chak objè ka sèvi ak metòd yo
+- Yo òganize aksyon yo nan klas la</p>
+<p><strong>Egzanp Method:</strong></p>
+<pre class="codehilite"><code class="language-python">def ajoute_nòt(self, nòt):
+    &quot;&quot;&quot;Metòd: Ajoute yon nòt nan lis elèv la&quot;&quot;&quot;
+    self.nòt_yo.append(nòt)
+    print(f&quot;{self.non} jwenn nòt: {nòt}&quot;)
+
+def kalkile_mwayèn(self):
+    &quot;&quot;&quot;Metòd: Kalkile nòt mwayèn elèv la&quot;&quot;&quot;
+    if len(self.nòt_yo) == 0:
+        return 0
+    mwayèn = sum(self.nòt_yo) / len(self.nòt_yo)
+    print(f&quot;{self.non} gen mwayèn: {mwayèn:.2f}&quot;)
+    return mwayèn
+
+def afiche_infò(self):
+    &quot;&quot;&quot;Metòd: Afiche tout enfòmasyon elèv la&quot;&quot;&quot;
+    print(f&quot;Non: {self.non}&quot;)
+    print(f&quot;Laj: {self.laj}&quot;)
+    print(f&quot;Klas: {self.klas}&quot;)
+    print(f&quot;Mwayèn: {self.kalkile_mwayèn():.2f}&quot;)
+</code></pre>
+
+<h4 id="7-instance-eksemple-obje-reyel">7. <strong>Instance</strong> (Eksemplè) - Objè Reyèl</h4>
+<p><strong>Kisa se "Instance"?</strong></p>
+<p><strong>Instance</strong> se yon lòt mo pou "objè" - li se yon eksemplè reyèl ki fèt dapre yon klas.</p>
+<p><strong>Egzanp Instance:</strong></p>
+<pre class="codehilite"><code class="language-python">marie = Elèv(&quot;Marie&quot;, 20, &quot;3e ane&quot;)    # marie se yon instance
+jean = Elèv(&quot;Jean&quot;, 19, &quot;2e ane&quot;)      # jean se yon instance
+sara = Elèv(&quot;Sara&quot;, 21, &quot;4e ane&quot;)      # sara se yon instance
+</code></pre>
+
+<h4 id="8-encapsulation-enkapsulasyon-kache-detay">8. <strong>Encapsulation</strong> (Enkapsulasyon) - Kache Detay</h4>
+<p><strong>Kisa se "Encapsulation"?</strong></p>
+<p><strong>Encapsulation</strong> se prensip pou kache detay entèn yo ak sèlman montre sa ki nesesè. Li se tankou yon machin - ou pa bezwen konnen kijan motè a travay, ou sèlman bezwen konnen kijan kondwi.</p>
+<p><strong>Egzanp Encapsulation:</strong></p>
+<pre class="codehilite"><code class="language-python">class Elèv:
+    def __init__(self, non, laj, klas):
+        self.non = non        # Piblik - tout moun ka wè
+        self.laj = laj        # Piblik - tout moun ka wè
+        self._klas = klas     # Pwotèje - sèlman klas la ka wè
+        self.__nòt_yo = []    # Prive - pa gen moun ka wè
+
+    def ajoute_nòt(self, nòt):
+        &quot;&quot;&quot;Metòd piblik - tout moun ka sèvi&quot;&quot;&quot;
+        self.__nòt_yo.append(nòt)
+
+    def _metòd_pwotèje(self):
+        &quot;&quot;&quot;Metòd pwotèje - sèlman klas la ka sèvi&quot;&quot;&quot;
+        pass
+
+    def __metòd_prive(self):
+        &quot;&quot;&quot;Metòd prive - pa gen moun ka sèvi&quot;&quot;&quot;
+        pass
+</code></pre>
+
+<h4 id="9-inheritance-eritaj-herite-karakteristik">9. <strong>Inheritance</strong> (Eritaj) - Herite Karakteristik</h4>
+<p><strong>Kisa se "Inheritance"?</strong></p>
+<p><strong>Inheritance</strong> se prensip pou yon klas ka herite karakteristik ak aksyon nan yon lòt klas. Li se tankou yon timoun ki herite karakteristik nan paran li yo.</p>
+<p><strong>Egzanp Inheritance:</strong></p>
+<pre class="codehilite"><code class="language-python">class Pèson:
+    &quot;&quot;&quot;Klas paran - karakteristik komen&quot;&quot;&quot;
+    def __init__(self, non, laj):
+        self.non = non
+        self.laj = laj
+
+    def di_bonjou(self):
+        print(f&quot;Bonjou! Mwen rele {self.non}&quot;)
+
+class Elèv(Pèson):  # Elèv herite nan Pèson
+    &quot;&quot;&quot;Klas pitit - karakteristik espesifik&quot;&quot;&quot;
+    def __init__(self, non, laj, klas):
+        super().__init__(non, laj)  # Rele konstriktè paran an
+        self.klas = klas
+        self.nòt_yo = []
+
+    def etidye(self):
+        print(f&quot;{self.non} ap etidye nan klas {self.klas}&quot;)
+
+class Pwofesè(Pèson):  # Pwofesè herite nan Pèson
+    &quot;&quot;&quot;Klas pitit - karakteristik espesifik&quot;&quot;&quot;
+    def __init__(self, non, laj, matyè):
+        super().__init__(non, laj)  # Rele konstriktè paran an
+        self.matyè = matyè
+
+    def anseye(self):
+        print(f&quot;{self.non} ap anseye {self.matyè}&quot;)
+</code></pre>
+
+<h4 id="10-polymorphism-polimofis-plizye-fom">10. <strong>Polymorphism</strong> (Polimòfis) - Plizyè Fòm</h4>
+<p><strong>Kisa se "Polymorphism"?</strong></p>
+<p><strong>Polymorphism</strong> se prensip pou objè diferan ka sèvi ak menm metòd la nan fason diferan. Li se tankou diferan kalite bèt ki ka kouri, men chak yon sèvi nan fason pa li.</p>
+<p><strong>Egzanp Polymorphism:</strong></p>
+<pre class="codehilite"><code class="language-python">class Bèt:
+    def kouri(self):
+        print(&quot;Bèt la ap kouri&quot;)
+
+class Chyen(Bèt):
+    def kouri(self):
+        print(&quot;Chyen an ap kouri ak pat li yo&quot;)
+
+class Chat(Bèt):
+    def kouri(self):
+        print(&quot;Chat la ap kouri ak pat li yo&quot;)
+
+class Lapen(Bèt):
+    def kouri(self):
+        print(&quot;Lapen an ap sote ak pat li yo&quot;)
+
+# Polymorphism - menm metòd, diferan aksyon
+bèt_yo = [Chyen(), Chat(), Lapen()]
+
+for bèt in bèt_yo:
+    bèt.kouri()  # Chak bèt kouri nan fason pa li
+</code></pre>
+
+<h3 id="egzanp-pratik-konple_2">🎮 Egzanp Pratik Konplè</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 EGZANP AMIZAN: Ou nan yon lekòl ak elèv yo
+
+print(&quot;🏫 SITUASYON: Ou nan yon lekòl ak elèv yo&quot;)
+print(&quot;=&quot; * 45)
+
+# 1. KREYE KLAS ELÈV
+print(&quot;1️⃣ KREYE KLAS ELÈV&quot;)
+print(&quot;   💡 Pensez: 'Fè plan pou yon elèv'&quot;)
+
+class Elèv:
+    &quot;&quot;&quot;Klas Elèv - Plan pou kreye elèv yo&quot;&quot;&quot;
+
+    def __init__(self, non, laj, klas):
+        &quot;&quot;&quot;Konstriktè - Kreye yon elèv nouvo&quot;&quot;&quot;
+        print(f&quot;   🎓 Kreye elèv: {non}&quot;)
         self.non = non
         self.laj = laj
         self.klas = klas
         self.nòt_yo = []
+        self.prezan = True
 
     def ajoute_nòt(self, nòt):
+        &quot;&quot;&quot;Ajoute yon nòt nan lis elèv la&quot;&quot;&quot;
+        print(f&quot;   📊 {self.non} jwenn nòt: {nòt}&quot;)
         self.nòt_yo.append(nòt)
 
     def kalkile_mwayèn(self):
+        &quot;&quot;&quot;Kalkile nòt mwayèn elèv la&quot;&quot;&quot;
         if len(self.nòt_yo) == 0:
             return 0
-        return sum(self.nòt_yo) / len(self.nòt_yo)
+        mwayèn = sum(self.nòt_yo) / len(self.nòt_yo)
+        print(f&quot;   📈 {self.non} gen mwayèn: {mwayèn:.2f}&quot;)
+        return mwayèn
 
     def afiche_infò(self):
-        print(f&quot;Non: {self.non}&quot;)
-        print(f&quot;Laj: {self.laj}&quot;)
-        print(f&quot;Klas: {self.klas}&quot;)
-        print(f&quot;Mwayèn: {self.kalkile_mwayèn():.2f}&quot;)
+        &quot;&quot;&quot;Afiche tout enfòmasyon elèv la&quot;&quot;&quot;
+        print(f&quot;   👤 Non: {self.non}&quot;)
+        print(f&quot;   🎂 Laj: {self.laj} an&quot;)
+        print(f&quot;   🏫 Klas: {self.klas}&quot;)
+        print(f&quot;   📊 Nòt yo: {self.nòt_yo}&quot;)
+        print(f&quot;   📈 Mwayèn: {self.kalkile_mwayèn():.2f}&quot;)
+        print(f&quot;   ✅ Prezan: {self.prezan}&quot;)
+        print()
+
+    def chanje_klas(self, nouvo_klas):
+        &quot;&quot;&quot;Chanje klas elèv la&quot;&quot;&quot;
+        ansyen_klas = self.klas
+        self.klas = nouvo_klas
+        print(f&quot;   🔄 {self.non} chanje klas: {ansyen_klas} → {nouvo_klas}&quot;)
+
+    def fè_anivèsè(self):
+        &quot;&quot;&quot;Elèv la fè anivèsè li&quot;&quot;&quot;
+        self.laj += 1
+        print(f&quot;   🎉 {self.non} fè {self.laj} an! Bon anivèsè!&quot;)
+
+print(&quot;   📋 Klas Elèv kreye ak siksè!&quot;)
+print()
+
+# 2. KREYE OBJÈ YO
+print(&quot;2️⃣ KREYE OBJÈ YO&quot;)
+print(&quot;   💡 Pensez: 'Fè elèv reyèl yo dapre plan an'&quot;)
+
+print(&quot;📚 Kreye elèv yo:&quot;)
+marie = Elèv(&quot;Marie&quot;, 20, &quot;3e ane&quot;)
+jean = Elèv(&quot;Jean&quot;, 19, &quot;2e ane&quot;)
+sara = Elèv(&quot;Sara&quot;, 21, &quot;4e ane&quot;)
+
+print()
+
+# 3. SÈVI AK OBJÈ YO
+print(&quot;3️⃣ SÈVI AK OBJÈ YO&quot;)
+print(&quot;   💡 Pensez: 'Fè aksyon ak elèv yo'&quot;)
+
+# Ajoute nòt yo
+print(&quot;📊 Ajoute nòt yo:&quot;)
+marie.ajoute_nòt(15)
+marie.ajoute_nòt(18)
+marie.ajoute_nòt(20)
+
+jean.ajoute_nòt(12)
+jean.ajoute_nòt(16)
+jean.ajoute_nòt(18)
+
+sara.ajoute_nòt(19)
+sara.ajoute_nòt(17)
+sara.ajoute_nòt(21)
+
+print()
+
+# Afiche enfòmasyon yo
+print(&quot;📋 Afiche enfòmasyon yo:&quot;)
+marie.afiche_infò()
+jean.afiche_infò()
+sara.afiche_infò()
+
+# Fè aksyon yo
+print(&quot;🎯 Fè aksyon yo:&quot;)
+marie.chanje_klas(&quot;4e ane&quot;)
+marie.fè_anivèsè()
+
+jean.chanje_klas(&quot;3e ane&quot;)
+
+sara.fè_anivèsè()
+
+print()
+
+# 4. AKSÈDE ATRIBİ YO
+print(&quot;4️⃣ AKSÈDE ATRIBİ YO&quot;)
+print(&quot;   💡 Pensez: 'Jwenn enfòmasyon nan objè yo'&quot;)
+
+print(f&quot;   📝 Non Marie: {marie.non}&quot;)
+print(f&quot;   🎂 Laj Jean: {jean.laj}&quot;)
+print(f&quot;   🏫 Klas Sara: {sara.klas}&quot;)
+print(f&quot;   📊 Nòt Marie: {marie.nòt_yo}&quot;)
+
+print()
+
+print(&quot;🎉 BRAVO! Ou konprann KLAS ak OBJÈ yo!&quot;)
 </code></pre>
 
 <h4 id="kreye-obje">Kreye objè</h4>
@@ -6927,28 +7257,367 @@ for fòm in fòm_yo:
 <li><strong>Chalèj</strong>: Rezoud pwoblèm desine fòm yo</li>
 </ol>
 <hr />
-<h2 id="chapit-8-jesyon-ere-ak-eksepsyon_1">Chapit 8: Jesyon Erè ak Eksepsyon</h2>
-<h3 id="ere-ak-eksepsyon">Erè ak Eksepsyon</h3>
-<h4 id="kalite-ere-yo">Kalite erè yo</h4>
-<pre class="codehilite"><code class="language-python"># SyntaxError - Erè nan sentaks
-# print(&quot;Hello world&quot;  # Manke parantèz
+<h2 id="chapit-8-jesyon-ere-ak-eksepsyon-error-handling-and-exceptions-eksplikasyon-detaye-pou-debitan">Chapit 8: Jesyon Erè ak Eksepsyon (Error Handling and Exceptions) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-se-ere-error-nan-pwogramasyon">🎯 Kisa se "Erè" (Error) nan Pwogramasyon?</h3>
+<p><strong>Definisyon Detaye:</strong></p>
+<p><strong>Erè</strong> se pwoblèm ki rive nan kòd la ki anpeche pwogram nan travay kòrèkteman. Li se tankou yon pwoblèm nan yon rejèt ki fè manje a pa bon.</p>
+<p><strong>Poukisa Erè Enpòtan?</strong></p>
+<ol>
+<li><strong>Kòrèksyon</strong>: Ou ka jwenn ak korije pwoblèm yo</li>
+<li><strong>Sekirite</strong>: Pwogram nan pa kraze</li>
+<li><strong>Eksperyans</strong>: Itilizatè a pa jwenn mesaj konfizyon</li>
+<li><strong>Devlopman</strong>: Ou ka aprann nan erè yo</li>
+<li><strong>Pwofesyonèl</strong>: Kòd la pi solid ak fiable</li>
+</ol>
+<p><strong>Analoji ki fasil konprann:</strong>
+- <strong>Erè</strong> = Tankou yon pwoblèm nan yon rejèt
+- <strong>Try/Except</strong> = Tankou yon plan B pou rejèt la
+- <strong>Exception</strong> = Tankou yon pwoblèm espesifik
+- <strong>Debugging</strong> = Tankou jwenn ak korije pwoblèm nan rejèt la</p>
+<h3 id="tem-fondamantal-nan-jesyon-ere">🔧 Tèm Fondamantal nan Jesyon Erè</h3>
+<h4 id="1-error-ere-pwoblem-nan-kod">1. <strong>Error</strong> (Erè) - Pwoblèm Nan Kòd</h4>
+<p><strong>Kisa se "Error"?</strong></p>
+<p><strong>Error</strong> se yon pwoblèm nan kòd la ki anpeche pwogram nan travay. Li se tankou yon erè nan yon rejèt ki fè manje a pa bon.</p>
+<p><strong>Poukisa Error Enpòtan?</strong>
+- Li montre ou kote pwoblèm nan ye
+- Li ede ou aprann nan erè yo
+- Li pèmèt ou korije kòd la</p>
+<p><strong>Kalite Erè:</strong>
+- <strong>Syntax Error</strong> - Kòd la pa swiv règ yo
+- <strong>Runtime Error</strong> - Pwoblèm pandan kouri pwogram nan
+- <strong>Logic Error</strong> - Kòd la travay men pa fè sa ou vle</p>
+<h4 id="2-exception-eksepsyon-ere-espesifik">2. <strong>Exception</strong> (Eksepsyon) - Erè Espesifik</h4>
+<p><strong>Kisa se "Exception"?</strong></p>
+<p><strong>Exception</strong> se yon kalite erè espesifik ki rive pandan kouri pwogram nan. Li se tankou yon pwoblèm espesifik nan yon rejèt.</p>
+<p><strong>Poukisa Exception Enpòtan?</strong>
+- Yo bay enfòmasyon detaye sou pwoblèm nan
+- Ou ka atrape yo ak try/except
+- Yo ede ou jere pwoblèm yo</p>
+<p><strong>Egzanp Exception:</strong></p>
+<pre class="codehilite"><code class="language-python"># ValueError - Valè pa bon
+try:
+    nimewo = int(&quot;abc&quot;)  # Sa va bay ValueError
+except ValueError:
+    print(&quot;Valè a pa bon!&quot;)
 
-# NameError - Non pa defini
-# print(nome_varyab)  # nome_varyab pa defini
+# ZeroDivisionError - Divize pa zewo
+try:
+    rezilta = 10 / 0  # Sa va bay ZeroDivisionError
+except ZeroDivisionError:
+    print(&quot;Ou pa ka divize pa zewo!&quot;)
+</code></pre>
 
-# TypeError - Kalite done pa bon
-# print(&quot;5&quot; + 3)  # Pa ka ajoute string ak nimewo
+<h4 id="3-try-eseye-kod">3. <strong>try</strong> - Eseye Kòd</h4>
+<p><strong>Kisa se "try"?</strong></p>
+<p><strong>try</strong> se yon mo kle nan Python ki di "Eseye kòd sa a, men si gen pwoblèm, fè sa lòt bagay". Li se tankou di "Eseye fè rejèt sa a, men si li pa bon, fè yon lòt bagay".</p>
+<p><strong>Poukisa try Enpòtan?</strong>
+- Li pèmèt ou eseye kòd ki ka gen pwoblèm
+- Li anpeche pwogram nan kraze
+- Li bay ou kontwòl sou erè yo</p>
+<p><strong>Egzanp try:</strong></p>
+<pre class="codehilite"><code class="language-python">try:
+    # Kòd ki ka gen pwoblèm
+    nimewo = int(input(&quot;Antre yon nimewo: &quot;))
+    rezilta = 10 / nimewo
+    print(f&quot;Rezilta: {rezilta}&quot;)
+except:
+    # Sa pou fè si gen pwoblèm
+    print(&quot;Yon pwoblèm rive!&quot;)
+</code></pre>
 
-# ValueError - Valè pa valab
-# int(&quot;abc&quot;)  # Pa ka konvèti &quot;abc&quot; nan nimewo
+<h4 id="4-except-jere-ere">4. <strong>except</strong> - Jere Erè</h4>
+<p><strong>Kisa se "except"?</strong></p>
+<p><strong>except</strong> se yon mo kle nan Python ki di "Si gen erè, fè sa". Li se tankou di "Si rejèt la pa bon, fè sa lòt bagay".</p>
+<p><strong>Poukisa except Enpòtan?</strong>
+- Li jere erè yo
+- Li anpeche pwogram nan kraze
+- Li bay mesaj itil pou itilizatè a</p>
+<p><strong>Egzanp except:</strong></p>
+<pre class="codehilite"><code class="language-python">try:
+    nimewo = int(input(&quot;Antre yon nimewo: &quot;))
+    rezilta = 10 / nimewo
+except ValueError:
+    print(&quot;Ou pa antre yon nimewo valab!&quot;)
+except ZeroDivisionError:
+    print(&quot;Ou pa ka divize pa zewo!&quot;)
+except Exception as e:
+    print(f&quot;Yon erè rive: {e}&quot;)
+</code></pre>
 
-# IndexError - Endeks pa egziste
-# lis = [1, 2, 3]
-# print(lis[5])  # Endeks 5 pa egziste
+<h4 id="5-finally-toujou-fe">5. <strong>finally</strong> - Toujou Fè</h4>
+<p><strong>Kisa se "finally"?</strong></p>
+<p><strong>finally</strong> se yon mo kle nan Python ki di "Toujou fè sa, menm si gen erè oswa pa". Li se tankou di "Toujou lave asyèt yo, menm si manje a pa bon".</p>
+<p><strong>Poukisa finally Enpòtan?</strong>
+- Li asire ke kèk bagay toujou fèt
+- Li netwaye resous yo
+- Li fèmen fichier yo</p>
+<p><strong>Egzanp finally:</strong></p>
+<pre class="codehilite"><code class="language-python">try:
+    fichier = open(&quot;done.txt&quot;, &quot;r&quot;)
+    kontni = fichier.read()
+except FileNotFoundError:
+    print(&quot;Fichier a pa jwenn!&quot;)
+finally:
+    fichier.close()  # Toujou fèmen fichier la
+</code></pre>
 
-# KeyError - Kle pa egziste nan diksyone
-# dik = {&quot;a&quot;: 1, &quot;b&quot;: 2}
-# print(dik[&quot;c&quot;])  # Kle &quot;c&quot; pa egziste
+<h4 id="6-else-si-pa-gen-ere">6. <strong>else</strong> - Si Pa Gen Erè</h4>
+<p><strong>Kisa se "else" nan try/except?</strong></p>
+<p><strong>else</strong> nan try/except se yon mo kle ki di "Si pa gen erè, fè sa". Li se tankou di "Si rejèt la bon, fè sa".</p>
+<p><strong>Poukisa else Enpòtan?</strong>
+- Li fè aksyon si tout bagay bon
+- Li separe kòd ki gen pwoblèm ak kòd ki bon
+- Li fè kòd la pi klè</p>
+<p><strong>Egzanp else:</strong></p>
+<pre class="codehilite"><code class="language-python">try:
+    nimewo = int(input(&quot;Antre yon nimewo: &quot;))
+    rezilta = 10 / nimewo
+except ValueError:
+    print(&quot;Ou pa antre yon nimewo valab!&quot;)
+except ZeroDivisionError:
+    print(&quot;Ou pa ka divize pa zewo!&quot;)
+else:
+    print(f&quot;Rezilta: {rezilta}&quot;)  # Fè si pa gen erè
+</code></pre>
+
+<h3 id="kalite-ere-yo">🔧 Kalite Erè Yo</h3>
+<h4 id="1-syntaxerror-ere-nan-reg">1. <strong>SyntaxError</strong> - Erè Nan Règ</h4>
+<p><strong>Kisa se "SyntaxError"?</strong></p>
+<p><strong>SyntaxError</strong> se yon erè ki rive lè kòd la pa swiv règ Python yo. Li se tankou yon erè gramè nan yon fraz.</p>
+<p><strong>Egzanp SyntaxError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ SYNTAX ERROR
+print(&quot;Hello world&quot;  # Manke parantèz )
+
+# ❌ SYNTAX ERROR
+if laj &gt;= 18  # Manke kolòn (:)
+    print(&quot;Ou majè&quot;)
+
+# ✅ SYNTAX KÒRÈK
+print(&quot;Hello world&quot;)
+if laj &gt;= 18:
+    print(&quot;Ou majè&quot;)
+</code></pre>
+
+<h4 id="2-nameerror-non-pa-defini">2. <strong>NameError</strong> - Non Pa Defini</h4>
+<p><strong>Kisa se "NameError"?</strong></p>
+<p><strong>NameError</strong> se yon erè ki rive lè ou sèvi ak yon non ki pa defini. Li se tankou sèvi ak yon mo ki pa nan diksyonè a.</p>
+<p><strong>Egzanp NameError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ NAME ERROR
+print(nome_varyab)  # nome_varyab pa defini
+
+# ✅ KÒRÈK
+nome_varyab = &quot;Bonjou&quot;
+print(nome_varyab)
+</code></pre>
+
+<h4 id="3-typeerror-kalite-done-pa-bon">3. <strong>TypeError</strong> - Kalite Done Pa Bon</h4>
+<p><strong>Kisa se "TypeError"?</strong></p>
+<p><strong>TypeError</strong> se yon erè ki rive lè ou sèvi ak kalite done ki pa konpatib. Li se tankou eseye ajoute pòm ak zòrèj.</p>
+<p><strong>Egzanp TypeError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ TYPE ERROR
+print(&quot;5&quot; + 3)  # Pa ka ajoute string ak nimewo
+
+# ✅ KÒRÈK
+print(&quot;5&quot; + str(3))  # Konvèti nimewo a nan string
+print(5 + 3)         # Ajoute de nimewo
+</code></pre>
+
+<h4 id="4-valueerror-vale-pa-valab">4. <strong>ValueError</strong> - Valè Pa Valab</h4>
+<p><strong>Kisa se "ValueError"?</strong></p>
+<p><strong>ValueError</strong> se yon erè ki rive lè valè a pa bon pou operasyon an. Li se tankou eseye mete yon kawòt nan yon fòmil pou gato.</p>
+<p><strong>Egzanp ValueError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ VALUE ERROR
+int(&quot;abc&quot;)  # Pa ka konvèti &quot;abc&quot; nan nimewo
+
+# ✅ KÒRÈK
+int(&quot;123&quot;)  # Konvèti &quot;123&quot; nan nimewo 123
+</code></pre>
+
+<h4 id="5-indexerror-endeks-pa-egziste">5. <strong>IndexError</strong> - Endeks Pa Egziste</h4>
+<p><strong>Kisa se "IndexError"?</strong></p>
+<p><strong>IndexError</strong> se yon erè ki rive lè ou eseye aksede yon pozisyon ki pa egziste nan yon lis. Li se tankou eseye jwenn eleman 10 nan yon lis ki gen sèlman 5 eleman.</p>
+<p><strong>Egzanp IndexError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ INDEX ERROR
+lis = [1, 2, 3]
+print(lis[5])  # Endeks 5 pa egziste
+
+# ✅ KÒRÈK
+lis = [1, 2, 3]
+print(lis[2])  # Endeks 2 egziste
+</code></pre>
+
+<h4 id="6-keyerror-kle-pa-egziste">6. <strong>KeyError</strong> - Kle Pa Egziste</h4>
+<p><strong>Kisa se "KeyError"?</strong></p>
+<p><strong>KeyError</strong> se yon erè ki rive lè ou eseye aksede yon kle ki pa egziste nan yon diksyone. Li se tankou eseye jwenn yon mo ki pa nan diksyonè a.</p>
+<p><strong>Egzanp KeyError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ KEY ERROR
+dik = {&quot;a&quot;: 1, &quot;b&quot;: 2}
+print(dik[&quot;c&quot;])  # Kle &quot;c&quot; pa egziste
+
+# ✅ KÒRÈK
+dik = {&quot;a&quot;: 1, &quot;b&quot;: 2}
+print(dik[&quot;a&quot;])  # Kle &quot;a&quot; egziste
+</code></pre>
+
+<h4 id="7-zerodivisionerror-divize-pa-zewo">7. <strong>ZeroDivisionError</strong> - Divize Pa Zewo</h4>
+<p><strong>Kisa se "ZeroDivisionError"?</strong></p>
+<p><strong>ZeroDivisionError</strong> se yon erè ki rive lè ou eseye divize pa zewo. Li se tankou eseye pataje yon bagay ant zewo moun.</p>
+<p><strong>Egzanp ZeroDivisionError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ ZERO DIVISION ERROR
+rezilta = 10 / 0
+
+# ✅ KÒRÈK
+try:
+    rezilta = 10 / 0
+except ZeroDivisionError:
+    print(&quot;Ou pa ka divize pa zewo!&quot;)
+</code></pre>
+
+<h4 id="8-filenotfounderror-fichier-pa-jwenn">8. <strong>FileNotFoundError</strong> - Fichier Pa Jwenn</h4>
+<p><strong>Kisa se "FileNotFoundError"?</strong></p>
+<p><strong>FileNotFoundError</strong> se yon erè ki rive lè ou eseye ouvri yon fichier ki pa egziste. Li se tankou eseye ouvri yon liv ki pa nan bibliyotèk la.</p>
+<p><strong>Egzanp FileNotFoundError:</strong></p>
+<pre class="codehilite"><code class="language-python"># ❌ FILE NOT FOUND ERROR
+fichier = open(&quot;fichier_ki_pa_egziste.txt&quot;, &quot;r&quot;)
+
+# ✅ KÒRÈK
+try:
+    fichier = open(&quot;done.txt&quot;, &quot;r&quot;)
+    kontni = fichier.read()
+except FileNotFoundError:
+    print(&quot;Fichier a pa jwenn!&quot;)
+</code></pre>
+
+<h3 id="egzanp-pratik-konple_3">🎮 Egzanp Pratik Konplè</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 EGZANP AMIZAN: Ou nan yon restoran ak chef
+
+print(&quot;🍽️ SITUASYON: Ou nan yon restoran ak chef&quot;)
+print(&quot;=&quot; * 45)
+
+# 1. TRY/EXCEPT DEBAZ
+print(&quot;1️⃣ TRY/EXCEPT DEBAZ&quot;)
+print(&quot;   💡 Pensez: 'Eseye fè rejèt la, men si li pa bon, fè sa lòt bagay'&quot;)
+
+def divize_pri(pri_total, kantite_moun):
+    &quot;&quot;&quot;Divize pri total ant kantite moun&quot;&quot;&quot;
+    try:
+        pri_pa_moun = pri_total / kantite_moun
+        print(f&quot;   💰 Chak moun peye: {pri_pa_moun:.2f} goud&quot;)
+        return pri_pa_moun
+    except ZeroDivisionError:
+        print(&quot;   ❌ Ou pa ka divize ant 0 moun!&quot;)
+        return 0
+    except TypeError:
+        print(&quot;   ❌ Ou dwe antre nimewo!&quot;)
+        return 0
+
+# Teste divize_pri
+divize_pri(100, 4)    # Kòrèk
+divize_pri(100, 0)    # ZeroDivisionError
+divize_pri(&quot;100&quot;, 4)  # TypeError
+
+print()
+
+# 2. TRY/EXCEPT/ELSE
+print(&quot;2️⃣ TRY/EXCEPT/ELSE&quot;)
+print(&quot;   💡 Pensez: 'Eseye fè rejèt la, si li pa bon fè sa lòt bagay, si li bon fè sa'&quot;)
+
+def kalkile_tip(pri, pousantaj):
+    &quot;&quot;&quot;Kalkile tip pou pri a&quot;&quot;&quot;
+    try:
+        tip = pri * (pousantaj / 100)
+    except (TypeError, ValueError):
+        print(&quot;   ❌ Ou dwe antre nimewo valab!&quot;)
+        tip = 0
+    except ZeroDivisionError:
+        print(&quot;   ❌ Pousantaj la pa ka zewo!&quot;)
+        tip = 0
+    else:
+        print(f&quot;   ✅ Tip kalkile: {tip:.2f} goud&quot;)
+        print(f&quot;   💳 Total: {pri + tip:.2f} goud&quot;)
+    finally:
+        print(&quot;   🧹 Netwaye kalkil yo...&quot;)
+
+# Teste kalkile_tip
+kalkile_tip(100, 15)     # Kòrèk
+kalkile_tip(&quot;100&quot;, 15)   # TypeError
+kalkile_tip(100, &quot;15&quot;)   # TypeError
+
+print()
+
+# 3. TRY/EXCEPT/FINALLY
+print(&quot;3️⃣ TRY/EXCEPT/FINALLY&quot;)
+print(&quot;   💡 Pensez: 'Eseye fè rejèt la, menm si li pa bon, toujou lave asyèt yo'&quot;)
+
+def li_fichier_rejèt(nom_fichier):
+    &quot;&quot;&quot;Li fichier rejèt la&quot;&quot;&quot;
+    fichier = None
+    try:
+        fichier = open(nom_fichier, &quot;r&quot;)
+        kontni = fichier.read()
+        print(f&quot;   📖 Rejèt la: {kontni}&quot;)
+        return kontni
+    except FileNotFoundError:
+        print(f&quot;   ❌ Fichier {nom_fichier} pa jwenn!&quot;)
+        return &quot;&quot;
+    except PermissionError:
+        print(f&quot;   ❌ Ou pa gen pèmisyon pou li {nom_fichier}!&quot;)
+        return &quot;&quot;
+    finally:
+        if fichier:
+            fichier.close()
+            print(&quot;   🔒 Fichier la fèmen&quot;)
+
+# Teste li_fichier_rejèt
+li_fichier_rejèt(&quot;rejèt.txt&quot;)        # Si fichier la egziste
+li_fichier_rejèt(&quot;pa_egziste.txt&quot;)   # Si fichier la pa egziste
+
+print()
+
+# 4. JERE PLIZYÈ ERÈ
+print(&quot;4️⃣ JERE PLIZYÈ ERÈ&quot;)
+print(&quot;   💡 Pensez: 'Eseye fè rejèt la, men jere diferan kalite pwoblèm'&quot;)
+
+def kalkile_pri_manje(pri, kantite, tip):
+    &quot;&quot;&quot;Kalkile pri manje ak tip&quot;&quot;&quot;
+    try:
+        # Konvèti string yo nan nimewo
+        pri = float(pri)
+        kantite = int(kantite)
+        tip = float(tip)
+
+        # Kalkile pri total
+        pri_total = pri * kantite
+        tip_montan = pri_total * (tip / 100)
+        total = pri_total + tip_montan
+
+        print(f&quot;   💰 Pri yon sèl: {pri} goud&quot;)
+        print(f&quot;   📊 Kantite: {kantite}&quot;)
+        print(f&quot;   💳 Pri total: {pri_total} goud&quot;)
+        print(f&quot;   🎁 Tip ({tip}%): {tip_montan:.2f} goud&quot;)
+        print(f&quot;   💸 Total final: {total:.2f} goud&quot;)
+
+        return total
+
+    except ValueError as e:
+        print(f&quot;   ❌ Valè pa bon: {e}&quot;)
+        print(&quot;   💡 Asire w ke ou antre nimewo!&quot;)
+        return 0
+    except ZeroDivisionError:
+        print(&quot;   ❌ Ou pa ka divize pa zewo!&quot;)
+        return 0
+    except Exception as e:
+        print(f&quot;   ❌ Yon erè inatandi rive: {e}&quot;)
+        return 0
+
+# Teste kalkile_pri_manje
+kalkile_pri_manje(&quot;25.50&quot;, &quot;3&quot;, &quot;15&quot;)    # Kòrèk
+kalkile_pri_manje(&quot;abc&quot;, &quot;3&quot;, &quot;15&quot;)      # ValueError
+kalkile_pri_manje(&quot;25.50&quot;, &quot;0&quot;, &quot;15&quot;)    # ZeroDivisionError
+
+print()
+
+print(&quot;🎉 BRAVO! Ou konprann JESYON ERÈ ak EKSEPSYON yo!&quot;)
 </code></pre>
 
 <h3 id="try-ak-except">Try ak Except</h3>

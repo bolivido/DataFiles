@@ -6891,32 +6891,415 @@ for i in range(1, 6):
 
 ---
 
-## Chapit 7: Klas ak Objè
+## Chapit 7: Klas ak Objè (Classes and Objects) - Eksplikasyon Detaye pou Debitan
 
-### Anatomi yon klas
+### 🎯 Kisa se "Programasyon Oryantasyon Objè" (OOP)?
 
-#### Klas debaz
+**Definisyon Detaye:**
+
+**Programasyon Oryantasyon Objè (OOP)** se yon fason pou òganize kòd la ki imite fason moun yo panse. Olye ekri kòd lineyè, nou kreye objè ki gen karakteristik ak aksyon.
+
+**Poukisa OOP Enpòtan?**
+
+1. **Modilè**: Divize gwo pwoblèm yo an ti pati
+2. **Reutilizasyon**: Sèvi ak menm kòd la plizyè fwa
+3. **Kenbe**: Pi fasil pou chanje ak amelyore
+4. **Entelijan**: Kòd la imite reyalite a
+5. **Evolisyon**: Pi fasil pou ajoute nouvo karakteristik
+
+**Analoji ki fasil konprann:**
+- **Klas** = Tankou yon plan pou yon machin
+- **Objè** = Tankou machin reyèl yo ki fèt dapre plan an
+- **Atribi** = Karakteristik yo (koulè, gwosè, etc.)
+- **Metòd** = Aksyon yo ka fè (kondwi, frene, etc.)
+
+### 🔧 Tèm Fondamantal nan OOP
+
+#### 1. **Class** (Klas) - Plan Pou Kreye Objè
+
+**Kisa se "Class"?**
+
+**Class** se yon plan oswa modèl pou kreye objè. Li defini ki karakteristik ak aksyon objè yo pral genyen.
+
+**Poukisa Class Enpòtan?**
+- Li se plan nan pou kreye objè yo
+- Li defini tout karakteristik ak aksyon yo
+- Ou ka kreye plizyè objè dapre menm plan an
+
+**Egzanp Class:**
+```python
+class Elèv:
+    """Klas Elèv - Plan pou kreye elèv yo"""
+    
+    def __init__(self, non, laj, klas):
+        """Konstriktè - Kreye yon elèv nouvo"""
+        self.non = non        # Atribi: non elèv la
+        self.laj = laj        # Atribi: laj elèv la
+        self.klas = klas      # Atribi: klas elèv la
+        self.nòt_yo = []      # Atribi: lis nòt elèv la
+```
+
+**Règ Class:**
+- Kòmanse ak mo kle `class`
+- Non klas la dwe kòmanse ak lèt majiskil
+- Chak klas gen karakteristik ak aksyon
+
+#### 2. **Object** (Objè) - Eksemplè Reyèl
+
+**Kisa se "Object"?**
+
+**Object** se yon eksemplè reyèl ki fèt dapre yon klas. Li se tankou yon machin reyèl ki fèt dapre plan machin an.
+
+**Poukisa Object Enpòtan?**
+- Sa se bagay reyèl la ke ou sèvi
+- Chak objè gen enfòmasyon ak aksyon pa li
+- Ou ka kreye plizyè objè dapre menm klas la
+
+**Egzanp Object:**
+```python
+# Kreye objè yo dapre klas Elèv
+marie = Elèv("Marie", 20, "3e ane")    # Objè: marie
+jean = Elèv("Jean", 19, "2e ane")      # Objè: jean
+sara = Elèv("Sara", 21, "4e ane")      # Objè: sara
+```
+
+#### 3. **Constructor** (Konstriktè) - Fonkisyon Kreasyon
+
+**Kisa se "Constructor"?**
+
+**Constructor** se yon fonksyon espesyal nan yon klas ki rele otomatikman lè ou kreye yon nouvo objè. Li se tankou yon chef ki prepare yon plat nouvo.
+
+**Poukisa Constructor Enpòtan?**
+- Li prepare nouvo objè a
+- Li bay valè inisyal pou atribi yo
+- Li rele otomatikman lè objè a kreye
+
+**Egzanp Constructor:**
+```python
+def __init__(self, non, laj, klas):
+    """Konstriktè - Prepare nouvo elèv la"""
+    print(f"Kreye elèv: {non}")
+    self.non = non        # Bay non elèv la
+    self.laj = laj        # Bay laj elèv la
+    self.klas = klas      # Bay klas elèv la
+    self.nòt_yo = []      # Kòmanse ak lis nòt vid
+```
+
+**Règ Constructor:**
+- Non li se toujou `__init__`
+- Premye paramèt li se toujou `self`
+- Li rele otomatikman lè objè a kreye
+
+#### 4. **self** - Referans Objè
+
+**Kisa se "self"?**
+
+**self** se referans nan objè aktyèl la nan yon klas. Li se tankou di "mwen menm" nan yon konvèsasyon.
+
+**Poukisa self Enpòtan?**
+- Li di Python ki objè ou ap travay ak
+- Li pèmèt aksè atribi ak metòd objè a
+- Chak objè gen `self` pa li
+
+**Egzanp self:**
+```python
+def ajoute_nòt(self, nòt):
+    """Ajoute nòt nan lis elèv la"""
+    self.nòt_yo.append(nòt)    # self.nòt_yo = nòt yo nan objè sa a
+    print(f"{self.non} jwenn nòt: {nòt}")  # self.non = non objè sa a
+```
+
+#### 5. **Attribute** (Atribi) - Karakteristik Objè
+
+**Kisa se "Attribute"?**
+
+**Attribute** se yon karakteristik ke yon objè genyen. Li se tankou yon karakteristik ke yon moun genyen (non, laj, wotè, etc.).
+
+**Poukisa Attribute Enpòtan?**
+- Yo defini karakteristik objè a
+- Chak objè gen atribi pa li
+- Ou ka chanje atribi yo
+
+**Egzanp Attribute:**
 ```python
 class Elèv:
     def __init__(self, non, laj, klas):
+        self.non = non        # Atribi: non elèv la
+        self.laj = laj        # Atribi: laj elèv la
+        self.klas = klas      # Atribi: klas elèv la
+        self.nòt_yo = []      # Atribi: lis nòt elèv la
+        self.prezan = True    # Atribi: si elèv la prezan
+
+# Aksede atribi yo
+print(marie.non)          # Afiche non elèv la
+print(marie.laj)          # Afiche laj elèv la
+print(marie.klas)         # Afiche klas elèv la
+```
+
+#### 6. **Method** (Metòd) - Aksyon Objè
+
+**Kisa se "Method"?**
+
+**Method** se yon fonksyon ke yon objè ka sèvi. Li se tankou yon aksyon ke yon moun ka fè (kondwi, manje, dòmi, etc.).
+
+**Poukisa Method Enpòtan?**
+- Yo defini aksyon objè a ka fè
+- Chak objè ka sèvi ak metòd yo
+- Yo òganize aksyon yo nan klas la
+
+**Egzanp Method:**
+```python
+def ajoute_nòt(self, nòt):
+    """Metòd: Ajoute yon nòt nan lis elèv la"""
+    self.nòt_yo.append(nòt)
+    print(f"{self.non} jwenn nòt: {nòt}")
+
+def kalkile_mwayèn(self):
+    """Metòd: Kalkile nòt mwayèn elèv la"""
+    if len(self.nòt_yo) == 0:
+        return 0
+    mwayèn = sum(self.nòt_yo) / len(self.nòt_yo)
+    print(f"{self.non} gen mwayèn: {mwayèn:.2f}")
+    return mwayèn
+
+def afiche_infò(self):
+    """Metòd: Afiche tout enfòmasyon elèv la"""
+    print(f"Non: {self.non}")
+    print(f"Laj: {self.laj}")
+    print(f"Klas: {self.klas}")
+    print(f"Mwayèn: {self.kalkile_mwayèn():.2f}")
+```
+
+#### 7. **Instance** (Eksemplè) - Objè Reyèl
+
+**Kisa se "Instance"?**
+
+**Instance** se yon lòt mo pou "objè" - li se yon eksemplè reyèl ki fèt dapre yon klas.
+
+**Egzanp Instance:**
+```python
+marie = Elèv("Marie", 20, "3e ane")    # marie se yon instance
+jean = Elèv("Jean", 19, "2e ane")      # jean se yon instance
+sara = Elèv("Sara", 21, "4e ane")      # sara se yon instance
+```
+
+#### 8. **Encapsulation** (Enkapsulasyon) - Kache Detay
+
+**Kisa se "Encapsulation"?**
+
+**Encapsulation** se prensip pou kache detay entèn yo ak sèlman montre sa ki nesesè. Li se tankou yon machin - ou pa bezwen konnen kijan motè a travay, ou sèlman bezwen konnen kijan kondwi.
+
+**Egzanp Encapsulation:**
+```python
+class Elèv:
+    def __init__(self, non, laj, klas):
+        self.non = non        # Piblik - tout moun ka wè
+        self.laj = laj        # Piblik - tout moun ka wè
+        self._klas = klas     # Pwotèje - sèlman klas la ka wè
+        self.__nòt_yo = []    # Prive - pa gen moun ka wè
+
+    def ajoute_nòt(self, nòt):
+        """Metòd piblik - tout moun ka sèvi"""
+        self.__nòt_yo.append(nòt)
+
+    def _metòd_pwotèje(self):
+        """Metòd pwotèje - sèlman klas la ka sèvi"""
+        pass
+
+    def __metòd_prive(self):
+        """Metòd prive - pa gen moun ka sèvi"""
+        pass
+```
+
+#### 9. **Inheritance** (Eritaj) - Herite Karakteristik
+
+**Kisa se "Inheritance"?**
+
+**Inheritance** se prensip pou yon klas ka herite karakteristik ak aksyon nan yon lòt klas. Li se tankou yon timoun ki herite karakteristik nan paran li yo.
+
+**Egzanp Inheritance:**
+```python
+class Pèson:
+    """Klas paran - karakteristik komen"""
+    def __init__(self, non, laj):
+        self.non = non
+        self.laj = laj
+    
+    def di_bonjou(self):
+        print(f"Bonjou! Mwen rele {self.non}")
+
+class Elèv(Pèson):  # Elèv herite nan Pèson
+    """Klas pitit - karakteristik espesifik"""
+    def __init__(self, non, laj, klas):
+        super().__init__(non, laj)  # Rele konstriktè paran an
+        self.klas = klas
+        self.nòt_yo = []
+    
+    def etidye(self):
+        print(f"{self.non} ap etidye nan klas {self.klas}")
+
+class Pwofesè(Pèson):  # Pwofesè herite nan Pèson
+    """Klas pitit - karakteristik espesifik"""
+    def __init__(self, non, laj, matyè):
+        super().__init__(non, laj)  # Rele konstriktè paran an
+        self.matyè = matyè
+    
+    def anseye(self):
+        print(f"{self.non} ap anseye {self.matyè}")
+```
+
+#### 10. **Polymorphism** (Polimòfis) - Plizyè Fòm
+
+**Kisa se "Polymorphism"?**
+
+**Polymorphism** se prensip pou objè diferan ka sèvi ak menm metòd la nan fason diferan. Li se tankou diferan kalite bèt ki ka kouri, men chak yon sèvi nan fason pa li.
+
+**Egzanp Polymorphism:**
+```python
+class Bèt:
+    def kouri(self):
+        print("Bèt la ap kouri")
+
+class Chyen(Bèt):
+    def kouri(self):
+        print("Chyen an ap kouri ak pat li yo")
+
+class Chat(Bèt):
+    def kouri(self):
+        print("Chat la ap kouri ak pat li yo")
+
+class Lapen(Bèt):
+    def kouri(self):
+        print("Lapen an ap sote ak pat li yo")
+
+# Polymorphism - menm metòd, diferan aksyon
+bèt_yo = [Chyen(), Chat(), Lapen()]
+
+for bèt in bèt_yo:
+    bèt.kouri()  # Chak bèt kouri nan fason pa li
+```
+
+### 🎮 Egzanp Pratik Konplè
+
+```python
+# 🎮 EGZANP AMIZAN: Ou nan yon lekòl ak elèv yo
+
+print("🏫 SITUASYON: Ou nan yon lekòl ak elèv yo")
+print("=" * 45)
+
+# 1. KREYE KLAS ELÈV
+print("1️⃣ KREYE KLAS ELÈV")
+print("   💡 Pensez: 'Fè plan pou yon elèv'")
+
+class Elèv:
+    """Klas Elèv - Plan pou kreye elèv yo"""
+    
+    def __init__(self, non, laj, klas):
+        """Konstriktè - Kreye yon elèv nouvo"""
+        print(f"   🎓 Kreye elèv: {non}")
         self.non = non
         self.laj = laj
         self.klas = klas
         self.nòt_yo = []
+        self.prezan = True
     
     def ajoute_nòt(self, nòt):
+        """Ajoute yon nòt nan lis elèv la"""
+        print(f"   📊 {self.non} jwenn nòt: {nòt}")
         self.nòt_yo.append(nòt)
     
     def kalkile_mwayèn(self):
+        """Kalkile nòt mwayèn elèv la"""
         if len(self.nòt_yo) == 0:
             return 0
-        return sum(self.nòt_yo) / len(self.nòt_yo)
+        mwayèn = sum(self.nòt_yo) / len(self.nòt_yo)
+        print(f"   📈 {self.non} gen mwayèn: {mwayèn:.2f}")
+        return mwayèn
     
     def afiche_infò(self):
-        print(f"Non: {self.non}")
-        print(f"Laj: {self.laj}")
-        print(f"Klas: {self.klas}")
-        print(f"Mwayèn: {self.kalkile_mwayèn():.2f}")
+        """Afiche tout enfòmasyon elèv la"""
+        print(f"   👤 Non: {self.non}")
+        print(f"   🎂 Laj: {self.laj} an")
+        print(f"   🏫 Klas: {self.klas}")
+        print(f"   📊 Nòt yo: {self.nòt_yo}")
+        print(f"   📈 Mwayèn: {self.kalkile_mwayèn():.2f}")
+        print(f"   ✅ Prezan: {self.prezan}")
+        print()
+    
+    def chanje_klas(self, nouvo_klas):
+        """Chanje klas elèv la"""
+        ansyen_klas = self.klas
+        self.klas = nouvo_klas
+        print(f"   🔄 {self.non} chanje klas: {ansyen_klas} → {nouvo_klas}")
+    
+    def fè_anivèsè(self):
+        """Elèv la fè anivèsè li"""
+        self.laj += 1
+        print(f"   🎉 {self.non} fè {self.laj} an! Bon anivèsè!")
+
+print("   📋 Klas Elèv kreye ak siksè!")
+print()
+
+# 2. KREYE OBJÈ YO
+print("2️⃣ KREYE OBJÈ YO")
+print("   💡 Pensez: 'Fè elèv reyèl yo dapre plan an'")
+
+print("📚 Kreye elèv yo:")
+marie = Elèv("Marie", 20, "3e ane")
+jean = Elèv("Jean", 19, "2e ane")
+sara = Elèv("Sara", 21, "4e ane")
+
+print()
+
+# 3. SÈVI AK OBJÈ YO
+print("3️⃣ SÈVI AK OBJÈ YO")
+print("   💡 Pensez: 'Fè aksyon ak elèv yo'")
+
+# Ajoute nòt yo
+print("📊 Ajoute nòt yo:")
+marie.ajoute_nòt(15)
+marie.ajoute_nòt(18)
+marie.ajoute_nòt(20)
+
+jean.ajoute_nòt(12)
+jean.ajoute_nòt(16)
+jean.ajoute_nòt(18)
+
+sara.ajoute_nòt(19)
+sara.ajoute_nòt(17)
+sara.ajoute_nòt(21)
+
+print()
+
+# Afiche enfòmasyon yo
+print("📋 Afiche enfòmasyon yo:")
+marie.afiche_infò()
+jean.afiche_infò()
+sara.afiche_infò()
+
+# Fè aksyon yo
+print("🎯 Fè aksyon yo:")
+marie.chanje_klas("4e ane")
+marie.fè_anivèsè()
+
+jean.chanje_klas("3e ane")
+
+sara.fè_anivèsè()
+
+print()
+
+# 4. AKSÈDE ATRIBİ YO
+print("4️⃣ AKSÈDE ATRIBİ YO")
+print("   💡 Pensez: 'Jwenn enfòmasyon nan objè yo'")
+
+print(f"   📝 Non Marie: {marie.non}")
+print(f"   🎂 Laj Jean: {jean.laj}")
+print(f"   🏫 Klas Sara: {sara.klas}")
+print(f"   📊 Nòt Marie: {marie.nòt_yo}")
+
+print()
+
+print("🎉 BRAVO! Ou konprann KLAS ak OBJÈ yo!")
 ```
 
 #### Kreye objè
@@ -7227,31 +7610,438 @@ for fòm in fòm_yo:
 
 ---
 
-## Chapit 8: Jesyon Erè ak Eksepsyon
+## Chapit 8: Jesyon Erè ak Eksepsyon (Error Handling and Exceptions) - Eksplikasyon Detaye pou Debitan
 
-### Erè ak Eksepsyon
+### 🎯 Kisa se "Erè" (Error) nan Pwogramasyon?
 
-#### Kalite erè yo
+**Definisyon Detaye:**
+
+**Erè** se pwoblèm ki rive nan kòd la ki anpeche pwogram nan travay kòrèkteman. Li se tankou yon pwoblèm nan yon rejèt ki fè manje a pa bon.
+
+**Poukisa Erè Enpòtan?**
+
+1. **Kòrèksyon**: Ou ka jwenn ak korije pwoblèm yo
+2. **Sekirite**: Pwogram nan pa kraze
+3. **Eksperyans**: Itilizatè a pa jwenn mesaj konfizyon
+4. **Devlopman**: Ou ka aprann nan erè yo
+5. **Pwofesyonèl**: Kòd la pi solid ak fiable
+
+**Analoji ki fasil konprann:**
+- **Erè** = Tankou yon pwoblèm nan yon rejèt
+- **Try/Except** = Tankou yon plan B pou rejèt la
+- **Exception** = Tankou yon pwoblèm espesifik
+- **Debugging** = Tankou jwenn ak korije pwoblèm nan rejèt la
+
+### 🔧 Tèm Fondamantal nan Jesyon Erè
+
+#### 1. **Error** (Erè) - Pwoblèm Nan Kòd
+
+**Kisa se "Error"?**
+
+**Error** se yon pwoblèm nan kòd la ki anpeche pwogram nan travay. Li se tankou yon erè nan yon rejèt ki fè manje a pa bon.
+
+**Poukisa Error Enpòtan?**
+- Li montre ou kote pwoblèm nan ye
+- Li ede ou aprann nan erè yo
+- Li pèmèt ou korije kòd la
+
+**Kalite Erè:**
+- **Syntax Error** - Kòd la pa swiv règ yo
+- **Runtime Error** - Pwoblèm pandan kouri pwogram nan
+- **Logic Error** - Kòd la travay men pa fè sa ou vle
+
+#### 2. **Exception** (Eksepsyon) - Erè Espesifik
+
+**Kisa se "Exception"?**
+
+**Exception** se yon kalite erè espesifik ki rive pandan kouri pwogram nan. Li se tankou yon pwoblèm espesifik nan yon rejèt.
+
+**Poukisa Exception Enpòtan?**
+- Yo bay enfòmasyon detaye sou pwoblèm nan
+- Ou ka atrape yo ak try/except
+- Yo ede ou jere pwoblèm yo
+
+**Egzanp Exception:**
 ```python
-# SyntaxError - Erè nan sentaks
-# print("Hello world"  # Manke parantèz
+# ValueError - Valè pa bon
+try:
+    nimewo = int("abc")  # Sa va bay ValueError
+except ValueError:
+    print("Valè a pa bon!")
 
-# NameError - Non pa defini
-# print(nome_varyab)  # nome_varyab pa defini
+# ZeroDivisionError - Divize pa zewo
+try:
+    rezilta = 10 / 0  # Sa va bay ZeroDivisionError
+except ZeroDivisionError:
+    print("Ou pa ka divize pa zewo!")
+```
 
-# TypeError - Kalite done pa bon
-# print("5" + 3)  # Pa ka ajoute string ak nimewo
+#### 3. **try** - Eseye Kòd
 
-# ValueError - Valè pa valab
-# int("abc")  # Pa ka konvèti "abc" nan nimewo
+**Kisa se "try"?**
 
-# IndexError - Endeks pa egziste
-# lis = [1, 2, 3]
-# print(lis[5])  # Endeks 5 pa egziste
+**try** se yon mo kle nan Python ki di "Eseye kòd sa a, men si gen pwoblèm, fè sa lòt bagay". Li se tankou di "Eseye fè rejèt sa a, men si li pa bon, fè yon lòt bagay".
 
-# KeyError - Kle pa egziste nan diksyone
-# dik = {"a": 1, "b": 2}
-# print(dik["c"])  # Kle "c" pa egziste
+**Poukisa try Enpòtan?**
+- Li pèmèt ou eseye kòd ki ka gen pwoblèm
+- Li anpeche pwogram nan kraze
+- Li bay ou kontwòl sou erè yo
+
+**Egzanp try:**
+```python
+try:
+    # Kòd ki ka gen pwoblèm
+    nimewo = int(input("Antre yon nimewo: "))
+    rezilta = 10 / nimewo
+    print(f"Rezilta: {rezilta}")
+except:
+    # Sa pou fè si gen pwoblèm
+    print("Yon pwoblèm rive!")
+```
+
+#### 4. **except** - Jere Erè
+
+**Kisa se "except"?**
+
+**except** se yon mo kle nan Python ki di "Si gen erè, fè sa". Li se tankou di "Si rejèt la pa bon, fè sa lòt bagay".
+
+**Poukisa except Enpòtan?**
+- Li jere erè yo
+- Li anpeche pwogram nan kraze
+- Li bay mesaj itil pou itilizatè a
+
+**Egzanp except:**
+```python
+try:
+    nimewo = int(input("Antre yon nimewo: "))
+    rezilta = 10 / nimewo
+except ValueError:
+    print("Ou pa antre yon nimewo valab!")
+except ZeroDivisionError:
+    print("Ou pa ka divize pa zewo!")
+except Exception as e:
+    print(f"Yon erè rive: {e}")
+```
+
+#### 5. **finally** - Toujou Fè
+
+**Kisa se "finally"?**
+
+**finally** se yon mo kle nan Python ki di "Toujou fè sa, menm si gen erè oswa pa". Li se tankou di "Toujou lave asyèt yo, menm si manje a pa bon".
+
+**Poukisa finally Enpòtan?**
+- Li asire ke kèk bagay toujou fèt
+- Li netwaye resous yo
+- Li fèmen fichier yo
+
+**Egzanp finally:**
+```python
+try:
+    fichier = open("done.txt", "r")
+    kontni = fichier.read()
+except FileNotFoundError:
+    print("Fichier a pa jwenn!")
+finally:
+    fichier.close()  # Toujou fèmen fichier la
+```
+
+#### 6. **else** - Si Pa Gen Erè
+
+**Kisa se "else" nan try/except?**
+
+**else** nan try/except se yon mo kle ki di "Si pa gen erè, fè sa". Li se tankou di "Si rejèt la bon, fè sa".
+
+**Poukisa else Enpòtan?**
+- Li fè aksyon si tout bagay bon
+- Li separe kòd ki gen pwoblèm ak kòd ki bon
+- Li fè kòd la pi klè
+
+**Egzanp else:**
+```python
+try:
+    nimewo = int(input("Antre yon nimewo: "))
+    rezilta = 10 / nimewo
+except ValueError:
+    print("Ou pa antre yon nimewo valab!")
+except ZeroDivisionError:
+    print("Ou pa ka divize pa zewo!")
+else:
+    print(f"Rezilta: {rezilta}")  # Fè si pa gen erè
+```
+
+### 🔧 Kalite Erè Yo
+
+#### 1. **SyntaxError** - Erè Nan Règ
+
+**Kisa se "SyntaxError"?**
+
+**SyntaxError** se yon erè ki rive lè kòd la pa swiv règ Python yo. Li se tankou yon erè gramè nan yon fraz.
+
+**Egzanp SyntaxError:**
+```python
+# ❌ SYNTAX ERROR
+print("Hello world"  # Manke parantèz )
+
+# ❌ SYNTAX ERROR
+if laj >= 18  # Manke kolòn (:)
+    print("Ou majè")
+
+# ✅ SYNTAX KÒRÈK
+print("Hello world")
+if laj >= 18:
+    print("Ou majè")
+```
+
+#### 2. **NameError** - Non Pa Defini
+
+**Kisa se "NameError"?**
+
+**NameError** se yon erè ki rive lè ou sèvi ak yon non ki pa defini. Li se tankou sèvi ak yon mo ki pa nan diksyonè a.
+
+**Egzanp NameError:**
+```python
+# ❌ NAME ERROR
+print(nome_varyab)  # nome_varyab pa defini
+
+# ✅ KÒRÈK
+nome_varyab = "Bonjou"
+print(nome_varyab)
+```
+
+#### 3. **TypeError** - Kalite Done Pa Bon
+
+**Kisa se "TypeError"?**
+
+**TypeError** se yon erè ki rive lè ou sèvi ak kalite done ki pa konpatib. Li se tankou eseye ajoute pòm ak zòrèj.
+
+**Egzanp TypeError:**
+```python
+# ❌ TYPE ERROR
+print("5" + 3)  # Pa ka ajoute string ak nimewo
+
+# ✅ KÒRÈK
+print("5" + str(3))  # Konvèti nimewo a nan string
+print(5 + 3)         # Ajoute de nimewo
+```
+
+#### 4. **ValueError** - Valè Pa Valab
+
+**Kisa se "ValueError"?**
+
+**ValueError** se yon erè ki rive lè valè a pa bon pou operasyon an. Li se tankou eseye mete yon kawòt nan yon fòmil pou gato.
+
+**Egzanp ValueError:**
+```python
+# ❌ VALUE ERROR
+int("abc")  # Pa ka konvèti "abc" nan nimewo
+
+# ✅ KÒRÈK
+int("123")  # Konvèti "123" nan nimewo 123
+```
+
+#### 5. **IndexError** - Endeks Pa Egziste
+
+**Kisa se "IndexError"?**
+
+**IndexError** se yon erè ki rive lè ou eseye aksede yon pozisyon ki pa egziste nan yon lis. Li se tankou eseye jwenn eleman 10 nan yon lis ki gen sèlman 5 eleman.
+
+**Egzanp IndexError:**
+```python
+# ❌ INDEX ERROR
+lis = [1, 2, 3]
+print(lis[5])  # Endeks 5 pa egziste
+
+# ✅ KÒRÈK
+lis = [1, 2, 3]
+print(lis[2])  # Endeks 2 egziste
+```
+
+#### 6. **KeyError** - Kle Pa Egziste
+
+**Kisa se "KeyError"?**
+
+**KeyError** se yon erè ki rive lè ou eseye aksede yon kle ki pa egziste nan yon diksyone. Li se tankou eseye jwenn yon mo ki pa nan diksyonè a.
+
+**Egzanp KeyError:**
+```python
+# ❌ KEY ERROR
+dik = {"a": 1, "b": 2}
+print(dik["c"])  # Kle "c" pa egziste
+
+# ✅ KÒRÈK
+dik = {"a": 1, "b": 2}
+print(dik["a"])  # Kle "a" egziste
+```
+
+#### 7. **ZeroDivisionError** - Divize Pa Zewo
+
+**Kisa se "ZeroDivisionError"?**
+
+**ZeroDivisionError** se yon erè ki rive lè ou eseye divize pa zewo. Li se tankou eseye pataje yon bagay ant zewo moun.
+
+**Egzanp ZeroDivisionError:**
+```python
+# ❌ ZERO DIVISION ERROR
+rezilta = 10 / 0
+
+# ✅ KÒRÈK
+try:
+    rezilta = 10 / 0
+except ZeroDivisionError:
+    print("Ou pa ka divize pa zewo!")
+```
+
+#### 8. **FileNotFoundError** - Fichier Pa Jwenn
+
+**Kisa se "FileNotFoundError"?**
+
+**FileNotFoundError** se yon erè ki rive lè ou eseye ouvri yon fichier ki pa egziste. Li se tankou eseye ouvri yon liv ki pa nan bibliyotèk la.
+
+**Egzanp FileNotFoundError:**
+```python
+# ❌ FILE NOT FOUND ERROR
+fichier = open("fichier_ki_pa_egziste.txt", "r")
+
+# ✅ KÒRÈK
+try:
+    fichier = open("done.txt", "r")
+    kontni = fichier.read()
+except FileNotFoundError:
+    print("Fichier a pa jwenn!")
+```
+
+### 🎮 Egzanp Pratik Konplè
+
+```python
+# 🎮 EGZANP AMIZAN: Ou nan yon restoran ak chef
+
+print("🍽️ SITUASYON: Ou nan yon restoran ak chef")
+print("=" * 45)
+
+# 1. TRY/EXCEPT DEBAZ
+print("1️⃣ TRY/EXCEPT DEBAZ")
+print("   💡 Pensez: 'Eseye fè rejèt la, men si li pa bon, fè sa lòt bagay'")
+
+def divize_pri(pri_total, kantite_moun):
+    """Divize pri total ant kantite moun"""
+    try:
+        pri_pa_moun = pri_total / kantite_moun
+        print(f"   💰 Chak moun peye: {pri_pa_moun:.2f} goud")
+        return pri_pa_moun
+    except ZeroDivisionError:
+        print("   ❌ Ou pa ka divize ant 0 moun!")
+        return 0
+    except TypeError:
+        print("   ❌ Ou dwe antre nimewo!")
+        return 0
+
+# Teste divize_pri
+divize_pri(100, 4)    # Kòrèk
+divize_pri(100, 0)    # ZeroDivisionError
+divize_pri("100", 4)  # TypeError
+
+print()
+
+# 2. TRY/EXCEPT/ELSE
+print("2️⃣ TRY/EXCEPT/ELSE")
+print("   💡 Pensez: 'Eseye fè rejèt la, si li pa bon fè sa lòt bagay, si li bon fè sa'")
+
+def kalkile_tip(pri, pousantaj):
+    """Kalkile tip pou pri a"""
+    try:
+        tip = pri * (pousantaj / 100)
+    except (TypeError, ValueError):
+        print("   ❌ Ou dwe antre nimewo valab!")
+        tip = 0
+    except ZeroDivisionError:
+        print("   ❌ Pousantaj la pa ka zewo!")
+        tip = 0
+    else:
+        print(f"   ✅ Tip kalkile: {tip:.2f} goud")
+        print(f"   💳 Total: {pri + tip:.2f} goud")
+    finally:
+        print("   🧹 Netwaye kalkil yo...")
+
+# Teste kalkile_tip
+kalkile_tip(100, 15)     # Kòrèk
+kalkile_tip("100", 15)   # TypeError
+kalkile_tip(100, "15")   # TypeError
+
+print()
+
+# 3. TRY/EXCEPT/FINALLY
+print("3️⃣ TRY/EXCEPT/FINALLY")
+print("   💡 Pensez: 'Eseye fè rejèt la, menm si li pa bon, toujou lave asyèt yo'")
+
+def li_fichier_rejèt(nom_fichier):
+    """Li fichier rejèt la"""
+    fichier = None
+    try:
+        fichier = open(nom_fichier, "r")
+        kontni = fichier.read()
+        print(f"   📖 Rejèt la: {kontni}")
+        return kontni
+    except FileNotFoundError:
+        print(f"   ❌ Fichier {nom_fichier} pa jwenn!")
+        return ""
+    except PermissionError:
+        print(f"   ❌ Ou pa gen pèmisyon pou li {nom_fichier}!")
+        return ""
+    finally:
+        if fichier:
+            fichier.close()
+            print("   🔒 Fichier la fèmen")
+
+# Teste li_fichier_rejèt
+li_fichier_rejèt("rejèt.txt")        # Si fichier la egziste
+li_fichier_rejèt("pa_egziste.txt")   # Si fichier la pa egziste
+
+print()
+
+# 4. JERE PLIZYÈ ERÈ
+print("4️⃣ JERE PLIZYÈ ERÈ")
+print("   💡 Pensez: 'Eseye fè rejèt la, men jere diferan kalite pwoblèm'")
+
+def kalkile_pri_manje(pri, kantite, tip):
+    """Kalkile pri manje ak tip"""
+    try:
+        # Konvèti string yo nan nimewo
+        pri = float(pri)
+        kantite = int(kantite)
+        tip = float(tip)
+        
+        # Kalkile pri total
+        pri_total = pri * kantite
+        tip_montan = pri_total * (tip / 100)
+        total = pri_total + tip_montan
+        
+        print(f"   💰 Pri yon sèl: {pri} goud")
+        print(f"   📊 Kantite: {kantite}")
+        print(f"   💳 Pri total: {pri_total} goud")
+        print(f"   🎁 Tip ({tip}%): {tip_montan:.2f} goud")
+        print(f"   💸 Total final: {total:.2f} goud")
+        
+        return total
+        
+    except ValueError as e:
+        print(f"   ❌ Valè pa bon: {e}")
+        print("   💡 Asire w ke ou antre nimewo!")
+        return 0
+    except ZeroDivisionError:
+        print("   ❌ Ou pa ka divize pa zewo!")
+        return 0
+    except Exception as e:
+        print(f"   ❌ Yon erè inatandi rive: {e}")
+        return 0
+
+# Teste kalkile_pri_manje
+kalkile_pri_manje("25.50", "3", "15")    # Kòrèk
+kalkile_pri_manje("abc", "3", "15")      # ValueError
+kalkile_pri_manje("25.50", "0", "15")    # ZeroDivisionError
+
+print()
+
+print("🎉 BRAVO! Ou konprann JESYON ERÈ ak EKSEPSYON yo!")
 ```
 
 ### Try ak Except
