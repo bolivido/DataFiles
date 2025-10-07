@@ -14196,15 +14196,853 @@ if __name__ == "__main__":
 
 ## Chapit 10: Travay ak Dosye (File Operations) - Eksplikasyon Detaye pou Debitan
 
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann travay ak fichier** - Kisa yo ye ak poukisa yo enpòtan
+- **Ouvri, li, ak ekri fichier** - Operasyon debaz ak fichier yo
+- **Sèvi ak CSV** - Jere done tab ak fichier CSV
+- **Sèvi ak JSON** - Jere done estriktire ak JSON
+- **Devlope yon sistèm backup** - Pwojè pratik ak jesyon fichier
+
+> **💡 TIP:** Travay ak fichier se fondasyon pou pwogram ki ka sere ak li done. Li pèmèt ou kreye aplikasyon ki ka kenbe enfòmasyon.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Fichier Fondamantal**
+- **File** - Fichier sou konpitè a
+- **Open** - Ouvri yon fichier
+- **Read** - Li kontni fichier la
+- **Write** - Ekri nan fichier la
+- **Close** - Fèmen fichier la
+
+#### **Mode Fichier**
+- **Read Mode** - Li sèlman
+- **Write Mode** - Ekri sèlman
+- **Append Mode** - Ajoute nan fen
+- **Binary Mode** - Done binè
+- **Text Mode** - Tèks nòmal
+
+#### **Fòma Done**
+- **CSV** - Comma Separated Values
+- **JSON** - JavaScript Object Notation
+- **TXT** - Fichier tèks nòmal
+- **Binary** - Done binè
+
+#### **Operasyon Fichier**
+- **Path** - Chemin fichier la
+- **Directory** - Katè
+- **Encoding** - Kodaj karaktè
+- **Buffer** - Zòn memwa tanporè
+
+---
+
 ### 🎯 Kisa se "Travay ak Dosye" (File Operations)?
 
 **Definisyon Detaye:**
 
 **Travay ak Dosye** se fason Python ka li, ekri, ak jere fichier yo sou konpitè a. Li se tankou yon bibliyotèkè ki ka li liv, ekri nòt, ak òganize dokiman yo.
 
+> **💡 TIP:** Pensez a fichier tankou yon liv - ou ka ouvri li, li li, ekri nan li, epi fèmen li. Chak fichier genyen yon non ak yon kote li ye.
+
+#### 📊 Diagram Operasyon Fichier
+
+```mermaid
+flowchart TD
+    A[Fichier] --> B[Ouvri]
+    B --> C[Li/Ekri]
+    C --> D[Fèmen]
+    
+    E[CSV] --> F[Parse]
+    F --> G[Lis/Diksyonè]
+    
+    H[JSON] --> I[Load]
+    I --> J[Objet Python]
+    
+    style A fill:#e1f5fe
+    style E fill:#f3e5f5
+    style H fill:#e8f5e8
+```
+
+![File Operations Visualization](https://images.unsplash.com/photo-1551288049-bebda4e38f71)
+*Source: [Unsplash](https://unsplash.com/photos/files) - Photo by [Luca Bravo]*
+
 **Poukisa Travay ak Dosye Enpòtan?**
 
 1. **Sere Done**: Konsève enfòmasyon pou pita
+2. **Pataje Done**: Pataje enfòmasyon ant pwogram yo
+3. **Backup**: Fè kopi sekirite
+4. **Konfigirasyon**: Sere paramèt pwogram yo
+5. **Log**: Ekri istwa operasyon yo
+6. **Import/Export**: Pote done ant sistèm yo
+
+---
+
+### 🔧 Ouvri, Li, ak Ekri Fichier
+
+#### 🎯 Kisa se "Ouvri, Li, ak Ekri Fichier"?
+
+**Ouvri** se kòmanse aksede yon fichier.
+**Li** se pran kontni fichier la.
+**Ekri** se mete kontni nan fichier la.
+
+> **💡 TIP:** Ouvri fichier se tankou ouvri yon liv, li se tankou li kontni liv la, ekri se tankou ekri nan liv la.
+
+#### 📋 Mode Fichier
+
+| Mode | Deskripsyon | Lè Sèvi |
+|------|-------------|---------|
+| **'r'** | Li sèlman | Li kontni fichier la |
+| **'w'** | Ekri sèlman | Ekri nouvo kontni |
+| **'a'** | Ajoute | Ajoute nan fen fichier la |
+| **'r+'** | Li ak ekri | Li ak modifye |
+| **'rb'** | Li binè | Li fichier binè |
+| **'wb'** | Ekri binè | Ekri fichier binè |
+
+#### 🔧 Egzanp Detaye Operasyon Fichier
+
+**Egzanp 1: Li Fichier**
+
+```python
+print("=== EGZANP 1: LI FICHIER ===")
+
+# Kreye yon fichier test
+with open("test.txt", "w", encoding="utf-8") as f:
+    f.write("Bonjou nan Python!\n")
+    f.write("Fichier sa a se pou test.\n")
+    f.write("Li genyen 3 liy tèks.")
+
+# Metòd 1: Li tout fichier la
+print("--- Metòd 1: Li tout fichier la ---")
+with open("test.txt", "r", encoding="utf-8") as f:
+    kontni = f.read()
+    print("Kontni tout fichier la:")
+    print(kontni)
+
+# Metòd 2: Li liy pa liy
+print("\n--- Metòd 2: Li liy pa liy ---")
+with open("test.txt", "r", encoding="utf-8") as f:
+    print("Chak liy:")
+    for i, liy in enumerate(f, 1):
+        print(f"Liy {i}: {liy.strip()}")
+
+# Metòd 3: Li sèlman kèk liy
+print("\n--- Metòd 3: Li sèlman kèk liy ---")
+with open("test.txt", "r", encoding="utf-8") as f:
+    premye_liy = f.readline()
+    dezyèm_liy = f.readline()
+    print(f"Premye liy: {premye_liy.strip()}")
+    print(f"Dezyèm liy: {dezyèm_liy.strip()}")
+```
+
+**Egzanp 2: Ekri Fichier**
+
+```python
+print("=== EGZANP 2: EKRI FICHIER ===")
+
+# Metòd 1: Ekri nouvo fichier
+print("--- Metòd 1: Ekri nouvo fichier ---")
+with open("nouvo_fichier.txt", "w", encoding="utf-8") as f:
+    f.write("Premye liy\n")
+    f.write("Dezyèm liy\n")
+    f.write("Twazyèm liy\n")
+
+# Metòd 2: Ajoute nan fichier ki egziste
+print("--- Metòd 2: Ajoute nan fichier ki egziste ---")
+with open("nouvo_fichier.txt", "a", encoding="utf-8") as f:
+    f.write("Katriyèm liy (ajoute)\n")
+    f.write("Senkyèm liy (ajoute)\n")
+
+# Metòd 3: Ekri ak format
+print("--- Metòd 3: Ekri ak format ---")
+non = "Marie"
+laj = 25
+vil = "Pòtoprens"
+
+with open("pwofil.txt", "w", encoding="utf-8") as f:
+    f.write(f"Non: {non}\n")
+    f.write(f"Laj: {laj}\n")
+    f.write(f"Vil: {vil}\n")
+
+# Li fichier yo pou verifye
+print("\nKontni nouvo_fichier.txt:")
+with open("nouvo_fichier.txt", "r", encoding="utf-8") as f:
+    print(f.read())
+
+print("\nKontni pwofil.txt:")
+with open("pwofil.txt", "r", encoding="utf-8") as f:
+    print(f.read())
+```
+
+**Egzanp 3: Jere Fichier ak Erè**
+
+```python
+print("=== EGZANP 3: JERE FICHIER AK ERÈ ===")
+
+import os
+
+def li_fichier_san_erè(non_fichier):
+    """
+    Li fichier ak jesyon erè
+    
+    Args:
+        non_fichier (str): Non fichier la
+    
+    Returns:
+        str: Kontni fichier la oswa None
+    """
+    try:
+        # Tcheke si fichier egziste
+        if not os.path.exists(non_fichier):
+            print(f"❌ Fichier {non_fichier} pa egziste")
+            return None
+        
+        # Li fichier la
+        with open(non_fichier, "r", encoding="utf-8") as f:
+            kontni = f.read()
+            print(f"✅ Fichier {non_fichier} li ak siksè")
+            return kontni
+    
+    except PermissionError:
+        print(f"❌ Pa gen pèmisyon pou li fichier {non_fichier}")
+        return None
+    except UnicodeDecodeError:
+        print(f"❌ Pa ka dekode fichier {non_fichier}")
+        return None
+    except Exception as e:
+        print(f"❌ Erè inatandi: {e}")
+        return None
+
+def ekri_fichier_san_erè(non_fichier, kontni):
+    """
+    Ekri fichier ak jesyon erè
+    
+    Args:
+        non_fichier (str): Non fichier la
+        kontni (str): Kontni pou ekri
+    """
+    try:
+        with open(non_fichier, "w", encoding="utf-8") as f:
+            f.write(kontni)
+            print(f"✅ Fichier {non_fichier} ekri ak siksè")
+    
+    except PermissionError:
+        print(f"❌ Pa gen pèmisyon pou ekri nan fichier {non_fichier}")
+    except Exception as e:
+        print(f"❌ Erè inatandi: {e}")
+
+# Teste fonksyon yo
+ekri_fichier_san_erè("test_san_erè.txt", "Bonjou nan Python!")
+kontni = li_fichier_san_erè("test_san_erè.txt")
+if kontni:
+    print(f"Kontni: {kontni}")
+
+# Teste ak fichier ki pa egziste
+li_fichier_san_erè("fichier_pa_egziste.txt")
+```
+
+**Egzanp 4: Jere Fichier ak Context Manager**
+
+```python
+print("=== EGZANP 4: JERE FICHIER AK CONTEXT MANAGER ===")
+
+class GestionèFichier:
+    """
+    Klas pou jere fichier yo
+    """
+    
+    def __init__(self, non_fichier, mode):
+        """
+        Konstriktè pou GestionèFichier
+        
+        Args:
+            non_fichier (str): Non fichier la
+            mode (str): Mode ouvri fichier la
+        """
+        self.non_fichier = non_fichier
+        self.mode = mode
+        self.fichier = None
+    
+    def __enter__(self):
+        """
+        Ouvri fichier la
+        """
+        print(f"Ouvri fichier {self.non_fichier} nan mode {self.mode}")
+        self.fichier = open(self.non_fichier, self.mode, encoding="utf-8")
+        return self.fichier
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        Fèmen fichier la
+        """
+        if self.fichier:
+            self.fichier.close()
+            print(f"Fèmen fichier {self.non_fichier}")
+        
+        # Jere erè yo
+        if exc_type:
+            print(f"Erè nan fichier {self.non_fichier}: {exc_val}")
+        
+        return False  # Pa kache erè yo
+
+# Sèvi ak context manager koutim
+with GestionèFichier("test_context.txt", "w") as f:
+    f.write("Teste context manager koutim\n")
+    f.write("Fichier sa a genyen 2 liy\n")
+
+# Li fichier la
+with GestionèFichier("test_context.txt", "r") as f:
+    kontni = f.read()
+    print(f"Kontni: {kontni}")
+```
+
+---
+
+### 🔧 CSV - Kòma Sèvi ak Done Tab
+
+#### 🎯 Kisa se "CSV"?
+
+**CSV** (Comma Separated Values) se yon fòma fichier pou sere done tab. Chak liy reprezante yon ranje, chak virgul reprezante yon kolòn.
+
+> **💡 TIP:** CSV se tankou yon tablo nan yon fichier tèks - chak liy se yon ranje, chak virgul se yon kolòn.
+
+#### 📋 Karakteristik CSV
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **Separator** | Karaktè pou separe kolòn | `,` (virgul) |
+| **Quote** | Karaktè pou antoure valè | `"` (guillemet) |
+| **Header** | Premye liy ak non kolòn | `Non,Laj,Vil` |
+| **Encoding** | Kodaj karaktè | UTF-8 |
+
+#### 🔧 Egzanp Detaye CSV
+
+**Egzanp 1: Ekri Fichier CSV**
+
+```python
+print("=== EGZANP 1: EKRI FICHIER CSV ===")
+
+import csv
+
+# Done pou ekri
+elèv_yo = [
+    ["Non", "Laj", "Klas", "Nòt"],
+    ["Marie", 15, "3e ane", 85],
+    ["Jean", 16, "4e ane", 90],
+    ["Sara", 14, "2e ane", 78],
+    ["Pierre", 17, "5e ane", 92]
+]
+
+# Metòd 1: Ekri ak csv.writer
+print("--- Metòd 1: Ekri ak csv.writer ---")
+with open("elèv_yo.csv", "w", newline="", encoding="utf-8") as f:
+    ekrivain = csv.writer(f)
+    for ranje in elèv_yo:
+        ekrivain.writerow(ranje)
+
+print("Fichier elèv_yo.csv kreye!")
+
+# Metòd 2: Ekri ak csv.DictWriter
+print("--- Metòd 2: Ekri ak csv.DictWriter ---")
+done_dict = [
+    {"Non": "Marie", "Laj": 15, "Klas": "3e ane", "Nòt": 85},
+    {"Non": "Jean", "Laj": 16, "Klas": "4e ane", "Nòt": 90},
+    {"Non": "Sara", "Laj": 14, "Klas": "2e ane", "Nòt": 78},
+    {"Non": "Pierre", "Laj": 17, "Klas": "5e ane", "Nòt": 92}
+]
+
+with open("elèv_dict.csv", "w", newline="", encoding="utf-8") as f:
+    if done_dict:
+        kolòn = done_dict[0].keys()
+        ekrivain = csv.DictWriter(f, fieldnames=kolòn)
+        ekrivain.writeheader()
+        ekrivain.writerows(done_dict)
+
+print("Fichier elèv_dict.csv kreye!")
+```
+
+**Egzanp 2: Li Fichier CSV**
+
+```python
+print("=== EGZANP 2: LI FICHIER CSV ===")
+
+import csv
+
+# Metòd 1: Li ak csv.reader
+print("--- Metòd 1: Li ak csv.reader ---")
+with open("elèv_yo.csv", "r", encoding="utf-8") as f:
+    lektè = csv.reader(f)
+    for i, ranje in enumerate(lektè):
+        if i == 0:
+            print(f"Header: {ranje}")
+        else:
+            print(f"Ranje {i}: {ranje}")
+
+# Metòd 2: Li ak csv.DictReader
+print("\n--- Metòd 2: Li ak csv.DictReader ---")
+with open("elèv_dict.csv", "r", encoding="utf-8") as f:
+    lektè = csv.DictReader(f)
+    for ranje in lektè:
+        print(f"Non: {ranje['Non']}, Laj: {ranje['Laj']}, Klas: {ranje['Klas']}, Nòt: {ranje['Nòt']}")
+
+# Metòd 3: Konvèti nan lis
+print("\n--- Metòd 3: Konvèti nan lis ---")
+with open("elèv_yo.csv", "r", encoding="utf-8") as f:
+    lektè = csv.reader(f)
+    done_lis = list(lektè)
+
+print("Done nan lis:")
+for ranje in done_lis:
+    print(ranje)
+```
+
+**Egzanp 3: Jere CSV Konplèks**
+
+```python
+print("=== EGZANP 3: JERE CSV KONPLÈKS ===")
+
+import csv
+import os
+
+class GestionèCSV:
+    """
+    Klas pou jere fichier CSV
+    """
+    
+    def __init__(self, non_fichier):
+        """
+        Konstriktè pou GestionèCSV
+        
+        Args:
+            non_fichier (str): Non fichier CSV la
+        """
+        self.non_fichier = non_fichier
+        self.kolòn = []
+        self.done = []
+    
+    def kreye_fichier(self, kolòn):
+        """
+        Kreye nouvo fichier CSV
+        
+        Args:
+            kolòn (list): Lis non kolòn yo
+        """
+        self.kolòn = kolòn
+        with open(self.non_fichier, "w", newline="", encoding="utf-8") as f:
+            ekrivain = csv.writer(f)
+            ekrivain.writerow(kolòn)
+        print(f"Fichier {self.non_fichier} kreye ak kolòn: {kolòn}")
+    
+    def ajoute_ranje(self, ranje):
+        """
+        Ajoute yon ranje nan fichier la
+        
+        Args:
+            ranje (list): Lis valè pou ranje a
+        """
+        if len(ranje) != len(self.kolòn):
+            print(f"❌ Raje a dwe genyen {len(self.kolòn)} kolòn")
+            return
+        
+        with open(self.non_fichier, "a", newline="", encoding="utf-8") as f:
+            ekrivain = csv.writer(f)
+            ekrivain.writerow(ranje)
+        print(f"✅ Raje ajoute: {ranje}")
+    
+    def li_fichier(self):
+        """
+        Li tout fichier la
+        
+        Returns:
+            list: Lis ranje yo
+        """
+        if not os.path.exists(self.non_fichier):
+            print(f"❌ Fichier {self.non_fichier} pa egziste")
+            return []
+        
+        done = []
+        with open(self.non_fichier, "r", encoding="utf-8") as f:
+            lektè = csv.reader(f)
+            for ranje in lektè:
+                done.append(ranje)
+        
+        if done:
+            self.kolòn = done[0]
+            self.done = done[1:]
+        
+        return done
+    
+    def jwenn_ranje(self, kolòn, valè):
+        """
+        Jwenn ranje yo ki genyen valè espesifik
+        
+        Args:
+            kolòn (str): Non kolòn la
+            valè: Valè pou chèche
+        
+        Returns:
+            list: Lis ranje yo ki matche
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        if kolòn not in self.kolòn:
+            print(f"❌ Kolòn {kolòn} pa egziste")
+            return []
+        
+        indeks_kolòn = self.kolòn.index(kolòn)
+        ranje_matche = []
+        
+        for ranje in self.done:
+            if ranje[indeks_kolòn] == str(valè):
+                ranje_matche.append(ranje)
+        
+        return ranje_matche
+    
+    def afiche_statistik(self):
+        """
+        Afiche estatistik fichier la
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        print(f"\n=== STATISTIK {self.non_fichier} ===")
+        print(f"Kantite kolòn: {len(self.kolòn)}")
+        print(f"Kantite ranje: {len(self.done)}")
+        print(f"Kolòn yo: {self.kolòn}")
+
+# Teste GestionèCSV
+gestionè = GestionèCSV("test_gestionè.csv")
+
+# Kreye fichier
+kolòn = ["Non", "Laj", "Vil", "Salè"]
+gestionè.kreye_fichier(kolòn)
+
+# Ajoute ranje yo
+gestionè.ajoute_ranje(["Marie", 25, "Pòtoprens", 50000])
+gestionè.ajoute_ranje(["Jean", 30, "Kap Ayisyen", 60000])
+gestionè.ajoute_ranje(["Sara", 28, "Pòtoprens", 55000])
+
+# Li fichier la
+done = gestionè.li_fichier()
+print(f"\nKontni fichier la:")
+for ranje in done:
+    print(ranje)
+
+# Chèche ranje yo
+ranje_pòtoprens = gestionè.jwenn_ranje("Vil", "Pòtoprens")
+print(f"\nRanje yo nan Pòtoprens: {ranje_pòtoprens}")
+
+# Afiche estatistik
+gestionè.afiche_statistik()
+```
+
+---
+
+### 🔧 JSON - Done Estriktire
+
+#### 🎯 Kisa se "JSON"?
+
+**JSON** (JavaScript Object Notation) se yon fòma pou sere done estriktire. Li se tankou yon diksyonè Python men nan fòma tèks.
+
+> **💡 TIP:** JSON se tankou yon diksyonè ki ekri nan yon fichier - li ka genyen kle ak valè, lis, ak lòt objè.
+
+#### 📋 Karakteristik JSON
+
+| Karakteristik | Deskripsyon | Egzanp |
+|---------------|-------------|---------|
+| **String** | Tèks ant guillemet | `"bonjou"` |
+| **Number** | Nimewo | `42`, `3.14` |
+| **Boolean** | Vre oswa Fo | `true`, `false` |
+| **Null** | Valè vid | `null` |
+| **Array** | Lis valè | `[1, 2, 3]` |
+| **Object** | Kle-valè | `{"non": "Marie"}` |
+
+#### 🔧 Egzanp Detaye JSON
+
+**Egzanp 1: Ekri Fichier JSON**
+
+```python
+print("=== EGZANP 1: EKRI FICHIER JSON ===")
+
+import json
+
+# Done pou ekri
+done_elèv = {
+    "non": "Marie",
+    "laj": 15,
+    "klas": "3e ane",
+    "nòt_yo": [85, 90, 78, 92],
+    "aktif": True,
+    "adrès": {
+        "vil": "Pòtoprens",
+        "katye": "Pétion-Ville"
+    }
+}
+
+# Metòd 1: Ekri ak json.dump
+print("--- Metòd 1: Ekri ak json.dump ---")
+with open("elèv.json", "w", encoding="utf-8") as f:
+    json.dump(done_elèv, f, indent=2, ensure_ascii=False)
+
+print("Fichier elèv.json kreye!")
+
+# Metòd 2: Ekri ak json.dumps
+print("--- Metòd 2: Ekri ak json.dumps ---")
+json_string = json.dumps(done_elèv, indent=2, ensure_ascii=False)
+print("JSON string:")
+print(json_string)
+
+# Metòd 3: Ekri lis objè
+print("--- Metòd 3: Ekri lis objè ---")
+lis_elèv = [
+    {"non": "Marie", "laj": 15, "klas": "3e ane"},
+    {"non": "Jean", "laj": 16, "klas": "4e ane"},
+    {"non": "Sara", "laj": 14, "klas": "2e ane"}
+]
+
+with open("lis_elèv.json", "w", encoding="utf-8") as f:
+    json.dump(lis_elèv, f, indent=2, ensure_ascii=False)
+
+print("Fichier lis_elèv.json kreye!")
+```
+
+**Egzanp 2: Li Fichier JSON**
+
+```python
+print("=== EGZANP 2: LI FICHIER JSON ===")
+
+import json
+
+# Metòd 1: Li ak json.load
+print("--- Metòd 1: Li ak json.load ---")
+with open("elèv.json", "r", encoding="utf-8") as f:
+    done_elèv = json.load(f)
+
+print("Done elèv:")
+print(f"Non: {done_elèv['non']}")
+print(f"Laj: {done_elèv['laj']}")
+print(f"Klas: {done_elèv['klas']}")
+print(f"Nòt yo: {done_elèv['nòt_yo']}")
+print(f"Aktif: {done_elèv['aktif']}")
+print(f"Adrès: {done_elèv['adrès']}")
+
+# Metòd 2: Li ak json.loads
+print("\n--- Metòd 2: Li ak json.loads ---")
+with open("elèv.json", "r", encoding="utf-8") as f:
+    json_string = f.read()
+
+done_elèv = json.loads(json_string)
+print(f"Done li: {done_elèv}")
+
+# Metòd 3: Li lis objè
+print("\n--- Metòd 3: Li lis objè ---")
+with open("lis_elèv.json", "r", encoding="utf-8") as f:
+    lis_elèv = json.load(f)
+
+print("Lis elèv yo:")
+for i, elèv in enumerate(lis_elèv, 1):
+    print(f"Elèv {i}: {elèv}")
+```
+
+**Egzanp 3: Jere JSON Konplèks**
+
+```python
+print("=== EGZANP 3: JERE JSON KONPLÈKS ===")
+
+import json
+import os
+from datetime import datetime
+
+class GestionèJSON:
+    """
+    Klas pou jere fichier JSON
+    """
+    
+    def __init__(self, non_fichier):
+        """
+        Konstriktè pou GestionèJSON
+        
+        Args:
+            non_fichier (str): Non fichier JSON la
+        """
+        self.non_fichier = non_fichier
+        self.done = {}
+    
+    def kreye_fichier(self, done_initial=None):
+        """
+        Kreye nouvo fichier JSON
+        
+        Args:
+            done_initial (dict): Done inisyal pou fichier la
+        """
+        self.done = done_initial if done_initial else {}
+        self.sere_fichier()
+        print(f"Fichier {self.non_fichier} kreye")
+    
+    def sere_fichier(self):
+        """
+        Sere done nan fichier la
+        """
+        with open(self.non_fichier, "w", encoding="utf-8") as f:
+            json.dump(self.done, f, indent=2, ensure_ascii=False)
+    
+    def li_fichier(self):
+        """
+        Li fichier la
+        
+        Returns:
+            dict: Done nan fichier la
+        """
+        if not os.path.exists(self.non_fichier):
+            print(f"❌ Fichier {self.non_fichier} pa egziste")
+            return {}
+        
+        try:
+            with open(self.non_fichier, "r", encoding="utf-8") as f:
+                self.done = json.load(f)
+            print(f"✅ Fichier {self.non_fichier} li ak siksè")
+            return self.done
+        except json.JSONDecodeError as e:
+            print(f"❌ Erè JSON: {e}")
+            return {}
+        except Exception as e:
+            print(f"❌ Erè: {e}")
+            return {}
+    
+    def ajoute_kle_valè(self, kle, valè):
+        """
+        Ajoute kle-valè nan fichier la
+        
+        Args:
+            kle (str): Kle a
+            valè: Valè a
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        self.done[kle] = valè
+        self.sere_fichier()
+        print(f"✅ Kle-valè ajoute: {kle} = {valè}")
+    
+    def jwenn_valè(self, kle):
+        """
+        Jwenn valè pou yon kle
+        
+        Args:
+            kle (str): Kle a
+        
+        Returns:
+            Valè a oswa None
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        return self.done.get(kle)
+    
+    def efase_kle(self, kle):
+        """
+        Efase yon kle nan fichier la
+        
+        Args:
+            kle (str): Kle a
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        if kle in self.done:
+            del self.done[kle]
+            self.sere_fichier()
+            print(f"✅ Kle efase: {kle}")
+        else:
+            print(f"❌ Kle {kle} pa egziste")
+    
+    def afiche_kontni(self):
+        """
+        Afiche kontni fichier la
+        """
+        if not self.done:
+            self.li_fichier()
+        
+        print(f"\n=== KONTNI {self.non_fichier} ===")
+        for kle, valè in self.done.items():
+            print(f"{kle}: {valè}")
+
+# Teste GestionèJSON
+gestionè = GestionèJSON("test_gestionè.json")
+
+# Kreye fichier
+done_initial = {
+    "kreyasyon": datetime.now().isoformat(),
+    "vèsyon": "1.0",
+    "otè": "Python Kreyol"
+}
+gestionè.kreye_fichier(done_initial)
+
+# Ajoute done
+gestionè.ajoute_kle_valè("non", "Marie")
+gestionè.ajoute_kle_valè("laj", 25)
+gestionè.ajoute_kle_valè("vil", "Pòtoprens")
+gestionè.ajoute_kle_valè("nòt_yo", [85, 90, 78])
+
+# Li done
+valè_non = gestionè.jwenn_valè("non")
+print(f"Non: {valè_non}")
+
+# Afiche kontni
+gestionè.afiche_kontni()
+
+# Efase kle
+gestionè.efase_kle("laj")
+gestionè.afiche_kontni()
+```
+
+---
+
+### 📊 Resime Travay ak Dosye
+
+#### 🎯 Tèm Enpòtan yo
+
+| Tèm | Deskripsyon | Egzanp |
+|-----|-------------|---------|
+| **File** | Fichier sou konpitè a | `open("test.txt")` |
+| **Read** | Li kontni fichier la | `f.read()` |
+| **Write** | Ekri nan fichier la | `f.write()` |
+| **CSV** | Fòma fichier tab | `csv.writer()` |
+| **JSON** | Fòma done estriktire | `json.dump()` |
+| **Encoding** | Kodaj karaktè | `encoding="utf-8"` |
+| **Path** | Chemin fichier la | `os.path.exists()` |
+
+#### 🔧 Règ Enpòtan
+
+1. **Toujou fèmen** fichier yo apre sèvi ak yo
+2. **Sèvi ak with** pou jesyon otomatik
+3. **Spesifye encoding** pou karaktè espesyal
+4. **Jere erè** lè travay ak fichier yo
+5. **Tcheke egzistans** anvan ouvri
+
+#### ⚠️ Erè Komen
+
+1. **Pa fèmen fichier** yo apre sèvi ak yo
+2. **Pa spesifye encoding** pou karaktè espesyal
+3. **Pa jere erè** lè travay ak fichier yo
+4. **Pa tcheke egzistans** anvan ouvri
+5. **Pa sèvi ak context manager** pou jesyon otomatik
+
+---
+
+### 🎮 Egzèsis Pratik
+
+**Egzèsis 1: Sistèm Backup**
+Kreye yon sistèm ki ka fè backup fichier yo.
+
+**Egzèsis 2: Gestionè Kontak**
+Kreye yon gestionè kontak ki sèvi ak CSV ak JSON.
+
+**Egzèsis 3: Sistèm Log**
+Kreye yon sistèm ki ekri log operasyon yo.
+
+**Egzèsis 4: Konvètè Done**
+Kreye yon pwogram ki ka konvèti ant CSV ak JSON.
 2. **Pataje**: Pataje done ant pwogram yo
 3. **Konfigirasyon**: Sere paramèt pwogram yo
 4. **Rapò**: Kreye rapò ak dokiman
