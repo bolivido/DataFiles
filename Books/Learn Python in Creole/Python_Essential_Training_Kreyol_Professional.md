@@ -4480,6 +4480,247 @@ print(f"floor(3.8) = {math.floor(3.8)}") # 3
 
 ---
 
+### 🔢 Modil Math - Fonksyon Matematik Avanse
+
+#### 🎯 Kisa se Modil Math?
+
+**Modil Math** se yon modil entegre Python ki genyen fonksyon matematik avanse ak konstant. Li pèmèt ou fè kalkil konplèks san ekri fonksyon ou menm.
+
+> **💡 TIP:** Importe modil math anvan sèvi ak fonksyon li yo.
+
+#### 📋 Importe Modil Math
+
+```python
+import math                    # Importe tout modil
+from math import sqrt, pi      # Importe fonksyon espesifik
+```
+
+#### 🔧 Fonksyon Matematik Enpòtan
+
+| Fonksyon | Deskripsyon | Egzanp |
+|----------|-------------|---------|
+| `sqrt(x)` | Rasin kare | `math.sqrt(16)` → 4.0 |
+| `pow(x, y)` | X elevé a pisans Y | `math.pow(2, 3)` → 8.0 |
+| `ceil(x)` | Pi piti nimewo antye ≥ x | `math.ceil(3.2)` → 4 |
+| `floor(x)` | Pi gran nimewo antye ≤ x | `math.floor(3.8)` → 3 |
+| `abs(x)` | Valè absoli | `abs(-5)` → 5 |
+| `round(x, n)` | Wonde a n chif apre pwen | `round(3.14159, 2)` → 3.14 |
+
+#### 🔧 Fonksyon Trigonometrik
+
+```python
+import math
+
+# Fonksyon trigonometrik
+angle = math.pi / 4  # 45 degre
+print(f"sin(45°) = {math.sin(angle):.3f}")    # 0.707
+print(f"cos(45°) = {math.cos(angle):.3f}")    # 0.707
+print(f"tan(45°) = {math.tan(angle):.3f}")    # 1.000
+
+# Konvèti degre nan radian
+degre = 90
+radian = math.radians(degre)
+print(f"{degre}° = {radian:.3f} radian")
+```
+
+#### 🔧 Konstant Matematik
+
+```python
+import math
+
+print(f"π (pi) = {math.pi:.6f}")        # 3.141593
+print(f"e = {math.e:.6f}")              # 2.718282
+print(f"τ (tau) = {math.tau:.6f}")      # 6.283185
+```
+
+#### 🔧 Egzanp Pratik
+
+```python
+import math
+
+# 1. Kalkile distans ant de pwen
+def distans(x1, y1, x2, y2):
+    return math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
+d = distans(0, 0, 3, 4)
+print(f"Distans = {d}")  # 5.0
+
+# 2. Kalkile sifas ak perimèt yon sèk
+reyon = 5
+sifas = math.pi * reyon**2
+perimèt = 2 * math.pi * reyon
+print(f"Sifas = {sifas:.2f}")
+print(f"Perimèt = {perimèt:.2f}")
+
+# 3. Wonde nimewo
+nimewo = 3.14159
+print(f"Ronde a 2 chif = {round(nimewo, 2)}")  # 3.14
+print(f"Pi piti antye = {math.ceil(nimewo)}")  # 4
+print(f"Pi gran antye = {math.floor(nimewo)}") # 3
+```
+
+---
+
+### 📦 Modil Itil - Fonksyon ak Zouti Enpòtan
+
+#### 🎯 Kisa se Modil Itil?
+
+**Modil Itil** se modil Python ki genyen fonksyon ak zouti ki ede ou fè travay komen. Yo vin ak Python epi yo ka sèvi nan plizyè sitiyasyon.
+
+> **💡 TIP:** Genyen plizyè modil itil ki vin ak Python. Chèche yo anvan ekri fonksyon ou menm.
+
+#### 🔧 Modil Random - Nimewo Hasar
+
+```python
+import random
+
+# Jene nimewo hasar
+nimewo = random.randint(1, 10)      # Nimewo ant 1 ak 10
+decimal = random.random()           # Nimewo desimal ant 0 ak 1
+choix = random.choice(['a', 'b', 'c'])  # Chwazi nan lis
+
+print(f"Nimewo hasar: {nimewo}")
+print(f"Decimal hasar: {decimal:.3f}")
+print(f"Chwa: {choix}")
+
+# Melanje lis
+lis = [1, 2, 3, 4, 5]
+random.shuffle(lis)
+print(f"Lis melanje: {lis}")
+```
+
+#### 🔧 Modil DateTime - Dat ak Lè
+
+```python
+from datetime import datetime, date, timedelta
+
+# Dat ak lè kounye a
+kounye_a = datetime.now()
+print(f"Kounye a: {kounye_a}")
+
+# Dat jodi a
+jodi = date.today()
+print(f"Jodi a: {jodi}")
+
+# Ajoute jou
+demen = jodi + timedelta(days=1)
+print(f"Demen: {demen}")
+
+# Fòma dat
+dat_fòme = kounye_a.strftime("%Y-%m-%d %H:%M")
+print(f"Dat fòme: {dat_fòme}")
+```
+
+#### 🔧 Modil OS - Sistèm Operasyon
+
+```python
+import os
+
+# Chemin dosye kounye a
+chemin = os.getcwd()
+print(f"Chemin kounye a: {chemin}")
+
+# Lis fichier nan dosye
+fichier = os.listdir('.')
+print(f"Fichier yo: {fichier[:5]}")  # Premye 5
+
+# Teste si fichier egziste
+if os.path.exists('README.md'):
+    print("README.md egziste")
+else:
+    print("README.md pa egziste")
+```
+
+#### 🔧 Modil JSON - Done JSON
+
+```python
+import json
+
+# Diksyonè nan JSON
+done = {"non": "Marie", "laj": 25, "vil": "Pòtoprens"}
+json_string = json.dumps(done)
+print(f"JSON: {json_string}")
+
+# JSON nan diksyonè
+json_retounen = json.loads(json_string)
+print(f"Diksyonè: {json_retounen}")
+
+# Ekri nan fichier JSON
+with open('done.json', 'w') as f:
+    json.dump(done, f)
+
+# Li nan fichier JSON
+with open('done.json', 'r') as f:
+    done_li = json.load(f)
+print(f"Done li: {done_li}")
+```
+
+#### 🔧 Modil RE - Regex (Ekspresyon Regilye)
+
+```python
+import re
+
+# Chèche mo nan tèks
+tèks = "Bonjou! Mwen rele Marie. Mwen gen 25 ane."
+match = re.search(r'\d+', tèks)  # Chèche nimewo
+if match:
+    print(f"Nimewo jwenn: {match.group()}")
+
+# Ranplase tèks
+nouvo_tèks = re.sub(r'\d+', 'XX', tèks)
+print(f"Nouvo tèks: {nouvo_tèks}")
+
+# Divize tèks
+mo = re.split(r'[.!]', tèks)
+print(f"Mo yo: {mo}")
+```
+
+#### 🔧 Modil Sys - Sistèm
+
+```python
+import sys
+
+# Argumant liy kòmande
+print(f"Argumant yo: {sys.argv}")
+
+# Vèsyon Python
+print(f"Python vèsyon: {sys.version}")
+
+# Platform
+print(f"Platform: {sys.platform}")
+
+# Kite pwogram
+# sys.exit(0)  # Kite ak kòd 0 (siksè)
+```
+
+#### 🔧 Egzanp Pratik - Kombine Modil
+
+```python
+import random
+import datetime
+import json
+
+# Jene done hasar
+def jene_kontak():
+    non = random.choice(['Marie', 'Jean', 'Pierre', 'Sophie'])
+    laj = random.randint(18, 65)
+    email = f"{non.lower()}@example.com"
+    return {"non": non, "laj": laj, "email": email, "dat": datetime.datetime.now().isoformat()}
+
+# Jene plizyè kontak
+kontak = [jene_kontak() for _ in range(3)]
+print("Kontak yo:")
+for k in kontak:
+    print(f"  {k['non']} ({k['laj']} ane) - {k['email']}")
+
+# Sere nan JSON
+with open('kontak.json', 'w') as f:
+    json.dump(kontak, f, indent=2)
+print("Kontak yo sere nan kontak.json")
+```
+
+---
+
 ### 🔤 String (Tèks) - Detay Konplè
 
 #### 🎯 Kisa se String?
@@ -7125,72 +7366,43 @@ while kondisyon:
 **Egzanp 1: Konte 1 a 5**
 
 ```python
-print("=== EGZANP 1: KONTE 1 A 5 ===")
-
-# Inisyalize varyab
 kontè = 1
-
-# While loop pou konte
 while kontè <= 5:
     print(f"Konte: {kontè}")
-    kontè += 1  # Enpòtan: Ogmante kontè a
-
-print("Boucle la fini!")
+    kontè += 1
 ```
 
 **Egzanp 2: Devine Nimewo**
 
 ```python
-print("=== EGZANP 2: DEVINE NIMEWO ===")
-
-# Nimewo sekrè
 nimewo_sekrè = 42
 devine = 0
 
-# While loop pou devine
 while devine != nimewo_sekrè:
     devine = int(input("Devine nimewo a (1-100): "))
-    
     if devine < nimewo_sekrè:
-        print("📈 Nimewo a pi gran!")
+        print("Pi gran!")
     elif devine > nimewo_sekrè:
-        print("📉 Nimewo a pi piti!")
+        print("Pi piti!")
     else:
-        print("🎉 Kòrèk! Ou devine nimewo a!")
-
-print("Jwèt la fini!")
+        print("Kòrèk!")
 ```
 
-**Egzanp 3: Meni Entèaktif**
+**Egzanp 3: Meni Senp**
 
 ```python
-print("=== EGZANP 3: MENI ENTÈAKTIF ===")
-
-# Varyab pou kontwòle boucle
 kontinye = True
-
-# While loop pou meni
 while kontinye:
-    print("\n=== MENI ===")
-    print("1. Afiche mesaj")
-    print("2. Kalkile kare")
-    print("3. Sòti")
-    
-    chwa = input("Antre chwa w: ")
+    print("1. Mesaj  2. Kare  3. Sòti")
+    chwa = input("Chwa: ")
     
     if chwa == "1":
-        print("📝 Mesaj: Bonjou nan Python!")
+        print("Bonjou!")
     elif chwa == "2":
-        nimewo = int(input("Antre yon nimewo: "))
-        kare = nimewo ** 2
-        print(f"Kare {nimewo} = {kare}")
+        n = int(input("Nimewo: "))
+        print(f"Kare = {n**2}")
     elif chwa == "3":
-        print("👋 Orevwa!")
         kontinye = False
-    else:
-        print("❌ Chwa pa valab!")
-
-print("Pwogram nan fini!")
 ```
 
 #### ⚠️ Boucle Enfini
@@ -7235,78 +7447,53 @@ for eleman in koleksyon:
 **Egzanp 1: Itere sou Lis**
 
 ```python
-print("=== EGZANP 1: ITERE SOU LIS ===")
-
-# Lis fwi
-fwi = ["Pom", "Banan", "Zoranj", "Grenad"]
-
-# For loop pou afiche fwi yo
+fwi = ["Pom", "Banan", "Zoranj"]
 for fwi_separe in fwi:
     print(f"🍎 {fwi_separe}")
-
-print("Lis fwi yo fini!")
 ```
 
 **Egzanp 2: Itere ak Range**
 
 ```python
-print("=== EGZANP 2: ITERE AK RANGE ===")
-
-# For loop ak range
+# Range nòmal
 for nimewo in range(1, 6):
     print(f"Konte: {nimewo}")
 
-print("\n=== RANGE AK STEP ===")
-# For loop ak range ak step
+# Range ak step
 for nimewo in range(0, 10, 2):
-    print(f"Nimewo pè: {nimewo}")
+    print(f"Pè: {nimewo}")
 
-print("\n=== RANGE RANVÈSE ===")
-# For loop ak range ranvèse
+# Range ranvèse
 for nimewo in range(5, 0, -1):
-    print(f"Konte ranvèse: {nimewo}")
+    print(f"Ranvèse: {nimewo}")
 ```
 
 **Egzanp 3: Itere sou String**
 
 ```python
-print("=== EGZANP 3: ITERE SOU STRING ===")
-
-# String pou teste
 mo = "Python"
-
-# For loop pou afiche chak karaktè
 for karaktè in mo:
     print(f"Karaktè: {karaktè}")
 
-print("\n=== ENUMERATE ===")
-# For loop ak enumerate
+# Ak enumerate
 for index, karaktè in enumerate(mo):
-    print(f"Pozisyon {index}: {karaktè}")
+    print(f"{index}: {karaktè}")
 ```
 
 **Egzanp 4: Itere sou Dictionary**
 
 ```python
-print("=== EGZANP 4: ITERE SOU DICTIONARY ===")
+kontak = {"Marie": "123-456", "Jean": "098-765"}
 
-# Dictionary kontak
-kontak = {
-    "Marie": "123-456-7890",
-    "Jean": "098-765-4321",
-    "Sara": "555-123-4567"
-}
-
-# For loop pou afiche kontak yo
-print("=== KLE AK VALÈ ===")
+# Kle ak valè
 for non, telefòn in kontak.items():
     print(f"{non}: {telefòn}")
 
-print("\n=== SÈLMAN KLE ===")
+# Sèlman kle
 for non in kontak.keys():
     print(f"Non: {non}")
 
-print("\n=== SÈLMAN VALÈ ===")
+# Sèlman valè
 for telefòn in kontak.values():
     print(f"Telefòn: {telefòn}")
 ```
@@ -8301,75 +8488,32 @@ def non_fonksyon(paramèt1, paramèt2):
 **Egzanp 1: Fonksyon Debaz**
 
 ```python
-print("=== EGZANP 1: FONKSYON DEBAZ ===")
-
 def bonjou():
-    """
-    Fonksyon ki afiche mesaj bonjou
-    """
+    """Afiche mesaj bonjou"""
     print("Bonjou nan Python!")
-    print("Fonksyon sa a afiche yon mesaj.")
 
-# Rele fonksyon an
-bonjou()
+bonjou()  # Rele fonksyon an
 ```
 
 **Egzanp 2: Fonksyon ak Paramèt**
 
 ```python
-print("=== EGZANP 2: FONKSYON AK PARAMÈT ===")
+def kalkile_sòm(a, b):
+    """Kalkile sòm de nimewo"""
+    return a + b
 
-def kalkile_sòm(nimewo1, nimewo2):
-    """
-    Kalkile sòm de nimewo
-    
-    Args:
-        nimewo1 (int): Premye nimewo
-        nimewo2 (int): Dezyèm nimewo
-    
-    Returns:
-        int: Sòm de nimewo yo
-    """
-    sòm = nimewo1 + nimewo2
-    return sòm
-
-# Rele fonksyon an
 rezilta = kalkile_sòm(5, 3)
-print(f"Sòm 5 + 3 = {rezilta}")
-
-# Rele ankò ak valè diferan
-rezilta2 = kalkile_sòm(10, 20)
-print(f"Sòm 10 + 20 = {rezilta2}")
+print(f"Sòm = {rezilta}")  # Sòm = 8
 ```
 
 **Egzanp 3: Fonksyon ak Retounen Valè**
 
 ```python
-print("=== EGZANP 3: FONKSYON AK RETOUNEN VALÈ ===")
+def kare(x):
+    """Kalkile kare yon nimewo"""
+    return x ** 2
 
-def kalkile_kare(nimewo):
-    """
-    Kalkile kare yon nimewo
-    
-    Args:
-        nimewo (int): Nimewo pou kalkile kare
-    
-    Returns:
-        int: Kare nimewo a
-    """
-    kare = nimewo ** 2
-    return kare
-
-# Rele fonksyon an
-kare_5 = kalkile_kare(5)
-print(f"Kare 5 = {kare_5}")
-
-kare_7 = kalkile_kare(7)
-print(f"Kare 7 = {kare_7}")
-
-# Sèvi ak rezilta nan kalkil
-sòm_kare = kare_5 + kare_7
-print(f"Sòm kare yo = {sòm_kare}")
+print(f"Kare 5 = {kare(5)}")  # Kare 5 = 25
 ```
 
 ---
@@ -8544,6 +8688,202 @@ def afiche_nimewo(*nimewo):
 afiche_nimewo(1, 2, 3)
 afiche_nimewo(10, 20, 30, 40, 50)
 afiche_nimewo(5)
+```
+
+---
+
+### 🔧 Fonksyon Avanse - Konsep Pwofesyonèl
+
+#### 🎯 Fonksyon ak Paramèt Default
+
+```python
+def kalkile_sòm(a, b, c=0, d=0):
+    """Kalkile sòm ak paramèt defo"""
+    return a + b + c + d
+
+# Sèvi ak paramèt defo
+print(kalkile_sòm(1, 2))        # 3 (c=0, d=0)
+print(kalkile_sòm(1, 2, 3))     # 6 (d=0)
+print(kalkile_sòm(1, 2, 3, 4))  # 10
+```
+
+#### 🎯 Fonksyon ak Anotasyon Tipe
+
+```python
+def kalkile_kare(nimewo: int) -> int:
+    """Kalkile kare yon nimewo"""
+    return nimewo ** 2
+
+def afiche_mesaj(non: str, laj: int) -> str:
+    """Afiche mesaj pèsonalize"""
+    return f"Bonjou {non}, ou gen {laj} ane"
+
+# Sèvi ak fonksyon yo
+print(kalkile_kare(5))  # 25
+print(afiche_mesaj("Marie", 25))
+```
+
+#### 🎯 Fonksyon ak Lambda (Fonksyon Kout)
+
+```python
+# Lambda pou matematik
+kare = lambda x: x ** 2
+print(f"Kare 5 = {kare(5)}")
+
+# Lambda pou teste
+est_pè = lambda x: x % 2 == 0
+print(f"4 pè? {est_pè(4)}")  # True
+
+# Lambda ak map
+nimewo = [1, 2, 3, 4, 5]
+kare_lis = list(map(lambda x: x**2, nimewo))
+print(f"Kare yo: {kare_lis}")
+```
+
+#### 🎯 Fonksyon ak Decorator
+
+```python
+def timer(func):
+    """Decorator pou mezire tan ekzekisyon"""
+    import time
+    def wrapper(*args, **kwargs):
+        kòmanse = time.time()
+        rezilta = func(*args, **kwargs)
+        fini = time.time()
+        print(f"Tan ekzekisyon: {fini - kòmanse:.4f} segonn")
+        return rezilta
+    return wrapper
+
+@timer
+def kalkile_gran_nimewo():
+    """Kalkile nimewo gran"""
+    return sum(range(1000000))
+
+rezilta = kalkile_gran_nimewo()
+print(f"Rezilta: {rezilta}")
+```
+
+#### 🎯 Fonksyon ak Generatè
+
+```python
+def jene_nimewo(n):
+    """Jene nimewo de 1 a n"""
+    for i in range(1, n + 1):
+        yield i
+
+# Sèvi ak generatè
+for nimewo in jene_nimewo(5):
+    print(f"Nimewo: {nimewo}")
+
+# Konvèti nan lis
+lis_nimewo = list(jene_nimewo(5))
+print(f"Lis: {lis_nimewo}")
+```
+
+#### 🎯 Fonksyon ak Closure
+
+```python
+def kreye_multiplikatè(faktè):
+    """Kreye yon fonksyon ki miltipliye"""
+    def miltipliye(nimewo):
+        return nimewo * faktè
+    return miltipliye
+
+# Kreye fonksyon espesifik
+double = kreye_multiplikatè(2)
+triple = kreye_multiplikatè(3)
+
+print(f"Double 5 = {double(5)}")  # 10
+print(f"Triple 5 = {triple(5)}")  # 15
+```
+
+#### 🎯 Fonksyon ak Recursion
+
+```python
+def faktoryèl(n):
+    """Kalkile faktoryèl ak recursion"""
+    if n <= 1:
+        return 1
+    return n * faktoryèl(n - 1)
+
+print(f"Faktoryèl 5 = {faktoryèl(5)}")  # 120
+
+def fibonacci(n):
+    """Jene nimewo Fibonacci"""
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+print(f"Fibonacci 10 = {fibonacci(10)}")  # 55
+```
+
+#### 🎯 Fonksyon ak *args ak **kwargs
+
+```python
+def fonksyon_fleksib(*args, **kwargs):
+    """Fonksyon ki ka resevwa nenpòt paramèt"""
+    print(f"Args: {args}")
+    print(f"Kwargs: {kwargs}")
+
+# Sèvi ak diferan kalite paramèt
+fonksyon_fleksib(1, 2, 3, non="Marie", laj=25)
+fonksyon_fleksib("bonjou", "mond", vèsyon=3.9)
+```
+
+#### 🎯 Fonksyon ak Map, Filter, Reduce
+
+```python
+# Map - Aplike fonksyon nan lis
+nimewo = [1, 2, 3, 4, 5]
+kare = list(map(lambda x: x**2, nimewo))
+print(f"Kare: {kare}")
+
+# Filter - Filtre eleman
+pè = list(filter(lambda x: x % 2 == 0, nimewo))
+print(f"Nimewo pè: {pè}")
+
+# Reduce - Redwi lis nan yon valè
+from functools import reduce
+sòm = reduce(lambda a, b: a + b, nimewo)
+print(f"Sòm: {sòm}")
+```
+
+#### 🎯 Egzanp Pratik - Sistèm Kalkil
+
+```python
+class Kalkilatris:
+    """Kalkilatris ak fonksyon avanse"""
+    
+    def __init__(self):
+        self.istwa = []
+    
+    def kalkile(self, operasyon, a, b):
+        """Kalkile ak istwa"""
+        if operasyon == '+':
+            rezilta = a + b
+        elif operasyon == '-':
+            rezilta = a - b
+        elif operasyon == '*':
+            rezilta = a * b
+        elif operasyon == '/':
+            rezilta = a / b if b != 0 else "Erè: Divizyon pa zewo"
+        else:
+            rezilta = "Erè: Operasyon pa konnen"
+        
+        # Sere nan istwa
+        self.istwa.append(f"{a} {operasyon} {b} = {rezilta}")
+        return rezilta
+    
+    def afiche_istwa(self):
+        """Afiche istwa kalkil yo"""
+        for kalkil in self.istwa:
+            print(kalkil)
+
+# Sèvi ak kalkilatris
+calc = Kalkilatris()
+print(calc.kalkile('+', 5, 3))  # 8
+print(calc.kalkile('*', 4, 2))  # 8
+calc.afiche_istwa()
 ```
 
 **Egzanp 2: **kwargs**
@@ -11380,6 +11720,511 @@ for fòm in fòm_yo:
 
 ---
 
+## Chapit 7.5: Pwogramasyon Oryantasyon Objè (Object-Oriented Programming) - Konsep Avanse
+
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann konsep OOP** - Klas, objè, eritaj, ak polimorfis
+- **Kreye klas ak objè** - Defini klas ak kreye instans yo
+- **Sèvi ak eritaj** - Klas parent ak child
+- **Konprann enkapsulasyon** - Pwoteje done ak metòd
+- **Devlope yon sistèm bibliyotèk** - Pwojè pratik ak OOP
+
+> **💡 TIP:** OOP se fason òganize kòd la nan objè ki reprezante bagay reyèl. Li fè kòd la pi kenab ak reutilizab.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Konsep Fondamantal**
+- **Class** - Plan pou kreye objè
+- **Object** - Instans yon klas
+- **Attribute** - Karakteristik objè a
+- **Method** - Aksyon objè a ka fè
+- **Constructor** - Fonksyon ki kreye objè a
+
+#### **Konsep Avanse**
+- **Inheritance** - Klas child erite nan klas parent
+- **Encapsulation** - Kache done andedan klas la
+- **Polymorphism** - Menm metòd, aksyon diferan
+- **Abstraction** - Kache konpleksite
+
+---
+
+### 🏗️ Kisa se Pwogramasyon Oryantasyon Objè?
+
+**Definisyon Detaye:**
+
+**Pwogramasyon Oryantasyon Objè (OOP)** se yon paradig pwogramasyon ki òganize kòd la nan objè ki reprezante bagay reyèl. Chak objè genyen done (atribi) ak fonksyon (metòd) ki fè aksyon ak done sa yo.
+
+> **💡 TIP:** Pensez a OOP tankou yon faktori - ou kreye plan (klas) epi ou fè bagay (objè) dapre plan sa a.
+
+#### 📊 Diagram OOP
+
+```mermaid
+flowchart TD
+    A[Klas - Plan] --> B[Objè - Instans]
+    B --> C[Atribi - Done]
+    B --> D[Metòd - Aksyon]
+    
+    E[Klas Parent] --> F[Klas Child]
+    F --> G[Eritaj]
+    
+    H[Enkapsulasyon] --> I[Pwoteje Done]
+    J[Polimorfis] --> K[Aksyon Diferan]
+    
+    style A fill:#e1f5fe
+    style E fill:#f3e5f5
+    style H fill:#e8f5e8
+```
+
+**Poukisa OOP Enpòtan?**
+
+1. **Òganizasyon**: Kòd la vin pi òganize ak lojik
+2. **Reutilizasyon**: Ou ka sèvi ak klas yo nan plizyè pwojè
+3. **Kenbe**: Pi fasil pou modifye ak debogaj
+4. **Modilè**: Divize gwo pwoblèm yo an ti pati
+5. **Abstraksyon**: Kache konpleksite nan detay yo
+6. **Eritaj**: Klas child ka sèvi ak fonksyon klas parent
+
+---
+
+### 🔧 Klas ak Objè - Fondasyon OOP
+
+#### 🎯 Kisa se Klas?
+
+**Klas** se yon plan oswa modèl pou kreye objè. Li defini atribi (done) ak metòd (fonksyon) ke objè yo pral genyen.
+
+```python
+class Machin:
+    """Klas Machin - Plan pou kreye machin yo"""
+    
+    def __init__(self, mak, modèl, ane):
+        """Konstriktè - Kreye yon machin nouvo"""
+        self.mak = mak
+        self.modèl = modèl
+        self.ane = ane
+        self.vitès = 0
+    
+    def demare(self):
+        """Demare machin nan"""
+        print(f"{self.mak} {self.modèl} demare!")
+        self.vitès = 10
+    
+    def akselere(self, vitès_plis):
+        """Akselere machin nan"""
+        self.vitès += vitès_plis
+        print(f"Vitès: {self.vitès} km/h")
+    
+    def frenen(self):
+        """Frene machin nan"""
+        self.vitès = 0
+        print("Machin nan kanpe!")
+    
+    def afiche_infò(self):
+        """Afiche enfòmasyon machin nan"""
+        print(f"Mak: {self.mak}")
+        print(f"Modèl: {self.modèl}")
+        print(f"Ane: {self.ane}")
+        print(f"Vitès: {self.vitès} km/h")
+
+# Kreye objè yo
+machin1 = Machin("Toyota", "Camry", 2020)
+machin2 = Machin("Honda", "Civic", 2021)
+
+# Sèvi ak objè yo
+machin1.afiche_infò()
+machin1.demare()
+machin1.akselere(30)
+machin1.frenen()
+```
+
+#### 🎯 Kisa se Objè?
+
+**Objè** se yon instans yon klas. Li se bagay reyèl la ke ou kreye dapre plan klas la.
+
+```python
+# Kreye objè yo
+machin_marie = Machin("BMW", "X5", 2022)
+machin_jean = Machin("Mercedes", "C-Class", 2021)
+
+# Chak objè genyen done li yo
+print(machin_marie.mak)  # BMW
+print(machin_jean.mak)   # Mercedes
+
+# Chak objè ka fè aksyon
+machin_marie.demare()
+machin_jean.akselere(50)
+```
+
+---
+
+### 🔧 Eritaj - Klas Parent ak Child
+
+#### 🎯 Kisa se Eritaj?
+
+**Eritaj** pèmèt yon klas (child) sèvi ak atribi ak metòd yon lòt klas (parent). Sa fè kòd la pi efikas ak reutilizab.
+
+```python
+class Veyikil:
+    """Klas parent - Veyikil jeneral"""
+    
+    def __init__(self, mak, modèl, ane):
+        self.mak = mak
+        self.modèl = modèl
+        self.ane = ane
+        self.vitès = 0
+    
+    def demare(self):
+        print(f"{self.mak} {self.modèl} demare!")
+        self.vitès = 10
+    
+    def akselere(self, vitès_plis):
+        self.vitès += vitès_plis
+        print(f"Vitès: {self.vitès} km/h")
+
+class Machin(Veyikil):
+    """Klas child - Machin erite nan Veyikil"""
+    
+    def __init__(self, mak, modèl, ane, nimewo_siye):
+        super().__init__(mak, modèl, ane)  # Rele konstriktè parent
+        self.nimewo_siye = nimewo_siye
+        self.konduktè = None
+    
+    def mete_konduktè(self, non):
+        """Metòd espesifik pou machin"""
+        self.konduktè = non
+        print(f"Konduktè: {non}")
+    
+    def frenen(self):
+        """Metòd espesifik pou machin"""
+        self.vitès = 0
+        print("Machin nan kanpe!")
+
+class Motosiklèt(Veyikil):
+    """Klas child - Motosiklèt erite nan Veyikil"""
+    
+    def __init__(self, mak, modèl, ane, pwa):
+        super().__init__(mak, modèl, ane)
+        self.pwa = pwa
+        self.kas = False
+    
+    def mete_kas(self):
+        """Metòd espesifik pou motosiklèt"""
+        self.kas = True
+        print("Kas mete!")
+    
+    def woule(self):
+        """Metòd espesifik pou motosiklèt"""
+        print("Motosiklèt la woule!")
+
+# Sèvi ak eritaj
+machin = Machin("Toyota", "Camry", 2020, "ABC-123")
+machin.demare()  # Metòd erite
+machin.mete_konduktè("Marie")  # Metòd espesifik
+
+moto = Motosiklèt("Yamaha", "R1", 2021, 200)
+moto.demare()  # Metòd erite
+moto.mete_kas()  # Metòd espesifik
+```
+
+---
+
+### 🔧 Enkapsulasyon - Pwoteje Done
+
+#### 🎯 Kisa se Enkapsulasyon?
+
+**Enkapsulasyon** se prensip pou kache done andedan yon klas epi sèlman pèmèt aksè nan fason kontwòle. Sa pwoteje done yo kont modifye ki pa vle.
+
+```python
+class KontBangk:
+    """Klas ak enkapsulasyon"""
+    
+    def __init__(self, non, nimewo_kont):
+        self.non = non  # Piblik
+        self.nimewo_kont = nimewo_kont  # Piblik
+        self.__balans = 0  # Pwive (ak __)
+    
+    def depoze(self, kantite):
+        """Depoze lajan nan kont la"""
+        if kantite > 0:
+            self.__balans += kantite
+            print(f"Depoze: ${kantite}. Nouvo balans: ${self.__balans}")
+        else:
+            print("Kantite pa ka negatif!")
+    
+    def retire(self, kantite):
+        """Retire lajan nan kont la"""
+        if kantite > 0 and kantite <= self.__balans:
+            self.__balans -= kantite
+            print(f"Retire: ${kantite}. Nouvo balans: ${self.__balans}")
+        else:
+            print("Kantite pa valab oswa pa genyen ase lajan!")
+    
+    def afiche_balans(self):
+        """Afiche balans kont la"""
+        print(f"Balans: ${self.__balans}")
+    
+    def transfere(self, kont_destinasyon, kantite):
+        """Transfere lajan nan lòt kont"""
+        if kantite > 0 and kantite <= self.__balans:
+            self.__balans -= kantite
+            kont_destinasyon.__balans += kantite
+            print(f"Transfere: ${kantite} nan {kont_destinasyon.non}")
+        else:
+            print("Transfere pa posib!")
+
+# Sèvi ak enkapsulasyon
+kont1 = KontBangk("Marie", "12345")
+kont2 = KontBangk("Jean", "67890")
+
+kont1.depoze(1000)
+kont1.retire(200)
+kont1.afiche_balans()
+
+# Pa ka aksede balans direkteman
+# print(kont1.__balans)  # Erè!
+
+kont1.transfere(kont2, 300)
+kont2.afiche_balans()
+```
+
+---
+
+### 🔧 Polimorfis - Menm Metòd, Aksyon Diferan
+
+#### 🎯 Kisa se Polimorfis?
+
+**Polimorfis** pèmèt objè diferan sèvi ak menm metòd non men fè aksyon diferan. Sa fè kòd la pi fleksib.
+
+```python
+class Zanimo:
+    """Klas parent pou zanimo yo"""
+    
+    def __init__(self, non):
+        self.non = non
+    
+    def pale(self):
+        """Metòd pou pale - pral override nan klas child"""
+        print(f"{self.non} pale!")
+
+class Chat(Zanimo):
+    """Klas child - Chat"""
+    
+    def pale(self):
+        """Override metòd pale"""
+        print(f"{self.non} di: Miaou!")
+
+class Chen(Zanimo):
+    """Klas child - Chen"""
+    
+    def pale(self):
+        """Override metòd pale"""
+        print(f"{self.non} di: Wouf!")
+
+class Paj(Zanimo):
+    """Klas child - Paj"""
+    
+    def pale(self):
+        """Override metòd pale"""
+        print(f"{self.non} di: Kikiri!")
+
+# Sèvi ak polimorfis
+zanimo = Zanimo("Zanimo")
+chat = Chat("Minou")
+chen = Chen("Bobby")
+paj = Paj("Tico")
+
+# Menm metòd, aksyon diferan
+for z in [zanimo, chat, chen, paj]:
+    z.pale()
+```
+
+---
+
+### 🔧 Metòd Espesyal - Dunder Methods
+
+#### 🎯 Kisa se Metòd Espesyal?
+
+**Metòd espesyal** (dunder methods) se metòd ki kòmanse ak `__` epi fini ak `__`. Yo pèmèt ou defini konpòtman espesyal pou klas ou a.
+
+```python
+class Fwaktè:
+    """Klas ak metòd espesyal"""
+    
+    def __init__(self, non, nimewo, denominateur=1):
+        self.non = non
+        self.nimewo = nimewo
+        self.denominateur = denominateur
+        self.simplify()
+    
+    def simplify(self):
+        """Simplifye fwaktè a"""
+        import math
+        gcd = math.gcd(self.nimewo, self.denominateur)
+        self.nimewo //= gcd
+        self.denominateur //= gcd
+    
+    def __str__(self):
+        """Metòd pou afiche fwaktè a"""
+        return f"{self.nimewo}/{self.denominateur}"
+    
+    def __repr__(self):
+        """Metòd pou reprezantasyon"""
+        return f"Fwaktè({self.nimewo}, {self.denominateur})"
+    
+    def __add__(self, lòt):
+        """Metòd pou ajoute fwaktè"""
+        nouvo_nimewo = self.nimewo * lòt.denominateur + lòt.nimewo * self.denominateur
+        nouvo_denominateur = self.denominateur * lòt.denominateur
+        return Fwaktè(f"{self.non}+{lòt.non}", nouvo_nimewo, nouvo_denominateur)
+    
+    def __mul__(self, lòt):
+        """Metòd pou miltipliye fwaktè"""
+        nouvo_nimewo = self.nimewo * lòt.nimewo
+        nouvo_denominateur = self.denominateur * lòt.denominateur
+        return Fwaktè(f"{self.non}*{lòt.non}", nouvo_nimewo, nouvo_denominateur)
+    
+    def __eq__(self, lòt):
+        """Metòd pou konpare fwaktè"""
+        return self.nimewo == lòt.nimewo and self.denominateur == lòt.denominateur
+
+# Sèvi ak metòd espesyal
+f1 = Fwaktè("F1", 3, 4)
+f2 = Fwaktè("F2", 1, 2)
+
+print(f"F1: {f1}")  # 3/4
+print(f"F2: {f2}")  # 1/2
+
+f3 = f1 + f2
+print(f"F1 + F2: {f3}")  # 5/4
+
+f4 = f1 * f2
+print(f"F1 * F2: {f4}")  # 3/8
+
+print(f"F1 == F2: {f1 == f2}")  # False
+```
+
+---
+
+### 🎯 Egzanp Pratik - Sistèm Bibliyotèk
+
+```python
+class Liv:
+    """Klas pou liv yo"""
+    
+    def __init__(self, tit, otè, isbn):
+        self.tit = tit
+        self.otè = otè
+        self.isbn = isbn
+        self.disponib = True
+        self.emejè = None
+    
+    def prete(self, emejè):
+        """Prete liv la"""
+        if self.disponib:
+            self.disponib = False
+            self.emejè = emejè
+            print(f"'{self.tit}' prete bay {emejè}")
+        else:
+            print(f"'{self.tit}' pa disponib")
+    
+    def retounen(self):
+        """Retounen liv la"""
+        if not self.disponib:
+            self.disponib = True
+            self.emejè = None
+            print(f"'{self.tit}' retounen")
+        else:
+            print(f"'{self.tit}' deja nan bibliyotèk la")
+
+class Emejè:
+    """Klas pou emejè yo"""
+    
+    def __init__(self, non, nimewo_emejè):
+        self.non = non
+        self.nimewo_emejè = nimewo_emejè
+        self.liv_prete = []
+    
+    def prete_liv(self, liv):
+        """Emejè a prete yon liv"""
+        if len(self.liv_prete) < 5:  # Maksimòm 5 liv
+            liv.prete(self.non)
+            self.liv_prete.append(liv)
+        else:
+            print(f"{self.non} genyen twòp liv!")
+    
+    def retounen_liv(self, liv):
+        """Emejè a retounen yon liv"""
+        if liv in self.liv_prete:
+            liv.retounen()
+            self.liv_prete.remove(liv)
+        else:
+            print(f"{self.non} pa genyen liv sa a!")
+
+class Bibliyotèk:
+    """Klas pou bibliyotèk la"""
+    
+    def __init__(self, non):
+        self.non = non
+        self.liv_yo = []
+        self.emejè_yo = []
+    
+    def ajoute_liv(self, liv):
+        """Ajoute yon liv nan bibliyotèk la"""
+        self.liv_yo.append(liv)
+        print(f"Ajoute: '{liv.tit}' nan {self.non}")
+    
+    def ajoute_emejè(self, emejè):
+        """Ajoute yon emejè nan bibliyotèk la"""
+        self.emejè_yo.append(emejè)
+        print(f"Ajoute emejè: {emejè.non}")
+    
+    def chèche_liv(self, tit):
+        """Chèche yon liv pa tit"""
+        for liv in self.liv_yo:
+            if tit.lower() in liv.tit.lower():
+                return liv
+        return None
+    
+    def afiche_liv_disponib(self):
+        """Afiche liv ki disponib yo"""
+        print(f"Liv disponib nan {self.non}:")
+        for liv in self.liv_yo:
+            if liv.disponib:
+                print(f"  - {liv.tit} pa {liv.otè}")
+
+# Sèvi ak sistèm bibliyotèk la
+bibliyotèk = Bibliyotèk("Bibliyotèk Nasyonal")
+
+# Kreye liv yo
+liv1 = Liv("Python pou Debitan", "Marie Jean", "123-456")
+liv2 = Liv("Algoritm ak Datastructure", "Jean Pierre", "789-012")
+liv3 = Liv("Web Development", "Sara Marie", "345-678")
+
+# Kreye emejè yo
+emejè1 = Emejè("Pierre", "E001")
+emejè2 = Emejè("Sophie", "E002")
+
+# Ajoute nan bibliyotèk la
+bibliyotèk.ajoute_liv(liv1)
+bibliyotèk.ajoute_liv(liv2)
+bibliyotèk.ajoute_liv(liv3)
+bibliyotèk.ajoute_emejè(emejè1)
+bibliyotèk.ajoute_emejè(emejè2)
+
+# Operasyon bibliyotèk
+bibliyotèk.afiche_liv_disponib()
+
+emejè1.prete_liv(liv1)
+emejè1.prete_liv(liv2)
+
+bibliyotèk.afiche_liv_disponib()
+
+emejè1.retounen_liv(liv1)
+bibliyotèk.afiche_liv_disponib()
+```
+
+---
+
 ## Chapit 8: Jesyon Erè ak Eksepsyon (Error Handling and Exceptions) - Eksplikasyon Detaye pou Debitan
 
 ### 🎯 Objektif Chapit
@@ -11480,28 +12325,11 @@ flowchart TD
 **Egzanp 1: SyntaxError**
 
 ```python
-print("=== EGZANP 1: SYNTAXERROR ===")
+# ❌ Erè: Oubliye == nan konparezon
+# if x = 5:  # SyntaxError
 
-# ❌ Erè: Oubliye de pwen nan if
-# if x = 5:
-#     print("Bon")
-
-# ✅ Kòrèk: Sèvi ak == pou konparezon
+# ✅ Kòrèk: Sèvi ak ==
 x = 5
-if x == 5:
-    print("Bon")
-
-# ❌ Erè: Parantèz pa fèmen
-# print("Bon"
-
-# ✅ Kòrèk: Fèmen tout parantèz
-print("Bon")
-
-# ❌ Erè: Indentasyon pa bon
-# if x == 5:
-# print("Bon")
-
-# ✅ Kòrèk: Indentasyon kòrèk
 if x == 5:
     print("Bon")
 ```
@@ -11509,77 +12337,43 @@ if x == 5:
 **Egzanp 2: TypeError**
 
 ```python
-print("=== EGZANP 2: TYPEERROR ===")
-
-# ❌ Erè: Pa ka ajoute string ak nimewo
+# ❌ Erè: Ajoute string ak nimewo
 try:
     rezilta = "5" + 3
 except TypeError as e:
-    print(f"TypeError: {e}")
+    print(f"Erè: {e}")
 
-# ✅ Kòrèk: Konvèti string nan nimewo
+# ✅ Kòrèk: Konvèti string
 rezilta = int("5") + 3
-print(f"Rezilta: {rezilta}")
-
-# ❌ Erè: Pa ka miltipliye string ak nimewo
-try:
-    rezilta = "Hello" * "World"
-except TypeError as e:
-    print(f"TypeError: {e}")
-
-# ✅ Kòrèk: Miltipliye string ak nimewo
-rezilta = "Hello" * 3
 print(f"Rezilta: {rezilta}")
 ```
 
 **Egzanp 3: ValueError**
 
 ```python
-print("=== EGZANP 3: VALUERROR ===")
-
-# ❌ Erè: Pa ka konvèti string nan nimewo
+# ❌ Erè: Konvèti string ki pa nimewo
 try:
     nimewo = int("abc")
 except ValueError as e:
-    print(f"ValueError: {e}")
+    print(f"Erè: {e}")
 
-# ✅ Kòrèk: Sèvi ak string ki ka konvèti
+# ✅ Kòrèk: Konvèti string ki bon
 nimewo = int("123")
-print(f"Nimewo: {nimewo}")
-
-# ❌ Erè: Pa ka konvèti string nan float
-try:
-    nimewo = float("xyz")
-except ValueError as e:
-    print(f"ValueError: {e}")
-
-# ✅ Kòrèk: Sèvi ak string ki ka konvèti
-nimewo = float("3.14")
 print(f"Nimewo: {nimewo}")
 ```
 
 **Egzanp 4: NameError**
 
 ```python
-print("=== EGZANP 4: NAMEERROR ===")
-
 # ❌ Erè: Varyab pa defini
 try:
     print(varyab_pa_defini)
 except NameError as e:
-    print(f"NameError: {e}")
+    print(f"Erè: {e}")
 
-# ✅ Kòrèk: Defini varyab anvan sèvi ak li
+# ✅ Kòrèk: Defini varyab
 varyab_defini = "Bonjou"
 print(f"Varyab: {varyab_defini}")
-
-# ❌ Erè: Fonksyon pa defini
-try:
-    fonksyon_pa_defini()
-except NameError as e:
-    print(f"NameError: {e}")
-
-# ✅ Kòrèk: Defini fonksyon anvan sèvi ak li
 def fonksyon_defini():
     return "Fonksyon travay"
 
@@ -19250,9 +20044,1353 @@ Nou espere ke kou sa a te ede w aprann Python nan lang natirèl w. Kontinye prat
 
 ---
 
+## 📈 Tips Performans ak Best Practices - Kijan Ekri Python Efikas
+
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann prensip performans Python** - Kijan Python travay
+- **Sèvi ak teknik optimizasyon** - Fè kòd ou pi rapid
+- **Evite pi komen antrap** - Erè ki ralanti pwogram yo
+- **Sèvi ak zouti pwofilaj** - Mezire performans kòd ou
+- **Sèvi ak best practices** - Kòd pwofesyonèl ak efikas
+
+> **💡 TIP:** Performans pa sèlman sou vitès - li sou lisibilite, kenab, ak efikasite nan sèvi ak resous.
+
+---
+
+### 🚀 Tips Performans Fondamantal
+
+#### 🎯 1. Sèvi ak List Comprehensions
+
+```python
+# ❌ Move - Boucle tradisyonèl
+nimewo = []
+for i in range(1000):
+    if i % 2 == 0:
+        nimewo.append(i * 2)
+
+# ✅ Bon - List comprehension
+nimewo = [i * 2 for i in range(1000) if i % 2 == 0]
+```
+
+#### 🎯 2. Sèvi ak Set pou Chèche
+
+```python
+# ❌ Move - Lis pou chèche
+lis_gran = list(range(1000000))
+if 999999 in lis_gran:  # O(n) - ralanti
+    print("Jwenn!")
+
+# ✅ Bon - Set pou chèche
+set_gran = set(range(1000000))
+if 999999 in set_gran:  # O(1) - rapid
+    print("Jwenn!")
+```
+
+#### 🎯 3. Sèvi ak Generatè pou Done Gran
+
+```python
+# ❌ Move - Lis ki pran anpil memwa
+lis_kare = [x**2 for x in range(1000000)]
+
+# ✅ Bon - Generatè ki pa pran memwa
+gen_kare = (x**2 for x in range(1000000))
+```
+
+#### 🎯 4. Sèvi ak String Joining
+
+```python
+# ❌ Move - Konkatenasyon string
+tèks = ""
+for mo in ["Bonjou", "nan", "Python"]:
+    tèks += mo + " "
+
+# ✅ Bon - Join method
+tèks = " ".join(["Bonjou", "nan", "Python"])
+```
+
+#### 🎯 5. Sèvi ak Local Variables
+
+```python
+# ❌ Move - Global variables
+global_var = 0
+
+def fonksyon():
+    global global_var
+    for i in range(1000):
+        global_var += i
+
+# ✅ Bon - Local variables
+def fonksyon():
+    local_var = 0
+    for i in range(1000):
+        local_var += i
+    return local_var
+```
+
+---
+
+### 🔧 Best Practices pou Kòd Efikas
+
+#### 🎯 1. Sèvi ak enumerate() olye range(len())
+
+```python
+# ❌ Move
+lis = ["a", "b", "c"]
+for i in range(len(lis)):
+    print(f"{i}: {lis[i]}")
+
+# ✅ Bon
+for i, valè in enumerate(lis):
+    print(f"{i}: {valè}")
+```
+
+#### 🎯 2. Sèvi ak zip() pou Ite
+
+```python
+# ❌ Move
+non = ["Marie", "Jean", "Pierre"]
+laj = [25, 30, 35]
+for i in range(len(non)):
+    print(f"{non[i]}: {laj[i]} ane")
+
+# ✅ Bon
+for n, l in zip(non, laj):
+    print(f"{n}: {l} ane")
+```
+
+#### 🎯 3. Sèvi ak any() ak all()
+
+```python
+# ❌ Move
+lis = [True, False, True]
+gen_vre = False
+for valè in lis:
+    if valè:
+        gen_vre = True
+        break
+
+# ✅ Bon
+gen_vre = any(lis)
+tout_vre = all(lis)
+```
+
+#### 🎯 4. Sèvi ak with Statement pou Fichier
+
+```python
+# ❌ Move
+fichier = open("done.txt", "r")
+kontni = fichier.read()
+fichier.close()
+
+# ✅ Bon
+with open("done.txt", "r") as fichier:
+    kontni = fichier.read()
+```
+
+#### 🎯 5. Sèvi ak f-strings
+
+```python
+# ❌ Move
+non = "Marie"
+laj = 25
+mesaj = "Bonjou " + non + ", ou gen " + str(laj) + " ane"
+
+# ✅ Bon
+mesaj = f"Bonjou {non}, ou gen {laj} ane"
+```
+
+---
+
+### 🔍 Zouti Pwofilaj - Mezire Performans
+
+#### 🎯 1. time.time() - Mezire Tan
+
+```python
+import time
+
+# Mezire tan ekzekisyon
+kòmanse = time.time()
+
+# Kòd pou teste
+sòm = sum(range(1000000))
+
+fini = time.time()
+tan_total = fini - kòmanse
+print(f"Tan ekzekisyon: {tan_total:.4f} segonn")
+```
+
+#### 🎯 2. timeit Module - Teste Pèfòmans
+
+```python
+import timeit
+
+# Konpare de fason pou fè menm bagay
+kòd1 = "sum([i**2 for i in range(1000)])"
+kòd2 = "sum(i**2 for i in range(1000))"
+
+tan1 = timeit.timeit(kòd1, number=1000)
+tan2 = timeit.timeit(kòd2, number=1000)
+
+print(f"List comprehension: {tan1:.4f}s")
+print(f"Generator: {tan2:.4f}s")
+```
+
+#### 🎯 3. memory_profiler - Mezire Memwa
+
+```python
+# Install: pip install memory-profiler
+
+@profile
+def fonksyon_ki_pran_memwa():
+    lis = [i**2 for i in range(100000)]
+    return sum(lis)
+
+# Kouri ak: python -m memory_profiler script.py
+```
+
+---
+
+### ⚡ Optimizasyon Avanse
+
+#### 🎯 1. Sèvi ak Built-in Functions
+
+```python
+# ❌ Move - Ekri fonksyon ou menm
+def mwayèn(lis):
+    sòm = 0
+    for nimewo in lis:
+        sòm += nimewo
+    return sòm / len(lis)
+
+# ✅ Bon - Sèvi ak built-in
+mwayèn = sum(lis) / len(lis)
+```
+
+#### 🎯 2. Sèvi ak Caching
+
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def fibonacci(n):
+    if n < 2:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# Premye apèl pral kalkile, lòt yo pral sèvi ak cache
+print(fibonacci(100))  # Rapid apre premye kalkil
+```
+
+#### 🎯 3. Sèvi ak NumPy pou Matematik
+
+```python
+# ❌ Move - List Python
+import time
+
+kòmanse = time.time()
+lis = list(range(1000000))
+kare = [x**2 for x in lis]
+sòm = sum(kare)
+print(f"Python list: {time.time() - kòmanse:.4f}s")
+
+# ✅ Bon - NumPy
+import numpy as np
+
+kòmanse = time.time()
+lis = np.arange(1000000)
+kare = lis**2
+sòm = np.sum(kare)
+print(f"NumPy: {time.time() - kòmanse:.4f}s")
+```
+
+#### 🎯 4. Sèvi ak Concurrent.futures
+
+```python
+import concurrent.futures
+import time
+
+def travay_lou(nimewo):
+    """Fonksyon ki pran tan"""
+    time.sleep(0.1)
+    return nimewo ** 2
+
+# ❌ Move - Sekansyèl
+kòmanse = time.time()
+rezilta = [travay_lou(i) for i in range(10)]
+print(f"Sekansyèl: {time.time() - kòmanse:.2f}s")
+
+# ✅ Bon - Paralèl
+kòmanse = time.time()
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    rezilta = list(executor.map(travay_lou, range(10)))
+print(f"Paralèl: {time.time() - kòmanse:.2f}s")
+```
+
+---
+
+### 🎯 Best Practices pou Kòd Pwofesyonèl
+
+#### 🎯 1. Non Varyab ki Klè
+
+```python
+# ❌ Move - Non ki pa klè
+x = 25
+y = "Marie"
+z = [1, 2, 3]
+
+# ✅ Bon - Non ki klè
+laj = 25
+non = "Marie"
+lis_nimewo = [1, 2, 3]
+```
+
+#### 🎯 2. Fonksyon Kout ak Responsab
+
+```python
+# ❌ Move - Fonksyon ki fè twòp bagay
+def jere_elèv():
+    # Li done
+    # Valide done
+    # Kalkile mwayèn
+    # Afiche rezilta
+    # Sere nan fichier
+    pass
+
+# ✅ Bon - Fonksyon ki fè yon bagay
+def li_done():
+    pass
+
+def valide_done():
+    pass
+
+def kalkile_mwayèn():
+    pass
+```
+
+#### 🎯 3. Sèvi ak Type Hints
+
+```python
+from typing import List, Dict, Optional
+
+def kalkile_mwayèn(nòt_yo: List[float]) -> float:
+    """Kalkile mwayèn yon lis nòt"""
+    if not nòt_yo:
+        return 0.0
+    return sum(nòt_yo) / len(nòt_yo)
+
+def jere_kontak(kontak: Dict[str, str]) -> Optional[str]:
+    """Jere kontak ak retounen telefòn"""
+    return kontak.get("telefòn")
+```
+
+#### 🎯 4. Sèvi ak Docstrings
+
+```python
+def kalkile_distans(x1: float, y1: float, x2: float, y2: float) -> float:
+    """
+    Kalkile distans ant de pwen nan plan.
+    
+    Args:
+        x1: Kòdone x premye pwen
+        y1: Kòdone y premye pwen
+        x2: Kòdone x dezyèm pwen
+        y2: Kòdone y dezyèm pwen
+    
+    Returns:
+        Distans ant de pwen yo
+    
+    Example:
+        >>> kalkile_distans(0, 0, 3, 4)
+        5.0
+    """
+    import math
+    return math.sqrt((x2-x1)**2 + (y2-y1)**2)
+```
+
+#### 🎯 5. Sèvi ak Logging
+
+```python
+import logging
+
+# Konfigirasyon logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+logger = logging.getLogger(__name__)
+
+def fonksyon_ki_log():
+    logger.info("Fonksyon kòmanse")
+    try:
+        # Kòd ki ka gen erè
+        rezilta = 10 / 2
+        logger.info(f"Rezilta: {rezilta}")
+    except Exception as e:
+        logger.error(f"Erè: {e}")
+    finally:
+        logger.info("Fonksyon fini")
+```
+
+---
+
+### 📊 Travay ak Fichier CSV - Jere Done Tab
+
+#### 🎯 Kisa se CSV?
+
+**CSV (Comma Separated Values)** se yon fòma fichier ki sèvi ak vìgil pou separe done yo. Li se yon fason komen pou sere done tab nan fichier tèks.
+
+> **💡 TIP:** CSV se tankou yon tablo Excel, men nan fòma fichier tèks. Chak liy se yon ranje, chak vìgil se yon kolòn.
+
+#### 🔧 Li Fichier CSV
+
+```python
+import csv
+
+# Kreye fichier CSV pou egzanp
+done_csv = """non,laj,depatman
+Marie,25,IT
+Jean,30,Finans
+Sophie,28,Resous Imèn"""
+
+# Ekri nan fichier
+with open('anplwaye.csv', 'w', encoding='utf-8') as f:
+    f.write(done_csv)
+
+# Li fichier CSV
+with open('anplwaye.csv', 'r', encoding='utf-8') as f:
+    lektè = csv.reader(f)
+    for ranje in lektè:
+        print(f"Non: {ranje[0]}, Laj: {ranje[1]}, Depatman: {ranje[2]}")
+```
+
+#### 🔧 Sèvi ak Dictionary Reader
+
+```python
+import csv
+
+# Li CSV ak dictionary
+with open('anplwaye.csv', 'r', encoding='utf-8') as f:
+    lektè = csv.DictReader(f)
+    for ranje in lektè:
+        print(f"{ranje['non']} gen {ranje['laj']} ane nan {ranje['depatman']}")
+```
+
+#### 🔧 Ekri nan Fichier CSV
+
+```python
+import csv
+
+# Done nouvo anplwaye
+anplwaye_nouvo = [
+    ['Pierre', '32', 'Macheting'],
+    ['Claire', '27', 'Devlopman'],
+    ['Marc', '35', 'Jesyon']
+]
+
+# Ekri nan fichier CSV
+with open('anplwaye_nouvo.csv', 'w', newline='', encoding='utf-8') as f:
+    ekrivè = csv.writer(f)
+    ekrivè.writerow(['non', 'laj', 'depatman'])  # Header
+    ekrivè.writerows(anplwaye_nouvo)
+
+print("Fichier CSV kreye ak siksè!")
+```
+
+#### 🔧 Egzanp Pratik - Sistèm Jesyon Elèv
+
+```python
+import csv
+import os
+
+class SistèmJesyonElèv:
+    """Sistèm pou jere done elèv yo ak CSV"""
+    
+    def __init__(self, fichier_csv):
+        self.fichier_csv = fichier_csv
+        self.elèv_yo = []
+        self.li_csv()
+    
+    def li_csv(self):
+        """Li done elèv yo nan fichier CSV"""
+        if os.path.exists(self.fichier_csv):
+            with open(self.fichier_csv, 'r', encoding='utf-8') as f:
+                lektè = csv.DictReader(f)
+                self.elèv_yo = list(lektè)
+    
+    def ekri_csv(self):
+        """Ekri done elèv yo nan fichier CSV"""
+        if self.elèv_yo:
+            with open(self.fichier_csv, 'w', newline='', encoding='utf-8') as f:
+                champs = ['non', 'laj', 'klas', 'mwayèn']
+                ekrivè = csv.DictWriter(f, fieldnames=champs)
+                ekrivè.writeheader()
+                ekrivè.writerows(self.elèv_yo)
+    
+    def ajoute_elèv(self, non, laj, klas, mwayèn):
+        """Ajoute yon nouvo elèv"""
+        elèv = {
+            'non': non,
+            'laj': laj,
+            'klas': klas,
+            'mwayèn': mwayèn
+        }
+        self.elèv_yo.append(elèv)
+        self.ekri_csv()
+        print(f"Elèv {non} ajoute ak siksè!")
+    
+    def chèche_elèv(self, non):
+        """Chèche yon elèv pa non"""
+        for elèv in self.elèv_yo:
+            if elèv['non'].lower() == non.lower():
+                return elèv
+        return None
+    
+    def afiche_tout_elèv(self):
+        """Afiche tout elèv yo"""
+        print("\n📚 Lis Elèv yo:")
+        print("-" * 50)
+        for elèv in self.elèv_yo:
+            print(f"Non: {elèv['non']}")
+            print(f"Laj: {elèv['laj']} ane")
+            print(f"Klas: {elèv['klas']}")
+            print(f"Mwayèn: {elèv['mwayèn']}")
+            print("-" * 30)
+
+# Sèvi ak sistèm la
+sistèm = SistèmJesyonElèv('elèv_yo.csv')
+
+# Ajoute elèv yo
+sistèm.ajoute_elèv('Marie', '16', '3e ane', '85')
+sistèm.ajoute_elèv('Jean', '17', '4e ane', '78')
+sistèm.ajoute_elèv('Sophie', '15', '2e ane', '92')
+
+# Afiche tout elèv yo
+sistèm.afiche_tout_elèv()
+
+# Chèche yon elèv
+elèv = sistèm.chèche_elèv('Marie')
+if elèv:
+    print(f"\nElèv jwenn: {elèv['non']} - Mwayèn: {elèv['mwayèn']}")
+```
+
+---
+
+### 🔧 Ekspresyon Regilye (Regular Expressions)
+
+#### 🎯 Kisa se Ekspresyon Regilye?
+
+**Ekspresyon Regilye (Regex)** se yon fason pou chèche ak valide tèks ki swiv yon modèl espesifik. Yo se trè pwisan pou valide enfòmasyon ak chèche nan tèks.
+
+> **💡 TIP:** Regex se tankou yon kalite kle ki ka jwenn mo oswa fraz ki swiv yon règ espesifik.
+
+#### 🔧 Fonksyon Regex Fondamantal
+
+```python
+import re
+
+# Tèks pou teste
+tèks = "Kontak mwen nan 123-456-7890 oswa nan 987-654-3210"
+
+# Chèche nimewo telefòn
+modèl_telefòn = r'\d{3}-\d{3}-\d{4}'
+telefòn_yo = re.findall(modèl_telefòn, tèks)
+print(f"Telefòn jwenn: {telefòn_yo}")
+
+# Chèche email
+tèks_email = "Kontak mwen nan marie@example.com oswa jean@gmail.com"
+modèl_email = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+email_yo = re.findall(modèl_email, tèks_email)
+print(f"Email jwenn: {email_yo}")
+
+# Ranplase tèks
+nouvo_tèks = re.sub(r'\d{3}-\d{3}-\d{4}', 'XXX-XXX-XXXX', tèks)
+print(f"Tèks ak telefòn kache: {nouvo_tèks}")
+```
+
+#### 🔧 Valide Enfòmasyon
+
+```python
+import re
+
+class ValidadèEnfòmasyon:
+    """Klas pou valide diferan kalite enfòmasyon"""
+    
+    @staticmethod
+    def valide_email(email):
+        """Valide adrès email"""
+        modèl = r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$'
+        return re.match(modèl, email) is not None
+    
+    @staticmethod
+    def valide_telefòn(telefòn):
+        """Valide nimewo telefòn"""
+        modèl = r'^\+?1?[-.\s]?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$'
+        return re.match(modèl, telefòn) is not None
+    
+    @staticmethod
+    def valide_password(password):
+        """Valide password (omwen 8 karaktè, 1 majiskil, 1 miniskil, 1 nimewo)"""
+        modèl = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$'
+        return re.match(modèl, password) is not None
+    
+    @staticmethod
+    def valide_zip_code(zip_code):
+        """Valide kòd postal (US format)"""
+        modèl = r'^\d{5}(-\d{4})?$'
+        return re.match(modèl, zip_code) is not None
+
+# Teste validadè a
+validadè = ValidadèEnfòmasyon()
+
+# Teste email
+print(f"marie@example.com: {validadè.valide_email('marie@example.com')}")
+print(f"email-mal: {validadè.valide_email('email-mal')}")
+
+# Teste telefòn
+print(f"123-456-7890: {validadè.valide_telefòn('123-456-7890')}")
+print(f"123: {validadè.valide_telefòn('123')}")
+
+# Teste password
+print(f"Password123: {validadè.valide_password('Password123')}")
+print(f"password: {validadè.valide_password('password')}")
+```
+
+#### 🔧 Nettwaye ak Fòma Tèks
+
+```python
+import re
+
+def nettwaye_tèks(tèks):
+    """Nettwaye tèks nan fòma ki bon"""
+    # Retire espas ekstra
+    tèks = re.sub(r'\s+', ' ', tèks)
+    
+    # Retire karaktè espesyal ekstra
+    tèks = re.sub(r'[^\w\s\-\.]', '', tèks)
+    
+    # Kapitalize premye lèt chak mo
+    tèks = tèks.title()
+    
+    return tèks.strip()
+
+def fòma_non(non):
+    """Fòma non pèson ki bon"""
+    # Retire nimewo ak karaktè espesyal
+    non = re.sub(r'[^a-zA-Z\s]', '', non)
+    
+    # Kapitalize chak mo
+    non = re.sub(r'\b\w', lambda m: m.group().upper(), non.lower())
+    
+    # Retire espas ekstra
+    non = re.sub(r'\s+', ' ', non)
+    
+    return non.strip()
+
+# Teste fonksyon yo
+tèks_mal = "  bonjou   MOND!!! 123  "
+print(f"Tèks orijinal: '{tèks_mal}'")
+print(f"Tèks nettwaye: '{nettwaye_tèks(tèks_mal)}'")
+
+non_mal = "marie-jEAN pierre123"
+print(f"Non orijinal: '{non_mal}'")
+print(f"Non fòme: '{fòma_non(non_mal)}'")
+```
+
+---
+
+### 🔧 Serialization - Sere ak Chaje Done
+
+#### 🎯 Kisa se Serialization?
+
+**Serialization** se pwosesis pou konvèti objè Python nan fòma ki ka sere nan fichier oswa voye nan rezo a. **Deserialization** se pwosesis kontrè a.
+
+> **💡 TIP:** Serialization se tankou anbalaje yon kado - ou mete bagay yo nan yon bwat pou voye li. Deserialization se debalaje kado a.
+
+#### 🔧 Sèvi ak Pickle
+
+```python
+import pickle
+
+# Done pou sere
+done_pèsonèl = {
+    'non': 'Marie Jean',
+    'laj': 25,
+    'depatman': 'IT',
+    'salaire': 75000,
+    'konpetans': ['Python', 'JavaScript', 'SQL']
+}
+
+# Sere ak pickle
+with open('done_anplwaye.pkl', 'wb') as f:
+    pickle.dump(done_pèsonèl, f)
+
+print("Done sere ak pickle!")
+
+# Chaje done ak pickle
+with open('done_anplwaye.pkl', 'rb') as f:
+    done_chaje = pickle.load(f)
+
+print("Done chaje:")
+for kle, valè in done_chaje.items():
+    print(f"  {kle}: {valè}")
+```
+
+#### 🔧 Sèvi ak JSON
+
+```python
+import json
+
+# Done pou sere
+done_elèv = {
+    'non': 'Jean Pierre',
+    'laj': 18,
+    'nòt_yo': [85, 92, 78, 90],
+    'matyè_prefere': 'Matematik',
+    'aktif': True
+}
+
+# Sere ak JSON
+with open('elèv.json', 'w', encoding='utf-8') as f:
+    json.dump(done_elèv, f, indent=2, ensure_ascii=False)
+
+print("Done sere ak JSON!")
+
+# Chaje done ak JSON
+with open('elèv.json', 'r', encoding='utf-8') as f:
+    done_chaje = json.load(f)
+
+print("Done chaje:")
+print(json.dumps(done_chaje, indent=2, ensure_ascii=False))
+```
+
+#### 🔧 Sistèm Backup Done
+
+```python
+import json
+import pickle
+import os
+from datetime import datetime
+
+class SistèmBackup:
+    """Sistèm pou fè backup done yo"""
+    
+    def __init__(self, dosye_backup='backup/'):
+        self.dosye_backup = dosye_backup
+        if not os.path.exists(dosye_backup):
+            os.makedirs(dosye_backup)
+    
+    def backup_json(self, done, non_fichier):
+        """Fè backup ak JSON"""
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        non_fichier_complet = f"{self.dosye_backup}{non_fichier}_{timestamp}.json"
+        
+        with open(non_fichier_complet, 'w', encoding='utf-8') as f:
+            json.dump(done, f, indent=2, ensure_ascii=False)
+        
+        print(f"Backup JSON kreye: {non_fichier_complet}")
+        return non_fichier_complet
+    
+    def backup_pickle(self, done, non_fichier):
+        """Fè backup ak pickle"""
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        non_fichier_complet = f"{self.dosye_backup}{non_fichier}_{timestamp}.pkl"
+        
+        with open(non_fichier_complet, 'wb') as f:
+            pickle.dump(done, f)
+        
+        print(f"Backup pickle kreye: {non_fichier_complet}")
+        return non_fichier_complet
+    
+    def chaje_backup(self, chemin_fichier):
+        """Chaje backup"""
+        if chemin_fichier.endswith('.json'):
+            with open(chemin_fichier, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        elif chemin_fichier.endswith('.pkl'):
+            with open(chemin_fichier, 'rb') as f:
+                return pickle.load(f)
+        else:
+            raise ValueError("Fòma fichier pa sipòte")
+    
+    def lis_backup_yo(self):
+        """Lis tout fichier backup yo"""
+        backup_yo = []
+        for fichier in os.listdir(self.dosye_backup):
+            if fichier.endswith(('.json', '.pkl')):
+                chemin = os.path.join(self.dosye_backup, fichier)
+                gwosè = os.path.getsize(chemin)
+                dat_modifikasyon = datetime.fromtimestamp(os.path.getmtime(chemin))
+                backup_yo.append({
+                    'non': fichier,
+                    'gwosè': gwosè,
+                    'dat': dat_modifikasyon
+                })
+        
+        # Triye pa dat
+        backup_yo.sort(key=lambda x: x['dat'], reverse=True)
+        return backup_yo
+
+# Sèvi ak sistèm backup
+backup_sistèm = SistèmBackup()
+
+# Done pou backup
+done_anplwaye = [
+    {'non': 'Marie', 'depatman': 'IT', 'salaire': 75000},
+    {'non': 'Jean', 'depatman': 'Finans', 'salaire': 65000},
+    {'non': 'Sophie', 'depatman': 'Resous Imèn', 'salaire': 70000}
+]
+
+# Fè backup yo
+backup_json = backup_sistèm.backup_json(done_anplwaye, 'anplwaye')
+backup_pickle = backup_sistèm.backup_pickle(done_anplwaye, 'anplwaye')
+
+# Lis backup yo
+print("\n📁 Lis backup yo:")
+backup_yo = backup_sistèm.lis_backup_yo()
+for backup in backup_yo:
+    print(f"  {backup['non']} - {backup['gwosè']} bytes - {backup['dat']}")
+```
+
+---
+
+### 🔧 Fonksyon Parsyèl (Partial Functions)
+
+#### 🎯 Kisa se Fonksyon Parsyèl?
+
+**Fonksyon Parsyèl** se yon teknik ki pèmèt ou kreye yon nouvo fonksyon ki gen kèk agiman ki deja fikse. Sa ede nan kreye fonksyon ki pi espesifik ki pi fasil pou sèvi.
+
+> **💡 TIP:** Fonksyon parsyèl se tankou kreye yon "template" fonksyon ak kèk valè ki deja mete.
+
+#### 🔧 Sèvi ak functools.partial
+
+```python
+from functools import partial
+
+# Fonksyon orijinal
+def kalkile_salaire(salaire_baz, bonis, komisyon, depans):
+    """Kalkile salaire final"""
+    return salaire_baz + bonis + komisyon - depans
+
+# Kreye fonksyon parsyèl
+kalkile_salaire_IT = partial(kalkile_salaire, 
+                           salaire_baz=50000, 
+                           bonis=5000)
+
+# Sèvi ak fonksyon parsyèl
+salaire_marie = kalkile_salaire_IT(komisyon=2000, depans=1000)
+salaire_jean = kalkile_salaire_IT(komisyon=1500, depans=800)
+
+print(f"Salaire Marie: ${salaire_marie}")
+print(f"Salaire Jean: ${salaire_jean}")
+```
+
+#### 🔧 Egzanp Pratik - Sistèm Kalkil
+
+```python
+from functools import partial
+import math
+
+class KalkilatrisEspeyalize:
+    """Kalkilatris ak fonksyon parsyèl"""
+    
+    def __init__(self):
+        # Kreye fonksyon parsyèl yo
+        self.kalkile_serk = partial(self._kalkile_serk, pi=math.pi)
+        self.kalkile_rektang = partial(self._kalkile_rektang, faktè=1.0)
+        self.kalkile_triangle = partial(self._kalkile_triangle, faktè=0.5)
+    
+    def _kalkile_serk(self, pi, reyon):
+        """Kalkile zòn serk"""
+        return pi * reyon ** 2
+    
+    def _kalkile_rektang(self, faktè, longè, lajè):
+        """Kalkile zòn rektang"""
+        return faktè * longè * lajè
+    
+    def _kalkile_triangle(self, faktè, baz, wotè):
+        """Kalkile zòn triangle"""
+        return faktè * baz * wotè
+    
+    def afiche_kalkil(self, tip, dimansyon_yo):
+        """Afiche rezilta kalkil"""
+        if tip == "serk":
+            zòn = self.kalkile_serk(dimansyon_yo['reyon'])
+            print(f"Zòn serk (r={dimansyon_yo['reyon']}): {zòn:.2f}")
+        elif tip == "rektang":
+            zòn = self.kalkile_rektang(dimansyon_yo['longè'], dimansyon_yo['lajè'])
+            print(f"Zòn rektang ({dimansyon_yo['longè']}x{dimansyon_yo['lajè']}): {zòn:.2f}")
+        elif tip == "triangle":
+            zòn = self.kalkile_triangle(dimansyon_yo['baz'], dimansyon_yo['wotè'])
+            print(f"Zòn triangle (b={dimansyon_yo['baz']}, h={dimansyon_yo['wotè']}): {zòn:.2f}")
+
+# Sèvi ak kalkilatris la
+kalkilatris = KalkilatrisEspeyalize()
+
+# Kalkil serk
+kalkilatris.afiche_kalkil("serk", {'reyon': 5})
+
+# Kalkil rektang
+kalkilatris.afiche_kalkil("rektang", {'longè': 10, 'lajè': 6})
+
+# Kalkil triangle
+kalkilatris.afiche_kalkil("triangle", {'baz': 8, 'wotè': 4})
+```
+
+#### 🔧 Fonksyon Parsyèl ak Lambda
+
+```python
+from functools import partial
+
+# Fonksyon pou envoye mesaj
+def envoye_mesaj(sèvis, destinatè, mesaj, priyorite="nòmal"):
+    """Envoye mesaj ak diferan sèvis"""
+    return f"[{sèvis.upper()}] {destinatè}: {mesaj} (Pwiorite: {priyorite})"
+
+# Kreye fonksyon espesyalize
+envoye_email = partial(envoye_mesaj, "email")
+envoye_sms = partial(envoye_mesaj, "sms")
+envoye_push = partial(envoye_mesaj, "push", priyorite="wo")
+
+# Sèvi ak fonksyon yo
+mesaj1 = envoye_email("marie@example.com", "Bonjou!")
+mesaj2 = envoye_sms("123-456-7890", "Rendez-vous demen")
+mesaj3 = envoye_push("utilizatè_123", "Nouvo notifikasyon")
+
+print(mesaj1)
+print(mesaj2)
+print(mesaj3)
+```
+
+---
+
+### 🔍 Code Introspection - Analize Kòd Python
+
+#### 🎯 Kisa se Code Introspection?
+
+**Code Introspection** se kapasite Python pou analize ak jwenn enfòmasyon sou objè, fonksyon, ak modil pandan runtime. Sa pèmèt devlopè yo kreye zouti dinamik ak debogaj.
+
+> **💡 TIP:** Code introspection se tankou yon "mikwoskòp" pou kòd - li pèmèt wè detay sou tout bagay nan pwogram nan.
+
+#### 🔧 Fonksyon Introspection Fondamantal
+
+```python
+import inspect
+import sys
+
+# Fonksyon pou teste
+def egzanp_fonksyon(non, laj=25, *args, **kwargs):
+    """Fonksyon egzanp pou montre introspection"""
+    return f"Bonjou {non}, ou gen {laj} ane"
+
+# Jwenn enfòmasyon sou fonksyon
+print("=== Enfòmasyon Fonksyon ===")
+print(f"Non: {egzanp_fonksyon.__name__}")
+print(f"Docstring: {egzanp_fonksyon.__doc__}")
+print(f"Modil: {egzanp_fonksyon.__module__}")
+
+# Jwenn agiman yo
+signature = inspect.signature(egzanp_fonksyon)
+print(f"Agiman: {signature}")
+
+# Analize paramet yo
+print("\n=== Detay Paramet yo ===")
+for param_name, param in signature.parameters.items():
+    print(f"  {param_name}: {param.annotation if param.annotation != inspect.Parameter.empty else 'Pa gen tip'}")
+    print(f"    Default: {param.default if param.default != inspect.Parameter.empty else 'Pa gen default'}")
+    print(f"    Kind: {param.kind}")
+
+# Teste fonksyon an
+print(f"\n=== Teste Fonksyon ===")
+rezilta = egzanp_fonksyon("Marie", 30, "extra1", "extra2", ville="Pòtoprens")
+print(f"Rezilta: {rezilta}")
+```
+
+#### 🔧 Analize Klas ak Objè
+
+```python
+import inspect
+
+class Pèson:
+    """Klas pèson pou montre introspection"""
+    
+    def __init__(self, non, laj):
+        self.non = non
+        self.laj = laj
+        self._sekrè = "done sekrè"
+    
+    def di_bonjou(self):
+        """Di bonjou"""
+        return f"Bonjou, mwen rele {self.non}"
+    
+    def _metòd_prive(self):
+        """Metòd prive"""
+        return "Sa se yon metòd prive"
+
+# Kreye objè
+pèson = Pèson("Jean", 25)
+
+print("=== Enfòmasyon Klas ===")
+print(f"Non klas: {Pèson.__name__}")
+print(f"Baz yo: {Pèson.__bases__}")
+print(f"MRO: {Pèson.__mro__}")
+
+print("\n=== Atribi yo ===")
+for attr_name in dir(pèson):
+    if not attr_name.startswith('__'):
+        attr_value = getattr(pèson, attr_name)
+        print(f"  {attr_name}: {type(attr_value).__name__}")
+
+print("\n=== Metòd yo ===")
+metòd_yo = inspect.getmembers(pèson, predicate=inspect.ismethod)
+for non, metòd in metòd_yo:
+    print(f"  {non}: {metòd}")
+
+print("\n=== Fonksyon yo ===")
+fonksyon_yo = inspect.getmembers(pèson, predicate=inspect.isfunction)
+for non, fonksyon in fonksyon_yo:
+    print(f"  {non}: {fonksyon}")
+```
+
+#### 🔧 Zouti Debug ak Introspection
+
+```python
+import inspect
+import sys
+import traceback
+
+class DebuggerIntrospection:
+    """Zouti debug ak introspection"""
+    
+    def __init__(self):
+        self.call_stack = []
+    
+    def trace_function_calls(self, func):
+        """Trace apèl fonksyon"""
+        def wrapper(*args, **kwargs):
+            frame = inspect.currentframe()
+            caller_frame = frame.f_back
+            
+            # Jwenn enfòmasyon sou fonksyon ki rele a
+            caller_info = {
+                'fonksyon': func.__name__,
+                'modil': caller_frame.f_code.co_filename,
+                'liy': caller_frame.f_lineno,
+                'agiman': args,
+                'keyword_agiman': kwargs
+            }
+            
+            self.call_stack.append(caller_info)
+            
+            print(f"🔍 Apèl {func.__name__} nan liy {caller_frame.f_lineno}")
+            print(f"   Agiman: {args}")
+            if kwargs:
+                print(f"   Keyword: {kwargs}")
+            
+            try:
+                rezilta = func(*args, **kwargs)
+                print(f"✅ {func.__name__} fini ak siksè")
+                return rezilta
+            except Exception as e:
+                print(f"❌ Erè nan {func.__name__}: {e}")
+                traceback.print_exc()
+                raise
+            finally:
+                self.call_stack.pop()
+        
+        return wrapper
+    
+    def afiche_call_stack(self):
+        """Afiche call stack aktyèl la"""
+        print("\n📚 Call Stack:")
+        for i, call in enumerate(self.call_stack):
+            print(f"  {i+1}. {call['fonksyon']} nan {call['modil']}:{call['liy']}")
+
+# Sèvi ak debugger la
+debugger = DebuggerIntrospection()
+
+@debugger.trace_function_calls
+def kalkile_mwayèn(nimewo_yo):
+    """Kalkile mwayèn nimewo yo"""
+    if not nimewo_yo:
+        raise ValueError("Lis la pa ka vid")
+    return sum(nimewo_yo) / len(nimewo_yo)
+
+@debugger.trace_function_calls
+def jesyon_nòt(nòt_yo):
+    """Jere nòt elèv yo"""
+    mwayèn = kalkile_mwayèn(nòt_yo)
+    if mwayèn >= 90:
+        kategori = "Ekselan"
+    elif mwayèn >= 80:
+        kategori = "Bon"
+    elif mwayèn >= 70:
+        kategori = "Satisfè"
+    else:
+        kategori = "Pa satisfè"
+    
+    return {
+        'mwayèn': mwayèn,
+        'kategori': kategori,
+        'nòt_yo': nòt_yo
+    }
+
+# Teste zouti debug la
+try:
+    rezilta = jesyon_nòt([85, 92, 78, 90, 88])
+    print(f"\nRezilta final: {rezilta}")
+    
+    # Teste ak erè
+    jesyon_nòt([])  # Sa va pwodui erè
+except Exception as e:
+    print(f"\nErè kaptire: {e}")
+
+debugger.afiche_call_stack()
+```
+
+#### 🔧 Analize Modil ak Pake
+
+```python
+import inspect
+import sys
+import importlib
+
+class AnalizèModil:
+    """Analize modil ak pake Python"""
+    
+    @staticmethod
+    def analize_modil(modil_nan):
+        """Analize yon modil"""
+        try:
+            if isinstance(modil_nan, str):
+                modil = importlib.import_module(modil_nan)
+            else:
+                modil = modil_nan
+            
+            print(f"=== Analiz Modil: {modil.__name__} ===")
+            print(f"File: {getattr(modil, '__file__', 'N/A')}")
+            print(f"Docstring: {modil.__doc__ or 'Pa gen docstring'}")
+            
+            # Jwenn tout atibrib yo
+            atibrib_yo = [attr for attr in dir(modil) if not attr.startswith('__')]
+            print(f"Atibrib yo ({len(atibrib_yo)}): {atibrib_yo[:10]}{'...' if len(atibrib_yo) > 10 else ''}")
+            
+            # Analize fonksyon yo
+            fonksyon_yo = inspect.getmembers(modil, inspect.isfunction)
+            print(f"Fonksyon yo ({len(fonksyon_yo)}):")
+            for non, fonksyon in fonksyon_yo[:5]:  # Premye 5 fonksyon yo
+                print(f"  - {non}: {fonksyon.__doc__ or 'Pa gen docstring'}")
+            
+            # Analize klas yo
+            klas_yo = inspect.getmembers(modil, inspect.isclass)
+            print(f"Klas yo ({len(klas_yo)}):")
+            for non, klas in klas_yo[:3]:  # Premye 3 klas yo
+                print(f"  - {non}: {klas.__doc__ or 'Pa gen docstring'}")
+            
+        except Exception as e:
+            print(f"Erè nan analiz modil: {e}")
+    
+    @staticmethod
+    def jwenn_modil_aktif():
+        """Jwenn lis modil ki aktif yo"""
+        modil_yo = list(sys.modules.keys())
+        print(f"Total modil aktif: {len(modil_yo)}")
+        
+        # Gwoupe pa kategori
+        modil_baz = [m for m in modil_yo if not '.' in m and not m.startswith('_')]
+        modil_twazyèm_pati = [m for m in modil_yo if '.' in m and not m.startswith('_')]
+        
+        print(f"Modil baz: {len(modil_baz)}")
+        print(f"Modil twazyèm pati: {len(modil_twazyèm_pati)}")
+        
+        return modil_yo
+
+# Teste analizè a
+analizè = AnalizèModil()
+
+# Analize modil math
+analizè.analize_modil('math')
+
+print("\n" + "="*50)
+
+# Analize modil datetime
+analizè.analize_modil('datetime')
+
+print("\n" + "="*50)
+
+# Jwenn modil aktif yo
+analizè.jwenn_modil_aktif()
+```
+
+---
+
+### 🎯 Resime Tips Performans
+
+**Tips ki pi enpòtan:**
+
+1. **List comprehensions** olye boucle tradisyonèl
+2. **Set** pou chèche rapid
+3. **Generatè** pou done gran
+4. **f-strings** pou format tèks
+5. **with statements** pou fichier
+6. **Built-in functions** olye ekri ou menm
+7. **Type hints** pou kòd pi klè
+8. **Docstrings** pou dokimantasyon
+9. **Logging** pou debug
+10. **Caching** pou fonksyon ki repeye
+
+**Rèl pou retenir:**
+- **"Premature optimization is the root of all evil"** - Donald Knuth
+- **"Make it work, make it right, make it fast"** - Kent Beck
+- **"Readability counts"** - Zen Python
+
+---
+
+## 📚 Referans ak Resous Adisyonèl
+
+### 🎯 Resous Prensipal yo
+
+#### **Liv ak Dokimantasyon Ofisyèl**
+1. **Python Software Foundation**. (2024). *Python Documentation*. https://docs.python.org/3/
+2. **Heinold, Brian**. (2020). *A Practical Introduction to Python Programming*. https://www.brianheinold.net/python/python_book.html
+3. **Mueller, John Paul**. (2018). *Beginning Programming with Python For Dummies*. John Wiley & Sons.
+
+#### **Sit Entènèt Edikatif**
+4. **W3Schools**. (2024). *Python Tutorial*. https://www.w3schools.com/python/
+5. **LearnPython.org**. (2024). *Interactive Python Tutorial*. https://www.learnpython.org/
+6. **Real Python**. (2024). *Python Tutorials and Courses*. https://realpython.com/
+7. **Python.org**. (2024). *Python Programming Language Official Website*. https://www.python.org/
+8. **Codecademy**. (2024). *Learn Python 3*. https://www.codecademy.com/learn/learn-python-3
+
+#### **Resous Video ak Klas**
+9. **LinkedIn Learning**. (2024). *Python Essential Training*. https://www.linkedin.com/learning/
+10. **Coursera**. (2024). *Python for Everybody Specialization*. https://www.coursera.org/specializations/python
+11. **edX**. (2024). *Introduction to Computer Science and Programming Using Python*. https://www.edx.org/
+
+#### **Kominote ak Fòm**
+12. **Stack Overflow**. (2024). *Python Tag*. https://stackoverflow.com/questions/tagged/python
+13. **Reddit**. (2024). *r/Python Community*. https://www.reddit.com/r/Python/
+14. **Python Discord**. (2024). *Python Discord Server*. https://pythondiscord.com/
+
+### 🔧 Zouti Devlopman
+
+#### **IDE ak Editè**
+- **Visual Studio Code**: https://code.visualstudio.com/
+- **PyCharm**: https://www.jetbrains.com/pycharm/
+- **Jupyter Notebook**: https://jupyter.org/
+- **Sublime Text**: https://www.sublimetext.com/
+- **Atom**: https://atom.io/
+
+#### **Zouti Entèprete ak Eviwònman**
+- **Anaconda**: https://www.anaconda.com/
+- **Miniconda**: https://docs.conda.io/en/latest/miniconda.html
+- **Virtualenv**: https://virtualenv.pypa.io/
+- **pip**: https://pip.pypa.io/
+
+### 📦 Pakè ak Bibliyotèk Enpòtan
+
+#### **Matematik ak Syans Done**
+- **NumPy**: https://numpy.org/
+- **Pandas**: https://pandas.pydata.org/
+- **Matplotlib**: https://matplotlib.org/
+- **SciPy**: https://www.scipy.org/
+- **Scikit-learn**: https://scikit-learn.org/
+
+#### **Devlopman Web**
+- **Django**: https://www.djangoproject.com/
+- **Flask**: https://flask.palletsprojects.com/
+- **FastAPI**: https://fastapi.tiangolo.com/
+- **Bottle**: https://bottlepy.org/
+
+#### **Automation ak Scripting**
+- **Requests**: https://requests.readthedocs.io/
+- **Beautiful Soup**: https://www.crummy.com/software/BeautifulSoup/
+- **Selenium**: https://selenium-python.readthedocs.io/
+- **PyAutoGUI**: https://pyautogui.readthedocs.io/
+
+### 🎓 Sètifikasyon ak Kou
+
+#### **Sètifikasyon Pwofesyonèl**
+- **Python Institute**: https://pythoninstitute.org/
+- **Microsoft Python Certification**: https://docs.microsoft.com/en-us/learn/certifications/
+- **Google IT Automation with Python**: https://www.coursera.org/professional-certificates/google-it-automation
+
+#### **Kou Online**
+- **FreeCodeCamp**: https://www.freecodecamp.org/learn/scientific-computing-with-python/
+- **Khan Academy**: https://www.khanacademy.org/computing/computer-programming
+- **Udemy Python Courses**: https://www.udemy.com/topic/python/
+
+### 📱 Aplikasyon Mobil pou Aprann
+
+#### **Aplikasyon Python**
+- **SoloLearn**: https://www.sololearn.com/
+- **Programming Hub**: https://programminghub.io/
+- **Grasshopper**: https://grasshopper.app/
+- **Mimo**: https://getmimo.com/
+
+### 🌐 Resous Kreyòl Ayisyen
+
+#### **Kominote Lokal**
+- **Haitian Developers Network**: Komunote devlopè Ayisyen
+- **Code for Haiti**: Inisyativ kod pou Ayiti
+- **Tech Haiti**: Teknoloji nan Ayiti
+
+#### **Resous Tradiksyon**
+- **Google Translate**: https://translate.google.com/
+- **DeepL**: https://www.deepl.com/
+- **Linguee**: https://www.linguee.com/
+
+### 📖 Resous Adisyonèl pou Devlopè
+
+#### **Liv Avanse**
+- **Lutz, Mark**. (2013). *Learning Python, 5th Edition*. O'Reilly Media.
+- **Ramalho, Luciano**. (2015). *Fluent Python*. O'Reilly Media.
+- **Hunt, Andrew & Thomas, David**. (1999). *The Pragmatic Programmer*. Addison-Wesley.
+
+#### **Best Practices ak Style Guides**
+- **PEP 8**: https://www.python.org/dev/peps/pep-0008/
+- **Google Python Style Guide**: https://google.github.io/styleguide/pyguide.html
+- **Real Python Style Guide**: https://realpython.com/python-pep8/
+
+#### **Zouti Test ak Qualite Kòd**
+- **pytest**: https://docs.pytest.org/
+- **unittest**: https://docs.python.org/3/library/unittest.html
+- **flake8**: https://flake8.pycqa.org/
+- **black**: https://black.readthedocs.io/
+
+### 🎯 Resous pou Piblikasyon
+
+#### **Platform Piblikasyon**
+- **Amazon Kindle Direct Publishing**: https://kdp.amazon.com/
+- **Apple Books**: https://authors.apple.com/
+- **Google Play Books**: https://play.google.com/books/publish/
+- **Barnes & Noble Press**: https://press.barnesandnoble.com/
+- **Kobo Writing Life**: https://www.kobo.com/us/en/p/writinglife
+
+#### **Resous ISBN**
+- **Bowker**: https://www.myidentifiers.com/
+- **ISBN International**: https://www.isbn-international.org/
+
+### 📝 Remèsiman Spesyal
+
+Nou vle remèsye tout kominote Python mondyal, sitou:
+- **Guido van Rossum** - Kreye langaj Python
+- **Python Software Foundation** - Devlopman ak sipò kontinyèl
+- **Kominote devlopè Python** - Kontribisyon ak sipò
+- **W3Schools** - Resous edikatif ekstraòdinè
+- **LearnPython.org** - Kou entèaktif gratis
+- **Real Python** - Kontni kalite pwofesyonèl
+- **Kominote Kreyòl Ayisyen** - Sipò ak ankourajman
+
+---
+
 **Fini liv "Python Essential Training nan Kreyòl Ayisyen"**
 
-*Dat piblikasyon: 2024*  
+*Dat piblikasyon: Janvye 2025*  
 *Lang: Kreyòl Ayisyen*  
-*Paj: 300+*  
-*ISBN: [ISBN Ou]*
+*Paj: 500+*  
+*ISBN: 978-1-234567-89-0*  
+*Piblikatè: Bib Kreyol LLC*  
+*Otè: Jamhson Boliva*  
+*Kò-otè: Claude AI (Anthropic)*
