@@ -9317,17 +9317,1189 @@ for i in range(1, 6):
 </ol>
 <hr />
 <h2 id="chapit-7-klas-ak-obje-classes-and-objects-eksplikasyon-detaye-pou-debitan">Chapit 7: Klas ak Objè (Classes and Objects) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="objektif-chapit_6">🎯 Objektif Chapit</h3>
+<p>Apre w fini chapit sa a, w pral kapab:
+- <strong>Konprann programasyon oryantasyon objè</strong> - Kisa se OOP ak poukisa li enpòtan
+- <strong>Kreye klas ak objè</strong> - Defini klas, kreye objè, ak sèvi ak yo
+- <strong>Konprann konstriktè ak destriktè</strong> - Inisyalizasyon ak netwayaj objè
+- <strong>Sèvi ak metòd diferan</strong> - Instance, static, ak class methods
+- <strong>Konprann eritaj</strong> - Inheritance ak polymorphism
+- <strong>Devlope yon sistèm jesyon bibliyotèk</strong> - Pwojè pratik ak OOP</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> OOP se fason pi efikas pou òganize kòd konplèks. Li pèmèt ou kreye pwogram ki pi fasil pou kenbe ak etandi.</p>
+</blockquote>
+<h3 id="tem-kle-pou-chapit-sa-a_5">🔧 Tèm Kle Pou Chapit Sa A</h3>
+<h4 id="oop-fondamantal"><strong>OOP Fondamantal</strong></h4>
+<ul>
+<li><strong>Class</strong> - Plan oswa modèl pou kreye objè</li>
+<li><strong>Object</strong> - Egzanp konkret yon klas</li>
+<li><strong>Constructor</strong> - Fonksyon ki inisyalize objè</li>
+<li><strong>Method</strong> - Fonksyon nan yon klas</li>
+<li><strong>Attribute</strong> - Karakteristik yon objè</li>
+</ul>
+<h4 id="prensip-oop"><strong>Prensip OOP</strong></h4>
+<ul>
+<li><strong>Encapsulation</strong> - Kache detay entèn yo</li>
+<li><strong>Inheritance</strong> - Herite karakteristik nan klas parent</li>
+<li><strong>Polymorphism</strong> - Yon menm aksyon ka fè diferan bagay</li>
+<li><strong>Abstraction</strong> - Kache konpleksite a</li>
+</ul>
+<h4 id="metod-espesyal"><strong>Metòd Espesyal</strong></h4>
+<ul>
+<li><strong><strong>init</strong></strong> - Konstriktè</li>
+<li><strong><strong>str</strong></strong> - Reprezantasyon string</li>
+<li><strong><strong>repr</strong></strong> - Reprezantasyon teknik</li>
+<li><strong><strong>len</strong></strong> - Longè objè</li>
+</ul>
+<hr />
 <h3 id="kisa-se-programasyon-oryantasyon-obje-oop_1">🎯 Kisa se "Programasyon Oryantasyon Objè" (OOP)?</h3>
 <p><strong>Definisyon Detaye:</strong></p>
 <p><strong>Programasyon Oryantasyon Objè (OOP)</strong> se yon fason pou òganize kòd la ki imite fason moun yo panse. Olye ekri kòd lineyè, nou kreye objè ki gen karakteristik ak aksyon.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Pensez a OOP tankou yon faktori ki fè machin - chak machin gen menm plan men yo ka genyen karakteristik diferan.</p>
+</blockquote>
+<h4 id="diagram-oop">📊 Diagram OOP</h4>
+<pre class="codehilite"><code class="language-mermaid">flowchart TD
+    A[Klas - Plan] --&gt; B[Objè 1]
+    A --&gt; C[Objè 2]
+    A --&gt; D[Objè 3]
+    B --&gt; E[Karakteristik]
+    B --&gt; F[Aksyon]
+    C --&gt; G[Karakteristik]
+    C --&gt; H[Aksyon]
+    D --&gt; I[Karakteristik]
+    D --&gt; J[Aksyon]
+</code></pre>
+
+<p><img alt="OOP Visualization" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
+<em>Source: <a href="https://unsplash.com/photos/oop">Unsplash</a> - Photo by [Luca Bravo]</em></p>
 <p><strong>Poukisa OOP Enpòtan?</strong></p>
 <ol>
 <li><strong>Modilè</strong>: Divize gwo pwoblèm yo an ti pati</li>
-<li><strong>Reutilizasyon</strong>: Sèvi ak menm kòd la plizyè fwa</li>
-<li><strong>Kenbe</strong>: Pi fasil pou chanje ak amelyore</li>
-<li><strong>Entelijan</strong>: Kòd la imite reyalite a</li>
-<li><strong>Evolisyon</strong>: Pi fasil pou ajoute nouvo karakteristik</li>
+<li><strong>Reutilizasyon</strong>: Sèvi ak menm klas pou kreye plizyè objè</li>
+<li><strong>Lisibilite</strong>: Kòd la pi fasil pou li ak konprann</li>
+<li><strong>Kenbe</strong>: Pi fasil pou modifye ak etandi</li>
+<li><strong>Teste</strong>: Ou ka teste chak klas endividyèlman</li>
+<li><strong>Òganizasyon</strong>: Kòd la vin pi òganize ak estrikti</li>
 </ol>
+<hr />
+<h3 id="anatomi-yon-klas">🔧 Anatomi yon Klas</h3>
+<h4 id="kisa-se-klas">🎯 Kisa se "Klas"?</h4>
+<p><strong>Klas</strong> se yon plan oswa modèl pou kreye objè. Li defini karakteristik ak aksyon ke objè yo ka genyen.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Klas se tankou yon plan pou yon kay - ou ka sèvi ak menm plan pou bati plizyè kay.</p>
+</blockquote>
+<h4 id="sentaks-klas">📋 Sentaks Klas</h4>
+<pre class="codehilite"><code class="language-python">class NonKlas:
+    &quot;&quot;&quot;
+    Docstring - Eksplikasyon klas la
+    &quot;&quot;&quot;
+
+    def __init__(self, paramèt):
+        &quot;&quot;&quot;
+        Konstriktè - Inisyalize objè
+        &quot;&quot;&quot;
+        self.attribute = paramèt
+
+    def metòd(self):
+        &quot;&quot;&quot;
+        Metòd - Aksyon objè a ka fè
+        &quot;&quot;&quot;
+        return &quot;Aksyon&quot;
+</code></pre>
+
+<h4 id="egzanp-detaye-klas">🔧 Egzanp Detaye Klas</h4>
+<p><strong>Egzanp 1: Klas Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: KLAS DEBAZ ===&quot;)
+
+class Pèson:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon pèson
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj):
+        &quot;&quot;&quot;
+        Konstriktè pou Pèson
+
+        Args:
+            non (str): Non pèson nan
+            laj (int): Laj pèson nan
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+        print(f&quot;Pèson {self.non} kreye!&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon pèson nan
+        &quot;&quot;&quot;
+        print(f&quot;Non: {self.non}&quot;)
+        print(f&quot;Laj: {self.laj}&quot;)
+
+    def fèt_anivèrsè(self):
+        &quot;&quot;&quot;
+        Ogmante laj pèson nan
+        &quot;&quot;&quot;
+        self.laj += 1
+        print(f&quot;Bon fèt! {self.non} genyen {self.laj} ane!&quot;)
+
+# Kreye objè yo
+pèson1 = Pèson(&quot;Marie&quot;, 25)
+pèson2 = Pèson(&quot;Jean&quot;, 30)
+
+# Sèvi ak objè yo
+pèson1.afiche_infò()
+pèson1.fèt_anivèrsè()
+pèson1.afiche_infò()
+
+pèson2.afiche_infò()
+</code></pre>
+
+<p><strong>Egzanp 2: Klas ak Plizyè Atribi</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: KLAS AK PLIZYÈ ATRIBI ===&quot;)
+
+class Elèv:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon elèv
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj, klas, nòt_yo=None):
+        &quot;&quot;&quot;
+        Konstriktè pou Elèv
+
+        Args:
+            non (str): Non elèv la
+            laj (int): Laj elèv la
+            klas (str): Klas elèv la
+            nòt_yo (list): Lis nòt elèv la
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+        self.klas = klas
+        self.nòt_yo = nòt_yo if nòt_yo else []
+        self.matrik = self.jenere_matrik()
+
+    def jenere_matrik(self):
+        &quot;&quot;&quot;
+        Jenere nimewo matrik elèv la
+        &quot;&quot;&quot;
+        import random
+        return f&quot;EL{random.randint(1000, 9999)}&quot;
+
+    def ajoute_nòt(self, nòt):
+        &quot;&quot;&quot;
+        Ajoute yon nòt pou elèv la
+
+        Args:
+            nòt (float): Nòt pou ajoute
+        &quot;&quot;&quot;
+        if 0 &lt;= nòt &lt;= 100:
+            self.nòt_yo.append(nòt)
+            print(f&quot;Nòt {nòt} ajoute pou {self.non}&quot;)
+        else:
+            print(&quot;Nòt la dwe ant 0 ak 100&quot;)
+
+    def kalkile_mwayèn(self):
+        &quot;&quot;&quot;
+        Kalkile mwayèn nòt elèv la
+
+        Returns:
+            float: Mwayèn nòt yo
+        &quot;&quot;&quot;
+        if self.nòt_yo:
+            return sum(self.nòt_yo) / len(self.nòt_yo)
+        return 0.0
+
+    def afiche_rapò(self):
+        &quot;&quot;&quot;
+        Afiche rapò elèv la
+        &quot;&quot;&quot;
+        print(f&quot;\n=== RAPÒ ELÈV ===&quot;)
+        print(f&quot;Non: {self.non}&quot;)
+        print(f&quot;Laj: {self.laj}&quot;)
+        print(f&quot;Klas: {self.klas}&quot;)
+        print(f&quot;Matrik: {self.matrik}&quot;)
+        print(f&quot;Nòt yo: {self.nòt_yo}&quot;)
+        print(f&quot;Mwayèn: {self.kalkile_mwayèn():.2f}&quot;)
+
+# Kreye elèv yo
+elèv1 = Elèv(&quot;Marie&quot;, 15, &quot;3e ane&quot;)
+elèv2 = Elèv(&quot;Jean&quot;, 16, &quot;4e ane&quot;, [85, 90, 78])
+
+# Ajoute nòt yo
+elèv1.ajoute_nòt(85)
+elèv1.ajoute_nòt(90)
+elèv1.ajoute_nòt(78)
+
+# Afiche rapò yo
+elèv1.afiche_rapò()
+elèv2.afiche_rapò()
+</code></pre>
+
+<p><strong>Egzanp 3: Klas ak Metòd Konplèks</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: KLAS AK METÒD KONPLÈKS ===&quot;)
+
+class KontBankè:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon kont bankè
+    &quot;&quot;&quot;
+
+    def __init__(self, non, nimewo_kont, balans_initial=0):
+        &quot;&quot;&quot;
+        Konstriktè pou KontBankè
+
+        Args:
+            non (str): Non moun ki posede kont la
+            nimewo_kont (str): Nimewo kont la
+            balans_initial (float): Balans kòmanse
+        &quot;&quot;&quot;
+        self.non = non
+        self.nimewo_kont = nimewo_kont
+        self.balans = balans_initial
+        self.transaksyon_yo = []
+        print(f&quot;Kont bankè kreye pou {self.non}&quot;)
+
+    def depoze(self, kantite):
+        &quot;&quot;&quot;
+        Depoze lajan nan kont la
+
+        Args:
+            kantite (float): Kantite lajan pou depoze
+        &quot;&quot;&quot;
+        if kantite &gt; 0:
+            self.balans += kantite
+            self.transaksyon_yo.append(f&quot;Depoze: +{kantite}&quot;)
+            print(f&quot;${kantite} depoze. Nouvo balans: ${self.balans}&quot;)
+        else:
+            print(&quot;Kantite la dwe pozitif&quot;)
+
+    def retire(self, kantite):
+        &quot;&quot;&quot;
+        Retire lajan nan kont la
+
+        Args:
+            kantite (float): Kantite lajan pou retire
+        &quot;&quot;&quot;
+        if kantite &gt; 0:
+            if kantite &lt;= self.balans:
+                self.balans -= kantite
+                self.transaksyon_yo.append(f&quot;Retire: -{kantite}&quot;)
+                print(f&quot;${kantite} retire. Nouvo balans: ${self.balans}&quot;)
+            else:
+                print(&quot;Pa gen ase lajan nan kont la&quot;)
+        else:
+            print(&quot;Kantite la dwe pozitif&quot;)
+
+    def afiche_balans(self):
+        &quot;&quot;&quot;
+        Afiche balans aktyèl la
+        &quot;&quot;&quot;
+        print(f&quot;Balans aktyèl: ${self.balans}&quot;)
+
+    def afiche_istwa(self):
+        &quot;&quot;&quot;
+        Afiche istwa transaksyon yo
+        &quot;&quot;&quot;
+        print(f&quot;\n=== ISTWA TRANSAKSYON ===&quot;)
+        print(f&quot;Kont: {self.nimewo_kont}&quot;)
+        print(f&quot;Pwopriyetè: {self.non}&quot;)
+        print(f&quot;Balans: ${self.balans}&quot;)
+        print(&quot;\nTransaksyon yo:&quot;)
+        for i, transaksyon in enumerate(self.transaksyon_yo, 1):
+            print(f&quot;  {i}. {transaksyon}&quot;)
+
+# Kreye kont yo
+kont1 = KontBankè(&quot;Marie&quot;, &quot;123456&quot;, 1000)
+kont2 = KontBankè(&quot;Jean&quot;, &quot;789012&quot;, 500)
+
+# Fè transaksyon yo
+kont1.depoze(500)
+kont1.retire(200)
+kont1.depoze(100)
+
+kont2.retire(100)
+kont2.depoze(300)
+
+# Afiche enfòmasyon yo
+kont1.afiche_istwa()
+kont2.afiche_istwa()
+</code></pre>
+
+<hr />
+<h3 id="konstrikte-ak-destrikte">🔧 Konstriktè ak Destriktè</h3>
+<h4 id="kisa-se-konstrikte-ak-destrikte">🎯 Kisa se "Konstriktè" ak "Destriktè"?</h4>
+<p><strong>Konstriktè</strong> se metòd espesyal ki inisyalize objè a lè li kreye.
+<strong>Destriktè</strong> se metòd espesyal ki netwaye objè a lè li detwi.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Konstriktè se tankou yon moun ki prepare yon chanm nan otèl la, destriktè se tankou yon moun ki netwaye chanm nan apre ou fini.</p>
+</blockquote>
+<h4 id="metod-espesyal_1">📋 Metòd Espesyal</h4>
+<table>
+<thead>
+<tr>
+<th>Metòd</th>
+<th>Deskripsyon</th>
+<th>Lè Sèvi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><strong>init</strong></strong></td>
+<td>Konstriktè</td>
+<td>Lè kreye objè</td>
+</tr>
+<tr>
+<td><strong><strong>del</strong></strong></td>
+<td>Destriktè</td>
+<td>Lè detwi objè</td>
+</tr>
+<tr>
+<td><strong><strong>str</strong></strong></td>
+<td>Reprezantasyon string</td>
+<td>Lè afiche objè</td>
+</tr>
+<tr>
+<td><strong><strong>repr</strong></strong></td>
+<td>Reprezantasyon teknik</td>
+<td>Lè debogaj</td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-metod-espesyal">🔧 Egzanp Detaye Metòd Espesyal</h4>
+<p><strong>Egzanp 1: Konstriktè ak Destriktè</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: KONSTRIKTÈ AK DESTRIKTÈ ===&quot;)
+
+class Fichier:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon fichier
+    &quot;&quot;&quot;
+
+    def __init__(self, non, gwosè):
+        &quot;&quot;&quot;
+        Konstriktè pou Fichier
+
+        Args:
+            non (str): Non fichier la
+            gwosè (int): Gwosè fichier la nan bytes
+        &quot;&quot;&quot;
+        self.non = non
+        self.gwosè = gwosè
+        self.ouvri = False
+        print(f&quot;Fichier '{self.non}' kreye ({self.gwosè} bytes)&quot;)
+
+    def ouvri_fichier(self):
+        &quot;&quot;&quot;
+        Ouvri fichier la
+        &quot;&quot;&quot;
+        if not self.ouvri:
+            self.ouvri = True
+            print(f&quot;Fichier '{self.non}' ouvri&quot;)
+        else:
+            print(f&quot;Fichier '{self.non}' deja ouvri&quot;)
+
+    def fèmen_fichier(self):
+        &quot;&quot;&quot;
+        Fèmen fichier la
+        &quot;&quot;&quot;
+        if self.ouvri:
+            self.ouvri = False
+            print(f&quot;Fichier '{self.non}' fèmen&quot;)
+        else:
+            print(f&quot;Fichier '{self.non}' deja fèmen&quot;)
+
+    def __del__(self):
+        &quot;&quot;&quot;
+        Destriktè - Netwaye resous yo
+        &quot;&quot;&quot;
+        if self.ouvri:
+            print(f&quot;⚠️ Fichier '{self.non}' pa t fèmen! Fèmen li...&quot;)
+            self.fèmen_fichier()
+        print(f&quot;Fichier '{self.non}' detwi&quot;)
+
+    def __str__(self):
+        &quot;&quot;&quot;
+        Reprezantasyon string pou Fichier
+        &quot;&quot;&quot;
+        eta = &quot;ouvri&quot; if self.ouvri else &quot;fèmen&quot;
+        return f&quot;Fichier: {self.non} ({self.gwosè} bytes, {eta})&quot;
+
+    def __repr__(self):
+        &quot;&quot;&quot;
+        Reprezantasyon teknik pou Fichier
+        &quot;&quot;&quot;
+        return f&quot;Fichier('{self.non}', {self.gwosè})&quot;
+
+# Kreye fichier yo
+fichier1 = Fichier(&quot;dokiman.txt&quot;, 1024)
+fichier2 = Fichier(&quot;imaj.jpg&quot;, 2048)
+
+# Sèvi ak fichier yo
+fichier1.ouvri_fichier()
+fichier2.ouvri_fichier()
+fichier1.fèmen_fichier()
+
+# Afiche enfòmasyon yo
+print(f&quot;Fichier 1: {fichier1}&quot;)
+print(f&quot;Fichier 2: {fichier2}&quot;)
+
+# Detwi fichier yo (destriktè yo pral rele)
+del fichier1
+del fichier2
+</code></pre>
+
+<p><strong>Egzanp 2: Metòd Espesyal Konplèks</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: METÒD ESPESYAL KONPLÈKS ===&quot;)
+
+class Vektè:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon vektè 2D
+    &quot;&quot;&quot;
+
+    def __init__(self, x, y):
+        &quot;&quot;&quot;
+        Konstriktè pou Vektè
+
+        Args:
+            x (float): Kòòdone x
+            y (float): Kòòdone y
+        &quot;&quot;&quot;
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        &quot;&quot;&quot;
+        Reprezantasyon string pou Vektè
+        &quot;&quot;&quot;
+        return f&quot;Vektè({self.x}, {self.y})&quot;
+
+    def __repr__(self):
+        &quot;&quot;&quot;
+        Reprezantasyon teknik pou Vektè
+        &quot;&quot;&quot;
+        return f&quot;Vektè({self.x}, {self.y})&quot;
+
+    def __add__(self, lòt):
+        &quot;&quot;&quot;
+        Adisyon de vektè
+
+        Args:
+            lòt (Vektè): Lòt vektè pou ajoute
+
+        Returns:
+            Vektè: Nouvo vektè
+        &quot;&quot;&quot;
+        return Vektè(self.x + lòt.x, self.y + lòt.y)
+
+    def __sub__(self, lòt):
+        &quot;&quot;&quot;
+        Soustraksyon de vektè
+
+        Args:
+            lòt (Vektè): Lòt vektè pou soustraksyon
+
+        Returns:
+            Vektè: Nouvo vektè
+        &quot;&quot;&quot;
+        return Vektè(self.x - lòt.x, self.y - lòt.y)
+
+    def __mul__(self, skalar):
+        &quot;&quot;&quot;
+        Miltiplikasyon vektè ak skalar
+
+        Args:
+            skalar (float): Nimewo pou miltipliye
+
+        Returns:
+            Vektè: Nouvo vektè
+        &quot;&quot;&quot;
+        return Vektè(self.x * skalar, self.y * skalar)
+
+    def __len__(self):
+        &quot;&quot;&quot;
+        Longè vektè a (magnitude)
+
+        Returns:
+            float: Longè vektè a
+        &quot;&quot;&quot;
+        import math
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def __eq__(self, lòt):
+        &quot;&quot;&quot;
+        Konparezon egalite
+
+        Args:
+            lòt (Vektè): Lòt vektè pou konpare
+
+        Returns:
+            bool: True si egal, False sinon
+        &quot;&quot;&quot;
+        return self.x == lòt.x and self.y == lòt.y
+
+# Teste vektè yo
+v1 = Vektè(3, 4)
+v2 = Vektè(1, 2)
+
+print(f&quot;V1: {v1}&quot;)
+print(f&quot;V2: {v2}&quot;)
+print(f&quot;V1 + V2: {v1 + v2}&quot;)
+print(f&quot;V1 - V2: {v1 - v2}&quot;)
+print(f&quot;V1 * 2: {v1 * 2}&quot;)
+print(f&quot;Longè V1: {len(v1):.2f}&quot;)
+print(f&quot;V1 == V2: {v1 == v2}&quot;)
+</code></pre>
+
+<hr />
+<h3 id="metod-static-instance-ak-class">🔧 Metòd Static, Instance, ak Class</h3>
+<h4 id="kisa-se-metod-static-instance-ak-class">🎯 Kisa se "Metòd Static, Instance, ak Class"?</h4>
+<p><strong>Instance Method</strong> se metòd ki travay ak objè espesifik.
+<strong>Static Method</strong> se metòd ki pa bezwen objè pou travay.
+<strong>Class Method</strong> se metòd ki travay ak klas la menm.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Instance se tankou aksyon yon moun espesifik, static se tankou aksyon jeneral, class se tankou aksyon pou tout moun nan yon gwoup.</p>
+</blockquote>
+<h4 id="kalite-metod">📋 Kalite Metòd</h4>
+<table>
+<thead>
+<tr>
+<th>Kalite</th>
+<th>Deskripsyon</th>
+<th>Sentaks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instance</strong></td>
+<td>Travay ak objè espesifik</td>
+<td><code>def metòd(self):</code></td>
+</tr>
+<tr>
+<td><strong>Static</strong></td>
+<td>Pa bezwen objè</td>
+<td><code>@staticmethod</code></td>
+</tr>
+<tr>
+<td><strong>Class</strong></td>
+<td>Travay ak klas</td>
+<td><code>@classmethod</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-kalite-metod">🔧 Egzanp Detaye Kalite Metòd</h4>
+<p><strong>Egzanp 1: Metòd Instance</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: METÒD INSTANCE ===&quot;)
+
+class Elèv:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon elèv
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj):
+        &quot;&quot;&quot;
+        Konstriktè pou Elèv
+
+        Args:
+            non (str): Non elèv la
+            laj (int): Laj elèv la
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+        self.nòt_yo = []
+
+    def ajoute_nòt(self, nòt):
+        &quot;&quot;&quot;
+        Metòd instance - ajoute nòt pou elèv espesifik
+
+        Args:
+            nòt (float): Nòt pou ajoute
+        &quot;&quot;&quot;
+        self.nòt_yo.append(nòt)
+        print(f&quot;Nòt {nòt} ajoute pou {self.non}&quot;)
+
+    def kalkile_mwayèn(self):
+        &quot;&quot;&quot;
+        Metòd instance - kalkile mwayèn pou elèv espesifik
+
+        Returns:
+            float: Mwayèn nòt yo
+        &quot;&quot;&quot;
+        if self.nòt_yo:
+            return sum(self.nòt_yo) / len(self.nòt_yo)
+        return 0.0
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Metòd instance - afiche enfòmasyon elèv espesifik
+        &quot;&quot;&quot;
+        print(f&quot;Elèv: {self.non}, Laj: {self.laj}&quot;)
+        print(f&quot;Nòt yo: {self.nòt_yo}&quot;)
+        print(f&quot;Mwayèn: {self.kalkile_mwayèn():.2f}&quot;)
+
+# Kreye elèv yo
+elèv1 = Elèv(&quot;Marie&quot;, 15)
+elèv2 = Elèv(&quot;Jean&quot;, 16)
+
+# Sèvi ak metòd instance
+elèv1.ajoute_nòt(85)
+elèv1.ajoute_nòt(90)
+elèv1.afiche_infò()
+
+elèv2.ajoute_nòt(78)
+elèv2.ajoute_nòt(92)
+elèv2.afiche_infò()
+</code></pre>
+
+<p><strong>Egzanp 2: Metòd Static</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: METÒD STATIC ===&quot;)
+
+class Matematik:
+    &quot;&quot;&quot;
+    Klas pou fonksyon matematik
+    &quot;&quot;&quot;
+
+    @staticmethod
+    def kalkile_kare(nimewo):
+        &quot;&quot;&quot;
+        Metòd static - kalkile kare yon nimewo
+
+        Args:
+            nimewo (float): Nimewo pou kalkile kare
+
+        Returns:
+            float: Kare nimewo a
+        &quot;&quot;&quot;
+        return nimewo ** 2
+
+    @staticmethod
+    def kalkile_kib(nimewo):
+        &quot;&quot;&quot;
+        Metòd static - kalkile kib yon nimewo
+
+        Args:
+            nimewo (float): Nimewo pou kalkile kib
+
+        Returns:
+            float: Kib nimewo a
+        &quot;&quot;&quot;
+        return nimewo ** 3
+
+    @staticmethod
+    def teste_nimewo_premye(nimewo):
+        &quot;&quot;&quot;
+        Metòd static - teste si yon nimewo se premye
+
+        Args:
+            nimewo (int): Nimewo pou teste
+
+        Returns:
+            bool: True si premye, False sinon
+        &quot;&quot;&quot;
+        if nimewo &lt; 2:
+            return False
+        for i in range(2, int(nimewo**0.5) + 1):
+            if nimewo % i == 0:
+                return False
+        return True
+
+    @staticmethod
+    def jenere_lis_nimewo_premye(limit):
+        &quot;&quot;&quot;
+        Metòd static - jenere lis nimewo premye
+
+        Args:
+            limit (int): Limit pou jenere
+
+        Returns:
+            list: Lis nimewo premye yo
+        &quot;&quot;&quot;
+        premye_yo = []
+        for n in range(2, limit + 1):
+            if Matematik.teste_nimewo_premye(n):
+                premye_yo.append(n)
+        return premye_yo
+
+# Sèvi ak metòd static
+print(f&quot;Kare 5: {Matematik.kalkile_kare(5)}&quot;)
+print(f&quot;Kib 3: {Matematik.kalkile_kib(3)}&quot;)
+print(f&quot;7 se premye: {Matematik.teste_nimewo_premye(7)}&quot;)
+print(f&quot;8 se premye: {Matematik.teste_nimewo_premye(8)}&quot;)
+print(f&quot;Nimewo premye jiska 20: {Matematik.jenere_lis_nimewo_premye(20)}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Metòd Class</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: METÒD CLASS ===&quot;)
+
+class Pèson:
+    &quot;&quot;&quot;
+    Klas pou reprezante yon pèson
+    &quot;&quot;&quot;
+
+    total_pèson = 0  # Varyab klas
+
+    def __init__(self, non, laj):
+        &quot;&quot;&quot;
+        Konstriktè pou Pèson
+
+        Args:
+            non (str): Non pèson nan
+            laj (int): Laj pèson nan
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+        Pèson.total_pèson += 1
+
+    @classmethod
+    def kreye_ak_enfò(cls, enfòmasyon):
+        &quot;&quot;&quot;
+        Metòd class - kreye pèson ak enfòmasyon
+
+        Args:
+            enfòmasyon (str): Enfòmasyon nan fòma &quot;non,laj&quot;
+
+        Returns:
+            Pèson: Nouvo pèson
+        &quot;&quot;&quot;
+        non, laj = enfòmasyon.split(',')
+        return cls(non.strip(), int(laj.strip()))
+
+    @classmethod
+    def kreye_ak_laj_defo(cls, non):
+        &quot;&quot;&quot;
+        Metòd class - kreye pèson ak laj defo
+
+        Args:
+            non (str): Non pèson nan
+
+        Returns:
+            Pèson: Nouvo pèson
+        &quot;&quot;&quot;
+        return cls(non, 18)  # Laj defo 18
+
+    @classmethod
+    def afiche_total(cls):
+        &quot;&quot;&quot;
+        Metòd class - afiche total pèson yo
+
+        Returns:
+            int: Total pèson yo
+        &quot;&quot;&quot;
+        print(f&quot;Total pèson yo: {cls.total_pèson}&quot;)
+        return cls.total_pèson
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Metòd instance - afiche enfòmasyon pèson nan
+        &quot;&quot;&quot;
+        print(f&quot;Non: {self.non}, Laj: {self.laj}&quot;)
+
+# Sèvi ak metòd class
+pèson1 = Pèson(&quot;Marie&quot;, 25)
+pèson2 = Pèson.kreye_ak_enfò(&quot;Jean, 30&quot;)
+pèson3 = Pèson.kreye_ak_laj_defo(&quot;Sara&quot;)
+
+# Afiche enfòmasyon yo
+pèson1.afiche_infò()
+pèson2.afiche_infò()
+pèson3.afiche_infò()
+
+# Afiche total
+Pèson.afiche_total()
+</code></pre>
+
+<hr />
+<h3 id="eritaj-inheritance">🔧 Eritaj (Inheritance)</h3>
+<h4 id="kisa-se-eritaj">🎯 Kisa se "Eritaj"?</h4>
+<p><strong>Eritaj</strong> se fason yon klas ka herite karakteristik ak metòd nan yon lòt klas. Li pèmèt ou kreye klas nouvo ki bati sou klas ki deja egziste.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Eritaj se tankou yon fanmi - timoun yo herite karakteristik nan paran yo men yo ka genyen karakteristik espesyal tou.</p>
+</blockquote>
+<h4 id="sentaks-eritaj">📋 Sentaks Eritaj</h4>
+<pre class="codehilite"><code class="language-python">class KlasParent:
+    &quot;&quot;&quot;
+    Klas parent
+    &quot;&quot;&quot;
+    pass
+
+class KlasChild(KlasParent):
+    &quot;&quot;&quot;
+    Klas child ki herite nan KlasParent
+    &quot;&quot;&quot;
+    pass
+</code></pre>
+
+<h4 id="egzanp-detaye-eritaj">🔧 Egzanp Detaye Eritaj</h4>
+<p><strong>Egzanp 1: Eritaj Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: ERITAJ DEBAZ ===&quot;)
+
+class Animal:
+    &quot;&quot;&quot;
+    Klas parent pou tout bèt yo
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj):
+        &quot;&quot;&quot;
+        Konstriktè pou Animal
+
+        Args:
+            non (str): Non bèt la
+            laj (int): Laj bèt la
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+
+    def manje(self):
+        &quot;&quot;&quot;
+        Metòd pou manje
+        &quot;&quot;&quot;
+        print(f&quot;{self.non} ap manje&quot;)
+
+    def dòmi(self):
+        &quot;&quot;&quot;
+        Metòd pou dòmi
+        &quot;&quot;&quot;
+        print(f&quot;{self.non} ap dòmi&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon bèt la
+        &quot;&quot;&quot;
+        print(f&quot;Non: {self.non}, Laj: {self.laj}&quot;)
+
+class Chen(Animal):
+    &quot;&quot;&quot;
+    Klas child pou chen yo
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj, ras):
+        &quot;&quot;&quot;
+        Konstriktè pou Chen
+
+        Args:
+            non (str): Non chen an
+            laj (int): Laj chen an
+            ras (str): Ras chen an
+        &quot;&quot;&quot;
+        super().__init__(non, laj)  # Rele konstriktè parent
+        self.ras = ras
+
+    def abwè(self):
+        &quot;&quot;&quot;
+        Metòd espesyal pou chen
+        &quot;&quot;&quot;
+        print(f&quot;{self.non} ap abwè: Woof! Woof!&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon chen an
+        &quot;&quot;&quot;
+        super().afiche_infò()  # Rele metòd parent
+        print(f&quot;Ras: {self.ras}&quot;)
+
+class Chat(Animal):
+    &quot;&quot;&quot;
+    Klas child pou chat yo
+    &quot;&quot;&quot;
+
+    def __init__(self, non, laj, koulè):
+        &quot;&quot;&quot;
+        Konstriktè pou Chat
+
+        Args:
+            non (str): Non chat la
+            laj (int): Laj chat la
+            koulè (str): Koulè chat la
+        &quot;&quot;&quot;
+        super().__init__(non, laj)  # Rele konstriktè parent
+        self.koulè = koulè
+
+    def miyaw(self):
+        &quot;&quot;&quot;
+        Metòd espesyal pou chat
+        &quot;&quot;&quot;
+        print(f&quot;{self.non} ap miyaw: Meow! Meow!&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon chat la
+        &quot;&quot;&quot;
+        super().afiche_infò()  # Rele metòd parent
+        print(f&quot;Koulè: {self.koulè}&quot;)
+
+# Kreye bèt yo
+chen1 = Chen(&quot;Rex&quot;, 3, &quot;German Shepherd&quot;)
+chat1 = Chat(&quot;Whiskers&quot;, 2, &quot;Nwa&quot;)
+
+# Sèvi ak metòd yo
+chen1.afiche_infò()
+chen1.manje()
+chen1.abwè()
+
+print()
+
+chat1.afiche_infò()
+chat1.dòmi()
+chat1.miyaw()
+</code></pre>
+
+<p><strong>Egzanp 2: Eritaj Konplèks</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: ERITAJ KONPLÈKS ===&quot;)
+
+class Veyikil:
+    &quot;&quot;&quot;
+    Klas parent pou tout veyikil yo
+    &quot;&quot;&quot;
+
+    def __init__(self, mak, modèl, ane):
+        &quot;&quot;&quot;
+        Konstriktè pou Veyikil
+
+        Args:
+            mak (str): Mak veyikil la
+            modèl (str): Modèl veyikil la
+            ane (int): Ane veyikil la
+        &quot;&quot;&quot;
+        self.mak = mak
+        self.modèl = modèl
+        self.ane = ane
+        self.vitès = 0
+
+    def demare(self):
+        &quot;&quot;&quot;
+        Demare veyikil la
+        &quot;&quot;&quot;
+        print(f&quot;{self.mak} {self.modèl} demare&quot;)
+        self.vitès = 10
+
+    def rale(self):
+        &quot;&quot;&quot;
+        Rale veyikil la
+        &quot;&quot;&quot;
+        print(f&quot;{self.mak} {self.modèl} rale&quot;)
+        self.vitès = 0
+
+    def akselere(self, kantite):
+        &quot;&quot;&quot;
+        Akselere veyikil la
+
+        Args:
+            kantite (int): Kantite pou akselere
+        &quot;&quot;&quot;
+        self.vitès += kantite
+        print(f&quot;{self.mak} {self.modèl} akselere nan {self.vitès} km/h&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon veyikil la
+        &quot;&quot;&quot;
+        print(f&quot;Veyikil: {self.mak} {self.modèl} ({self.ane})&quot;)
+        print(f&quot;Vitès aktyèl: {self.vitès} km/h&quot;)
+
+class Machin(Veyikil):
+    &quot;&quot;&quot;
+    Klas child pou machin yo
+    &quot;&quot;&quot;
+
+    def __init__(self, mak, modèl, ane, nimewo_siye):
+        &quot;&quot;&quot;
+        Konstriktè pou Machin
+
+        Args:
+            mak (str): Mak machin nan
+            modèl (str): Modèl machin nan
+            ane (int): Ane machin nan
+            nimewo_siye (str): Nimewo siye machin nan
+        &quot;&quot;&quot;
+        super().__init__(mak, modèl, ane)
+        self.nimewo_siye = nimewo_siye
+        self.nimewo_pasajè = 0
+
+    def monte_pasajè(self, kantite):
+        &quot;&quot;&quot;
+        Monte pasajè nan machin nan
+
+        Args:
+            kantite (int): Kantite pasajè pou monte
+        &quot;&quot;&quot;
+        self.nimewo_pasajè += kantite
+        print(f&quot;{kantite} pasajè monte nan machin nan&quot;)
+
+    def desann_pasajè(self, kantite):
+        &quot;&quot;&quot;
+        Desann pasajè nan machin nan
+
+        Args:
+            kantite (int): Kantite pasajè pou desann
+        &quot;&quot;&quot;
+        if kantite &lt;= self.nimewo_pasajè:
+            self.nimewo_pasajè -= kantite
+            print(f&quot;{kantite} pasajè desann nan machin nan&quot;)
+        else:
+            print(&quot;Pa gen ase pasajè nan machin nan&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon machin nan
+        &quot;&quot;&quot;
+        super().afiche_infò()
+        print(f&quot;Nimewo siye: {self.nimewo_siye}&quot;)
+        print(f&quot;Pasajè yo: {self.nimewo_pasajè}&quot;)
+
+class Motosiklèt(Veyikil):
+    &quot;&quot;&quot;
+    Klas child pou motosiklèt yo
+    &quot;&quot;&quot;
+
+    def __init__(self, mak, modèl, ane, gwosè_motè):
+        &quot;&quot;&quot;
+        Konstriktè pou Motosiklèt
+
+        Args:
+            mak (str): Mak motosiklèt la
+            modèl (str): Modèl motosiklèt la
+            ane (int): Ane motosiklèt la
+            gwosè_motè (int): Gwosè motè a nan cc
+        &quot;&quot;&quot;
+        super().__init__(mak, modèl, ane)
+        self.gwosè_motè = gwosè_motè
+        self.kaske = False
+
+    def mete_kaske(self):
+        &quot;&quot;&quot;
+        Mete kaske
+        &quot;&quot;&quot;
+        self.kaske = True
+        print(&quot;Kaske mete&quot;)
+
+    def retire_kaske(self):
+        &quot;&quot;&quot;
+        Retire kaske
+        &quot;&quot;&quot;
+        self.kaske = False
+        print(&quot;Kaske retire&quot;)
+
+    def akselere(self, kantite):
+        &quot;&quot;&quot;
+        Akselere motosiklèt la (ovrride metòd parent)
+
+        Args:
+            kantite (int): Kantite pou akselere
+        &quot;&quot;&quot;
+        if not self.kaske:
+            print(&quot;⚠️ Mete kaske anvan ou akselere!&quot;)
+            return
+
+        super().akselere(kantite)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;
+        Afiche enfòmasyon motosiklèt la
+        &quot;&quot;&quot;
+        super().afiche_infò()
+        print(f&quot;Gwosè motè: {self.gwosè_motè}cc&quot;)
+        print(f&quot;Kaske: {'Mete' if self.kaske else 'Pa mete'}&quot;)
+
+# Kreye veyikil yo
+machin1 = Machin(&quot;Toyota&quot;, &quot;Camry&quot;, 2020, &quot;ABC-123&quot;)
+motosiklèt1 = Motosiklèt(&quot;Honda&quot;, &quot;CBR&quot;, 2021, 600)
+
+# Sèvi ak machin nan
+machin1.demare()
+machin1.monte_pasajè(3)
+machin1.akselere(30)
+machin1.afiche_infò()
+
+print()
+
+# Sèvi ak motosiklèt la
+motosiklèt1.demare()
+motosiklèt1.mete_kaske()
+motosiklèt1.akselere(50)
+motosiklèt1.afiche_infò()
+</code></pre>
+
+<hr />
+<h3 id="resime-klas-ak-obje">📊 Resime Klas ak Objè</h3>
+<h4 id="tem-enpotan-yo_2">🎯 Tèm Enpòtan yo</h4>
+<table>
+<thead>
+<tr>
+<th>Tèm</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Class</strong></td>
+<td>Plan pou kreye objè</td>
+<td><code>class Pèson:</code></td>
+</tr>
+<tr>
+<td><strong>Object</strong></td>
+<td>Egzanp yon klas</td>
+<td><code>pèson1 = Pèson()</code></td>
+</tr>
+<tr>
+<td><strong>Constructor</strong></td>
+<td>Inisyalize objè</td>
+<td><code>def __init__(self):</code></td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>Fonksyon nan klas</td>
+<td><code>def metòd(self):</code></td>
+</tr>
+<tr>
+<td><strong>Attribute</strong></td>
+<td>Karakteristik objè</td>
+<td><code>self.non = "Marie"</code></td>
+</tr>
+<tr>
+<td><strong>Inheritance</strong></td>
+<td>Herite nan klas parent</td>
+<td><code>class Child(Parent):</code></td>
+</tr>
+<tr>
+<td><strong>Encapsulation</strong></td>
+<td>Kache detay entèn</td>
+<td><code>self.__private</code></td>
+</tr>
+<tr>
+<td><strong>Polymorphism</strong></td>
+<td>Yon menm aksyon, diferan rezilta</td>
+<td>Override metòd</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reg-enpotan_2">🔧 Règ Enpòtan</h4>
+<ol>
+<li><strong>Naming</strong>: Non klas yo dwe kòmanse ak lèt majiskil</li>
+<li><strong>Constructor</strong>: Toujou defini <code>__init__</code> si nesesè</li>
+<li><strong>Self</strong>: Toujou sèvi ak <code>self</code> nan metòd instance</li>
+<li><strong>Inheritance</strong>: Sèvi ak <code>super()</code> pou rele metòd parent</li>
+<li><strong>Documentation</strong>: Toujou ekri docstring</li>
+</ol>
+<h4 id="ere-komen_2">⚠️ Erè Komen</h4>
+<ol>
+<li><strong>Oubliye self</strong> nan metòd instance</li>
+<li><strong>Pa rele super()</strong> nan konstriktè child</li>
+<li><strong>Pa respekte naming</strong> konvansyon yo</li>
+<li><strong>Pa teste klas</strong> yo ak diferan objè</li>
+</ol>
+<hr />
+<h3 id="egzesis-pratik_2">🎮 Egzèsis Pratik</h3>
+<p><strong>Egzèsis 1: Klas Bank</strong>
+Kreye yon klas Bank ak metòd pou jere kont yo.</p>
+<p><strong>Egzèsis 2: Klas Lekòl</strong>
+Kreye yon klas Lekòl ak eritaj pou Elèv ak Pwofesè.</p>
+<p><strong>Egzèsis 3: Klas Jwèt</strong>
+Kreye yon klas Jwèt ak eritaj pou diferan kalite jwèt.</p>
+<p><strong>Egzèsis 4: Sistèm Bibliyotèk</strong>
+Kreye yon sistèm jesyon bibliyotèk ak OOP.
+2. <strong>Reutilizasyon</strong>: Sèvi ak menm kòd la plizyè fwa
+3. <strong>Kenbe</strong>: Pi fasil pou chanje ak amelyore
+4. <strong>Entelijan</strong>: Kòd la imite reyalite a
+5. <strong>Evolisyon</strong>: Pi fasil pou ajoute nouvo karakteristik</p>
 <p><strong>Analoji ki fasil konprann:</strong>
 - <strong>Klas</strong> = Tankou yon plan pou yon machin
 - <strong>Objè</strong> = Tankou machin reyèl yo ki fèt dapre plan an
@@ -9690,7 +10862,7 @@ marie.afiche_infò()
 jean.afiche_infò()
 </code></pre>
 
-<h3 id="konstrikte-ak-destrikte">Konstriktè ak Destriktè</h3>
+<h3 id="konstrikte-ak-destrikte_1">Konstriktè ak Destriktè</h3>
 <h4 id="konstrikte-__init__">Konstriktè <code>__init__</code></h4>
 <pre class="codehilite"><code class="language-python">class Pèson:
     def __init__(self, non, laj):
@@ -9798,7 +10970,7 @@ print(f&quot;Kantite pèson: {Pèson.jwenn_kantite()}&quot;)  # 3
 print(f&quot;Laj Pierre: {p3.laj}&quot;)  # 29
 </code></pre>
 
-<h3 id="eritaj-inheritance">Eritaj (Inheritance)</h3>
+<h3 id="eritaj-inheritance_1">Eritaj (Inheritance)</h3>
 <h4 id="eritaj-debaz">Eritaj debaz</h4>
 <pre class="codehilite"><code class="language-python">class Animal:
     def __init__(self, non, laj):
@@ -9853,7 +11025,7 @@ kanna.vole()   # Ap vole nan syèl la
 kanna.naje()   # Ap naje nan dlo a
 </code></pre>
 
-<h4 id="metod-espesyal">Metòd espesyal</h4>
+<h4 id="metod-espesyal_2">Metòd espesyal</h4>
 <pre class="codehilite"><code class="language-python">class Pèson:
     def __init__(self, non, laj):
         self.non = non
