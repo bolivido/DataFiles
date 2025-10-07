@@ -46,3 +46,4 @@ def open_html_for_pdf():
 
 if __name__ == "__main__":
     open_html_for_pdf()
+

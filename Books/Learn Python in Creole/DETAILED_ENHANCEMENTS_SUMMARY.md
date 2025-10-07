@@ -581,3 +581,4 @@ Liv sa a kounye a se yon **resous konprèhensif ak pwofesyonèl** ki:
 **Pou**: Jamhson Boliva / Bib Kreyol LLC  
 **Dat**: Janvye 2025  
 **Objektif**: Premye liv pwogramasyon nan Kreyòl Ayisyen
+

@@ -400,6 +400,9 @@
 <h2 id="glose-fondamantal-tem-pwogramasyon-pou-debitan">📚 Glosè Fondamantal - Tèm Pwogramasyon Pou Debitan</h2>
 <h3 id="poukisa-ou-bezwen-konprann-tem-sa-yo">🎯 Poukisa Ou Bezwen Konprann Tèm Sa Yo?</h3>
 <p>Avant ou kòmanse aprann Python, li enpòtan pou ou konprann tèm fondamantal yo nan pwogramasyon. Sa yo se mo kle yo ke ou pral wè nan tout liv sa a. Chak tèm gen yon eksplikasyon detaye ak egzanp pratik.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Chak tèm sa a se tankou yon mo nan diksyonè a - ou bezwen konnen sa li vle di pou ou ka konprann Python kòrèkteman.</p>
+</blockquote>
 <hr />
 <h3 id="tem-fondamantal-pwogramasyon">🔧 Tèm Fondamantal Pwogramasyon</h3>
 <h4 id="1-syntax-sintaks-reg-ekriti-kod">1. <strong>Syntax</strong> (Sintaks) - Règ Ekriti Kòd</h4>
@@ -776,6 +779,184 @@ non.upper()        # Metòd upper() pou fè lèt yo majiskil
 
 elèv = Elèv(&quot;Marie&quot;)
 print(elèv.non)          # Afiche atribi 'non'
+</code></pre>
+
+<hr />
+<h2 id="mo-kle-python-python-keywords-referans-konple">🐍 Mo Kle Python (Python Keywords) - Referans Konplè</h2>
+<h3 id="kisa-se-mo-kle-python">🎯 Kisa se "Mo Kle Python"?</h3>
+<p><strong>Mo Kle Python</strong> se mo rezève nan langaj Python yo ke ou pa ka sèvi ak kòm non varyab. Yo gen sans espesyal nan langaj la.</p>
+<blockquote>
+<p><strong>⚠️ AVÈTISMAN:</strong> Ou pa ka sèvi ak mo kle yo kòm non varyab. Sa va bay erè!</p>
+</blockquote>
+<h3 id="lis-konple-mo-kle-python">📋 Lis Konplè Mo Kle Python</h3>
+<h4 id="mo-kle-pou-kondisyon"><strong>Mo Kle Pou Kondisyon</strong></h4>
+<ul>
+<li><strong><code>if</code></strong> - Teste kondisyon</li>
+<li><strong><code>else</code></strong> - Altènatif pou kondisyon</li>
+<li><strong><code>elif</code></strong> - Kondisyon adisyonèl</li>
+<li><strong><code>and</code></strong> - Operatè lojik "ET"</li>
+<li><strong><code>or</code></strong> - Operatè lojik "OSWA"</li>
+<li><strong><code>not</code></strong> - Operatè lojik "PA"</li>
+</ul>
+<h4 id="mo-kle-pou-boucle"><strong>Mo Kle Pou Boucle</strong></h4>
+<ul>
+<li><strong><code>for</code></strong> - Boucle pou iterasyon</li>
+<li><strong><code>while</code></strong> - Boucle ak kondisyon</li>
+<li><strong><code>break</code></strong> - Sòti nan boucle</li>
+<li><strong><code>continue</code></strong> - Kontinye nan pwochen iterasyon</li>
+<li><strong><code>pass</code></strong> - Pa fè anyen (placeholder)</li>
+</ul>
+<h4 id="mo-kle-pou-fonksyon"><strong>Mo Kle Pou Fonksyon</strong></h4>
+<ul>
+<li><strong><code>def</code></strong> - Defini fonksyon</li>
+<li><strong><code>return</code></strong> - Retounen valè</li>
+<li><strong><code>lambda</code></strong> - Fonksyon kout</li>
+<li><strong><code>yield</code></strong> - Retounen valè nan generator</li>
+</ul>
+<h4 id="mo-kle-pou-klas-ak-obje"><strong>Mo Kle Pou Klas ak Objè</strong></h4>
+<ul>
+<li><strong><code>class</code></strong> - Defini klas</li>
+<li><strong><code>self</code></strong> - Referans objè</li>
+<li><strong><code>super()</code></strong> - Aksede klas paran</li>
+<li><strong><code>__init__</code></strong> - Konstriktè</li>
+<li><strong><code>__str__</code></strong> - Reprezantasyon string</li>
+</ul>
+<h4 id="mo-kle-pou-modil"><strong>Mo Kle Pou Modil</strong></h4>
+<ul>
+<li><strong><code>import</code></strong> - Enpòte modil</li>
+<li><strong><code>from</code></strong> - Enpòte pati spesifik</li>
+<li><strong><code>as</code></strong> - Bay non alias</li>
+</ul>
+<h4 id="mo-kle-pou-jesyon-ere"><strong>Mo Kle Pou Jesyon Erè</strong></h4>
+<ul>
+<li><strong><code>try</code></strong> - Eseye kòd</li>
+<li><strong><code>except</code></strong> - Jere erè</li>
+<li><strong><code>finally</code></strong> - Toujou ekzekite</li>
+<li><strong><code>raise</code></strong> - Leve erè</li>
+</ul>
+<h4 id="mo-kle-pou-vale-espesyal"><strong>Mo Kle Pou Valè Espesyal</strong></h4>
+<ul>
+<li><strong><code>True</code></strong> - Valè Boolean vre</li>
+<li><strong><code>False</code></strong> - Valè Boolean fo</li>
+<li><strong><code>None</code></strong> - Valè vid</li>
+<li><strong><code>in</code></strong> - Teste si eleman nan koleksyon</li>
+<li><strong><code>is</code></strong> - Teste idantite objè</li>
+</ul>
+<h3 id="egzanp-mo-kle-yo">🎮 Egzanp Mo Kle yo</h3>
+<pre class="codehilite"><code class="language-python"># Mo kle kondisyon
+if True and not False:
+    print(&quot;Kondisyon vre&quot;)
+
+# Mo kle boucle
+for i in range(3):
+    if i == 1:
+        continue
+    print(i)
+
+# Mo kle fonksyon
+def fonksyon_mwen():
+    return &quot;Bonjou&quot;
+
+# Mo kle klas
+class MonKlas:
+    def __init__(self):
+        self.valè = True
+
+# Mo kle modil
+import os
+from sys import exit
+
+# Mo kle jesyon erè
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print(&quot;Pa ka divize pa zewo&quot;)
+finally:
+    print(&quot;Fini&quot;)
+
+# Mo kle valè espesyal
+if None is None:
+    print(&quot;None se None&quot;)
+</code></pre>
+
+<hr />
+<h2 id="fonksyon-entegre-python-built-in-functions">🔧 Fonksyon Entegre Python (Built-in Functions)</h2>
+<h3 id="kisa-se-fonksyon-entegre">🎯 Kisa se "Fonksyon Entegre"?</h3>
+<p><strong>Fonksyon Entegre</strong> se fonksyon yo ke Python bay otomatikman. Ou pa bezwen enpòte yo - yo disponib toujou.</p>
+<h3 id="fonksyon-entegre-enpotan">📋 Fonksyon Entegre Enpòtan</h3>
+<h4 id="fonksyon-pou-konvesyon"><strong>Fonksyon Pou Konvèsyon</strong></h4>
+<ul>
+<li><strong><code>int()</code></strong> - Konvèti nan nimewo antye</li>
+<li><strong><code>float()</code></strong> - Konvèti nan nimewo desimal</li>
+<li><strong><code>str()</code></strong> - Konvèti nan string</li>
+<li><strong><code>bool()</code></strong> - Konvèti nan Boolean</li>
+<li><strong><code>list()</code></strong> - Konvèti nan lis</li>
+<li><strong><code>tuple()</code></strong> - Konvèti nan tuple</li>
+<li><strong><code>set()</code></strong> - Konvèti nan set</li>
+<li><strong><code>dict()</code></strong> - Konvèti nan diksyone</li>
+</ul>
+<h4 id="fonksyon-pou-kalkil"><strong>Fonksyon Pou Kalkil</strong></h4>
+<ul>
+<li><strong><code>abs()</code></strong> - Valè absoli</li>
+<li><strong><code>min()</code></strong> - Valè minimòm</li>
+<li><strong><code>max()</code></strong> - Valè maksimòm</li>
+<li><strong><code>sum()</code></strong> - Sòm eleman yo</li>
+<li><strong><code>round()</code></strong> - Wonde nimewo</li>
+<li><strong><code>pow()</code></strong> - Pisans</li>
+</ul>
+<h4 id="fonksyon-pou-string"><strong>Fonksyon Pou String</strong></h4>
+<ul>
+<li><strong><code>len()</code></strong> - Longè string oswa koleksyon</li>
+<li><strong><code>ord()</code></strong> - Kod ASCII yon karaktè</li>
+<li><strong><code>chr()</code></strong> - Karaktè nan kod ASCII</li>
+</ul>
+<h4 id="fonksyon-pou-inputoutput"><strong>Fonksyon Pou Input/Output</strong></h4>
+<ul>
+<li><strong><code>print()</code></strong> - Afiche tèks</li>
+<li><strong><code>input()</code></strong> - Resevwa enfòmasyon itilizatè</li>
+<li><strong><code>open()</code></strong> - Ouvri fichier</li>
+</ul>
+<h4 id="fonksyon-pou-koleksyon"><strong>Fonksyon Pou Koleksyon</strong></h4>
+<ul>
+<li><strong><code>len()</code></strong> - Longè koleksyon</li>
+<li><strong><code>sorted()</code></strong> - Triye koleksyon</li>
+<li><strong><code>reversed()</code></strong> - Ranvèse koleksyon</li>
+<li><strong><code>enumerate()</code></strong> - Bay endeks ak valè</li>
+<li><strong><code>zip()</code></strong> - Konbine koleksyon</li>
+</ul>
+<h3 id="egzanp-fonksyon-entegre">🎮 Egzanp Fonksyon Entegre</h3>
+<pre class="codehilite"><code class="language-python"># Fonksyon konvèsyon
+nimewo = int(&quot;123&quot;)      # 123
+tèks = str(456)          # &quot;456&quot;
+lis = list(&quot;abc&quot;)        # ['a', 'b', 'c']
+
+# Fonksyon kalkil
+valè_abs = abs(-5)       # 5
+min_valè = min(1, 2, 3)  # 1
+max_valè = max(1, 2, 3)  # 3
+sòm = sum([1, 2, 3])     # 6
+
+# Fonksyon string
+longè = len(&quot;Bonjou&quot;)    # 6
+karaktè = chr(65)        # 'A'
+kod = ord('A')           # 65
+
+# Fonksyon input/output
+print(&quot;Bonjou mond!&quot;)    # Afiche: Bonjou mond!
+non = input(&quot;Non w:&quot;)    # Resevwa enfòmasyon
+
+# Fonksyon koleksyon
+lis = [3, 1, 2]
+triye = sorted(lis)      # [1, 2, 3]
+ranvèse = list(reversed(lis))  # [2, 1, 3]
+
+# enumerate ak zip
+for i, valè in enumerate(['a', 'b', 'c']):
+    print(f&quot;{i}: {valè}&quot;)  # 0: a, 1: b, 2: c
+
+lis1 = [1, 2, 3]
+lis2 = ['a', 'b', 'c']
+konbine = list(zip(lis1, lis2))  # [(1, 'a'), (2, 'b'), (3, 'c')]
 </code></pre>
 
 <hr />
@@ -1713,17 +1894,223 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>Codecademy Python:</strong> <a href="https://codecademy.com">codecademy.com</a> - Kou entèaktif</li>
 </ul>
 <hr />
-<h2 id="chapit-2-koumanse-rapid_1">Chapit 2: Koumanse Rapid</h2>
+<h2 id="chapit-2-koumanse-rapid-getting-started-quickly-eksplikasyon-detaye-pou-debitan">Chapit 2: Koumanse Rapid (Getting Started Quickly) - Eksplikasyon Detaye pou Debitan</h2>
 <h3 id="objektif-chapit_1">🎯 Objektif Chapit</h3>
 <p>Apre w fini chapit sa a, w pral kapab:
-- Konprann kisa se varyab ak kalite done
-- Sèvi ak operatè matematik, konparezon, ak lòjik
-- Kontwòle akouman pwogram ak if/else ak boucle
-- Kreye fonksyon debaz
-- Devlope yon kalkilatris senp</p>
+- <strong>Konprann kisa se varyab ak kalite done</strong> - Fondasyon Python
+- <strong>Sèvi ak operatè matematik, konparezon, ak lòjik</strong> - Kalkil ak lojik
+- <strong>Kontwòle akouman pwogram ak if/else ak boucle</strong> - Desizyon ak repètisyon
+- <strong>Kreye fonksyon debaz</strong> - Òganize kòd la
+- <strong>Devlope yon kalkilatris senp</strong> - Pwojè pratik</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Chak chapit bati sou chapit anvan an. Asire w ke ou konprann Chapit 1 anvan ou kontinye.</p>
+</blockquote>
+<h3 id="tem-kle-pou-chapit-sa-a">🔧 Tèm Kle Pou Chapit Sa A</h3>
+<h4 id="varyab-variables"><strong>Varyab (Variables)</strong></h4>
+<ul>
+<li><strong>Varyab</strong> - Plas pou sere done nan memwa</li>
+<li><strong>Non varyab</strong> - Règ pou non varyab yo</li>
+<li><strong>Assignement</strong> - Bay valè yon varyab</li>
+</ul>
+<h4 id="kalite-done-data-types"><strong>Kalite Done (Data Types)</strong></h4>
+<ul>
+<li><strong>String</strong> - Tèks, mo, ak fraz</li>
+<li><strong>Integer</strong> - Nimewo antye (san pwen desimal)</li>
+<li><strong>Float</strong> - Nimewo desimal (ak pwen desimal)</li>
+<li><strong>Boolean</strong> - Valè vre (True) oswa fo (False)</li>
+</ul>
+<h4 id="operate-operators"><strong>Operatè (Operators)</strong></h4>
+<ul>
+<li><strong>Operatè matematik</strong> - +, -, *, /, //, %, **</li>
+<li><strong>Operatè konparezon</strong> - ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+<li><strong>Operatè lojik</strong> - and, or, not</li>
+</ul>
+<h4 id="fonksyon-entegre-built-in-functions"><strong>Fonksyon Entegre (Built-in Functions)</strong></h4>
+<ul>
+<li><strong>print()</strong> - Afiche tèks nan ekran</li>
+<li><strong>input()</strong> - Resevwa enfòmasyon nan itilizatè</li>
+<li><strong>type()</strong> - Jwenn kalite done yon varyab</li>
+<li><strong>len()</strong> - Jwenn longè yon string oswa koleksyon</li>
+</ul>
 <hr />
-<h3 id="varyab-ak-kalite-done">📦 Varyab ak Kalite Done</h3>
-<h4 id="kisa-se-yon-varyab">🎁 Kisa se yon varyab?</h4>
+<h3 id="varyab-ak-kalite-done-variables-and-data-types">📦 Varyab ak Kalite Done (Variables and Data Types)</h3>
+<h4 id="kisa-se-yon-varyab-variable">🎁 Kisa se yon varyab (Variable)?</h4>
+<p><strong>Varyab</strong> se yon plas nan memwa konpitè a kote ou ka sere done. Li se tankou yon ti bwat ki gen yon non epi ki ka gen bagay andedan.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Pensez a yon varyab tankou yon etikèt ki gen yon non epi ki pointe sou yon valè nan memwa a.</p>
+</blockquote>
+<h4 id="reg-pou-non-varyab">🔧 Règ Pou Non Varyab</h4>
+<ol>
+<li>
+<p><strong>Kòmanse ak lèt oswa underscore (_)</strong>
+   <code>python
+   ✅ bon = "Bon"
+   ✅ _bon = "Bon"
+   ✅ bon3 = "Bon"</code></p>
+</li>
+<li>
+<p><strong>Pa ka kòmanse ak nimewo</strong>
+   <code>python
+   ❌ 3bon = "Mal"  # Erè!</code></p>
+</li>
+<li>
+<p><strong>Pa ka gen espas</strong>
+   <code>python
+   ❌ bon jou = "Mal"  # Erè!
+   ✅ bon_jou = "Bon"
+   ✅ bonJou = "Bon"  # camelCase</code></p>
+</li>
+<li>
+<p><strong>Pa ka sèvi ak mo kle Python</strong>
+   <code>python
+   ❌ if = "Mal"  # Erè! 'if' se mo kle
+   ❌ for = "Mal"  # Erè! 'for' se mo kle</code></p>
+</li>
+</ol>
+<h4 id="kalite-done-fondamantal-python">📋 Kalite Done Fondamantal Python</h4>
+<p>Python gen 4 kalite done fondamantal:</p>
+<table>
+<thead>
+<tr>
+<th>Kalite</th>
+<th>Non</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>str</strong></td>
+<td>String</td>
+<td>Tèks, mo, fraz</td>
+<td><code>"Bonjou"</code>, <code>'Mond'</code></td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>Integer</td>
+<td>Nimewo antye</td>
+<td><code>42</code>, <code>-5</code>, <code>0</code></td>
+</tr>
+<tr>
+<td><strong>float</strong></td>
+<td>Float</td>
+<td>Nimewo desimal</td>
+<td><code>3.14</code>, <code>-2.5</code></td>
+</tr>
+<tr>
+<td><strong>bool</strong></td>
+<td>Boolean</td>
+<td>Vre oswa Fo</td>
+<td><code>True</code>, <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="string-teks-detay-konple">🔤 String (Tèks) - Detay Konplè</h4>
+<p><strong>String</strong> se kalite done pou tèks. Ou ka kreye string yo ak kòm doub (<code>"</code>) oswa kòm sèl (<code>'</code>).</p>
+<pre class="codehilite"><code class="language-python"># Kreye string yo
+non = &quot;Marie&quot;
+mesaj = 'Bonjou mond!'
+adrès = &quot;&quot;&quot;123 Pòtoprens
+Ayiti&quot;&quot;&quot;
+
+# String ak karaktè espesyal
+chemin = &quot;C:\\dosye\\nouvo&quot;  # Escape backslash
+tèks = &quot;Li di: \&quot;Bonjou!\&quot;&quot;  # Escape quotes
+</code></pre>
+
+<p><strong>Metòd String Enpòtan:</strong>
+- <strong><code>.upper()</code></strong> - Fè lèt yo majiskil
+- <strong><code>.lower()</code></strong> - Fè lèt yo miniskil
+- <strong><code>.strip()</code></strong> - Retire espas nan kòmansman ak fen
+- <strong><code>.split()</code></strong> - Divise string nan lis
+- <strong><code>.replace()</code></strong> - Ranplase pati string
+- <strong><code>.find()</code></strong> - Chèche yon sous-string</p>
+<pre class="codehilite"><code class="language-python">tèks = &quot;  Bonjou Mond  &quot;
+
+# Metòd string
+print(tèks.upper())      # &quot;  BONJOU MOND  &quot;
+print(tèks.lower())      # &quot;  bonjou mond  &quot;
+print(tèks.strip())      # &quot;Bonjou Mond&quot;
+print(tèks.split())      # ['Bonjou', 'Mond']
+print(tèks.replace(&quot;Mond&quot;, &quot;Ayiti&quot;))  # &quot;  Bonjou Ayiti  &quot;
+print(tèks.find(&quot;Mond&quot;)) # 8
+</code></pre>
+
+<h4 id="integer-nimewo-antye-detay-konple">🔢 Integer (Nimewo Antye) - Detay Konplè</h4>
+<p><strong>Integer</strong> se nimewo antye (san pwen desimal). Yo ka pozitif, negatif, oswa zewo.</p>
+<pre class="codehilite"><code class="language-python"># Egzanp integer
+laj = 25
+negatif = -10
+zewo = 0
+gwo_nimewo = 1000000
+
+# Operasyon ak integer
+sòm = 5 + 3        # 8
+diferans = 10 - 4   # 6
+pwodui = 6 * 7      # 42
+pwopòsyon = 15 / 3  # 5.0 (retounen float)
+divizyon_antyè = 15 // 3  # 5 (retounen integer)
+rès = 17 % 5       # 2 (rès divizyon)
+pisans = 2 ** 3    # 8 (2^3)
+</code></pre>
+
+<h4 id="float-nimewo-desimal-detay-konple">🎯 Float (Nimewo Desimal) - Detay Konplè</h4>
+<p><strong>Float</strong> se nimewo desimal. Yo reprezante nimewo reyèl ak pwen desimal.</p>
+<pre class="codehilite"><code class="language-python"># Egzanp float
+pri = 25.99
+pwa = 65.5
+pi = 3.14159
+negatif_float = -2.5
+
+# Operasyon ak float
+kalkil = 3.14 + 2.86  # 6.0
+divizyon = 10 / 3     # 3.3333333333333335
+</code></pre>
+
+<blockquote>
+<p><strong>⚠️ ATANSYON:</strong> Float yo pa toujou presi 100%. Sa se nòmal nan pwogramasyon.</p>
+</blockquote>
+<h4 id="boolean-vrefo-detay-konple">✅ Boolean (Vre/Fo) - Detay Konplè</h4>
+<p><strong>Boolean</strong> se kalite done ki gen sèlman de valè: <code>True</code> oswa <code>False</code>.</p>
+<pre class="codehilite"><code class="language-python"># Egzanp Boolean
+prezan = True
+gen_lajan = False
+laj_ok = True
+
+# Boolean nan kondisyon
+if prezan:
+    print(&quot;Elèv la prezan&quot;)
+
+# Konvèsyon nan Boolean
+print(bool(1))      # True
+print(bool(0))      # False
+print(bool(&quot;&quot;))     # False
+print(bool(&quot;tèks&quot;)) # True
+</code></pre>
+
+<h4 id="fonksyon-type-ak-isinstance">🔍 Fonksyon type() ak isinstance()</h4>
+<p><strong><code>type()</code></strong> di ou ki kalite done yon varyab genyen.
+<strong><code>isinstance()</code></strong> teste si yon varyab se yon kalite espesifik.</p>
+<pre class="codehilite"><code class="language-python"># Teste kalite done
+non = &quot;Marie&quot;
+laj = 25
+pri = 99.99
+prezan = True
+
+print(type(nom))        # &lt;class 'str'&gt;
+print(type(laj))        # &lt;class 'int'&gt;
+print(type(pri))        # &lt;class 'float'&gt;
+print(type(prezan))     # &lt;class 'bool'&gt;
+
+# Teste ak isinstance
+print(isinstance(nom, str))     # True
+print(isinstance(laj, int))     # True
+print(isinstance(pri, float))   # True
+print(isinstance(prezan, bool)) # True
+print(isinstance(laj, str))     # False
+</code></pre>
+
 <p>Yon varyab se tankou yon ti bwat kote ou ka sere enfòmasyon. Chak bwat gen yon non ak yon valè. Pensez a yon bwat nan yon depo ak yon etikèt sou li.</p>
 <p><img alt="Variable concept visualization" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" />
 <em>Source: <a href="https://unsplash.com/photos/storage-boxes">Unsplash</a> - Photo by [Andrea Piacquadio]</em></p>
@@ -9401,7 +9788,7 @@ print(f&quot;Zòn rektang: {zòn}&quot;)
 - <strong>Program</strong> - Seri enstriksyon
 - <strong>Variable</strong> - Plas pou sere done
 - <strong>IDE</strong> - Zouti pou ekri kòd</p>
-<h4 id="chapit-2-koumanse-rapid_2"><strong>Chapit 2: Koumanse Rapid</strong></h4>
+<h4 id="chapit-2-koumanse-rapid_1"><strong>Chapit 2: Koumanse Rapid</strong></h4>
 <p><strong>Kisa nou te aprann:</strong>
 - <strong>Varyab ak kalite done</strong> - String, Integer, Float, Boolean
 - <strong>Operatè matematik</strong> - +, -, <em>, /, //, %, **

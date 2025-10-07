@@ -220,3 +220,4 @@ Avec ces améliorations, le livre est maintenant prêt pour une publication prof
 **Pou**: Jamhson Boliva / Bib Kreyol LLC  
 **Dat**: Janvye 2025  
 **Objektif**: Premye liv pwogramasyon nan Kreyòl Ayisyen
+

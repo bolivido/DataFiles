@@ -190,3 +190,4 @@ Pou chak imaj ki itilize, ajoute referans sa a:
 ---
 
 **Note**: Tout imaj yo dwe gen lisans CC0 oswa Public Domain pou evite pwoblèm kopiright.
+

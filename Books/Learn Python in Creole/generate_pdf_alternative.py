@@ -200,3 +200,4 @@ if __name__ == "__main__":
     print("🚀 Kòmanse jenere PDF ak WeasyPrint...")
     markdown_to_pdf_alternative()
     print("✨ Fini!")
+

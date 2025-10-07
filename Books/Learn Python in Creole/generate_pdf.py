@@ -203,3 +203,4 @@ if __name__ == "__main__":
     print("🚀 Kòmanse jenere PDF...")
     markdown_to_pdf()
     print("✨ Fini!")
+

@@ -173,6 +173,8 @@ Nou vle remèsye:
 
 Avant ou kòmanse aprann Python, li enpòtan pou ou konprann tèm fondamantal yo nan pwogramasyon. Sa yo se mo kle yo ke ou pral wè nan tout liv sa a. Chak tèm gen yon eksplikasyon detaye ak egzanp pratik.
 
+> **💡 TIP:** Chak tèm sa a se tankou yon mo nan diksyonè a - ou bezwen konnen sa li vle di pou ou ka konprann Python kòrèkteman.
+
 ---
 
 ### 🔧 Tèm Fondamantal Pwogramasyon
@@ -715,6 +717,185 @@ class Elèv:
 
 elèv = Elèv("Marie")
 print(elèv.non)          # Afiche atribi 'non'
+```
+
+---
+
+## 🐍 Mo Kle Python (Python Keywords) - Referans Konplè
+
+### 🎯 Kisa se "Mo Kle Python"?
+
+**Mo Kle Python** se mo rezève nan langaj Python yo ke ou pa ka sèvi ak kòm non varyab. Yo gen sans espesyal nan langaj la.
+
+> **⚠️ AVÈTISMAN:** Ou pa ka sèvi ak mo kle yo kòm non varyab. Sa va bay erè!
+
+### 📋 Lis Konplè Mo Kle Python
+
+#### **Mo Kle Pou Kondisyon**
+- **`if`** - Teste kondisyon
+- **`else`** - Altènatif pou kondisyon
+- **`elif`** - Kondisyon adisyonèl
+- **`and`** - Operatè lojik "ET"
+- **`or`** - Operatè lojik "OSWA"
+- **`not`** - Operatè lojik "PA"
+
+#### **Mo Kle Pou Boucle**
+- **`for`** - Boucle pou iterasyon
+- **`while`** - Boucle ak kondisyon
+- **`break`** - Sòti nan boucle
+- **`continue`** - Kontinye nan pwochen iterasyon
+- **`pass`** - Pa fè anyen (placeholder)
+
+#### **Mo Kle Pou Fonksyon**
+- **`def`** - Defini fonksyon
+- **`return`** - Retounen valè
+- **`lambda`** - Fonksyon kout
+- **`yield`** - Retounen valè nan generator
+
+#### **Mo Kle Pou Klas ak Objè**
+- **`class`** - Defini klas
+- **`self`** - Referans objè
+- **`super()`** - Aksede klas paran
+- **`__init__`** - Konstriktè
+- **`__str__`** - Reprezantasyon string
+
+#### **Mo Kle Pou Modil**
+- **`import`** - Enpòte modil
+- **`from`** - Enpòte pati spesifik
+- **`as`** - Bay non alias
+
+#### **Mo Kle Pou Jesyon Erè**
+- **`try`** - Eseye kòd
+- **`except`** - Jere erè
+- **`finally`** - Toujou ekzekite
+- **`raise`** - Leve erè
+
+#### **Mo Kle Pou Valè Espesyal**
+- **`True`** - Valè Boolean vre
+- **`False`** - Valè Boolean fo
+- **`None`** - Valè vid
+- **`in`** - Teste si eleman nan koleksyon
+- **`is`** - Teste idantite objè
+
+### 🎮 Egzanp Mo Kle yo
+
+```python
+# Mo kle kondisyon
+if True and not False:
+    print("Kondisyon vre")
+
+# Mo kle boucle
+for i in range(3):
+    if i == 1:
+        continue
+    print(i)
+
+# Mo kle fonksyon
+def fonksyon_mwen():
+    return "Bonjou"
+
+# Mo kle klas
+class MonKlas:
+    def __init__(self):
+        self.valè = True
+
+# Mo kle modil
+import os
+from sys import exit
+
+# Mo kle jesyon erè
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Pa ka divize pa zewo")
+finally:
+    print("Fini")
+
+# Mo kle valè espesyal
+if None is None:
+    print("None se None")
+```
+
+---
+
+## 🔧 Fonksyon Entegre Python (Built-in Functions)
+
+### 🎯 Kisa se "Fonksyon Entegre"?
+
+**Fonksyon Entegre** se fonksyon yo ke Python bay otomatikman. Ou pa bezwen enpòte yo - yo disponib toujou.
+
+### 📋 Fonksyon Entegre Enpòtan
+
+#### **Fonksyon Pou Konvèsyon**
+- **`int()`** - Konvèti nan nimewo antye
+- **`float()`** - Konvèti nan nimewo desimal
+- **`str()`** - Konvèti nan string
+- **`bool()`** - Konvèti nan Boolean
+- **`list()`** - Konvèti nan lis
+- **`tuple()`** - Konvèti nan tuple
+- **`set()`** - Konvèti nan set
+- **`dict()`** - Konvèti nan diksyone
+
+#### **Fonksyon Pou Kalkil**
+- **`abs()`** - Valè absoli
+- **`min()`** - Valè minimòm
+- **`max()`** - Valè maksimòm
+- **`sum()`** - Sòm eleman yo
+- **`round()`** - Wonde nimewo
+- **`pow()`** - Pisans
+
+#### **Fonksyon Pou String**
+- **`len()`** - Longè string oswa koleksyon
+- **`ord()`** - Kod ASCII yon karaktè
+- **`chr()`** - Karaktè nan kod ASCII
+
+#### **Fonksyon Pou Input/Output**
+- **`print()`** - Afiche tèks
+- **`input()`** - Resevwa enfòmasyon itilizatè
+- **`open()`** - Ouvri fichier
+
+#### **Fonksyon Pou Koleksyon**
+- **`len()`** - Longè koleksyon
+- **`sorted()`** - Triye koleksyon
+- **`reversed()`** - Ranvèse koleksyon
+- **`enumerate()`** - Bay endeks ak valè
+- **`zip()`** - Konbine koleksyon
+
+### 🎮 Egzanp Fonksyon Entegre
+
+```python
+# Fonksyon konvèsyon
+nimewo = int("123")      # 123
+tèks = str(456)          # "456"
+lis = list("abc")        # ['a', 'b', 'c']
+
+# Fonksyon kalkil
+valè_abs = abs(-5)       # 5
+min_valè = min(1, 2, 3)  # 1
+max_valè = max(1, 2, 3)  # 3
+sòm = sum([1, 2, 3])     # 6
+
+# Fonksyon string
+longè = len("Bonjou")    # 6
+karaktè = chr(65)        # 'A'
+kod = ord('A')           # 65
+
+# Fonksyon input/output
+print("Bonjou mond!")    # Afiche: Bonjou mond!
+non = input("Non w:")    # Resevwa enfòmasyon
+
+# Fonksyon koleksyon
+lis = [3, 1, 2]
+triye = sorted(lis)      # [1, 2, 3]
+ranvèse = list(reversed(lis))  # [2, 1, 3]
+
+# enumerate ak zip
+for i, valè in enumerate(['a', 'b', 'c']):
+    print(f"{i}: {valè}")  # 0: a, 1: b, 2: c
+
+lis1 = [1, 2, 3]
+lis2 = ['a', 'b', 'c']
+konbine = list(zip(lis1, lis2))  # [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
 
 ---
@@ -1537,21 +1718,212 @@ if __name__ == "__main__":
 
 ---
 
-## Chapit 2: Koumanse Rapid
+## Chapit 2: Koumanse Rapid (Getting Started Quickly) - Eksplikasyon Detaye pou Debitan
 
 ### 🎯 Objektif Chapit
 Apre w fini chapit sa a, w pral kapab:
-- Konprann kisa se varyab ak kalite done
-- Sèvi ak operatè matematik, konparezon, ak lòjik
-- Kontwòle akouman pwogram ak if/else ak boucle
-- Kreye fonksyon debaz
-- Devlope yon kalkilatris senp
+- **Konprann kisa se varyab ak kalite done** - Fondasyon Python
+- **Sèvi ak operatè matematik, konparezon, ak lòjik** - Kalkil ak lojik
+- **Kontwòle akouman pwogram ak if/else ak boucle** - Desizyon ak repètisyon
+- **Kreye fonksyon debaz** - Òganize kòd la
+- **Devlope yon kalkilatris senp** - Pwojè pratik
+
+> **💡 TIP:** Chak chapit bati sou chapit anvan an. Asire w ke ou konprann Chapit 1 anvan ou kontinye.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Varyab (Variables)**
+- **Varyab** - Plas pou sere done nan memwa
+- **Non varyab** - Règ pou non varyab yo
+- **Assignement** - Bay valè yon varyab
+
+#### **Kalite Done (Data Types)**
+- **String** - Tèks, mo, ak fraz
+- **Integer** - Nimewo antye (san pwen desimal)
+- **Float** - Nimewo desimal (ak pwen desimal)
+- **Boolean** - Valè vre (True) oswa fo (False)
+
+#### **Operatè (Operators)**
+- **Operatè matematik** - +, -, *, /, //, %, **
+- **Operatè konparezon** - ==, !=, >, <, >=, <=
+- **Operatè lojik** - and, or, not
+
+#### **Fonksyon Entegre (Built-in Functions)**
+- **print()** - Afiche tèks nan ekran
+- **input()** - Resevwa enfòmasyon nan itilizatè
+- **type()** - Jwenn kalite done yon varyab
+- **len()** - Jwenn longè yon string oswa koleksyon
 
 ---
 
-### 📦 Varyab ak Kalite Done
+### 📦 Varyab ak Kalite Done (Variables and Data Types)
 
-#### 🎁 Kisa se yon varyab?
+#### 🎁 Kisa se yon varyab (Variable)?
+
+**Varyab** se yon plas nan memwa konpitè a kote ou ka sere done. Li se tankou yon ti bwat ki gen yon non epi ki ka gen bagay andedan.
+
+> **💡 TIP:** Pensez a yon varyab tankou yon etikèt ki gen yon non epi ki pointe sou yon valè nan memwa a.
+
+#### 🔧 Règ Pou Non Varyab
+
+1. **Kòmanse ak lèt oswa underscore (_)**
+   ```python
+   ✅ bon = "Bon"
+   ✅ _bon = "Bon"
+   ✅ bon3 = "Bon"
+   ```
+
+2. **Pa ka kòmanse ak nimewo**
+   ```python
+   ❌ 3bon = "Mal"  # Erè!
+   ```
+
+3. **Pa ka gen espas**
+   ```python
+   ❌ bon jou = "Mal"  # Erè!
+   ✅ bon_jou = "Bon"
+   ✅ bonJou = "Bon"  # camelCase
+   ```
+
+4. **Pa ka sèvi ak mo kle Python**
+   ```python
+   ❌ if = "Mal"  # Erè! 'if' se mo kle
+   ❌ for = "Mal"  # Erè! 'for' se mo kle
+   ```
+
+#### 📋 Kalite Done Fondamantal Python
+
+Python gen 4 kalite done fondamantal:
+
+| Kalite | Non | Deskripsyon | Egzanp |
+|--------|-----|-------------|---------|
+| **str** | String | Tèks, mo, fraz | `"Bonjou"`, `'Mond'` |
+| **int** | Integer | Nimewo antye | `42`, `-5`, `0` |
+| **float** | Float | Nimewo desimal | `3.14`, `-2.5` |
+| **bool** | Boolean | Vre oswa Fo | `True`, `False` |
+
+---
+
+#### 🔤 String (Tèks) - Detay Konplè
+
+**String** se kalite done pou tèks. Ou ka kreye string yo ak kòm doub (`"`) oswa kòm sèl (`'`).
+
+```python
+# Kreye string yo
+non = "Marie"
+mesaj = 'Bonjou mond!'
+adrès = """123 Pòtoprens
+Ayiti"""
+
+# String ak karaktè espesyal
+chemin = "C:\\dosye\\nouvo"  # Escape backslash
+tèks = "Li di: \"Bonjou!\""  # Escape quotes
+```
+
+**Metòd String Enpòtan:**
+- **`.upper()`** - Fè lèt yo majiskil
+- **`.lower()`** - Fè lèt yo miniskil
+- **`.strip()`** - Retire espas nan kòmansman ak fen
+- **`.split()`** - Divise string nan lis
+- **`.replace()`** - Ranplase pati string
+- **`.find()`** - Chèche yon sous-string
+
+```python
+tèks = "  Bonjou Mond  "
+
+# Metòd string
+print(tèks.upper())      # "  BONJOU MOND  "
+print(tèks.lower())      # "  bonjou mond  "
+print(tèks.strip())      # "Bonjou Mond"
+print(tèks.split())      # ['Bonjou', 'Mond']
+print(tèks.replace("Mond", "Ayiti"))  # "  Bonjou Ayiti  "
+print(tèks.find("Mond")) # 8
+```
+
+#### 🔢 Integer (Nimewo Antye) - Detay Konplè
+
+**Integer** se nimewo antye (san pwen desimal). Yo ka pozitif, negatif, oswa zewo.
+
+```python
+# Egzanp integer
+laj = 25
+negatif = -10
+zewo = 0
+gwo_nimewo = 1000000
+
+# Operasyon ak integer
+sòm = 5 + 3        # 8
+diferans = 10 - 4   # 6
+pwodui = 6 * 7      # 42
+pwopòsyon = 15 / 3  # 5.0 (retounen float)
+divizyon_antyè = 15 // 3  # 5 (retounen integer)
+rès = 17 % 5       # 2 (rès divizyon)
+pisans = 2 ** 3    # 8 (2^3)
+```
+
+#### 🎯 Float (Nimewo Desimal) - Detay Konplè
+
+**Float** se nimewo desimal. Yo reprezante nimewo reyèl ak pwen desimal.
+
+```python
+# Egzanp float
+pri = 25.99
+pwa = 65.5
+pi = 3.14159
+negatif_float = -2.5
+
+# Operasyon ak float
+kalkil = 3.14 + 2.86  # 6.0
+divizyon = 10 / 3     # 3.3333333333333335
+```
+
+> **⚠️ ATANSYON:** Float yo pa toujou presi 100%. Sa se nòmal nan pwogramasyon.
+
+#### ✅ Boolean (Vre/Fo) - Detay Konplè
+
+**Boolean** se kalite done ki gen sèlman de valè: `True` oswa `False`.
+
+```python
+# Egzanp Boolean
+prezan = True
+gen_lajan = False
+laj_ok = True
+
+# Boolean nan kondisyon
+if prezan:
+    print("Elèv la prezan")
+
+# Konvèsyon nan Boolean
+print(bool(1))      # True
+print(bool(0))      # False
+print(bool(""))     # False
+print(bool("tèks")) # True
+```
+
+#### 🔍 Fonksyon type() ak isinstance()
+
+**`type()`** di ou ki kalite done yon varyab genyen.
+**`isinstance()`** teste si yon varyab se yon kalite espesifik.
+
+```python
+# Teste kalite done
+non = "Marie"
+laj = 25
+pri = 99.99
+prezan = True
+
+print(type(nom))        # <class 'str'>
+print(type(laj))        # <class 'int'>
+print(type(pri))        # <class 'float'>
+print(type(prezan))     # <class 'bool'>
+
+# Teste ak isinstance
+print(isinstance(nom, str))     # True
+print(isinstance(laj, int))     # True
+print(isinstance(pri, float))   # True
+print(isinstance(prezan, bool)) # True
+print(isinstance(laj, str))     # False
+```
 
 Yon varyab se tankou yon ti bwat kote ou ka sere enfòmasyon. Chak bwat gen yon non ak yon valè. Pensez a yon bwat nan yon depo ak yon etikèt sou li.
 

@@ -29,3 +29,4 @@ pytest-cov==4.1.0
 # Pou development (opsyonèl)
 black==23.11.0
 flake8==6.1.0
+
