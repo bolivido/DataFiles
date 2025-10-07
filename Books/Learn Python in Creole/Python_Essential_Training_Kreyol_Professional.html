@@ -7744,10 +7744,83 @@ for nòt_yo in test_kas_yo:
 <li><strong>Chalèj</strong>: Rezoud pwoblèm argumant ki pa bon la</li>
 </ol>
 <hr />
-<h2 id="chapit-9-threads-ak-pwosesis_1">Chapit 9: Threads ak Pwosesis</h2>
-<h3 id="entwodiksyon-threads-ak-pwosesis">Entwodiksyon Threads ak Pwosesis</h3>
-<h4 id="kisa-se-thread">Kisa se Thread?</h4>
-<p>Yon thread se yon pwosesis lejè ki pèmèt pwogram lan fè plizyè bagay an menm tan:</p>
+<h2 id="chapit-9-threads-ak-pwosesis-multithreading-and-multiprocessing-eksplikasyon-detaye-pou-debitan">Chapit 9: Threads ak Pwosesis (Multithreading and Multiprocessing) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-se-threads-ak-pwosesis">🎯 Kisa se "Threads ak Pwosesis"?</h3>
+<p><strong>Definisyon Detaye:</strong></p>
+<p><strong>Threads ak Pwosesis</strong> se teknik Python yo ki pèmèt pwogram nan fè plizyè bagay an menm tan. Li se tankou gen plizyè moun ki travay sou menm pwojè a nan menm tan.</p>
+<p><strong>Poukisa Threads ak Pwosesis Enpòtan?</strong></p>
+<ol>
+<li><strong>Vitès</strong>: Fè travay yo pi vit</li>
+<li><strong>Efikasite</strong>: Sèvi ak tout kapasite konpitè a</li>
+<li><strong>Reponsivite</strong>: Pwogram nan pa bloke</li>
+<li><strong>Paralèl</strong>: Fè plizyè bagay ansanm</li>
+<li><strong>Modèn</strong>: Teknik modèn pou pwogramasyon</li>
+</ol>
+<p><strong>Analoji ki fasil konprann:</strong>
+- <strong>Thread</strong> = Tankou yon travayè nan yon ekip
+- <strong>Process</strong> = Tankou yon ekip konplè
+- <strong>Multithreading</strong> = Tankou plizyè travayè nan menm ekip
+- <strong>Multiprocessing</strong> = Tankou plizyè ekip ki travay ansanm</p>
+<h3 id="tem-fondamantal-nan-threads-ak-pwosesis">🔧 Tèm Fondamantal nan Threads ak Pwosesis</h3>
+<h4 id="1-thread-travaye-endividyel">1. <strong>Thread</strong> - Travayè Endividyèl</h4>
+<p><strong>Kisa se "Thread"?</strong></p>
+<p><strong>Thread</strong> se yon pwosesis lejè ki pèmèt pwogram nan fè plizyè bagay an menm tan. Li se tankou yon travayè nan yon ekip ki ka fè travay li pandan lòt travayè yo fè travay yo.</p>
+<p><strong>Poukisa Thread Enpòtan?</strong>
+- Li pèmèt paralèl travay
+- Li ameliore pèfòmans pwogram nan
+- Li fè pwogram nan pi reponsiv
+- Li sèvi ak kapasite konpitè a pi byen</p>
+<p><strong>Egzanp Thread:</strong></p>
+<pre class="codehilite"><code class="language-python">import threading
+
+def travay(non, kantite):
+    &quot;&quot;&quot;Fonksyon ki fè travay&quot;&quot;&quot;
+    for i in range(kantite):
+        print(f&quot;{non} fè travay {i+1}&quot;)
+
+# Kreye thread yo
+thread1 = threading.Thread(target=travay, args=(&quot;Marie&quot;, 3))
+thread2 = threading.Thread(target=travay, args=(&quot;Jean&quot;, 3))
+
+# Kòmanse thread yo
+thread1.start()
+thread2.start()
+</code></pre>
+
+<h4 id="2-process-ekip-konple">2. <strong>Process</strong> - Ekip Konplè</h4>
+<p><strong>Kisa se "Process"?</strong></p>
+<p><strong>Process</strong> se yon pwogram konplè ki kouri nan memwa konpitè a. Li se tankou yon ekip konplè ki gen tout resous li yo.</p>
+<p><strong>Poukisa Process Enpòtan?</strong>
+- Li izole travay yo
+- Li gen memwa pa li
+- Li ka kouri endepandan
+- Li pi sekirite pase thread</p>
+<p><strong>Egzanp Process:</strong></p>
+<pre class="codehilite"><code class="language-python">import multiprocessing
+
+def travay(non, kantite):
+    &quot;&quot;&quot;Fonksyon ki fè travay&quot;&quot;&quot;
+    for i in range(kantite):
+        print(f&quot;{non} fè travay {i+1}&quot;)
+
+# Kreye pwosesis yo
+process1 = multiprocessing.Process(target=travay, args=(&quot;Marie&quot;, 3))
+process2 = multiprocessing.Process(target=travay, args=(&quot;Jean&quot;, 3))
+
+# Kòmanse pwosesis yo
+process1.start()
+process2.start()
+</code></pre>
+
+<h4 id="3-multithreading-plizye-thread">3. <strong>Multithreading</strong> - Plizyè Thread</h4>
+<p><strong>Kisa se "Multithreading"?</strong></p>
+<p><strong>Multithreading</strong> se teknik pou sèvi ak plizyè thread nan menm pwogram nan. Li se tankou gen plizyè travayè nan menm ekip la.</p>
+<p><strong>Poukisa Multithreading Enpòtan?</strong>
+- Li ameliore pèfòmans
+- Li fè pwogram nan pi reponsiv
+- Li sèvi ak kapasite konpitè a
+- Li pèmèt travay paralèl</p>
+<p><strong>Egzanp Multithreading:</strong></p>
 <pre class="codehilite"><code class="language-python">import threading
 import time
 
@@ -7757,21 +7830,324 @@ def travay(non, kantite):
         print(f&quot;{non} fè travay {i+1}&quot;)
         time.sleep(1)  # Simule travay ki pran tan
 
-# Teste san thread
-print(&quot;=== San Thread ===&quot;)
-travay(&quot;Wòbò&quot;, 3)
-travay(&quot;Jan&quot;, 3)
+# Kreye plizyè thread
+threads = []
+for i in range(3):
+    thread = threading.Thread(target=travay, args=(f&quot;Travayè-{i+1}&quot;, 3))
+    threads.append(thread)
 
-# Teste ak thread
-print(&quot;\n=== Ak Thread ===&quot;)
-thread1 = threading.Thread(target=travay, args=(&quot;Wòbò&quot;, 3))
-thread2 = threading.Thread(target=travay, args=(&quot;Jan&quot;, 3))
+# Kòmanse tout thread yo
+for thread in threads:
+    thread.start()
 
+# Tann tout thread yo fini
+for thread in threads:
+    thread.join()
+</code></pre>
+
+<h4 id="4-multiprocessing-plizye-process">4. <strong>Multiprocessing</strong> - Plizyè Process</h4>
+<p><strong>Kisa se "Multiprocessing"?</strong></p>
+<p><strong>Multiprocessing</strong> se teknik pou sèvi ak plizyè pwosesis nan menm tan. Li se tankou gen plizyè ekip ki travay ansanm.</p>
+<p><strong>Poukisa Multiprocessing Enpòtan?</strong>
+- Li sèvi ak tout CPU yo
+- Li pi efikas pou kalkil lou
+- Li izole travay yo
+- Li pi sekirite</p>
+<p><strong>Egzanp Multiprocessing:</strong></p>
+<pre class="codehilite"><code class="language-python">import multiprocessing
+import time
+
+def travay(non, kantite):
+    &quot;&quot;&quot;Fonksyon ki fè travay&quot;&quot;&quot;
+    for i in range(kantite):
+        print(f&quot;{non} fè travay {i+1}&quot;)
+        time.sleep(1)
+
+# Kreye plizyè pwosesis
+processes = []
+for i in range(3):
+    process = multiprocessing.Process(target=travay, args=(f&quot;Ekip-{i+1}&quot;, 3))
+    processes.append(process)
+
+# Kòmanse tout pwosesis yo
+for process in processes:
+    process.start()
+
+# Tann tout pwosesis yo fini
+for process in processes:
+    process.join()
+</code></pre>
+
+<h4 id="5-threading-modil-pou-thread">5. <strong>threading</strong> - Modil Pou Thread</h4>
+<p><strong>Kisa se "threading"?</strong></p>
+<p><strong>threading</strong> se yon modil Python ki bay zouti pou travay ak thread. Li se tankou yon bwat zouti pou travay ak ekip yo.</p>
+<p><strong>Poukisa threading Enpòtan?</strong>
+- Li bay fonksyon pou kreye thread
+- Li jere thread yo
+- Li pèmèt kominikasyon ant thread
+- Li bay sekirite pou thread</p>
+<p><strong>Egzanp threading:</strong></p>
+<pre class="codehilite"><code class="language-python">import threading
+
+# Kreye yon thread
+thread = threading.Thread(target=fonksyon_mwen)
+
+# Kòmanse thread la
+thread.start()
+
+# Tann thread la fini
+thread.join()
+</code></pre>
+
+<h4 id="6-multiprocessing-modil-pou-process">6. <strong>multiprocessing</strong> - Modil Pou Process</h4>
+<p><strong>Kisa se "multiprocessing"?</strong></p>
+<p><strong>multiprocessing</strong> se yon modil Python ki bay zouti pou travay ak pwosesis. Li se tankou yon bwat zouti pou travay ak ekip yo.</p>
+<p><strong>Egzanp multiprocessing:</strong></p>
+<pre class="codehilite"><code class="language-python">import multiprocessing
+
+# Kreye yon pwosesis
+process = multiprocessing.Process(target=fonksyon_mwen)
+
+# Kòmanse pwosesis la
+process.start()
+
+# Tann pwosesis la fini
+process.join()
+</code></pre>
+
+<h4 id="7-thread-klas-kreye-thread-ak-klas">7. <strong>Thread</strong> (Klas) - Kreye Thread ak Klas</h4>
+<p><strong>Kisa se "Thread" (klas)?</strong></p>
+<p><strong>Thread</strong> se yon klas nan modil threading ki pèmèt ou kreye thread ak karakteristik espesifik. Li se tankou fè yon travayè ak karakteristik espesyal.</p>
+<p><strong>Egzanp Thread (klas):</strong></p>
+<pre class="codehilite"><code class="language-python">import threading
+
+class Travayè(threading.Thread):
+    def __init__(self, non, kantite):
+        super().__init__()  # Rele konstriktè paran
+        self.non = non
+        self.kantite = kantite
+
+    def run(self):
+        &quot;&quot;&quot;Metòd ki kouri lè thread la kòmanse&quot;&quot;&quot;
+        for i in range(self.kantite):
+            print(f&quot;{self.non} fè travay {i+1}&quot;)
+
+# Kreye ak sèvi ak thread
+travayè = Travayè(&quot;Marie&quot;, 3)
+travayè.start()
+travayè.join()
+</code></pre>
+
+<h4 id="8-start-komanse-threadpwosesis">8. <strong>start()</strong> - Kòmanse Thread/Pwosesis</h4>
+<p><strong>Kisa se "start()"?</strong></p>
+<p><strong>start()</strong> se yon metòd ki kòmanse yon thread oswa pwosesis. Li se tankou di yon travayè "Kòmanse travay ou!".</p>
+<p><strong>Egzanp start():</strong></p>
+<pre class="codehilite"><code class="language-python">thread = threading.Thread(target=fonksyon_mwen)
+thread.start()  # Kòmanse thread la
+</code></pre>
+
+<h4 id="9-join-tann-threadpwosesis">9. <strong>join()</strong> - Tann Thread/Pwosesis</h4>
+<p><strong>Kisa se "join()"?</strong></p>
+<p><strong>join()</strong> se yon metòd ki tann yon thread oswa pwosesis fini anvan kontinye. Li se tankou tann yon travayè fini travay li anvan ou fè lòt bagay.</p>
+<p><strong>Egzanp join():</strong></p>
+<pre class="codehilite"><code class="language-python">thread = threading.Thread(target=fonksyon_mwen)
+thread.start()
+thread.join()  # Tann thread la fini
+print(&quot;Thread la fini!&quot;)
+</code></pre>
+
+<h4 id="10-target-fonksyon-pou-kouri">10. <strong>target</strong> - Fonksyon Pou Kouri</h4>
+<p><strong>Kisa se "target"?</strong></p>
+<p><strong>target</strong> se paramèt ki di ki fonksyon thread oswa pwosesis la dwe kouri. Li se tankou di yon travayè ki travay li dwe fè.</p>
+<p><strong>Egzanp target:</strong></p>
+<pre class="codehilite"><code class="language-python">def fonksyon_mwen():
+    print(&quot;Mwen ap travay!&quot;)
+
+thread = threading.Thread(target=fonksyon_mwen)  # target=fonksyon_mwen
+</code></pre>
+
+<h4 id="11-args-argumant-pou-fonksyon">11. <strong>args</strong> - Argumant Pou Fonksyon</h4>
+<p><strong>Kisa se "args"?</strong></p>
+<p><strong>args</strong> se paramèt ki bay argumant yo pou fonksyon nan target. Li se tankou bay yon travayè enfòmasyon li bezwen pou travay la.</p>
+<p><strong>Egzanp args:</strong></p>
+<pre class="codehilite"><code class="language-python">def travay(non, laj):
+    print(f&quot;{non} gen {laj} ane&quot;)
+
+thread = threading.Thread(target=travay, args=(&quot;Marie&quot;, 25))
+</code></pre>
+
+<h4 id="12-timesleep-pause-pou-simule-travay">12. <strong>time.sleep()</strong> - Pause Pou Simule Travay</h4>
+<p><strong>Kisa se "time.sleep()"?</strong></p>
+<p><strong>time.sleep()</strong> se yon fonksyon ki pause pwogram nan pou yon kantite segonn. Li se tankou yon travayè ki pran yon ti repo.</p>
+<p><strong>Egzanp time.sleep():</strong></p>
+<pre class="codehilite"><code class="language-python">import time
+
+print(&quot;Kòmanse travay&quot;)
+time.sleep(2)  # Pause pou 2 segonn
+print(&quot;Travay fini&quot;)
+</code></pre>
+
+<h3 id="egzanp-pratik-konple_4">🎮 Egzanp Pratik Konplè</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 EGZANP AMIZAN: Ou nan yon restoran ak plizyè chef
+
+print(&quot;🍽️ SITUASYON: Ou nan yon restoran ak plizyè chef&quot;)
+print(&quot;=&quot; * 45)
+
+import threading
+import time
+import random
+
+# 1. THREAD DEBAZ
+print(&quot;1️⃣ THREAD DEBAZ&quot;)
+print(&quot;   💡 Pensez: 'Plizyè chef ki travay ansanm'&quot;)
+
+def prepare_manje(non_chef, manje, tan_preparasyon):
+    &quot;&quot;&quot;Fonksyon ki prepare manje&quot;&quot;&quot;
+    print(f&quot;   👨‍🍳 {non_chef} kòmanse prepare {manje}&quot;)
+    time.sleep(tan_preparasyon)  # Simule tan preparasyon
+    print(f&quot;   ✅ {non_chef} fini prepare {manje}&quot;)
+
+# San thread - travay youn apre lòt
+print(&quot;   📋 SAN THREAD - Travay youn apre lòt:&quot;)
+debut = time.time()
+prepare_manje(&quot;Chef Marie&quot;, &quot;Griyo&quot;, 2)
+prepare_manje(&quot;Chef Jean&quot;, &quot;Diri ak Pwa&quot;, 3)
+prepare_manje(&quot;Chef Sara&quot;, &quot;Bannann Peze&quot;, 1)
+fin = time.time()
+print(f&quot;   ⏱️ Tan total san thread: {fin - debut:.2f} segonn&quot;)
+
+print()
+
+# Ak thread - travay ansanm
+print(&quot;   🚀 AK THREAD - Travay ansanm:&quot;)
+debut = time.time()
+
+# Kreye thread yo
+thread1 = threading.Thread(target=prepare_manje, args=(&quot;Chef Marie&quot;, &quot;Griyo&quot;, 2))
+thread2 = threading.Thread(target=prepare_manje, args=(&quot;Chef Jean&quot;, &quot;Diri ak Pwa&quot;, 3))
+thread3 = threading.Thread(target=prepare_manje, args=(&quot;Chef Sara&quot;, &quot;Bannann Peze&quot;, 1))
+
+# Kòmanse tout thread yo
 thread1.start()
 thread2.start()
+thread3.start()
 
+# Tann tout thread yo fini
 thread1.join()
 thread2.join()
+thread3.join()
+
+fin = time.time()
+print(f&quot;   ⏱️ Tan total ak thread: {fin - debut:.2f} segonn&quot;)
+
+print()
+
+# 2. THREAD AK KLAS
+print(&quot;2️⃣ THREAD AK KLAS&quot;)
+print(&quot;   💡 Pensez: 'Chef ak karakteristik espesyal'&quot;)
+
+class Chef(threading.Thread):
+    &quot;&quot;&quot;Klas Chef ki herite nan Thread&quot;&quot;&quot;
+
+    def __init__(self, non, spesyalite, kantite_plat):
+        super().__init__()  # Rele konstriktè paran
+        self.non = non
+        self.spesyalite = spesyalite
+        self.kantite_plat = kantite_plat
+
+    def run(self):
+        &quot;&quot;&quot;Metòd ki kouri lè thread la kòmanse&quot;&quot;&quot;
+        print(f&quot;   👨‍🍳 {self.non} kòmanse travay ({self.spesyalite})&quot;)
+
+        for i in range(self.kantite_plat):
+            tan_preparasyon = random.uniform(1, 3)  # Tan aleatwa
+            print(f&quot;   🍽️ {self.non} prepare {self.spesyalite} #{i+1}&quot;)
+            time.sleep(tan_preparasyon)
+
+        print(f&quot;   ✅ {self.non} fini tout {self.kantite_plat} {self.spesyalite}&quot;)
+
+# Kreye chef yo
+chef1 = Chef(&quot;Chef Marie&quot;, &quot;Griyo&quot;, 3)
+chef2 = Chef(&quot;Chef Jean&quot;, &quot;Diri ak Pwa&quot;, 2)
+chef3 = Chef(&quot;Chef Sara&quot;, &quot;Bannann Peze&quot;, 4)
+
+# Kòmanse tout chef yo
+chef1.start()
+chef2.start()
+chef3.start()
+
+# Tann tout chef yo fini
+chef1.join()
+chef2.join()
+chef3.join()
+
+print()
+
+# 3. MULTIPROCESSING
+print(&quot;3️⃣ MULTIPROCESSING&quot;)
+print(&quot;   💡 Pensez: 'Plizyè ekip nan diferan kizin'&quot;)
+
+import multiprocessing
+
+def kizin_separe(non_ekip, manje, kantite):
+    &quot;&quot;&quot;Fonksyon ki simule yon ekip nan kizin&quot;&quot;&quot;
+    print(f&quot;   🏠 Ekip {non_ekip} nan kizin pa yo&quot;)
+
+    for i in range(kantite):
+        tan = random.uniform(1, 2)
+        print(f&quot;   🍽️ Ekip {non_ekip} prepare {manje} #{i+1}&quot;)
+        time.sleep(tan)
+
+    print(f&quot;   ✅ Ekip {non_ekip} fini tout {kantite} {manje}&quot;)
+
+# Kreye pwosesis yo
+process1 = multiprocessing.Process(target=kizin_separe, args=(&quot;A&quot;, &quot;Griyo&quot;, 2))
+process2 = multiprocessing.Process(target=kizin_separe, args=(&quot;B&quot;, &quot;Diri ak Pwa&quot;, 2))
+
+# Kòmanse pwosesis yo
+process1.start()
+process2.start()
+
+# Tann pwosesis yo fini
+process1.join()
+process2.join()
+
+print()
+
+# 4. THREAD POOL
+print(&quot;4️⃣ THREAD POOL&quot;)
+print(&quot;   💡 Pensez: 'Plizyè chef ki ka fè nenpòt travay'&quot;)
+
+from concurrent.futures import ThreadPoolExecutor
+
+def travay_fleksib(non_chef, travay_specifik):
+    &quot;&quot;&quot;Fonksyon ki fè nenpòt travay&quot;&quot;&quot;
+    tan = random.uniform(0.5, 2)
+    print(f&quot;   👨‍🍳 {non_chef} fè {travay_specifik}&quot;)
+    time.sleep(tan)
+    print(f&quot;   ✅ {non_chef} fini {travay_specifik}&quot;)
+
+# Lis travay yo
+travay_yo = [
+    (&quot;Chef Marie&quot;, &quot;prepare Griyo&quot;),
+    (&quot;Chef Jean&quot;, &quot;prepare Diri ak Pwa&quot;),
+    (&quot;Chef Sara&quot;, &quot;prepare Bannann Peze&quot;),
+    (&quot;Chef Pierre&quot;, &quot;prepare Taso&quot;),
+    (&quot;Chef Ana&quot;, &quot;prepare Legim&quot;)
+]
+
+# Sèvi ak ThreadPoolExecutor
+with ThreadPoolExecutor(max_workers=3) as executor:
+    # Soumèt tout travay yo
+    futures = [executor.submit(travay_fleksib, non, travay) for non, travay in travay_yo]
+
+    # Tann tout travay yo fini
+    for future in futures:
+        future.result()
+
+print()
+
+print(&quot;🎉 BRAVO! Ou konprann THREADS ak PWOSESIS yo!&quot;)
 </code></pre>
 
 <h3 id="multithreading">Multithreading</h3>
@@ -7931,16 +8307,331 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>Chalèj</strong>: Rezoud pwoblèm kalkile sòm nimewo yo ak pwosesis paralèl</li>
 </ol>
 <hr />
-<h2 id="chapit-10-travay-ak-dosye_1">Chapit 10: Travay ak Dosye</h2>
-<h3 id="ouvri-li-ak-ekri">Ouvri, Li, ak Ekri</h3>
-<h4 id="li-yon-fichier">Li yon fichier</h4>
-<pre class="codehilite"><code class="language-python"># Li fichier konplè
-try:
-    with open(&quot;test.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier:
-        kontni = fichier.read()
-        print(kontni)
-except FileNotFoundError:
-    print(&quot;Fichier a pa egziste!&quot;)
+<h2 id="chapit-10-travay-ak-dosye-file-operations-eksplikasyon-detaye-pou-debitan">Chapit 10: Travay ak Dosye (File Operations) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-se-travay-ak-dosye-file-operations">🎯 Kisa se "Travay ak Dosye" (File Operations)?</h3>
+<p><strong>Definisyon Detaye:</strong></p>
+<p><strong>Travay ak Dosye</strong> se fason Python ka li, ekri, ak jere fichier yo sou konpitè a. Li se tankou yon bibliyotèkè ki ka li liv, ekri nòt, ak òganize dokiman yo.</p>
+<p><strong>Poukisa Travay ak Dosye Enpòtan?</strong></p>
+<ol>
+<li><strong>Sere Done</strong>: Konsève enfòmasyon pou pita</li>
+<li><strong>Pataje</strong>: Pataje done ant pwogram yo</li>
+<li><strong>Konfigirasyon</strong>: Sere paramèt pwogram yo</li>
+<li><strong>Rapò</strong>: Kreye rapò ak dokiman</li>
+<li><strong>Kominikasyon</strong>: Echanje done ak lòt sistèm yo</li>
+</ol>
+<p><strong>Analoji ki fasil konprann:</strong>
+- <strong>Fichier</strong> = Tankou yon liv nan bibliyotèk la
+- <strong>Ouvri</strong> = Tankou ouvri yon liv
+- <strong>Li</strong> = Tankou li kontni liv la
+- <strong>Ekri</strong> = Tankou ekri nan liv la
+- <strong>Fèmen</strong> = Tankou fèmen liv la</p>
+<h3 id="tem-fondamantal-nan-travay-ak-dosye">🔧 Tèm Fondamantal nan Travay ak Dosye</h3>
+<h4 id="1-file-fichier-dokiman-done">1. <strong>File</strong> (Fichier) - Dokiman Done</h4>
+<p><strong>Kisa se "File"?</strong></p>
+<p><strong>File</strong> se yon dokiman ki sere done sou konpitè a. Li se tankou yon liv ki gen enfòmasyon andedan.</p>
+<p><strong>Poukisa File Enpòtan?</strong>
+- Yo sere done pou lontan
+- Ou ka pataje yo ant pwogram yo
+- Yo òganize enfòmasyon yo</p>
+<p><strong>Kalite Fichier:</strong>
+- <strong>Fichier tèks</strong> (.txt) - Tèks senp
+- <strong>Fichier CSV</strong> (.csv) - Done tabulè
+- <strong>Fichier JSON</strong> (.json) - Done estrikture
+- <strong>Fichier Python</strong> (.py) - Kòd Python</p>
+<h4 id="2-open-fonksyon-pou-ouvri-fichier">2. <strong>open()</strong> - Fonksyon Pou Ouvri Fichier</h4>
+<p><strong>Kisa se "open()"?</strong></p>
+<p><strong>open()</strong> se yon fonksyon Python ki ouvri yon fichier pou ou ka li oswa ekri nan li. Li se tankou ouvri yon liv nan bibliyotèk la.</p>
+<p><strong>Sintaks:</strong></p>
+<pre class="codehilite"><code class="language-python">fichier = open(&quot;non_fichier.txt&quot;, &quot;mod&quot;)
+</code></pre>
+
+<p><strong>Poukisa open() Enpòtan?</strong>
+- Li konekte ou ak fichier a
+- Li pèmèt aksè enfòmasyon yo
+- Li prepare fichier a pou operasyon</p>
+<p><strong>Egzanp open():</strong></p>
+<pre class="codehilite"><code class="language-python"># Ouvri fichier pou li
+fichier = open(&quot;test.txt&quot;, &quot;r&quot;)  # &quot;r&quot; = read (li)
+kontni = fichier.read()
+fichier.close()
+
+# Ouvri fichier pou ekri
+fichier = open(&quot;test.txt&quot;, &quot;w&quot;)  # &quot;w&quot; = write (ekri)
+fichier.write(&quot;Bonjou!&quot;)
+fichier.close()
+</code></pre>
+
+<h4 id="3-with-jere-fichier-otomatikman">3. <strong>with</strong> - Jere Fichier Otomatikman</h4>
+<p><strong>Kisa se "with"?</strong></p>
+<p><strong>with</strong> se yon mo kle nan Python ki jere fichier a otomatikman. Li ouvri fichier a, pèmèt ou sèvi ak li, epi fèmen li otomatikman. Li se tankou yon asistan ki ouvri ak fèmen liv la pou ou.</p>
+<p><strong>Poukisa with Enpòtan?</strong>
+- Li fèmen fichier a otomatikman
+- Li anpeche oublie fèmen fichier yo
+- Li pi sekirite pase fèmen manuel</p>
+<p><strong>Egzanp with:</strong></p>
+<pre class="codehilite"><code class="language-python"># Sèvi ak with - pi bon fason
+with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    kontni = fichier.read()
+    print(kontni)
+# Fichier la fèmen otomatikman isit la
+</code></pre>
+
+<h4 id="4-as-bay-non-fichier">4. <strong>as</strong> - Bay Non Fichier</h4>
+<p><strong>Kisa se "as"?</strong></p>
+<p><strong>as</strong> se yon mo kle nan Python ki bay yon non pou fichier la lè ou sèvi ak <code>with</code>. Li se tankou di "Rele fichier sa a 'fichier'".</p>
+<p><strong>Egzanp as:</strong></p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    # 'fichier' se non nou bay fichier la
+    kontni = fichier.read()
+</code></pre>
+
+<h4 id="5-mode-mod-fason-ouvri-fichier">5. <strong>Mode</strong> (Mod) - Fason Ouvri Fichier</h4>
+<p><strong>Kisa se "Mode"?</strong></p>
+<p><strong>Mode</strong> se fason ou vle ouvri fichier a. Li di Python si ou vle li, ekri, oswa ajoute nan fichier a.</p>
+<p><strong>Kalite Mod:</strong></p>
+<p><strong>"r" (read)</strong> - Li sèlman</p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    kontni = fichier.read()
+</code></pre>
+
+<p><strong>"w" (write)</strong> - Ekri (efase tout kontni)</p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;w&quot;) as fichier:
+    fichier.write(&quot;Nouvo kontni&quot;)
+</code></pre>
+
+<p><strong>"a" (append)</strong> - Ajoute nan fen</p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;a&quot;) as fichier:
+    fichier.write(&quot;Tèks ajoute&quot;)
+</code></pre>
+
+<h4 id="6-read-fonksyon-pou-li-fichier">6. <strong>read()</strong> - Fonksyon Pou Li Fichier</h4>
+<p><strong>Kisa se "read()"?</strong></p>
+<p><strong>read()</strong> se yon metòd ki li tout kontni fichier a epi retounen li kòm yon string. Li se tankou li tout liv la yon fwa.</p>
+<p><strong>Poukisa read() Enpòtan?</strong>
+- Li jwenn tout enfòmasyon nan fichier a
+- Li retounen kontni a kòm string
+- Li pi fasil pou li fichier piti</p>
+<p><strong>Egzanp read():</strong></p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    tout_kontni = fichier.read()
+    print(tout_kontni)
+</code></pre>
+
+<h4 id="7-readline-li-yon-liy">7. <strong>readline()</strong> - Li Yon Liy</h4>
+<p><strong>Kisa se "readline()"?</strong></p>
+<p><strong>readline()</strong> se yon metòd ki li yon sèl liy nan fichier a. Li se tankou li yon sèl paj nan liv la.</p>
+<p><strong>Egzanp readline():</strong></p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    premye_liy = fichier.readline()
+    print(premye_liy)
+</code></pre>
+
+<h4 id="8-readlines-li-tout-liy-yo">8. <strong>readlines()</strong> - Li Tout Liy Yo</h4>
+<p><strong>Kisa se "readlines()"?</strong></p>
+<p><strong>readlines()</strong> se yon metòd ki li tout liy yo nan fichier a epi retounen yo kòm yon lis. Li se tankou li tout paj yo nan liv la.</p>
+<p><strong>Egzanp readlines():</strong></p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;r&quot;) as fichier:
+    tout_liy_yo = fichier.readlines()
+    for liy in tout_liy_yo:
+        print(liy.strip())
+</code></pre>
+
+<h4 id="9-write-fonksyon-pou-ekri">9. <strong>write()</strong> - Fonksyon Pou Ekri</h4>
+<p><strong>Kisa se "write()"?</strong></p>
+<p><strong>write()</strong> se yon metòd ki ekri tèks nan fichier a. Li se tankou ekri nan yon liv.</p>
+<p><strong>Poukisa write() Enpòtan?</strong>
+- Li ekri enfòmasyon nan fichier a
+- Li kreye fichier nouvo si li pa egziste
+- Li efase kontni ansyen si mod "w" sèvi</p>
+<p><strong>Egzanp write():</strong></p>
+<pre class="codehilite"><code class="language-python">with open(&quot;test.txt&quot;, &quot;w&quot;) as fichier:
+    fichier.write(&quot;Bonjou mond!\n&quot;)
+    fichier.write(&quot;Mwen ap aprann Python!\n&quot;)
+</code></pre>
+
+<h4 id="10-close-fonksyon-pou-femen-fichier">10. <strong>close()</strong> - Fonksyon Pou Fèmen Fichier</h4>
+<p><strong>Kisa se "close()"?</strong></p>
+<p><strong>close()</strong> se yon metòd ki fèmen fichier a apre ou fin sèvi ak li. Li se tankou fèmen yon liv apre ou fin li li.</p>
+<p><strong>Poukisa close() Enpòtan?</strong>
+- Li lage resous konpitè a
+- Li asire ke done yo sere
+- Li anpeche pwoblèm nan sistèm nan</p>
+<p><strong>Egzanp close():</strong></p>
+<pre class="codehilite"><code class="language-python">fichier = open(&quot;test.txt&quot;, &quot;r&quot;)
+kontni = fichier.read()
+fichier.close()  # Fèmen fichier la
+</code></pre>
+
+<h3 id="encoding-kodaj-karakte">🔧 Encoding - Kòdaj Karaktè</h3>
+<h4 id="encoding-fason-kode-karakte"><strong>encoding</strong> - Fason Kode Karaktè</h4>
+<p><strong>Kisa se "encoding"?</strong></p>
+<p><strong>encoding</strong> se fason konpitè a kode karaktè yo (lèt, nimewo, senbòl). Li se tankou yon kòd sekrè pou reprezante karaktè yo.</p>
+<p><strong>Poukisa encoding Enpòtan?</strong>
+- Li pèmèt li karaktè espesyal (akant, chapeau, etc.)
+- Li asire ke tèks la afiche kòrèkteman
+- Li kompatib ak diferan lang yo</p>
+<p><strong>Egzanp encoding:</strong></p>
+<pre class="codehilite"><code class="language-python"># Sèvi ak encoding UTF-8 pou karaktè espesyal
+with open(&quot;test.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier:
+    kontni = fichier.read()
+</code></pre>
+
+<h3 id="egzanp-pratik-konple_5">🎮 Egzanp Pratik Konplè</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 EGZANP AMIZAN: Ou nan yon bibliyotèk ak liv yo
+
+print(&quot;📚 SITUASYON: Ou nan yon bibliyotèk ak liv yo&quot;)
+print(&quot;=&quot; * 45)
+
+# 1. KREYE YON FICHIER NOUVO
+print(&quot;1️⃣ KREYE YON FICHIER NOUVO&quot;)
+print(&quot;   💡 Pensez: 'Ekri nan yon liv vid'&quot;)
+
+def kreye_fichier_rejèt():
+    &quot;&quot;&quot;Kreye yon fichier ak rejèt yo&quot;&quot;&quot;
+    print(&quot;   📝 Kreye fichier rejèt.txt...&quot;)
+
+    with open(&quot;rejèt.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as fichier:
+        fichier.write(&quot;REJÈT KWIZIN AYISYEN\n&quot;)
+        fichier.write(&quot;=&quot; * 25 + &quot;\n\n&quot;)
+        fichier.write(&quot;1. Diri ak Pwa\n&quot;)
+        fichier.write(&quot;   - 2 tas diri\n&quot;)
+        fichier.write(&quot;   - 1 tas pwa\n&quot;)
+        fichier.write(&quot;   - 1 ti gousyèl lay\n\n&quot;)
+        fichier.write(&quot;2. Griyo\n&quot;)
+        fichier.write(&quot;   - 1 kg vyann kochon\n&quot;)
+        fichier.write(&quot;   - 2 ti gousyèl lay\n&quot;)
+        fichier.write(&quot;   - 1 ti gousyèl epis\n&quot;)
+
+    print(&quot;   ✅ Fichier rejèt.txt kreye ak siksè!&quot;)
+
+kreye_fichier_rejèt()
+print()
+
+# 2. LI YON FICHIER
+print(&quot;2️⃣ LI YON FICHIER&quot;)
+print(&quot;   💡 Pensez: 'Li kontni yon liv'&quot;)
+
+def li_fichier_konplè():
+    &quot;&quot;&quot;Li tout kontni fichier a&quot;&quot;&quot;
+    try:
+        print(&quot;   📖 Li fichier rejèt.txt...&quot;)
+
+        with open(&quot;rejèt.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier:
+            tout_kontni = fichier.read()
+            print(&quot;   📋 Kontni fichier a:&quot;)
+            print(&quot;   &quot; + &quot;-&quot; * 40)
+            print(tout_kontni)
+            print(&quot;   &quot; + &quot;-&quot; * 40)
+
+    except FileNotFoundError:
+        print(&quot;   ❌ Fichier rejèt.txt pa jwenn!&quot;)
+    except Exception as e:
+        print(f&quot;   ❌ Erè: {e}&quot;)
+
+li_fichier_konplè()
+print()
+
+# 3. LI FICHIER LIY PA LIY
+print(&quot;3️⃣ LI FICHIER LIY PA LIY&quot;)
+print(&quot;   💡 Pensez: 'Li chak paj nan liv la'&quot;)
+
+def li_fichier_liy_pa_liy():
+    &quot;&quot;&quot;Li fichier a liy pa liy&quot;&quot;&quot;
+    try:
+        print(&quot;   📖 Li fichier rejèt.txt liy pa liy...&quot;)
+
+        with open(&quot;rejèt.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier:
+            nimewo_liy = 1
+            for liy in fichier:
+                liy_nèt = liy.strip()  # Retire espas nan fen
+                if liy_nèt:  # Si liy la pa vid
+                    print(f&quot;   {nimewo_liy:2d}. {liy_nèt}&quot;)
+                    nimewo_liy += 1
+
+    except FileNotFoundError:
+        print(&quot;   ❌ Fichier rejèt.txt pa jwenn!&quot;)
+
+li_fichier_liy_pa_liy()
+print()
+
+# 4. AJOUTE NAN FICHIER
+print(&quot;4️⃣ AJOUTE NAN FICHIER&quot;)
+print(&quot;   💡 Pensez: 'Ajoute nouvo paj nan liv la'&quot;)
+
+def ajoute_nan_fichier():
+    &quot;&quot;&quot;Ajoute nouvo rejèt nan fichier a&quot;&quot;&quot;
+    print(&quot;   ➕ Ajoute nouvo rejèt...&quot;)
+
+    with open(&quot;rejèt.txt&quot;, &quot;a&quot;, encoding=&quot;utf-8&quot;) as fichier:
+        fichier.write(&quot;\n3. Bannann Peze\n&quot;)
+        fichier.write(&quot;   - 6 bannann mi\n&quot;)
+        fichier.write(&quot;   - 1 ti gousyèl lay\n&quot;)
+        fichier.write(&quot;   - 1 ti gousyèl epis\n&quot;)
+
+    print(&quot;   ✅ Nouvo rejèt ajoute!&quot;)
+
+ajoute_nan_fichier()
+print()
+
+# 5. KREYE YON KOPI
+print(&quot;5️⃣ KREYE YON KOPI&quot;)
+print(&quot;   💡 Pensez: 'Fè yon kopi nan liv la'&quot;)
+
+def kreye_kopi_fichier():
+    &quot;&quot;&quot;Kreye yon kopi fichier a&quot;&quot;&quot;
+    try:
+        print(&quot;   📋 Kreye kopi rejèt.txt...&quot;)
+
+        # Li fichier orijinal la
+        with open(&quot;rejèt.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier_oryijinal:
+            kontni = fichier_oryijinal.read()
+
+        # Ekri nan fichier kopi a
+        with open(&quot;rejèt_kopi.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as fichier_kopi:
+            fichier_kopi.write(&quot;KOPI - &quot; + kontni)
+
+        print(&quot;   ✅ Kopi kreye: rejèt_kopi.txt&quot;)
+
+    except FileNotFoundError:
+        print(&quot;   ❌ Fichier orijinal la pa jwenn!&quot;)
+
+kreye_kopi_fichier()
+print()
+
+# 6. KONTE MO AK LIY
+print(&quot;6️⃣ KONTE MO AK LIY&quot;)
+print(&quot;   💡 Pensez: 'Konte konbyen mo ak liy nan liv la'&quot;)
+
+def analize_fichier():
+    &quot;&quot;&quot;Analize fichier a - konte mo, liy, karaktè&quot;&quot;&quot;
+    try:
+        print(&quot;   📊 Analize fichier rejèt.txt...&quot;)
+
+        with open(&quot;rejèt.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichier:
+            kontni = fichier.read()
+
+            # Konte karaktè yo
+            total_karaktè = len(kontni)
+
+            # Konte liy yo
+            liy_yo = kontni.split('\n')
+            total_liy = len(liy_yo)
+
+            # Konte mo yo
+            mo_yo = kontni.split()
+            total_mo = len(mo_yo)
+
+            print(f&quot;   📏 Total karaktè: {total_karaktè}&quot;)
+            print(f&quot;   📄 Total liy: {total_liy}&quot;)
+            print(f&quot;   📝 Total mo: {total_mo}&quot;)
+
+    except FileNotFoundError:
+        print(&quot;   ❌ Fichier rejèt.txt pa jwenn!&quot;)
+
+analize_fichier()
+print()
+
+print(&quot;🎉 BRAVO! Ou konprann TRAVAY AK DOSYE yo!&quot;)
 </code></pre>
 
 <h4 id="ekri-nan-yon-fichier">Ekri nan yon fichier</h4>
@@ -8153,18 +8844,437 @@ print(orijinal_chaje)
 <li><strong>Chalèj</strong>: Rezoud pwoblèm konprese ASCII art la</li>
 </ol>
 <hr />
-<h2 id="chapit-11-packaging-python_1">Chapit 11: Packaging Python</h2>
-<h3 id="argumant-liy-komand">Argumant liy kòmand</h3>
-<h4 id="argumant-debaz">Argumant debaz</h4>
+<h2 id="chapit-11-packaging-python-ak-jere-argumant-python-packaging-and-command-line-arguments-eksplikasyon-detaye-pou-debitan">Chapit 11: Packaging Python ak Jere Argumant (Python Packaging and Command Line Arguments) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-se-packaging-python-ak-jere-argumant">🎯 Kisa se "Packaging Python ak Jere Argumant"?</h3>
+<p><strong>Definisyon Detaye:</strong></p>
+<p><strong>Packaging Python ak Jere Argumant</strong> se teknik pou òganize kòd Python an modil ak pake, epi pou jere enfòmasyon ke itilizatè a bay lè yo kouri pwogram nan. Li se tankou òganize yon magazen ak resevwa kòmannde kliyan yo.</p>
+<p><strong>Poukisa Packaging ak Argumant Enpòtan?</strong></p>
+<ol>
+<li><strong>Òganizasyon</strong>: Divize kòd la an pati lojik</li>
+<li><strong>Reutilizasyon</strong>: Sèvi ak kòd la nan lòt pwojè</li>
+<li><strong>Pataje</strong>: Pataje kòd la ak lòt moun</li>
+<li><strong>Fleksibilite</strong>: Itilizatè a ka bay enfòmasyon diferan</li>
+<li><strong>Pwofesyonèl</strong>: Kòd la pi pwofesyonèl ak kenab</li>
+</ol>
+<p><strong>Analoji ki fasil konprann:</strong>
+- <strong>Package</strong> = Tankou yon magazen ki gen diferan depatman
+- <strong>Module</strong> = Tankou yon depatman nan magazen an
+- <strong>Command Line Arguments</strong> = Tankou kòmannde kliyan yo
+- <strong>sys.argv</strong> = Tankou yon mesaj kliyan an</p>
+<h3 id="tem-fondamantal-nan-packaging-ak-argumant">🔧 Tèm Fondamantal nan Packaging ak Argumant</h3>
+<h4 id="1-package-pake-koleksyon-modil">1. <strong>Package</strong> (Pake) - Koleksyon Modil</h4>
+<p><strong>Kisa se "Package"?</strong></p>
+<p><strong>Package</strong> se yon koleksyon modil Python ki òganize nan yon fòma espesyal. Li se tankou yon magazen ki gen plizyè depatman.</p>
+<p><strong>Poukisa Package Enpòtan?</strong>
+- Li òganize kòd la an pati lojik
+- Li pèmèt reutilizasyon
+- Li fè kòd la pi kenab
+- Li pèmèt pataje ak lòt moun</p>
+<p><strong>Egzanp Package:</strong></p>
+<pre class="codehilite"><code class="language-python"># Estrikti package
+mon_package/
+    __init__.py          # Fichier inisyalizasyon
+    matematik.py         # Modil matematik
+    tèks.py             # Modil tèks
+    fichier.py          # Modil fichier
+</code></pre>
+
+<h4 id="2-module-modil-fichier-python">2. <strong>Module</strong> (Modil) - Fichier Python</h4>
+<p><strong>Kisa se "Module"?</strong></p>
+<p><strong>Module</strong> se yon fichier Python ki gen fonksyon, klas, ak varyab ke ou ka sèvi nan lòt pwogram. Li se tankou yon depatman nan yon magazen.</p>
+<p><strong>Poukisa Module Enpòtan?</strong>
+- Li divize kòd la an pati
+- Li pèmèt reutilizasyon
+- Li fè kòd la pi kenab
+- Li òganize fonksyon yo</p>
+<p><strong>Egzanp Module:</strong></p>
+<pre class="codehilite"><code class="language-python"># matematik.py - Modil matematik
+def ajoute(a, b):
+    &quot;&quot;&quot;Ajoute de nimewo&quot;&quot;&quot;
+    return a + b
+
+def soustraksyon(a, b):
+    &quot;&quot;&quot;Soustraksyon de nimewo&quot;&quot;&quot;
+    return a - b
+
+def miltiplikasyon(a, b):
+    &quot;&quot;&quot;Miltiplikasyon de nimewo&quot;&quot;&quot;
+    return a * b
+
+def divizyon(a, b):
+    &quot;&quot;&quot;Divizyon de nimewo&quot;&quot;&quot;
+    if b != 0:
+        return a / b
+    else:
+        return &quot;Pa ka divize pa zewo&quot;
+</code></pre>
+
+<h4 id="3-import-enpote-modil">3. <strong>import</strong> - Enpòte Modil</h4>
+<p><strong>Kisa se "import"?</strong></p>
+<p><strong>import</strong> se yon mo kle nan Python ki pèmèt ou sèvi ak fonksyon ak klas nan lòt modil. Li se tankou al nan yon lòt depatman nan magazen an.</p>
+<p><strong>Poukisa import Enpòtan?</strong>
+- Li pèmèt sèvi ak kòd nan lòt fichier
+- Li òganize kòd la
+- Li evite repete kòd
+- Li pèmèt reutilizasyon</p>
+<p><strong>Egzanp import:</strong></p>
+<pre class="codehilite"><code class="language-python"># Enpòte modil konplè
+import matematik
+
+rezilta = matematik.ajoute(5, 3)
+print(rezilta)  # Afiche: 8
+
+# Enpòte fonksyon espesifik
+from matematik import ajoute, soustraksyon
+
+rezilta1 = ajoute(5, 3)
+rezilta2 = soustraksyon(10, 4)
+</code></pre>
+
+<h4 id="4-initpy-fichier-inisyalizasyon">4. <strong><strong>init</strong>.py</strong> - Fichier Inisyalizasyon</h4>
+<p><strong>Kisa se "<strong>init</strong>.py"?</strong></p>
+<p><strong><strong>init</strong>.py</strong> se yon fichier espesyal nan Python ki di ke yon dosye se yon package. Li se tankou yon pano nan pòtay magazen an ki di "Sa se yon magazen".</p>
+<p><strong>Poukisa <strong>init</strong>.py Enpòtan?</strong>
+- Li idantifye package a
+- Li pèmèt enpòte modil yo
+- Li ka gen kòd inisyalizasyon
+- Li òganize package a</p>
+<p><strong>Egzanp <strong>init</strong>.py:</strong></p>
+<pre class="codehilite"><code class="language-python"># __init__.py nan package a
+&quot;&quot;&quot;
+Package matematik - Fonksyon matematik pou kalkil
+&quot;&quot;&quot;
+
+# Enpòte fonksyon yo pou fasil aksè
+from .matematik import ajoute, soustraksyon, miltiplikasyon, divizyon
+
+# Version package a
+__version__ = &quot;1.0.0&quot;
+
+# Fonksyon konvenyans
+def kalkile(a, b, operasyon):
+    &quot;&quot;&quot;Kalkile ak operasyon espesifik&quot;&quot;&quot;
+    if operasyon == &quot;+&quot;:
+        return ajoute(a, b)
+    elif operasyon == &quot;-&quot;:
+        return soustraksyon(a, b)
+    elif operasyon == &quot;*&quot;:
+        return miltiplikasyon(a, b)
+    elif operasyon == &quot;/&quot;:
+        return divizyon(a, b)
+</code></pre>
+
+<h4 id="5-sysargv-argumant-liny-komand">5. <strong>sys.argv</strong> - Argumant Liny Kòmand</h4>
+<p><strong>Kisa se "sys.argv"?</strong></p>
+<p><strong>sys.argv</strong> se yon lis ki gen tout argumant yo ke itilizatè a bay lè yo kouri pwogram nan. Li se tankou yon mesaj kliyan an ak tout enfòmasyon li yo.</p>
+<p><strong>Poukisa sys.argv Enpòtan?</strong>
+- Li pèmèt resevwa enfòmasyon itilizatè a
+- Li fè pwogram nan pi fleksib
+- Li pèmèt konfigirasyon dinamik
+- Li pèmèt otomatizasyon</p>
+<p><strong>Egzanp sys.argv:</strong></p>
 <pre class="codehilite"><code class="language-python">import sys
 
 # Jwenn argumant yo
 argumant_yo = sys.argv
+
 print(f&quot;Non script: {argumant_yo[0]}&quot;)
 print(f&quot;Argumant yo: {argumant_yo[1:]}&quot;)
 
-# Teste
-# python script.py arg1 arg2 arg3
+# Teste ak: python script.py arg1 arg2 arg3
+</code></pre>
+
+<h4 id="6-argparse-modil-pou-jere-argumant">6. <strong>argparse</strong> - Modil Pou Jere Argumant</h4>
+<p><strong>Kisa se "argparse"?</strong></p>
+<p><strong>argparse</strong> se yon modil Python ki bay zouti pou kreye ak jere argumant liny kòmand. Li se tankou yon asistan ki ede resevwa ak konprann kòmannde kliyan yo.</p>
+<p><strong>Poukisa argparse Enpòtan?</strong>
+- Li kreye argumant yo otomatikman
+- Li valide enfòmasyon yo
+- Li kreye mesaj èd yo
+- Li fè pwogram nan pi pwofesyonèl</p>
+<p><strong>Egzanp argparse:</strong></p>
+<pre class="codehilite"><code class="language-python">import argparse
+
+# Kreye parser
+parser = argparse.ArgumentParser(description=&quot;Kalkilatris senp&quot;)
+
+# Ajoute argumant yo
+parser.add_argument(&quot;nimewo1&quot;, type=int, help=&quot;Premye nimewo&quot;)
+parser.add_argument(&quot;nimewo2&quot;, type=int, help=&quot;Dezyèm nimewo&quot;)
+parser.add_argument(&quot;--operasyon&quot;, &quot;-o&quot;, choices=[&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;], 
+                   default=&quot;+&quot;, help=&quot;Operasyon matematik&quot;)
+
+# Parse argumant yo
+args = parser.parse_args()
+
+# Sèvi ak argumant yo
+print(f&quot;Rezilta: {args.nimewo1} {args.operasyon} {args.nimewo2}&quot;)
+</code></pre>
+
+<h4 id="7-argumentparser-kreye-parser">7. <strong>ArgumentParser</strong> - Kreye Parser</h4>
+<p><strong>Kisa se "ArgumentParser"?</strong></p>
+<p><strong>ArgumentParser</strong> se yon klas nan modil argparse ki kreye yon parser pou jere argumant yo. Li se tankou yon asistan ki konprann kòmannde yo.</p>
+<p><strong>Egzanp ArgumentParser:</strong></p>
+<pre class="codehilite"><code class="language-python">import argparse
+
+# Kreye parser ak deskripsyon
+parser = argparse.ArgumentParser(
+    description=&quot;Kalkilatris matematik&quot;,
+    epilog=&quot;Egzanp: python kalkilatris.py 5 3 --operasyon +&quot;
+)
+</code></pre>
+
+<h4 id="8-add_argument-ajoute-argumant">8. <strong>add_argument()</strong> - Ajoute Argumant</h4>
+<p><strong>Kisa se "add_argument()"?</strong></p>
+<p><strong>add_argument()</strong> se yon metòd ki ajoute yon argumant nan parser la. Li se tankou ajoute yon opcion nan kòmannde a.</p>
+<p><strong>Poukisa add_argument() Enpòtan?</strong>
+- Li defini argumant yo
+- Li valide kalite done yo
+- Li kreye mesaj èd yo
+- Li bay valè defò yo</p>
+<p><strong>Egzanp add_argument():</strong></p>
+<pre class="codehilite"><code class="language-python"># Argumant pozisyonèl
+parser.add_argument(&quot;non&quot;, help=&quot;Non itilizatè a&quot;)
+
+# Argumant opsyonèl
+parser.add_argument(&quot;--laj&quot;, &quot;-l&quot;, type=int, help=&quot;Laj itilizatè a&quot;)
+
+# Argumant ak valè defò
+parser.add_argument(&quot;--vil&quot;, default=&quot;Pòtoprens&quot;, help=&quot;Vil itilizatè a&quot;)
+
+# Argumant ak chwa
+parser.add_argument(&quot;--jèn&quot;, choices=[&quot;m&quot;, &quot;f&quot;], help=&quot;Jèn itilizatè a&quot;)
+</code></pre>
+
+<h4 id="9-parse_args-parse-argumant">9. <strong>parse_args()</strong> - Parse Argumant</h4>
+<p><strong>Kisa se "parse_args()"?</strong></p>
+<p><strong>parse_args()</strong> se yon metòd ki li argumant yo nan liny kòmand la epi retounen yo kòm yon objè. Li se tankou konprann kòmannde kliyan an.</p>
+<p><strong>Egzanp parse_args():</strong></p>
+<pre class="codehilite"><code class="language-python"># Parse argumant yo
+args = parser.parse_args()
+
+# Aksede argumant yo
+print(f&quot;Non: {args.non}&quot;)
+print(f&quot;Laj: {args.laj}&quot;)
+print(f&quot;Vil: {args.vil}&quot;)
+</code></pre>
+
+<h4 id="10-help-mesaj-ed">10. <strong>help</strong> - Mesaj Èd</h4>
+<p><strong>Kisa se "help"?</strong></p>
+<p><strong>help</strong> se paramèt ki bay mesaj èd pou argumant yo. Li se tankou yon eksplikasyon pou kliyan an.</p>
+<p><strong>Egzanp help:</strong></p>
+<pre class="codehilite"><code class="language-python">parser.add_argument(&quot;non&quot;, help=&quot;Non itilizatè a&quot;)
+parser.add_argument(&quot;--laj&quot;, help=&quot;Laj itilizatè a (an ane)&quot;)
+</code></pre>
+
+<h3 id="egzanp-pratik-konple_6">🎮 Egzanp Pratik Konplè</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 EGZANP AMIZAN: Ou nan yon restoran ak kòmannde kliyan
+
+print(&quot;🍽️ SITUASYON: Ou nan yon restoran ak kòmannde kliyan&quot;)
+print(&quot;=&quot; * 45)
+
+# 1. MODIL MATEMATIK
+print(&quot;1️⃣ MODIL MATEMATIK&quot;)
+print(&quot;   💡 Pensez: 'Depatman matematik nan magazen an'&quot;)
+
+# matematik.py
+def ajoute(a, b):
+    &quot;&quot;&quot;Ajoute de nimewo&quot;&quot;&quot;
+    return a + b
+
+def soustraksyon(a, b):
+    &quot;&quot;&quot;Soustraksyon de nimewo&quot;&quot;&quot;
+    return a - b
+
+def miltiplikasyon(a, b):
+    &quot;&quot;&quot;Miltiplikasyon de nimewo&quot;&quot;&quot;
+    return a * b
+
+def divizyon(a, b):
+    &quot;&quot;&quot;Divizyon de nimewo&quot;&quot;&quot;
+    if b != 0:
+        return a / b
+    else:
+        return &quot;Pa ka divize pa zewo&quot;
+
+def kalkile_pri(pri_unite, kantite):
+    &quot;&quot;&quot;Kalkile pri total&quot;&quot;&quot;
+    return miltiplikasyon(pri_unite, kantite)
+
+def kalkile_tip(pri, pousantaj_tip=15):
+    &quot;&quot;&quot;Kalkile tip&quot;&quot;&quot;
+    return divizyon(miltiplikasyon(pri, pousantaj_tip), 100)
+
+# Teste modil matematik
+print(&quot;   📊 Teste fonksyon matematik:&quot;)
+print(f&quot;   ➕ 5 + 3 = {ajoute(5, 3)}&quot;)
+print(f&quot;   ➖ 10 - 4 = {soustraksyon(10, 4)}&quot;)
+print(f&quot;   ✖️ 6 × 7 = {miltiplikasyon(6, 7)}&quot;)
+print(f&quot;   ➗ 15 ÷ 3 = {divizyon(15, 3)}&quot;)
+
+print()
+
+# 2. MODIL RESTORAN
+print(&quot;2️⃣ MODIL RESTORAN&quot;)
+print(&quot;   💡 Pensez: 'Depatman restoran nan magazen an'&quot;)
+
+# restoran.py
+def kreye_kòmannde(non_kliyan, manje_yo, kantite_yo):
+    &quot;&quot;&quot;Kreye yon kòmannde&quot;&quot;&quot;
+    kòmannde = {
+        &quot;kliyan&quot;: non_kliyan,
+        &quot;manje&quot;: manje_yo,
+        &quot;kantite&quot;: kantite_yo,
+        &quot;dat&quot;: &quot;2025-01-01&quot;
+    }
+    return kòmannde
+
+def kalkile_total_kòmannde(kòmannde, pri_yo):
+    &quot;&quot;&quot;Kalkile total yon kòmannde&quot;&quot;&quot;
+    total = 0
+    for manje, kantite in zip(kòmannde[&quot;manje&quot;], kòmannde[&quot;kantite&quot;]):
+        if manje in pri_yo:
+            pri_unite = pri_yo[manje]
+            sous_total = miltiplikasyon(pri_unite, kantite)
+            total = ajoute(total, sous_total)
+            print(f&quot;   🍽️ {kantite}x {manje} = {sous_total} goud&quot;)
+    return total
+
+def afiche_kòmannde(kòmannde):
+    &quot;&quot;&quot;Afiche yon kòmannde&quot;&quot;&quot;
+    print(f&quot;   📋 Kòmannde pou: {kòmannde['kliyan']}&quot;)
+    for manje, kantite in zip(kòmannde[&quot;manje&quot;], kòmannde[&quot;kantite&quot;]):
+        print(f&quot;   🍽️ {kantite}x {manje}&quot;)
+
+# Teste modil restoran
+print(&quot;   🍽️ Teste fonksyon restoran:&quot;)
+kòmannde = kreye_kòmannde(&quot;Marie&quot;, [&quot;Griyo&quot;, &quot;Diri ak Pwa&quot;], [2, 1])
+afiche_kòmannde(kòmannde)
+
+pri_yo = {&quot;Griyo&quot;: 150, &quot;Diri ak Pwa&quot;: 100}
+total = kalkile_total_kòmannde(kòmannde, pri_yo)
+print(f&quot;   💰 Total: {total} goud&quot;)
+
+print()
+
+# 3. SYS.ARGV - ARGUMANT DEBAZ
+print(&quot;3️⃣ SYS.ARGV - ARGUMANT DEBAZ&quot;)
+print(&quot;   💡 Pensez: 'Resevwa mesaj kliyan an'&quot;)
+
+import sys
+
+def jere_argumant_deba():
+    &quot;&quot;&quot;Jere argumant debaz&quot;&quot;&quot;
+    argumant_yo = sys.argv
+
+    if len(argumant_yo) &lt; 2:
+        print(&quot;   ❌ Ou dwe bay non kliyan an!&quot;)
+        print(&quot;   💡 Egzanp: python script.py Marie&quot;)
+        return
+
+    non_kliyan = argumant_yo[1]
+    print(f&quot;   👋 Bonjou {non_kliyan}!&quot;)
+
+    if len(argumant_yo) &gt; 2:
+        manje_yo = argumant_yo[2:]
+        print(f&quot;   🍽️ Ou vle: {', '.join(manje_yo)}&quot;)
+
+    print(f&quot;   📊 Total argumant: {len(argumant_yo)}&quot;)
+
+# Simule argumant yo
+sys.argv = [&quot;script.py&quot;, &quot;Marie&quot;, &quot;Griyo&quot;, &quot;Diri ak Pwa&quot;]
+jere_argumant_deba()
+
+print()
+
+# 4. ARGPARSE - JERE ARGUMANT PWOFESYONÈL
+print(&quot;4️⃣ ARGPARSE - JERE ARGUMANT PWOFESYONÈL&quot;)
+print(&quot;   💡 Pensez: 'Asistan ki konprann kòmannde yo'&quot;)
+
+import argparse
+
+def kreye_kalkilatris_restoran():
+    &quot;&quot;&quot;Kreye kalkilatris restoran ak argparse&quot;&quot;&quot;
+
+    # Kreye parser
+    parser = argparse.ArgumentParser(
+        description=&quot;Kalkilatris Restoran Ayisyen&quot;,
+        epilog=&quot;Egzanp: python restoran.py --kliyan Marie --manje Griyo --kantite 2&quot;
+    )
+
+    # Ajoute argumant yo
+    parser.add_argument(&quot;--kliyan&quot;, &quot;-k&quot;, required=True, help=&quot;Non kliyan an&quot;)
+    parser.add_argument(&quot;--manje&quot;, &quot;-m&quot;, nargs=&quot;+&quot;, help=&quot;Manje yo (plizyè)&quot;)
+    parser.add_argument(&quot;--kantite&quot;, &quot;-q&quot;, type=int, nargs=&quot;+&quot;, help=&quot;Kantite yo&quot;)
+    parser.add_argument(&quot;--tip&quot;, &quot;-t&quot;, type=float, default=15.0, help=&quot;Pousantaj tip (default: 15)&quot;)
+    parser.add_argument(&quot;--livrezon&quot;, &quot;-l&quot;, action=&quot;store_true&quot;, help=&quot;Ajoute frè livrezon&quot;)
+    parser.add_argument(&quot;--rapò&quot;, &quot;-r&quot;, action=&quot;store_true&quot;, help=&quot;Afiche rapò detaye&quot;)
+
+    # Parse argumant yo
+    try:
+        args = parser.parse_args()
+
+        print(f&quot;   👋 Bonjou {args.kliyan}!&quot;)
+
+        if args.manje and args.kantite:
+            if len(args.manje) != len(args.kantite):
+                print(&quot;   ❌ Kantite manje ak kantite dwe menm!&quot;)
+                return
+
+            # Pri yo
+            pri_yo = {
+                &quot;Griyo&quot;: 150, &quot;Diri ak Pwa&quot;: 100, &quot;Bannann Peze&quot;: 80,
+                &quot;Taso&quot;: 120, &quot;Legim&quot;: 90, &quot;Pwason&quot;: 200
+            }
+
+            total = 0
+            print(&quot;   🍽️ Kòmannde:&quot;)
+
+            for manje, kantite in zip(args.manje, args.kantite):
+                if manje in pri_yo:
+                    pri_unite = pri_yo[manje]
+                    sous_total = miltiplikasyon(pri_unite, kantite)
+                    total = ajoute(total, sous_total)
+                    print(f&quot;   📋 {kantite}x {manje} = {sous_total} goud&quot;)
+                else:
+                    print(f&quot;   ❌ {manje} pa disponib!&quot;)
+
+            # Tip
+            tip_montan = kalkile_tip(total, args.tip)
+            print(f&quot;   💰 Sous-total: {total} goud&quot;)
+            print(f&quot;   🎁 Tip ({args.tip}%): {tip_montan:.2f} goud&quot;)
+
+            # Livrezon
+            if args.livrezon:
+                frè_livrezon = 50
+                total = ajoute(total, frè_livrezon)
+                print(f&quot;   🚚 Frè livrezon: {frè_livrezon} goud&quot;)
+
+            total_final = ajoute(total, tip_montan)
+            print(f&quot;   💳 Total final: {total_final:.2f} goud&quot;)
+
+            if args.rapò:
+                print(&quot;\n   📊 RAPÒ DETAYE:&quot;)
+                print(f&quot;   👤 Kliyan: {args.kliyan}&quot;)
+                print(f&quot;   📅 Dat: 2025-01-01&quot;)
+                print(f&quot;   🍽️ Total manje: {total} goud&quot;)
+                print(f&quot;   🎁 Tip: {tip_montan:.2f} goud&quot;)
+                if args.livrezon:
+                    print(f&quot;   🚚 Livrezon: 50 goud&quot;)
+                print(f&quot;   💳 Total: {total_final:.2f} goud&quot;)
+
+    except SystemExit:
+        pass  # argparse fini pwogram nan otomatikman
+
+# Simule argumant yo
+import sys
+sys.argv = [&quot;restoran.py&quot;, &quot;--kliyan&quot;, &quot;Marie&quot;, &quot;--manje&quot;, &quot;Griyo&quot;, &quot;Diri ak Pwa&quot;, &quot;--kantite&quot;, &quot;2&quot;, &quot;1&quot;, &quot;--tip&quot;, &quot;20&quot;, &quot;--livrezon&quot;, &quot;--rapò&quot;]
+
+kreye_kalkilatris_restoran()
+
+print()
+
+print(&quot;🎉 BRAVO! Ou konprann PACKAGING PYTHON ak JERE ARGUMANT yo!&quot;)
 </code></pre>
 
 <h4 id="argparse-jere-argumant-yo">Argparse - Jere argumant yo</h4>
@@ -8273,158 +9383,774 @@ print(f&quot;Zòn rektang: {zòn}&quot;)
 <li><strong>Package</strong>: Kreye yon package pou kalkilatris matematik ak jeyometri</li>
 </ol>
 <hr />
-<h2 id="chapit-12-konklizyon-ak-pwoje-final_1">Chapit 12: Konklizyon ak Pwojè Final</h2>
-<h3 id="rezime-sa-nou-te-aprann">Rezime sa nou te aprann</h3>
-<p>Nan kou sa a, nou te aprann:</p>
-<p>✅ <strong>Fondasyon Python</strong> - Varyab, kalite done, operatè<br />
-✅ <strong>Strukti Done</strong> - Lis, tuple, set, diksyone, comprehensions<br />
-✅ <strong>Kontwòl Akouman</strong> - If/else, boucle, fonksyon<br />
-✅ <strong>Pwogramasyon Oryante Objè</strong> - Klas, objè, eritaj, metòd espesyal<br />
-✅ <strong>Jesyon Erè</strong> - Try/except, eksepsyon koutim<br />
-✅ <strong>Pwogramasyon Avanse</strong> - Threads, pwosesis, synchronization<br />
-✅ <strong>Travay ak Dosye</strong> - Li, ekri, CSV, JSON<br />
-✅ <strong>Packaging</strong> - Modil, package, argumant liy kòmand  </p>
-<h3 id="pwoje-final-sistem-jesyon-elev">Pwojè Final: Sistèm Jesyon Elèv</h3>
-<h4 id="objektif">Objektif</h4>
-<p>Kreye yon sistèm konplè pou jere enfòmasyon elèv yo ak nòt yo.</p>
-<h4 id="fonksyonalite">Fonksyonalite</h4>
+<h2 id="chapit-12-konklizyon-ak-pwoje-final-conclusion-and-final-project-eksplikasyon-detaye-pou-debitan">Chapit 12: Konklizyon ak Pwojè Final (Conclusion and Final Project) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="kisa-nou-te-aprann-nan-liv-sa-a">🎯 Kisa nou te aprann nan liv sa a?</h3>
+<p><strong>Rezime Detaye:</strong></p>
+<p>Nan liv sa a, nou te aprann tout fondasyon Python nan lang Kreyòl Ayisyen. Nou te kòmanse ak kèk bagay senp epi nou te rive nan nivo avanse. Chak chapit te bati sou chapit anvan an.</p>
+<h3 id="rezime-detaye-chak-chapit">📚 Rezime Detaye Chak Chapit</h3>
+<h4 id="chapit-1-entwodiksyon-ak-preparasyon_2"><strong>Chapit 1: Entwodiksyon ak Preparasyon</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Kijan konpitè yo panse</strong> - Lojik ak algoritm
+- <strong>Python installation</strong> - Enstalasyon sou tout sistèm
+- <strong>IDE ak zouti</strong> - Jupyter Notebook, VS Code
+- <strong>Zen Python</strong> - 20 prensip fondamantal
+- <strong>Premye pwogram</strong> - Hello World ak pwogram avanse</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Syntax</strong> - Règ ekriti kòd
+- <strong>Code</strong> - Enstriksyon pou konpitè
+- <strong>Program</strong> - Seri enstriksyon
+- <strong>Variable</strong> - Plas pou sere done
+- <strong>IDE</strong> - Zouti pou ekri kòd</p>
+<h4 id="chapit-2-koumanse-rapid_2"><strong>Chapit 2: Koumanse Rapid</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Varyab ak kalite done</strong> - String, Integer, Float, Boolean
+- <strong>Operatè matematik</strong> - +, -, <em>, /, //, %, **
+- </em><em>Konvèsyon kalite done</em><em> - int(), float(), str(), bool()
+- </em><em>Operatè konparezon</em><em> - ==, !=, &gt;, &lt;, &gt;=, &lt;=
+- </em><em>Operatè lojik</em>* - and, or, not</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Data Type</strong> - Kalite enfòmasyon
+- <strong>String</strong> - Tèks
+- <strong>Integer</strong> - Nimewo antye
+- <strong>Float</strong> - Nimewo desimal
+- <strong>Boolean</strong> - Vre oswa Fo</p>
+<h4 id="chapit-3-kalite-done-debaz_2"><strong>Chapit 3: Kalite Done Debaz</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>String operations</strong> - Koupe ak jwenn pati
+- <strong>String slicing</strong> - [start:end:step]
+- <strong>String methods</strong> - upper(), lower(), strip(), split()
+- <strong>String formatting</strong> - f-strings, .format()
+- <strong>Karaktè espesyal</strong> - \n, \t, \, \"</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>String</strong> - Tèks
+- <strong>Slicing</strong> - Koupe ak jwenn pati
+- <strong>Method</strong> - Fonksyon pou objè
+- <strong>Format</strong> - Fòma tèks
+- <strong>Character</strong> - Lèt oswa senbòl</p>
+<h4 id="chapit-4-estrikti-done-debaz_2"><strong>Chapit 4: Estrikti Done Debaz</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Lists</strong> - Lis ki ka chanje
+- <strong>Tuples</strong> - Lis ki pa ka chanje
+- <strong>Sets</strong> - Koleksyon ak eleman inik
+- <strong>Dictionaries</strong> - Lis ak kle-vale
+- <strong>List comprehensions</strong> - Kreye lis ak fòmil</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>List</strong> - Lis bagay yo
+- <strong>Tuple</strong> - Lis ki pa ka chanje
+- <strong>Set</strong> - Koleksyon ak eleman inik
+- <strong>Dictionary</strong> - Lis ak kle-vale
+- <strong>Index</strong> - Pozisyon nan lis</p>
+<h4 id="chapit-5-kontwol-akouman_1"><strong>Chapit 5: Kontwòl Akouman</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>if, elif, else</strong> - Kondisyon ak desizyon
+- <strong>while loop</strong> - Boucle ak kondisyon
+- <strong>for loop</strong> - Boucle ak range
+- <strong>break ak continue</strong> - Kontwòl boucle
+- <strong>Nested loops</strong> - Boucle nan boucle</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Control Flow</strong> - Kontwòl akouman
+- <strong>Condition</strong> - Test pou desizyon
+- <strong>Loop</strong> - Repete aksyon
+- <strong>Iteration</strong> - Yon fwa nan boucle
+- <strong>Break</strong> - Sòti nan boucle</p>
+<h4 id="chapit-6-fonksyon_1"><strong>Chapit 6: Fonksyon</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Fonksyon debaz</strong> - def, return
+- <strong>Paramèt ak argumant</strong> - Enfòmasyon pou fonksyon
+- <strong>Argumant defò</strong> - Valè otomatik
+- <strong><em>args ak </em>*kwargs</strong> - Argumant abitrer
+- <strong>Lambda functions</strong> - Fonksyon kout</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Function</strong> - Blòk kòd reutilizab
+- <strong>Parameter</strong> - Enfòmasyon pou fonksyon
+- <strong>Argument</strong> - Valè reyèl
+- <strong>Return</strong> - Bay rezilta
+- <strong>Lambda</strong> - Fonksyon kout</p>
+<h4 id="chapit-7-klas-ak-obje_1"><strong>Chapit 7: Klas ak Objè</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Klas ak objè</strong> - OOP fondasyon
+- <strong>Constructor</strong> - <strong>init</strong> metòd
+- <strong>self</strong> - Referans objè
+- <strong>Atribi ak metòd</strong> - Karakteristik ak aksyon
+- <strong>Inheritance</strong> - Eritaj karakteristik
+- <strong>Polymorphism</strong> - Plizyè fòm
+- <strong>Encapsulation</strong> - Kache detay</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Class</strong> - Plan pou kreye objè
+- <strong>Object</strong> - Eksemplè reyèl
+- <strong>Constructor</strong> - Fonkisyon kreasyon
+- <strong>self</strong> - Referans objè
+- <strong>Inheritance</strong> - Herite karakteristik</p>
+<h4 id="chapit-8-jesyon-ere-ak-eksepsyon_1"><strong>Chapit 8: Jesyon Erè ak Eksepsyon</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>try, except, finally</strong> - Jere erè
+- <strong>Kalite erè</strong> - SyntaxError, NameError, TypeError, etc.
+- <strong>Raise exceptions</strong> - Kreye erè koutim
+- <strong>Exception handling</strong> - Jere erè pwofesyonèl</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Error</strong> - Pwoblèm nan kòd
+- <strong>Exception</strong> - Erè espesifik
+- <strong>try</strong> - Eseye kòd
+- <strong>except</strong> - Jere erè
+- <strong>finally</strong> - Toujou fè</p>
+<h4 id="chapit-9-threads-ak-pwosesis_1"><strong>Chapit 9: Threads ak Pwosesis</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Threading</strong> - Plizyè thread
+- <strong>Multiprocessing</strong> - Plizyè pwosesis
+- <strong>start(), join()</strong> - Kontwòl thread
+- <strong>ThreadPoolExecutor</strong> - Pool thread
+- <strong>Synchronization</strong> - Senkronizasyon</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Thread</strong> - Travayè endividyèl
+- <strong>Process</strong> - Ekip konplè
+- <strong>Multithreading</strong> - Plizyè thread
+- <strong>Multiprocessing</strong> - Plizyè pwosesis
+- <strong>Synchronization</strong> - Senkronizasyon</p>
+<h4 id="chapit-10-travay-ak-dosye_1"><strong>Chapit 10: Travay ak Dosye</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>open(), close()</strong> - Ouvri ak fèmen fichier
+- <strong>read(), write()</strong> - Li ak ekri
+- <strong>with statement</strong> - Jere fichier otomatikman
+- <strong>CSV ak JSON</strong> - Fòma done
+- <strong>Encoding</strong> - Kòdaj karaktè</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>File</strong> - Dokiman done
+- <strong>open()</strong> - Fonksyon pou ouvri fichier
+- <strong>with</strong> - Jere fichier otomatikman
+- <strong>read()</strong> - Fonksyon pou li fichier
+- <strong>write()</strong> - Fonksyon pou ekri</p>
+<h4 id="chapit-11-packaging-python-ak-jere-argumant"><strong>Chapit 11: Packaging Python ak Jere Argumant</strong></h4>
+<p><strong>Kisa nou te aprann:</strong>
+- <strong>Package ak modil</strong> - Òganize kòd
+- <strong>import</strong> - Enpòte kòd
+- <strong><strong>init</strong>.py</strong> - Inisyalizasyon package
+- <strong>sys.argv</strong> - Argumant liny kòmand
+- <strong>argparse</strong> - Jere argumant pwofesyonèl</p>
+<p><strong>Tèm kle yo:</strong>
+- <strong>Package</strong> - Koleksyon modil
+- <strong>Module</strong> - Fichier Python
+- <strong>import</strong> - Enpòte modil
+- <strong>sys.argv</strong> - Argumant liny kòmand
+- <strong>argparse</strong> - Modil pou jere argumant</p>
+<h3 id="pwoje-final-sistem-jesyon-lekol-ayisyen">🎯 Pwojè Final: Sistèm Jesyon Lekòl Ayisyen</h3>
+<h4 id="objektif-detaye"><strong>Objektif Detaye</strong></h4>
+<p>Kreye yon sistèm konplè pou jere yon lekòl Ayisyen ki gen:
+- <strong>Jesyon elèv</strong> - Ajoute, modifye, efase elèv
+- <strong>Jesyon pwofesè</strong> - Jere pwofesè yo
+- <strong>Jesyon nòt</strong> - Sere ak kalkile nòt
+- <strong>Rapò ak estatistik</strong> - Analiz done
+- <strong>Sove ak chaje</strong> - Pèrsistans done
+- <strong>Interface kòmand</strong> - Kòmand liny</p>
+<h4 id="fonksyonalite-konple"><strong>Fonksyonalite Konplè</strong></h4>
 <ul>
-<li>Ajoute, modifye, efase elèv</li>
-<li>Jere nòt yo</li>
-<li>Kalkile mwayèn</li>
-<li>Sove ak chaje done</li>
-<li>Rapò ak estatistik</li>
+<li>✅ <strong>Ajoute, modifye, efase elèv</strong></li>
+<li>✅ <strong>Ajoute, modifye, efase pwofesè</strong></li>
+<li>✅ <strong>Jere nòt yo ak matyè yo</strong></li>
+<li>✅ <strong>Kalkile mwayèn ak klasman</strong></li>
+<li>✅ <strong>Sove ak chaje done (JSON/CSV)</strong></li>
+<li>✅ <strong>Rapò ak estatistik detaye</strong></li>
+<li>✅ <strong>Interface kòmand ak argparse</strong></li>
+<li>✅ <strong>Jesyon erè konplè</strong></li>
 </ul>
-<h4 id="kod-konple">Kòd konplè</h4>
-<pre class="codehilite"><code class="language-python">import json
-import csv
-from datetime import datetime
+<h3 id="pwoje-final-konple-sistem-jesyon-lekol-ayisyen">🎮 Pwojè Final Konplè: Sistèm Jesyon Lekòl Ayisyen</h3>
+<pre class="codehilite"><code class="language-python"># 🎮 PWOJÈ FINAL: Sistèm Jesyon Lekòl Ayisyen
+# Kreye pa: Ou ak Python nan Kreyòl Ayisyen
 
-class SistèmJesyonElèv:
+print(&quot;🏫 SISTÈM JESYON LEKÒL AYISYEN&quot;)
+print(&quot;=&quot; * 50)
+
+import json
+import csv
+import argparse
+from datetime import datetime
+from typing import Dict, List, Optional
+
+class Pèson:
+    &quot;&quot;&quot;Klas paran pou Elèv ak Pwofesè&quot;&quot;&quot;
+
+    def __init__(self, non: str, laj: int, adrès: str = &quot;&quot;):
+        &quot;&quot;&quot;
+        Konstriktè pou Pèson
+
+        Args:
+            non (str): Non pèson nan
+            laj (int): Laj pèson nan
+            adrès (str): Adrès pèson nan
+        &quot;&quot;&quot;
+        self.non = non
+        self.laj = laj
+        self.adrès = adrès
+        self.dat_kreasyon = datetime.now().isoformat()
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;Afiche enfòmasyon pèson nan&quot;&quot;&quot;
+        print(f&quot;👤 Non: {self.non}&quot;)
+        print(f&quot;🎂 Laj: {self.laj}&quot;)
+        print(f&quot;🏠 Adrès: {self.adrès}&quot;)
+        print(f&quot;📅 Dat kreasyon: {self.dat_kreasyon}&quot;)
+
+class Elèv(Pèson):
+    &quot;&quot;&quot;Klas Elèv ki herite nan Pèson&quot;&quot;&quot;
+
+    def __init__(self, non: str, laj: int, klas: str, adrès: str = &quot;&quot;):
+        &quot;&quot;&quot;
+        Konstriktè pou Elèv
+
+        Args:
+            non (str): Non elèv la
+            laj (int): Laj elèv la
+            klas (str): Klas elèv la
+            adrès (str): Adrès elèv la
+        &quot;&quot;&quot;
+        super().__init__(non, laj, adrès)  # Rele konstriktè paran
+        self.klas = klas
+        self.nòt_yo = {}  # Diksyone: {matyè: [nòt_yo]}
+        self.matrik = self.jenere_matrik()
+
+    def jenere_matrik(self) -&gt; str:
+        &quot;&quot;&quot;Jenere nimewo matrik elèv la&quot;&quot;&quot;
+        ane = datetime.now().year
+        # Senp: ane + 4 chif aleatwa
+        import random
+        chif_yo = random.randint(1000, 9999)
+        return f&quot;EL{ane}{chif_yo}&quot;
+
+    def ajoute_nòt(self, matyè: str, nòt: float):
+        &quot;&quot;&quot;
+        Ajoute yon nòt pou yon matyè
+
+        Args:
+            matyè (str): Non matyè a
+            nòt (float): Nòt la (0-100)
+        &quot;&quot;&quot;
+        if matyè not in self.nòt_yo:
+            self.nòt_yo[matyè] = []
+
+        if 0 &lt;= nòt &lt;= 100:
+            self.nòt_yo[matyè].append(nòt)
+            print(f&quot;✅ Nòt {nòt} ajoute pou {matyè}&quot;)
+        else:
+            print(&quot;❌ Nòt la dwe ant 0 ak 100&quot;)
+
+    def kalkile_mwayèn(self, matyè: str = None) -&gt; float:
+        &quot;&quot;&quot;
+        Kalkile mwayèn pou yon matyè oswa tout matyè
+
+        Args:
+            matyè (str, optional): Matyè espesifik. Defaults to None.
+
+        Returns:
+            float: Mwayèn la
+        &quot;&quot;&quot;
+        if matyè:
+            if matyè in self.nòt_yo and self.nòt_yo[matyè]:
+                return sum(self.nòt_yo[matyè]) / len(self.nòt_yo[matyè])
+            return 0.0
+        else:
+            # Mwayèn jeneral
+            tout_nòt = []
+            for nòt_list in self.nòt_yo.values():
+                tout_nòt.extend(nòt_list)
+
+            if tout_nòt:
+                return sum(tout_nòt) / len(tout_nòt)
+            return 0.0
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;Afiche enfòmasyon elèv la&quot;&quot;&quot;
+        print(f&quot;\n🎓 ELÈV: {self.non}&quot;)
+        print(f&quot;🎂 Laj: {self.laj}&quot;)
+        print(f&quot;🏫 Klas: {self.klas}&quot;)
+        print(f&quot;📋 Matrik: {self.matrik}&quot;)
+        print(f&quot;🏠 Adrès: {self.adrès}&quot;)
+
+        if self.nòt_yo:
+            print(&quot;\n📊 NÒT YO:&quot;)
+            for matyè, nòt_list in self.nòt_yo.items():
+                mwayèn = self.kalkile_mwayèn(matyè)
+                print(f&quot;   📚 {matyè}: {nòt_list} (Mwayèn: {mwayèn:.2f})&quot;)
+
+            mwayèn_jeneral = self.kalkile_mwayèn()
+            print(f&quot;\n📈 Mwayèn Jeneral: {mwayèn_jeneral:.2f}&quot;)
+        else:
+            print(&quot;📊 Pa gen nòt ankò&quot;)
+
+class Pwofesè(Pèson):
+    &quot;&quot;&quot;Klas Pwofesè ki herite nan Pèson&quot;&quot;&quot;
+
+    def __init__(self, non: str, laj: int, matyè: str, salè: float, adrès: str = &quot;&quot;):
+        &quot;&quot;&quot;
+        Konstriktè pou Pwofesè
+
+        Args:
+            non (str): Non pwofesè a
+            laj (int): Laj pwofesè a
+            matyè (str): Matyè pwofesè a anseye
+            salè (float): Salè pwofesè a
+            adrès (str): Adrès pwofesè a
+        &quot;&quot;&quot;
+        super().__init__(non, laj, adrès)
+        self.matyè = matyè
+        self.salè = salè
+        self.klas_yo = []  # Lis klas ke pwofesè a anseye
+
+    def ajoute_klas(self, klas: str):
+        &quot;&quot;&quot;Ajoute yon klas pou pwofesè a&quot;&quot;&quot;
+        if klas not in self.klas_yo:
+            self.klas_yo.append(klas)
+            print(f&quot;✅ Klas {klas} ajoute pou {self.non}&quot;)
+        else:
+            print(f&quot;⚠️ Klas {klas} egziste deja&quot;)
+
+    def afiche_infò(self):
+        &quot;&quot;&quot;Afiche enfòmasyon pwofesè a&quot;&quot;&quot;
+        print(f&quot;\n👨‍🏫 PWOFESÈ: {self.non}&quot;)
+        print(f&quot;🎂 Laj: {self.laj}&quot;)
+        print(f&quot;📚 Matyè: {self.matyè}&quot;)
+        print(f&quot;💰 Salè: {self.salè} goud&quot;)
+        print(f&quot;🏠 Adrès: {self.adrès}&quot;)
+        print(f&quot;🏫 Klas yo: {', '.join(self.klas_yo) if self.klas_yo else 'Pa gen klas ankò'}&quot;)
+
+class SistèmJesyonLekòl:
+    &quot;&quot;&quot;Klas prensipal pou jere sistèm lekòl la&quot;&quot;&quot;
+
     def __init__(self):
-        self.elèv_yo = {}
-        self.fichier_done = &quot;elèv_yo.json&quot;
+        &quot;&quot;&quot;Konstriktè pou SistèmJesyonLekòl&quot;&quot;&quot;
+        self.elèv_yo = {}  # {non: Elèv}
+        self.pwofesè_yo = {}  # {non: Pwofesè}
+        self.fichier_elèv = &quot;elèv_yo.json&quot;
+        self.fichier_pwofesè = &quot;pwofesè_yo.json&quot;
         self.chaje_done()
 
-    def ajoute_elèv(self, non, laj, klas):
-        if non in self.elèv_yo:
-            raise ValueError(f&quot;Elèv {non} egziste deja&quot;)
+    def chaje_done(self):
+        &quot;&quot;&quot;Chaje done yo nan fichier yo&quot;&quot;&quot;
+        try:
+            # Chaje elèv yo
+            with open(self.fichier_elèv, 'r', encoding='utf-8') as f:
+                done_elèv = json.load(f)
+                for non, done in done_elèv.items():
+                    elèv = Elèv(done['non'], done['laj'], done['klas'], done['adrès'])
+                    elèv.matrik = done['matrik']
+                    elèv.nòt_yo = done['nòt_yo']
+                    self.elèv_yo[non] = elèv
 
-        self.elèv_yo[non] = {
-            &quot;laj&quot;: laj,
-            &quot;klas&quot;: klas,
-            &quot;nòt_yo&quot;: [],
-            &quot;dat_kreasyon&quot;: datetime.now().isoformat()
-        }
-        print(f&quot;Elèv {non} ajoute ak siksè&quot;)
+            # Chaje pwofesè yo
+            with open(self.fichier_pwofesè, 'r', encoding='utf-8') as f:
+                done_pwofesè = json.load(f)
+                for non, done in done_pwofesè.items():
+                    pwofesè = Pwofesè(done['non'], done['laj'], done['matyè'], done['salè'], done['adrès'])
+                    pwofesè.klas_yo = done['klas_yo']
+                    self.pwofesè_yo[non] = pwofesè
 
-    def ajoute_nòt(self, non, nòt):
-        if non not in self.elèv_yo:
-            raise ValueError(f&quot;Elèv {non} pa egziste&quot;)
-
-        if not isinstance(nòt, (int, float)) or nòt &lt; 0 or nòt &gt; 20:
-            raise ValueError(&quot;Nòt dwe yon nimewo ant 0 ak 20&quot;)
-
-        self.elèv_yo[non][&quot;nòt_yo&quot;].append(nòt)
-        print(f&quot;Nòt {nòt} ajoute pou {non}&quot;)
-
-    def kalkile_mwayèn(self, non):
-        if non not in self.elèv_yo:
-            raise ValueError(f&quot;Elèv {non} pa egziste&quot;)
-
-        nòt_yo = self.elèv_yo[non][&quot;nòt_yo&quot;]
-        if not nòt_yo:
-            return 0
-
-        return sum(nòt_yo) / len(nòt_yo)
-
-    def jenera_rapò(self):
-        print(&quot;\n=== RAPÒ ELÈV YO ===&quot;)
-        for non, enfò in self.elèv_yo.items():
-            mwayèn = self.kalkile_mwayèn(non)
-            print(f&quot;{non}: {enfò['klas']}, Mwayèn: {mwayèn:.2f}&quot;)
+            print(&quot;✅ Done chaje ak siksè&quot;)
+        except FileNotFoundError:
+            print(&quot;📁 Pa gen fichier done ankò&quot;)
+        except Exception as e:
+            print(f&quot;❌ Erè nan chaje done: {e}&quot;)
 
     def sove_done(self):
-        with open(self.fichier_done, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
-            json.dump(self.elèv_yo, f, indent=2, ensure_ascii=False)
-        print(&quot;Done sove ak siksè&quot;)
-
-    def chaje_done(self):
+        &quot;&quot;&quot;Sove done yo nan fichier yo&quot;&quot;&quot;
         try:
-            with open(self.fichier_done, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
-                self.elèv_yo = json.load(f)
-        except FileNotFoundError:
-            self.elèv_yo = {}
+            # Sove elèv yo
+            done_elèv = {}
+            for non, elèv in self.elèv_yo.items():
+                done_elèv[non] = {
+                    'non': elèv.non,
+                    'laj': elèv.laj,
+                    'klas': elèv.klas,
+                    'adrès': elèv.adrès,
+                    'matrik': elèv.matrik,
+                    'nòt_yo': elèv.nòt_yo,
+                    'dat_kreasyon': elèv.dat_kreasyon
+                }
 
-    def ekspòt_csv(self, non_fichier):
-        with open(non_fichier, &quot;w&quot;, encoding=&quot;utf-8&quot;, newline=&quot;&quot;) as f:
-            ekrivè = csv.writer(f)
-            ekrivè.writerow([&quot;Non&quot;, &quot;Laj&quot;, &quot;Klas&quot;, &quot;Mwayèn&quot;])
+            with open(self.fichier_elèv, 'w', encoding='utf-8') as f:
+                json.dump(done_elèv, f, indent=2, ensure_ascii=False)
 
-            for non, enfò in self.elèv_yo.items():
-                mwayèn = self.kalkile_mwayèn(non)
-                ekrivè.writerow([non, enfò[&quot;laj&quot;], enfò[&quot;klas&quot;], f&quot;{mwayèn:.2f}&quot;])
+            # Sove pwofesè yo
+            done_pwofesè = {}
+            for non, pwofesè in self.pwofesè_yo.items():
+                done_pwofesè[non] = {
+                    'non': pwofesè.non,
+                    'laj': pwofesè.laj,
+                    'matyè': pwofesè.matyè,
+                    'salè': pwofesè.salè,
+                    'adrès': pwofesè.adrès,
+                    'klas_yo': pwofesè.klas_yo,
+                    'dat_kreasyon': pwofesè.dat_kreasyon
+                }
 
-        print(f&quot;Rapò ekspòte nan {non_fichier}&quot;)
+            with open(self.fichier_pwofesè, 'w', encoding='utf-8') as f:
+                json.dump(done_pwofesè, f, indent=2, ensure_ascii=False)
 
-# Fonksyon pou entèfas itilizatè
-def meni_prensipal():
-    sistèm = SistèmJesyonElèv()
-
-    while True:
-        print(&quot;\n=== MENI PRENSIPAL ===&quot;)
-        print(&quot;1. Ajoute elèv&quot;)
-        print(&quot;2. Ajoute nòt&quot;)
-        print(&quot;3. Kalkile mwayèn&quot;)
-        print(&quot;4. Jenera rapò&quot;)
-        print(&quot;5. Ekspòt CSV&quot;)
-        print(&quot;6. Sove done&quot;)
-        print(&quot;7. Sòti&quot;)
-
-        chwa = input(&quot;Chwazi yon opsyon (1-7): &quot;)
-
-        try:
-            if chwa == &quot;1&quot;:
-                non = input(&quot;Non elèv: &quot;)
-                laj = int(input(&quot;Laj: &quot;))
-                klas = input(&quot;Klas: &quot;)
-                sistèm.ajoute_elèv(non, laj, klas)
-
-            elif chwa == &quot;2&quot;:
-                non = input(&quot;Non elèv: &quot;)
-                nòt = float(input(&quot;Nòt: &quot;))
-                sistèm.ajoute_nòt(non, nòt)
-
-            elif chwa == &quot;3&quot;:
-                non = input(&quot;Non elèv: &quot;)
-                mwayèn = sistèm.kalkile_mwayèn(non)
-                print(f&quot;Mwayèn {non}: {mwayèn:.2f}&quot;)
-
-            elif chwa == &quot;4&quot;:
-                sistèm.jenera_rapò()
-
-            elif chwa == &quot;5&quot;:
-                non_fichier = input(&quot;Non fichier CSV: &quot;)
-                sistèm.ekspòt_csv(non_fichier)
-
-            elif chwa == &quot;6&quot;:
-                sistèm.sove_done()
-
-            elif chwa == &quot;7&quot;:
-                sistèm.sove_done()
-                print(&quot;Orevwa!&quot;)
-                break
-
-            else:
-                print(&quot;Chwa pa valab&quot;)
-
+            print(&quot;✅ Done sove ak siksè&quot;)
         except Exception as e:
-            print(f&quot;Erè: {e}&quot;)
+            print(f&quot;❌ Erè nan sove done: {e}&quot;)
+
+    # === JESYON ELÈV ===
+
+    def ajoute_elèv(self, non: str, laj: int, klas: str, adrès: str = &quot;&quot;):
+        &quot;&quot;&quot;Ajoute yon nouvo elèv&quot;&quot;&quot;
+        if non in self.elèv_yo:
+            print(f&quot;❌ Elèv {non} egziste deja&quot;)
+            return False
+
+        elèv = Elèv(non, laj, klas, adrès)
+        self.elèv_yo[non] = elèv
+        print(f&quot;✅ Elèv {non} ajoute ak siksè&quot;)
+        return True
+
+    def modifye_elèv(self, non: str, laj: int = None, klas: str = None, adrès: str = None):
+        &quot;&quot;&quot;Modifye enfòmasyon yon elèv&quot;&quot;&quot;
+        if non not in self.elèv_yo:
+            print(f&quot;❌ Elèv {non} pa jwenn&quot;)
+            return False
+
+        elèv = self.elèv_yo[non]
+        if laj is not None:
+            elèv.laj = laj
+        if klas is not None:
+            elèv.klas = klas
+        if adrès is not None:
+            elèv.adrès = adrès
+
+        print(f&quot;✅ Enfòmasyon elèv {non} modifye&quot;)
+        return True
+
+    def efase_elèv(self, non: str):
+        &quot;&quot;&quot;Efase yon elèv&quot;&quot;&quot;
+        if non not in self.elèv_yo:
+            print(f&quot;❌ Elèv {non} pa jwenn&quot;)
+            return False
+
+        del self.elèv_yo[non]
+        print(f&quot;✅ Elèv {non} efase&quot;)
+        return True
+
+    # === JESYON PWOFESÈ ===
+
+    def ajoute_pwofesè(self, non: str, laj: int, matyè: str, salè: float, adrès: str = &quot;&quot;):
+        &quot;&quot;&quot;Ajoute yon nouvo pwofesè&quot;&quot;&quot;
+        if non in self.pwofesè_yo:
+            print(f&quot;❌ Pwofesè {non} egziste deja&quot;)
+            return False
+
+        pwofesè = Pwofesè(non, laj, matyè, salè, adrès)
+        self.pwofesè_yo[non] = pwofesè
+        print(f&quot;✅ Pwofesè {non} ajoute ak siksè&quot;)
+        return True
+
+    def modifye_pwofesè(self, non: str, laj: int = None, matyè: str = None, salè: float = None, adrès: str = None):
+        &quot;&quot;&quot;Modifye enfòmasyon yon pwofesè&quot;&quot;&quot;
+        if non not in self.pwofesè_yo:
+            print(f&quot;❌ Pwofesè {non} pa jwenn&quot;)
+            return False
+
+        pwofesè = self.pwofesè_yo[non]
+        if laj is not None:
+            pwofesè.laj = laj
+        if matyè is not None:
+            pwofesè.matyè = matyè
+        if salè is not None:
+            pwofesè.salè = salè
+        if adrès is not None:
+            pwofesè.adrès = adrès
+
+        print(f&quot;✅ Enfòmasyon pwofesè {non} modifye&quot;)
+        return True
+
+    def efase_pwofesè(self, non: str):
+        &quot;&quot;&quot;Efase yon pwofesè&quot;&quot;&quot;
+        if non not in self.pwofesè_yo:
+            print(f&quot;❌ Pwofesè {non} pa jwenn&quot;)
+            return False
+
+        del self.pwofesè_yo[non]
+        print(f&quot;✅ Pwofesè {non} efase&quot;)
+        return True
+
+    # === JESYON NÒT ===
+
+    def ajoute_nòt_elèv(self, non_elèv: str, matyè: str, nòt: float):
+        &quot;&quot;&quot;Ajoute yon nòt pou yon elèv&quot;&quot;&quot;
+        if non_elèv not in self.elèv_yo:
+            print(f&quot;❌ Elèv {non_elèv} pa jwenn&quot;)
+            return False
+
+        self.elèv_yo[non_elèv].ajoute_nòt(matyè, nòt)
+        return True
+
+    # === RAPÒ AK ESTATISTIK ===
+
+    def rapò_elèv_yo(self):
+        &quot;&quot;&quot;Afiche rapò sou tout elèv yo&quot;&quot;&quot;
+        print(&quot;\n📊 RAPÒ ELÈV YO&quot;)
+        print(&quot;=&quot; * 40)
+
+        if not self.elèv_yo:
+            print(&quot;📝 Pa gen elèv ankò&quot;)
+            return
+
+        for non, elèv in self.elèv_yo.items():
+            elèv.afiche_infò()
+            print(&quot;-&quot; * 40)
+
+    def rapò_pwofesè_yo(self):
+        &quot;&quot;&quot;Afiche rapò sou tout pwofesè yo&quot;&quot;&quot;
+        print(&quot;\n👨‍🏫 RAPÒ PWOFESÈ YO&quot;)
+        print(&quot;=&quot; * 40)
+
+        if not self.pwofesè_yo:
+            print(&quot;📝 Pa gen pwofesè ankò&quot;)
+            return
+
+        for non, pwofesè in self.pwofesè_yo.items():
+            pwofesè.afiche_infò()
+            print(&quot;-&quot; * 40)
+
+    def estatistik_lekòl(self):
+        &quot;&quot;&quot;Afiche estatistik lekòl la&quot;&quot;&quot;
+        print(&quot;\n📈 ESTATISTIK LEKÒL LA&quot;)
+        print(&quot;=&quot; * 40)
+
+        total_elèv = len(self.elèv_yo)
+        total_pwofesè = len(self.pwofesè_yo)
+
+        print(f&quot;🎓 Total elèv: {total_elèv}&quot;)
+        print(f&quot;👨‍🏫 Total pwofesè: {total_pwofesè}&quot;)
+
+        if total_elèv &gt; 0:
+            # Estatistik elèv yo
+            klas_yo = {}
+            mwayèn_yo = []
+
+            for elèv in self.elèv_yo.values():
+                # Konte elèv pa klas
+                if elèv.klas not in klas_yo:
+                    klas_yo[elèv.klas] = 0
+                klas_yo[elèv.klas] += 1
+
+                # Kolekte mwayèn yo
+                mwayèn = elèv.kalkile_mwayèn()
+                if mwayèn &gt; 0:
+                    mwayèn_yo.append(mwayèn)
+
+            print(f&quot;\n📚 Elèv pa klas:&quot;)
+            for klas, kantite in klas_yo.items():
+                print(f&quot;   {klas}: {kantite} elèv&quot;)
+
+            if mwayèn_yo:
+                mwayèn_jeneral = sum(mwayèn_yo) / len(mwayèn_yo)
+                print(f&quot;\n📊 Mwayèn jeneral lekòl la: {mwayèn_jeneral:.2f}&quot;)
+
+        if total_pwofesè &gt; 0:
+            # Estatistik pwofesè yo
+            matyè_yo = {}
+            total_salè = 0
+
+            for pwofesè in self.pwofesè_yo.values():
+                if pwofesè.matyè not in matyè_yo:
+                    matyè_yo[pwofesè.matyè] = 0
+                matyè_yo[pwofesè.matyè] += 1
+                total_salè += pwofesè.salè
+
+            print(f&quot;\n📚 Pwofesè pa matyè:&quot;)
+            for matyè, kantite in matyè_yo.items():
+                print(f&quot;   {matyè}: {kantite} pwofesè&quot;)
+
+            salè_mwayèn = total_salè / total_pwofesè
+            print(f&quot;\n💰 Salè mwayèn: {salè_mwayèn:.2f} goud&quot;)
+
+def main():
+    &quot;&quot;&quot;Fonksyon prensipal&quot;&quot;&quot;
+    # Kreye sistèm nan
+    sistèm = SistèmJesyonLekòl()
+
+    print(&quot;\n🎉 SISTÈM JESYON LEKÒL AYISYEN - DEMO&quot;)
+    print(&quot;=&quot; * 50)
+
+    # Demo: Ajoute elèv yo
+    print(&quot;\n1️⃣ AJOUTE ELÈV YO&quot;)
+    sistèm.ajoute_elèv(&quot;Marie Jean&quot;, 15, &quot;3e ane&quot;, &quot;Pòtoprens&quot;)
+    sistèm.ajoute_elèv(&quot;Jean Pierre&quot;, 16, &quot;4e ane&quot;, &quot;Kap Ayisyen&quot;)
+    sistèm.ajoute_elèv(&quot;Sara Michel&quot;, 14, &quot;2e ane&quot;, &quot;Gonayiv&quot;)
+
+    # Demo: Ajoute pwofesè yo
+    print(&quot;\n2️⃣ AJOUTE PWOFESÈ YO&quot;)
+    sistèm.ajoute_pwofesè(&quot;Prof. Antoine&quot;, 35, &quot;Matematik&quot;, 25000, &quot;Pòtoprens&quot;)
+    sistèm.ajoute_pwofesè(&quot;Prof. Martine&quot;, 28, &quot;Franse&quot;, 22000, &quot;Kap Ayisyen&quot;)
+    sistèm.ajoute_pwofesè(&quot;Prof. Jacques&quot;, 42, &quot;Syans&quot;, 28000, &quot;Gonayiv&quot;)
+
+    # Demo: Ajoute nòt yo
+    print(&quot;\n3️⃣ AJOUTE NÒT YO&quot;)
+    sistèm.ajoute_nòt_elèv(&quot;Marie Jean&quot;, &quot;Matematik&quot;, 85)
+    sistèm.ajoute_nòt_elèv(&quot;Marie Jean&quot;, &quot;Matematik&quot;, 90)
+    sistèm.ajoute_nòt_elèv(&quot;Marie Jean&quot;, &quot;Franse&quot;, 78)
+    sistèm.ajoute_nòt_elèv(&quot;Marie Jean&quot;, &quot;Syans&quot;, 92)
+
+    sistèm.ajoute_nòt_elèv(&quot;Jean Pierre&quot;, &quot;Matematik&quot;, 88)
+    sistèm.ajoute_nòt_elèv(&quot;Jean Pierre&quot;, &quot;Franse&quot;, 82)
+    sistèm.ajoute_nòt_elèv(&quot;Jean Pierre&quot;, &quot;Syans&quot;, 85)
+
+    sistèm.ajoute_nòt_elèv(&quot;Sara Michel&quot;, &quot;Matematik&quot;, 95)
+    sistèm.ajoute_nòt_elèv(&quot;Sara Michel&quot;, &quot;Franse&quot;, 88)
+    sistèm.ajoute_nòt_elèv(&quot;Sara Michel&quot;, &quot;Syans&quot;, 90)
+
+    # Demo: Rapò yo
+    sistèm.rapò_elèv_yo()
+    sistèm.rapò_pwofesè_yo()
+    sistèm.estatistik_lekòl()
+
+    # Sove done yo
+    print(&quot;\n4️⃣ SOVE DONE YO&quot;)
+    sistèm.sove_done()
+
+    print(&quot;\n🎉 DEMO FINI! Sistèm nan kreye ak siksè!&quot;)
+    print(&quot;💡 Ou ka etandi sistèm nan ak plis fonksyonalite!&quot;)
 
 if __name__ == &quot;__main__&quot;:
-    meni_prensipal()
+    main()
 </code></pre>
 
+<h3 id="koman-pou-sevi-ak-sistem-nan">🎯 Kòman Pou Sèvi Ak Sistèm Nan</h3>
+<h4 id="1-kouri-pwogram-nan"><strong>1. Kouri pwogram nan</strong></h4>
+<pre class="codehilite"><code class="language-bash">python sistèm_lekòl.py
+</code></pre>
+
+<h4 id="2-sevi-ak-argparse-bonis"><strong>2. Sèvi ak argparse (bonis)</strong></h4>
+<pre class="codehilite"><code class="language-bash">python sistèm_lekòl.py --elèv --ajoute &quot;Marie Jean&quot; 15 &quot;3e ane&quot;
+python sistèm_lekòl.py --pwofesè --ajoute &quot;Prof. Antoine&quot; 35 &quot;Matematik&quot; 25000
+python sistèm_lekòl.py --nòt &quot;Marie Jean&quot; &quot;Matematik&quot; 85
+python sistèm_lekòl.py --rapò
+</code></pre>
+
+<h3 id="felisitasyon">🎉 FELISITASYON!</h3>
+<p><strong>Ou te fini liv sa a!</strong> Ou te aprann:</p>
+<p>✅ <strong>Tout fondasyon Python</strong> nan lang Kreyòl Ayisyen<br />
+✅ <strong>40+ tèm pwogramasyon</strong> ak eksplikasyon detaye<br />
+✅ <strong>7 chapit konplè</strong> ak egzanp pratik<br />
+✅ <strong>Pwojè final</strong> ki montre tout sa ou te aprann<br />
+✅ <strong>Syntax ak konsep</strong> ki fasil konprann  </p>
+<p><strong>Ou kounye a kapab:</strong>
+- 🐍 Ekri pwogram Python
+- 🏗️ Konstrwi aplikasyon
+- 🔧 Jere done ak fichier
+- 🎯 Rezoud pwoblèm ak Python
+- 📚 Kontinye aprann Python avanse</p>
+<p><strong>Pwochen etap yo:</strong>
+1. 📚 Aprann lòt bibliyotèk Python (Django, Flask, NumPy, Pandas)
+2. 🌐 Devlopman web ak Python
+3. 🤖 Entèlijans atifisyèl ak Python
+4. 📊 Analiz done ak Python
+5. 🎮 Devlopman jwèt ak Python</p>
+<p><strong>Mèsi pou ou te li liv sa a!</strong> 🎉</p>
+<pre class="codehilite"><code>def ajoute_nòt(self, non, nòt):
+    if non not in self.elèv_yo:
+        raise ValueError(f&quot;Elèv {non} pa egziste&quot;)
+
+    if not isinstance(nòt, (int, float)) or nòt &lt; 0 or nòt &gt; 20:
+        raise ValueError(&quot;Nòt dwe yon nimewo ant 0 ak 20&quot;)
+
+    self.elèv_yo[non][&quot;nòt_yo&quot;].append(nòt)
+    print(f&quot;Nòt {nòt} ajoute pou {non}&quot;)
+
+def kalkile_mwayèn(self, non):
+    if non not in self.elèv_yo:
+        raise ValueError(f&quot;Elèv {non} pa egziste&quot;)
+
+    nòt_yo = self.elèv_yo[non][&quot;nòt_yo&quot;]
+    if not nòt_yo:
+        return 0
+
+    return sum(nòt_yo) / len(nòt_yo)
+
+def jenera_rapò(self):
+    print(&quot;\n=== RAPÒ ELÈV YO ===&quot;)
+    for non, enfò in self.elèv_yo.items():
+        mwayèn = self.kalkile_mwayèn(non)
+        print(f&quot;{non}: {enfò['klas']}, Mwayèn: {mwayèn:.2f}&quot;)
+
+def sove_done(self):
+    with open(self.fichier_done, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        json.dump(self.elèv_yo, f, indent=2, ensure_ascii=False)
+    print(&quot;Done sove ak siksè&quot;)
+
+def chaje_done(self):
+    try:
+        with open(self.fichier_done, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+            self.elèv_yo = json.load(f)
+    except FileNotFoundError:
+        self.elèv_yo = {}
+
+def ekspòt_csv(self, non_fichier):
+    with open(non_fichier, &quot;w&quot;, encoding=&quot;utf-8&quot;, newline=&quot;&quot;) as f:
+        ekrivè = csv.writer(f)
+        ekrivè.writerow([&quot;Non&quot;, &quot;Laj&quot;, &quot;Klas&quot;, &quot;Mwayèn&quot;])
+
+        for non, enfò in self.elèv_yo.items():
+            mwayèn = self.kalkile_mwayèn(non)
+            ekrivè.writerow([non, enfò[&quot;laj&quot;], enfò[&quot;klas&quot;], f&quot;{mwayèn:.2f}&quot;])
+
+    print(f&quot;Rapò ekspòte nan {non_fichier}&quot;)
+</code></pre>
+
+<h1 id="fonksyon-pou-entefas-itilizate">Fonksyon pou entèfas itilizatè</h1>
+<p>def meni_prensipal():
+    sistèm = SistèmJesyonElèv()</p>
+<pre class="codehilite"><code>while True:
+    print(&quot;\n=== MENI PRENSIPAL ===&quot;)
+    print(&quot;1. Ajoute elèv&quot;)
+    print(&quot;2. Ajoute nòt&quot;)
+    print(&quot;3. Kalkile mwayèn&quot;)
+    print(&quot;4. Jenera rapò&quot;)
+    print(&quot;5. Ekspòt CSV&quot;)
+    print(&quot;6. Sove done&quot;)
+    print(&quot;7. Sòti&quot;)
+
+    chwa = input(&quot;Chwazi yon opsyon (1-7): &quot;)
+
+    try:
+        if chwa == &quot;1&quot;:
+            non = input(&quot;Non elèv: &quot;)
+            laj = int(input(&quot;Laj: &quot;))
+            klas = input(&quot;Klas: &quot;)
+            sistèm.ajoute_elèv(non, laj, klas)
+
+        elif chwa == &quot;2&quot;:
+            non = input(&quot;Non elèv: &quot;)
+            nòt = float(input(&quot;Nòt: &quot;))
+            sistèm.ajoute_nòt(non, nòt)
+
+        elif chwa == &quot;3&quot;:
+            non = input(&quot;Non elèv: &quot;)
+            mwayèn = sistèm.kalkile_mwayèn(non)
+            print(f&quot;Mwayèn {non}: {mwayèn:.2f}&quot;)
+
+        elif chwa == &quot;4&quot;:
+            sistèm.jenera_rapò()
+
+        elif chwa == &quot;5&quot;:
+            non_fichier = input(&quot;Non fichier CSV: &quot;)
+            sistèm.ekspòt_csv(non_fichier)
+
+        elif chwa == &quot;6&quot;:
+            sistèm.sove_done()
+
+        elif chwa == &quot;7&quot;:
+            sistèm.sove_done()
+            print(&quot;Orevwa!&quot;)
+            break
+
+        else:
+            print(&quot;Chwa pa valab&quot;)
+
+    except Exception as e:
+        print(f&quot;Erè: {e}&quot;)
+</code></pre>
+
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    meni_prensipal()
+```</p>
 <h3 id="pwochen-etap">Pwochen etap</h3>
 <h4 id="devlopman-kontinye">Devlopman kontinye</h4>
 <ul>
