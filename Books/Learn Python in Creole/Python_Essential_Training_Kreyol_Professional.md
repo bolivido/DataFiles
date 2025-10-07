@@ -8199,15 +8199,659 @@ print(f"Nimewo premye efikas: {nimewo_premye}")
 
 ## Chapit 6: Fonksyon (Functions) - Eksplikasyon Detaye pou Debitan
 
+### 🎯 Objektif Chapit
+Apre w fini chapit sa a, w pral kapab:
+- **Konprann kisa se fonksyon** - Definisyon, avantaj, ak lè pou sèvi ak yo
+- **Kreye fonksyon debaz** - Def, paramèt, argumant, ak retounen valè
+- **Sèvi ak paramèt diferan** - Pozisyonèl, nonmen, default, *args, **kwargs
+- **Konprann scope varyab** - Lokal, global, nonlocal
+- **Sèvi ak lambda fonksyon** - Fonksyon kout ak anonim
+- **Devlope yon bibliyotèk matematik** - Pwojè pratik ak fonksyon yo
+
+> **💡 TIP:** Fonksyon yo se fondasyon pou pwogramasyon efikas. Yo pèmèt ou òganize kòd la ak evite repetisyon.
+
+### 🔧 Tèm Kle Pou Chapit Sa A
+
+#### **Fonksyon Fondamantal**
+- **Function** - Blòk kòd ki ka reutilize
+- **def** - Mo kle pou kreye fonksyon
+- **Parameter** - Varyab nan definisyon fonksyon
+- **Argument** - Valè pase nan fonksyon
+- **Return** - Retounen valè nan fonksyon
+
+#### **Paramèt ak Argumant**
+- **Positional** - Paramèt pa pozisyon
+- **Named** - Paramèt pa non
+- **Default** - Paramèt ak valè defo
+- **Variable** - Paramèt varyab (*args, **kwargs)
+
+#### **Scope ak Lambda**
+- **Local** - Varyab lokal nan fonksyon
+- **Global** - Varyab global nan pwogram
+- **Nonlocal** - Varyab nan fonksyon parent
+- **Lambda** - Fonksyon kout ak anonim
+
+---
+
 ### 🎯 Kisa se "Fonksyon" (Function)?
 
 **Definisyon Detaye:**
 
 Nan Python, yon **fonksyon** se yon blòk kòd ki òganize, ki ka reutilize, epi ki fè yon travay espesifik. Fonksyon yo pèmèt pwogramasyon modilè, sa ki fè kòd la pi lisib, pi fasil pou kenbe, ak pi efikas pa evite repetisyon.
 
+> **💡 TIP:** Pensez a yon fonksyon tankou yon machin nan yon faktori - li fè yon travay espesifik epi ou ka rele li plizyè fwa.
+
+#### 📊 Diagram Fonksyon
+
+```mermaid
+flowchart TD
+    A[Kòd Prensipal] --> B[Rele Fonksyon]
+    B --> C[Fonksyon]
+    C --> D[Travay Espesifik]
+    D --> E[Retounen Rezilta]
+    E --> F[Kòd Prensipal]
+    F --> G[Kontinye]
+```
+
+![Function Visualization](https://images.unsplash.com/photo-1551288049-bebda4e38f71)
+*Source: [Unsplash](https://unsplash.com/photos/function) - Photo by [Luca Bravo]*
+
 **Poukisa Fonksyon Yo Enpòtan?**
 
 1. **Modilè**: Ou ka divize gwo pwoblèm yo an ti pati
+2. **Reutilizasyon**: Ou ka sèvi ak menm kòd la plizyè fwa
+3. **Lisibilite**: Kòd la vin pi fasil pou li ak konprann
+4. **Kenbe**: Pi fasil pou modifye ak debogaj
+5. **Teste**: Ou ka teste chak pati endividyèlman
+6. **Òganizasyon**: Kòd la vin pi òganize ak estrikti
+
+---
+
+### 🔧 Anatomi yon Fonksyon
+
+#### 🎯 Kisa se "Anatomi Fonksyon"?
+
+**Anatomi Fonksyon** se pati diferan ki fòme yon fonksyon. Chak pati genyen yon wòl espesifik.
+
+> **💡 TIP:** Anatomi fonksyon se tankou anatomi yon moun - chak pati genyen yon fonksyon espesifik.
+
+#### 📋 Pati Fonksyon
+
+```python
+def non_fonksyon(paramèt1, paramèt2):
+    """
+    Docstring - Eksplikasyon fonksyon an
+    """
+    # Kòd fonksyon an
+    rezilta = paramèt1 + paramèt2
+    return rezilta
+```
+
+| Pati | Deskripsyon | Egzanp |
+|------|-------------|---------|
+| **def** | Mo kle pou kreye fonksyon | `def` |
+| **non_fonksyon** | Non fonksyon an | `kalkile_sòm` |
+| **paramèt** | Varyab nan fonksyon | `(a, b)` |
+| **docstring** | Eksplikasyon fonksyon | `"""Kalkile sòm"""` |
+| **kòd** | Kòd fonksyon an | `return a + b` |
+| **return** | Retounen valè | `return rezilta` |
+
+#### 🔧 Egzanp Detaye Anatomi
+
+**Egzanp 1: Fonksyon Debaz**
+
+```python
+print("=== EGZANP 1: FONKSYON DEBAZ ===")
+
+def bonjou():
+    """
+    Fonksyon ki afiche mesaj bonjou
+    """
+    print("Bonjou nan Python!")
+    print("Fonksyon sa a afiche yon mesaj.")
+
+# Rele fonksyon an
+bonjou()
+```
+
+**Egzanp 2: Fonksyon ak Paramèt**
+
+```python
+print("=== EGZANP 2: FONKSYON AK PARAMÈT ===")
+
+def kalkile_sòm(nimewo1, nimewo2):
+    """
+    Kalkile sòm de nimewo
+    
+    Args:
+        nimewo1 (int): Premye nimewo
+        nimewo2 (int): Dezyèm nimewo
+    
+    Returns:
+        int: Sòm de nimewo yo
+    """
+    sòm = nimewo1 + nimewo2
+    return sòm
+
+# Rele fonksyon an
+rezilta = kalkile_sòm(5, 3)
+print(f"Sòm 5 + 3 = {rezilta}")
+
+# Rele ankò ak valè diferan
+rezilta2 = kalkile_sòm(10, 20)
+print(f"Sòm 10 + 20 = {rezilta2}")
+```
+
+**Egzanp 3: Fonksyon ak Retounen Valè**
+
+```python
+print("=== EGZANP 3: FONKSYON AK RETOUNEN VALÈ ===")
+
+def kalkile_kare(nimewo):
+    """
+    Kalkile kare yon nimewo
+    
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+    
+    Returns:
+        int: Kare nimewo a
+    """
+    kare = nimewo ** 2
+    return kare
+
+# Rele fonksyon an
+kare_5 = kalkile_kare(5)
+print(f"Kare 5 = {kare_5}")
+
+kare_7 = kalkile_kare(7)
+print(f"Kare 7 = {kare_7}")
+
+# Sèvi ak rezilta nan kalkil
+sòm_kare = kare_5 + kare_7
+print(f"Sòm kare yo = {sòm_kare}")
+```
+
+---
+
+### 🔧 Paramèt ak Argumant
+
+#### 🎯 Kisa se "Paramèt" ak "Argumant"?
+
+**Paramèt** se varyab yo nan definisyon fonksyon an.
+**Argumant** se valè yo ke ou pase nan fonksyon an.
+
+> **💡 TIP:** Paramèt se tankou yon fòm vid, argumant se tankou enfòmasyon ou ekri nan fòm nan.
+
+#### 📋 Kalite Paramèt
+
+| Kalite | Deskripsyon | Egzanp |
+|--------|-------------|---------|
+| **Positional** | Paramèt pa pozisyon | `fonksyon(1, 2)` |
+| **Named** | Paramèt pa non | `fonksyon(a=1, b=2)` |
+| **Default** | Paramèt ak valè defo | `def fonksyon(a=0)` |
+| **Variable** | Paramèt varyab | `def fonksyon(*args)` |
+
+#### 🔧 Egzanp Detaye Paramèt
+
+**Egzanp 1: Paramèt Pozisyonèl**
+
+```python
+print("=== EGZANP 1: PARAMÈT POZISYONÈL ===")
+
+def afiche_infò(non, laj, vil):
+    """
+    Afiche enfòmasyon pèson
+    
+    Args:
+        non (str): Non pèson nan
+        laj (int): Laj pèson nan
+        vil (str): Vil pèson nan rete
+    """
+    print(f"Non: {non}")
+    print(f"Laj: {laj}")
+    print(f"Vil: {vil}")
+
+# Rele ak paramèt pozisyonèl
+afiche_infò("Marie", 25, "Pòtoprens")
+afiche_infò("Jean", 30, "Kap Ayisyen")
+```
+
+**Egzanp 2: Paramèt Nonmen**
+
+```python
+print("=== EGZANP 2: PARAMÈT NONMEN ===")
+
+def kalkile_pri(pri_debaz, rediksyon=0, taks=0.15):
+    """
+    Kalkile pri final yon pwodwi
+    
+    Args:
+        pri_debaz (float): Pri debaz pwodwi a
+        rediksyon (float): Rediksyon nan pri a
+        taks (float): Taks pou ajoute
+    
+    Returns:
+        float: Pri final la
+    """
+    pri_apre_rediksyon = pri_debaz - rediksyon
+    taks_kalkile = pri_apre_rediksyon * taks
+    pri_final = pri_apre_rediksyon + taks_kalkile
+    return pri_final
+
+# Rele ak paramèt nonmen
+pri1 = kalkile_pri(pri_debaz=100, rediksyon=10, taks=0.15)
+print(f"Pri 1: ${pri1:.2f}")
+
+pri2 = kalkile_pri(pri_debaz=200, rediksyon=20)
+print(f"Pri 2: ${pri2:.2f}")
+
+pri3 = kalkile_pri(pri_debaz=50)
+print(f"Pri 3: ${pri3:.2f}")
+```
+
+**Egzanp 3: Paramèt Defo**
+
+```python
+print("=== EGZANP 3: PARAMÈT DEFO ===")
+
+def kalkile_volim(longè=1, lajè=1, wotè=1):
+    """
+    Kalkile volim yon bwat
+    
+    Args:
+        longè (float): Longè bwat la
+        lajè (float): Lajè bwat la
+        wotè (float): Wotè bwat la
+    
+    Returns:
+        float: Volim bwat la
+    """
+    volim = longè * lajè * wotè
+    return volim
+
+# Rele ak tout paramèt
+volim1 = kalkile_volim(5, 3, 2)
+print(f"Volim 1: {volim1}")
+
+# Rele ak kèk paramèt
+volim2 = kalkile_volim(4, 3)
+print(f"Volim 2: {volim2}")
+
+# Rele san paramèt
+volim3 = kalkile_volim()
+print(f"Volim 3: {volim3}")
+
+# Rele ak paramèt nonmen
+volim4 = kalkile_volim(wotè=5)
+print(f"Volim 4: {volim4}")
+```
+
+---
+
+### 🔧 *args ak **kwargs
+
+#### 🎯 Kisa se "*args" ak "**kwargs"?
+
+***args** pèmèt ou pase yon nimewo varyab paramèt pozisyonèl.
+****kwargs** pèmèt ou pase yon nimewo varyab paramèt nonmen.
+
+> **💡 TIP:** *args se tankou yon sak ki ka pran plizyè bagay, **kwargs se tankou yon diksyonè ki ka genyen plizyè kle-valè.
+
+#### 📋 Sentaks *args ak **kwargs
+
+```python
+def fonksyon(*args, **kwargs):
+    """
+    Fonksyon ak paramèt varyab
+    
+    Args:
+        *args: Paramèt pozisyonèl varyab
+        **kwargs: Paramèt nonmen varyab
+    """
+    # Traite args
+    for arg in args:
+        print(f"Arg: {arg}")
+    
+    # Traite kwargs
+    for kle, valè in kwargs.items():
+        print(f"{kle}: {valè}")
+```
+
+#### 🔧 Egzanp Detaye *args ak **kwargs
+
+**Egzanp 1: *args**
+
+```python
+print("=== EGZANP 1: *ARGS ===")
+
+def afiche_nimewo(*nimewo):
+    """
+    Afiche tout nimewo yo
+    
+    Args:
+        *nimewo: Lis nimewo yo
+    """
+    print("Nimewo yo:")
+    for i, n in enumerate(nimewo):
+        print(f"  {i+1}. {n}")
+    
+    # Kalkile sòm
+    sòm = sum(nimewo)
+    print(f"Sòm: {sòm}")
+
+# Rele ak diferan nimewo paramèt
+afiche_nimewo(1, 2, 3)
+afiche_nimewo(10, 20, 30, 40, 50)
+afiche_nimewo(5)
+```
+
+**Egzanp 2: **kwargs**
+
+```python
+print("=== EGZANP 2: **KWARGS ===")
+
+def afiche_pwofil(**enfòmasyon):
+    """
+    Afiche pwofil pèson
+    
+    Args:
+        **enfòmasyon: Diksyonè enfòmasyon yo
+    """
+    print("=== PWOFIL ===")
+    for kle, valè in enfòmasyon.items():
+        print(f"{kle.title()}: {valè}")
+
+# Rele ak diferan enfòmasyon
+afiche_pwofil(non="Marie", laj=25, vil="Pòtoprens")
+afiche_pwofil(non="Jean", travay="Devlopè", salè=50000, eksperyans=3)
+```
+
+**Egzanp 3: *args ak **kwargs Ansanm**
+
+```python
+print("=== EGZANP 3: *ARGS AK **KWARGS ===")
+
+def kalkile_ak_infò(*nimewo, **opsyon):
+    """
+    Kalkile ak nimewo yo ak opsyon yo
+    
+    Args:
+        *nimewo: Nimewo yo pou kalkile
+        **opsyon: Opsyon kalkil yo
+    """
+    print(f"Nimewo yo: {nimewo}")
+    
+    # Opsyon defo
+    operasyon = opsyon.get('operasyon', 'sòm')
+    afiche_detay = opsyon.get('afiche_detay', False)
+    
+    if operasyon == 'sòm':
+        rezilta = sum(nimewo)
+        print(f"Sòm: {rezilta}")
+    elif operasyon == 'pwodui':
+        rezilta = 1
+        for n in nimewo:
+            rezilta *= n
+        print(f"Pwodui: {rezilta}")
+    elif operasyon == 'mwayèn':
+        rezilta = sum(nimewo) / len(nimewo)
+        print(f"Mwayèn: {rezilta}")
+    
+    if afiche_detay:
+        print(f"Kantite nimewo: {len(nimewo)}")
+        print(f"Operasyon: {operasyon}")
+
+# Rele ak diferan opsyon
+kalkile_ak_infò(1, 2, 3, 4, 5)
+kalkile_ak_infò(2, 4, 6, operasyon='pwodui')
+kalkile_ak_infò(10, 20, 30, operasyon='mwayèn', afiche_detay=True)
+```
+
+---
+
+### 🔧 Scope Varyab
+
+#### 🎯 Kisa se "Scope Varyab"?
+
+**Scope Varyab** se kote yon varyab ka aksede nan kòd la. Python genyen twa kalite scope: lokal, global, ak nonlocal.
+
+> **💡 TIP:** Scope se tankou yon chanm nan yon kay - chak varyab genyen chanm pa li kote li ka viv.
+
+#### 📋 Kalite Scope
+
+| Kalite | Deskripsyon | Kote Aksede |
+|--------|-------------|-------------|
+| **Local** | Varyab nan fonksyon | Sèlman nan fonksyon an |
+| **Global** | Varyab nan pwogram | Tout kote nan pwogram |
+| **Nonlocal** | Varyab nan fonksyon parent | Nan fonksyon parent ak child |
+
+#### 🔧 Egzanp Detaye Scope
+
+**Egzanp 1: Scope Lokal**
+
+```python
+print("=== EGZANP 1: SCOPE LOKAL ===")
+
+# Varyab global
+non_global = "Global"
+
+def teste_scope_lokal():
+    """
+    Teste scope lokal
+    """
+    # Varyab lokal
+    non_lokal = "Lokal"
+    print(f"Nan fonksyon - Lokal: {non_lokal}")
+    print(f"Nan fonksyon - Global: {non_global}")
+
+# Rele fonksyon an
+teste_scope_lokal()
+
+# Deyò fonksyon an
+print(f"Deyò fonksyon - Global: {non_global}")
+# print(f"Deyò fonksyon - Lokal: {non_lokal}")  # ❌ Erè! Varyab lokal pa aksede deyò
+```
+
+**Egzanp 2: Scope Global**
+
+```python
+print("=== EGZANP 2: SCOPE GLOBAL ===")
+
+# Varyab global
+kontè = 0
+
+def ogmante_kontè():
+    """
+    Ogmante kontè global
+    """
+    global kontè  # Enpòtan: Di Python ke se varyab global
+    kontè += 1
+    print(f"Kontè nan fonksyon: {kontè}")
+
+def afiche_kontè():
+    """
+    Afiche kontè global
+    """
+    print(f"Kontè nan fonksyon: {kontè}")
+
+# Teste
+print(f"Kontè kòmanse: {kontè}")
+ogmante_kontè()
+ogmante_kontè()
+afiche_kontè()
+print(f"Kontè final: {kontè}")
+```
+
+**Egzanp 3: Scope Nonlocal**
+
+```python
+print("=== EGZANP 3: SCOPE NONLOCAL ===")
+
+def fonksyon_parent():
+    """
+    Fonksyon parent
+    """
+    varyab_parent = "Parent"
+    
+    def fonksyon_child():
+        """
+        Fonksyon child
+        """
+        nonlocal varyab_parent  # Enpòtan: Di Python ke se varyab parent
+        varyab_parent = "Child"
+        print(f"Nan child: {varyab_parent}")
+    
+    print(f"Nan parent (anvan): {varyab_parent}")
+    fonksyon_child()
+    print(f"Nan parent (apre): {varyab_parent}")
+
+# Teste
+fonksyon_parent()
+```
+
+---
+
+### 🔧 Lambda Fonksyon
+
+#### 🎯 Kisa se "Lambda Fonksyon"?
+
+**Lambda Fonksyon** se yon fonksyon kout ak anonim ki ka kreye nan yon sèl liy. Yo pi fasil pou sèvi ak yo pou operasyon senp.
+
+> **💡 TIP:** Lambda se tankou yon fonksyon eksprès - ou ka kreye li rapidman san bay li non.
+
+#### 📋 Sentaks Lambda
+
+```python
+# Sentaks debaz
+lambda paramèt: ekspresyon
+
+# Egzanp
+kare = lambda x: x ** 2
+print(kare(5))  # 25
+```
+
+#### 🔧 Egzanp Detaye Lambda
+
+**Egzanp 1: Lambda Debaz**
+
+```python
+print("=== EGZANP 1: LAMBDA DEBAZ ===")
+
+# Lambda pou kalkile kare
+kare = lambda x: x ** 2
+print(f"Kare 5: {kare(5)}")
+print(f"Kare 7: {kare(7)}")
+
+# Lambda pou kalkile sòm
+sòm = lambda x, y: x + y
+print(f"Sòm 3 + 4: {sòm(3, 4)}")
+
+# Lambda pou teste si nimewo pè
+nimewo_pè = lambda x: x % 2 == 0
+print(f"4 se pè: {nimewo_pè(4)}")
+print(f"7 se pè: {nimewo_pè(7)}")
+```
+
+**Egzanp 2: Lambda ak Fonksyon Entegre**
+
+```python
+print("=== EGZANP 2: LAMBDA AK FONKSYON ENTEGRE ===")
+
+# Lis nimewo
+nimewo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Sèvi ak lambda ak map()
+kare_lis = list(map(lambda x: x ** 2, nimewo))
+print(f"Kare lis: {kare_lis}")
+
+# Sèvi ak lambda ak filter()
+nimewo_pè = list(filter(lambda x: x % 2 == 0, nimewo))
+print(f"Nimewo pè: {nimewo_pè}")
+
+# Sèvi ak lambda ak sorted()
+lis_string = ["banana", "apple", "cherry", "date"]
+lis_triye = sorted(lis_string, key=lambda x: len(x))
+print(f"Lis triye pa longè: {lis_triye}")
+```
+
+**Egzanp 3: Lambda nan Fonksyon**
+
+```python
+print("=== EGZANP 3: LAMBDA NAN FONKSYON ===")
+
+def aplike_operasyon(nimewo, operasyon):
+    """
+    Aplike operasyon sou nimewo
+    
+    Args:
+        nimewo (list): Lis nimewo yo
+        operasyon (function): Fonksyon operasyon
+    
+    Returns:
+        list: Lis rezilta yo
+    """
+    return [operasyon(x) for x in nimewo]
+
+# Lis nimewo
+nimewo = [1, 2, 3, 4, 5]
+
+# Aplike diferan operasyon
+kare_lis = aplike_operasyon(nimewo, lambda x: x ** 2)
+print(f"Kare: {kare_lis}")
+
+kib_lis = aplike_operasyon(nimewo, lambda x: x ** 3)
+print(f"Kib: {kib_lis}")
+
+doble_lis = aplike_operasyon(nimewo, lambda x: x * 2)
+print(f"Doble: {doble_lis}")
+```
+
+---
+
+### 📊 Resime Fonksyon
+
+#### 🎯 Tèm Enpòtan yo
+
+| Tèm | Deskripsyon | Egzanp |
+|-----|-------------|---------|
+| **Function** | Blòk kòd ki ka reutilize | `def fonksyon():` |
+| **Parameter** | Varyab nan definisyon | `def fonksyon(a, b):` |
+| **Argument** | Valè pase nan fonksyon | `fonksyon(1, 2)` |
+| **Return** | Retounen valè | `return rezilta` |
+| **Scope** | Kote varyab ka aksede | `local`, `global` |
+| **Lambda** | Fonksyon kout | `lambda x: x**2` |
+
+#### 🔧 Règ Enpòtan
+
+1. **Naming**: Non fonksyon yo dwe deskriptif
+2. **Parameters**: Kòmanse ak paramèt ki pa gen valè defo
+3. **Return**: Toujou retounen yon valè si nesesè
+4. **Scope**: Konprann scope varyab yo
+5. **Documentation**: Toujou ekri docstring
+
+#### ⚠️ Erè Komen
+
+1. **Oubliye return** pou fonksyon ki bezwen retounen valè
+2. **Pa respekte scope** varyab yo
+3. **Pa ekri docstring** pou eksplike fonksyon an
+4. **Pa teste fonksyon** yo ak diferan valè
+
+---
+
+### 🎮 Egzèsis Pratik
+
+**Egzèsis 1: Kalkilatris Fonksyon**
+Kreye fonksyon pou tout operasyon matematik.
+
+**Egzèsis 2: Sistèm Validasyon**
+Kreye fonksyon pou valide enfòmasyon.
+
+**Egzèsis 3: Bibliyotèk Matematik**
+Kreye yon koleksyon fonksyon matematik.
+
+**Egzèsis 4: Jwèt ak Fonksyon**
+Kreye yon jwèt ki sèvi ak plizyè fonksyon.
 2. **Reutilizasyon**: Ou pa bezwen ekri menm kòd la plizyè fwa
 3. **Lisibilite**: Kòd la pi fasil pou li ak konprann
 4. **Kenbe**: Pi fasil pou chanje oswa korije erè

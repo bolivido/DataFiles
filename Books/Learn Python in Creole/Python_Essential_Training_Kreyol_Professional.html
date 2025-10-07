@@ -8041,17 +8041,701 @@ print(f&quot;Nimewo premye efikas: {nimewo_premye}&quot;)
 </ol>
 <hr />
 <h2 id="chapit-6-fonksyon-functions-eksplikasyon-detaye-pou-debitan">Chapit 6: Fonksyon (Functions) - Eksplikasyon Detaye pou Debitan</h2>
+<h3 id="objektif-chapit_5">🎯 Objektif Chapit</h3>
+<p>Apre w fini chapit sa a, w pral kapab:
+- <strong>Konprann kisa se fonksyon</strong> - Definisyon, avantaj, ak lè pou sèvi ak yo
+- <strong>Kreye fonksyon debaz</strong> - Def, paramèt, argumant, ak retounen valè
+- <strong>Sèvi ak paramèt diferan</strong> - Pozisyonèl, nonmen, default, <em>args, </em><em>kwargs
+- </em><em>Konprann scope varyab</em><em> - Lokal, global, nonlocal
+- </em><em>Sèvi ak lambda fonksyon</em><em> - Fonksyon kout ak anonim
+- </em><em>Devlope yon bibliyotèk matematik</em>* - Pwojè pratik ak fonksyon yo</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Fonksyon yo se fondasyon pou pwogramasyon efikas. Yo pèmèt ou òganize kòd la ak evite repetisyon.</p>
+</blockquote>
+<h3 id="tem-kle-pou-chapit-sa-a_4">🔧 Tèm Kle Pou Chapit Sa A</h3>
+<h4 id="fonksyon-fondamantal"><strong>Fonksyon Fondamantal</strong></h4>
+<ul>
+<li><strong>Function</strong> - Blòk kòd ki ka reutilize</li>
+<li><strong>def</strong> - Mo kle pou kreye fonksyon</li>
+<li><strong>Parameter</strong> - Varyab nan definisyon fonksyon</li>
+<li><strong>Argument</strong> - Valè pase nan fonksyon</li>
+<li><strong>Return</strong> - Retounen valè nan fonksyon</li>
+</ul>
+<h4 id="paramet-ak-argumant"><strong>Paramèt ak Argumant</strong></h4>
+<ul>
+<li><strong>Positional</strong> - Paramèt pa pozisyon</li>
+<li><strong>Named</strong> - Paramèt pa non</li>
+<li><strong>Default</strong> - Paramèt ak valè defo</li>
+<li><strong>Variable</strong> - Paramèt varyab (<em>args, </em>*kwargs)</li>
+</ul>
+<h4 id="scope-ak-lambda"><strong>Scope ak Lambda</strong></h4>
+<ul>
+<li><strong>Local</strong> - Varyab lokal nan fonksyon</li>
+<li><strong>Global</strong> - Varyab global nan pwogram</li>
+<li><strong>Nonlocal</strong> - Varyab nan fonksyon parent</li>
+<li><strong>Lambda</strong> - Fonksyon kout ak anonim</li>
+</ul>
+<hr />
 <h3 id="kisa-se-fonksyon-function">🎯 Kisa se "Fonksyon" (Function)?</h3>
 <p><strong>Definisyon Detaye:</strong></p>
 <p>Nan Python, yon <strong>fonksyon</strong> se yon blòk kòd ki òganize, ki ka reutilize, epi ki fè yon travay espesifik. Fonksyon yo pèmèt pwogramasyon modilè, sa ki fè kòd la pi lisib, pi fasil pou kenbe, ak pi efikas pa evite repetisyon.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Pensez a yon fonksyon tankou yon machin nan yon faktori - li fè yon travay espesifik epi ou ka rele li plizyè fwa.</p>
+</blockquote>
+<h4 id="diagram-fonksyon">📊 Diagram Fonksyon</h4>
+<pre class="codehilite"><code class="language-mermaid">flowchart TD
+    A[Kòd Prensipal] --&gt; B[Rele Fonksyon]
+    B --&gt; C[Fonksyon]
+    C --&gt; D[Travay Espesifik]
+    D --&gt; E[Retounen Rezilta]
+    E --&gt; F[Kòd Prensipal]
+    F --&gt; G[Kontinye]
+</code></pre>
+
+<p><img alt="Function Visualization" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" />
+<em>Source: <a href="https://unsplash.com/photos/function">Unsplash</a> - Photo by [Luca Bravo]</em></p>
 <p><strong>Poukisa Fonksyon Yo Enpòtan?</strong></p>
 <ol>
 <li><strong>Modilè</strong>: Ou ka divize gwo pwoblèm yo an ti pati</li>
-<li><strong>Reutilizasyon</strong>: Ou pa bezwen ekri menm kòd la plizyè fwa</li>
-<li><strong>Lisibilite</strong>: Kòd la pi fasil pou li ak konprann</li>
-<li><strong>Kenbe</strong>: Pi fasil pou chanje oswa korije erè</li>
-<li><strong>Teste</strong>: Ou ka teste chak fonksyon apa</li>
+<li><strong>Reutilizasyon</strong>: Ou ka sèvi ak menm kòd la plizyè fwa</li>
+<li><strong>Lisibilite</strong>: Kòd la vin pi fasil pou li ak konprann</li>
+<li><strong>Kenbe</strong>: Pi fasil pou modifye ak debogaj</li>
+<li><strong>Teste</strong>: Ou ka teste chak pati endividyèlman</li>
+<li><strong>Òganizasyon</strong>: Kòd la vin pi òganize ak estrikti</li>
 </ol>
+<hr />
+<h3 id="anatomi-yon-fonksyon">🔧 Anatomi yon Fonksyon</h3>
+<h4 id="kisa-se-anatomi-fonksyon">🎯 Kisa se "Anatomi Fonksyon"?</h4>
+<p><strong>Anatomi Fonksyon</strong> se pati diferan ki fòme yon fonksyon. Chak pati genyen yon wòl espesifik.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Anatomi fonksyon se tankou anatomi yon moun - chak pati genyen yon fonksyon espesifik.</p>
+</blockquote>
+<h4 id="pati-fonksyon">📋 Pati Fonksyon</h4>
+<pre class="codehilite"><code class="language-python">def non_fonksyon(paramèt1, paramèt2):
+    &quot;&quot;&quot;
+    Docstring - Eksplikasyon fonksyon an
+    &quot;&quot;&quot;
+    # Kòd fonksyon an
+    rezilta = paramèt1 + paramèt2
+    return rezilta
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Pati</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>def</strong></td>
+<td>Mo kle pou kreye fonksyon</td>
+<td><code>def</code></td>
+</tr>
+<tr>
+<td><strong>non_fonksyon</strong></td>
+<td>Non fonksyon an</td>
+<td><code>kalkile_sòm</code></td>
+</tr>
+<tr>
+<td><strong>paramèt</strong></td>
+<td>Varyab nan fonksyon</td>
+<td><code>(a, b)</code></td>
+</tr>
+<tr>
+<td><strong>docstring</strong></td>
+<td>Eksplikasyon fonksyon</td>
+<td><code>"""Kalkile sòm"""</code></td>
+</tr>
+<tr>
+<td><strong>kòd</strong></td>
+<td>Kòd fonksyon an</td>
+<td><code>return a + b</code></td>
+</tr>
+<tr>
+<td><strong>return</strong></td>
+<td>Retounen valè</td>
+<td><code>return rezilta</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-anatomi">🔧 Egzanp Detaye Anatomi</h4>
+<p><strong>Egzanp 1: Fonksyon Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: FONKSYON DEBAZ ===&quot;)
+
+def bonjou():
+    &quot;&quot;&quot;
+    Fonksyon ki afiche mesaj bonjou
+    &quot;&quot;&quot;
+    print(&quot;Bonjou nan Python!&quot;)
+    print(&quot;Fonksyon sa a afiche yon mesaj.&quot;)
+
+# Rele fonksyon an
+bonjou()
+</code></pre>
+
+<p><strong>Egzanp 2: Fonksyon ak Paramèt</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: FONKSYON AK PARAMÈT ===&quot;)
+
+def kalkile_sòm(nimewo1, nimewo2):
+    &quot;&quot;&quot;
+    Kalkile sòm de nimewo
+
+    Args:
+        nimewo1 (int): Premye nimewo
+        nimewo2 (int): Dezyèm nimewo
+
+    Returns:
+        int: Sòm de nimewo yo
+    &quot;&quot;&quot;
+    sòm = nimewo1 + nimewo2
+    return sòm
+
+# Rele fonksyon an
+rezilta = kalkile_sòm(5, 3)
+print(f&quot;Sòm 5 + 3 = {rezilta}&quot;)
+
+# Rele ankò ak valè diferan
+rezilta2 = kalkile_sòm(10, 20)
+print(f&quot;Sòm 10 + 20 = {rezilta2}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Fonksyon ak Retounen Valè</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: FONKSYON AK RETOUNEN VALÈ ===&quot;)
+
+def kalkile_kare(nimewo):
+    &quot;&quot;&quot;
+    Kalkile kare yon nimewo
+
+    Args:
+        nimewo (int): Nimewo pou kalkile kare
+
+    Returns:
+        int: Kare nimewo a
+    &quot;&quot;&quot;
+    kare = nimewo ** 2
+    return kare
+
+# Rele fonksyon an
+kare_5 = kalkile_kare(5)
+print(f&quot;Kare 5 = {kare_5}&quot;)
+
+kare_7 = kalkile_kare(7)
+print(f&quot;Kare 7 = {kare_7}&quot;)
+
+# Sèvi ak rezilta nan kalkil
+sòm_kare = kare_5 + kare_7
+print(f&quot;Sòm kare yo = {sòm_kare}&quot;)
+</code></pre>
+
+<hr />
+<h3 id="paramet-ak-argumant_1">🔧 Paramèt ak Argumant</h3>
+<h4 id="kisa-se-paramet-ak-argumant">🎯 Kisa se "Paramèt" ak "Argumant"?</h4>
+<p><strong>Paramèt</strong> se varyab yo nan definisyon fonksyon an.
+<strong>Argumant</strong> se valè yo ke ou pase nan fonksyon an.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Paramèt se tankou yon fòm vid, argumant se tankou enfòmasyon ou ekri nan fòm nan.</p>
+</blockquote>
+<h4 id="kalite-paramet">📋 Kalite Paramèt</h4>
+<table>
+<thead>
+<tr>
+<th>Kalite</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Positional</strong></td>
+<td>Paramèt pa pozisyon</td>
+<td><code>fonksyon(1, 2)</code></td>
+</tr>
+<tr>
+<td><strong>Named</strong></td>
+<td>Paramèt pa non</td>
+<td><code>fonksyon(a=1, b=2)</code></td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td>Paramèt ak valè defo</td>
+<td><code>def fonksyon(a=0)</code></td>
+</tr>
+<tr>
+<td><strong>Variable</strong></td>
+<td>Paramèt varyab</td>
+<td><code>def fonksyon(*args)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-paramet">🔧 Egzanp Detaye Paramèt</h4>
+<p><strong>Egzanp 1: Paramèt Pozisyonèl</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: PARAMÈT POZISYONÈL ===&quot;)
+
+def afiche_infò(non, laj, vil):
+    &quot;&quot;&quot;
+    Afiche enfòmasyon pèson
+
+    Args:
+        non (str): Non pèson nan
+        laj (int): Laj pèson nan
+        vil (str): Vil pèson nan rete
+    &quot;&quot;&quot;
+    print(f&quot;Non: {non}&quot;)
+    print(f&quot;Laj: {laj}&quot;)
+    print(f&quot;Vil: {vil}&quot;)
+
+# Rele ak paramèt pozisyonèl
+afiche_infò(&quot;Marie&quot;, 25, &quot;Pòtoprens&quot;)
+afiche_infò(&quot;Jean&quot;, 30, &quot;Kap Ayisyen&quot;)
+</code></pre>
+
+<p><strong>Egzanp 2: Paramèt Nonmen</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: PARAMÈT NONMEN ===&quot;)
+
+def kalkile_pri(pri_debaz, rediksyon=0, taks=0.15):
+    &quot;&quot;&quot;
+    Kalkile pri final yon pwodwi
+
+    Args:
+        pri_debaz (float): Pri debaz pwodwi a
+        rediksyon (float): Rediksyon nan pri a
+        taks (float): Taks pou ajoute
+
+    Returns:
+        float: Pri final la
+    &quot;&quot;&quot;
+    pri_apre_rediksyon = pri_debaz - rediksyon
+    taks_kalkile = pri_apre_rediksyon * taks
+    pri_final = pri_apre_rediksyon + taks_kalkile
+    return pri_final
+
+# Rele ak paramèt nonmen
+pri1 = kalkile_pri(pri_debaz=100, rediksyon=10, taks=0.15)
+print(f&quot;Pri 1: ${pri1:.2f}&quot;)
+
+pri2 = kalkile_pri(pri_debaz=200, rediksyon=20)
+print(f&quot;Pri 2: ${pri2:.2f}&quot;)
+
+pri3 = kalkile_pri(pri_debaz=50)
+print(f&quot;Pri 3: ${pri3:.2f}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Paramèt Defo</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: PARAMÈT DEFO ===&quot;)
+
+def kalkile_volim(longè=1, lajè=1, wotè=1):
+    &quot;&quot;&quot;
+    Kalkile volim yon bwat
+
+    Args:
+        longè (float): Longè bwat la
+        lajè (float): Lajè bwat la
+        wotè (float): Wotè bwat la
+
+    Returns:
+        float: Volim bwat la
+    &quot;&quot;&quot;
+    volim = longè * lajè * wotè
+    return volim
+
+# Rele ak tout paramèt
+volim1 = kalkile_volim(5, 3, 2)
+print(f&quot;Volim 1: {volim1}&quot;)
+
+# Rele ak kèk paramèt
+volim2 = kalkile_volim(4, 3)
+print(f&quot;Volim 2: {volim2}&quot;)
+
+# Rele san paramèt
+volim3 = kalkile_volim()
+print(f&quot;Volim 3: {volim3}&quot;)
+
+# Rele ak paramèt nonmen
+volim4 = kalkile_volim(wotè=5)
+print(f&quot;Volim 4: {volim4}&quot;)
+</code></pre>
+
+<hr />
+<h3 id="args-ak-kwargs">🔧 <em>args ak </em>*kwargs</h3>
+<h4 id="kisa-se-args-ak-kwargs">🎯 Kisa se "<em>args" ak "</em>*kwargs"?</h4>
+<p><strong><em>args</em>* pèmèt ou pase yon nimewo varyab paramèt pozisyonèl.
+</strong><strong>kwargs</strong> pèmèt ou pase yon nimewo varyab paramèt nonmen.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> <em>args se tankou yon sak ki ka pran plizyè bagay, </em>*kwargs se tankou yon diksyonè ki ka genyen plizyè kle-valè.</p>
+</blockquote>
+<h4 id="sentaks-args-ak-kwargs">📋 Sentaks <em>args ak </em>*kwargs</h4>
+<pre class="codehilite"><code class="language-python">def fonksyon(*args, **kwargs):
+    &quot;&quot;&quot;
+    Fonksyon ak paramèt varyab
+
+    Args:
+        *args: Paramèt pozisyonèl varyab
+        **kwargs: Paramèt nonmen varyab
+    &quot;&quot;&quot;
+    # Traite args
+    for arg in args:
+        print(f&quot;Arg: {arg}&quot;)
+
+    # Traite kwargs
+    for kle, valè in kwargs.items():
+        print(f&quot;{kle}: {valè}&quot;)
+</code></pre>
+
+<h4 id="egzanp-detaye-args-ak-kwargs">🔧 Egzanp Detaye <em>args ak </em>*kwargs</h4>
+<p><strong>Egzanp 1: *args</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: *ARGS ===&quot;)
+
+def afiche_nimewo(*nimewo):
+    &quot;&quot;&quot;
+    Afiche tout nimewo yo
+
+    Args:
+        *nimewo: Lis nimewo yo
+    &quot;&quot;&quot;
+    print(&quot;Nimewo yo:&quot;)
+    for i, n in enumerate(nimewo):
+        print(f&quot;  {i+1}. {n}&quot;)
+
+    # Kalkile sòm
+    sòm = sum(nimewo)
+    print(f&quot;Sòm: {sòm}&quot;)
+
+# Rele ak diferan nimewo paramèt
+afiche_nimewo(1, 2, 3)
+afiche_nimewo(10, 20, 30, 40, 50)
+afiche_nimewo(5)
+</code></pre>
+
+<p><strong>Egzanp 2: </strong>kwargs**</p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: **KWARGS ===&quot;)
+
+def afiche_pwofil(**enfòmasyon):
+    &quot;&quot;&quot;
+    Afiche pwofil pèson
+
+    Args:
+        **enfòmasyon: Diksyonè enfòmasyon yo
+    &quot;&quot;&quot;
+    print(&quot;=== PWOFIL ===&quot;)
+    for kle, valè in enfòmasyon.items():
+        print(f&quot;{kle.title()}: {valè}&quot;)
+
+# Rele ak diferan enfòmasyon
+afiche_pwofil(non=&quot;Marie&quot;, laj=25, vil=&quot;Pòtoprens&quot;)
+afiche_pwofil(non=&quot;Jean&quot;, travay=&quot;Devlopè&quot;, salè=50000, eksperyans=3)
+</code></pre>
+
+<p><strong>Egzanp 3: *args ak </strong>kwargs Ansanm**</p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: *ARGS AK **KWARGS ===&quot;)
+
+def kalkile_ak_infò(*nimewo, **opsyon):
+    &quot;&quot;&quot;
+    Kalkile ak nimewo yo ak opsyon yo
+
+    Args:
+        *nimewo: Nimewo yo pou kalkile
+        **opsyon: Opsyon kalkil yo
+    &quot;&quot;&quot;
+    print(f&quot;Nimewo yo: {nimewo}&quot;)
+
+    # Opsyon defo
+    operasyon = opsyon.get('operasyon', 'sòm')
+    afiche_detay = opsyon.get('afiche_detay', False)
+
+    if operasyon == 'sòm':
+        rezilta = sum(nimewo)
+        print(f&quot;Sòm: {rezilta}&quot;)
+    elif operasyon == 'pwodui':
+        rezilta = 1
+        for n in nimewo:
+            rezilta *= n
+        print(f&quot;Pwodui: {rezilta}&quot;)
+    elif operasyon == 'mwayèn':
+        rezilta = sum(nimewo) / len(nimewo)
+        print(f&quot;Mwayèn: {rezilta}&quot;)
+
+    if afiche_detay:
+        print(f&quot;Kantite nimewo: {len(nimewo)}&quot;)
+        print(f&quot;Operasyon: {operasyon}&quot;)
+
+# Rele ak diferan opsyon
+kalkile_ak_infò(1, 2, 3, 4, 5)
+kalkile_ak_infò(2, 4, 6, operasyon='pwodui')
+kalkile_ak_infò(10, 20, 30, operasyon='mwayèn', afiche_detay=True)
+</code></pre>
+
+<hr />
+<h3 id="scope-varyab">🔧 Scope Varyab</h3>
+<h4 id="kisa-se-scope-varyab">🎯 Kisa se "Scope Varyab"?</h4>
+<p><strong>Scope Varyab</strong> se kote yon varyab ka aksede nan kòd la. Python genyen twa kalite scope: lokal, global, ak nonlocal.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Scope se tankou yon chanm nan yon kay - chak varyab genyen chanm pa li kote li ka viv.</p>
+</blockquote>
+<h4 id="kalite-scope">📋 Kalite Scope</h4>
+<table>
+<thead>
+<tr>
+<th>Kalite</th>
+<th>Deskripsyon</th>
+<th>Kote Aksede</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local</strong></td>
+<td>Varyab nan fonksyon</td>
+<td>Sèlman nan fonksyon an</td>
+</tr>
+<tr>
+<td><strong>Global</strong></td>
+<td>Varyab nan pwogram</td>
+<td>Tout kote nan pwogram</td>
+</tr>
+<tr>
+<td><strong>Nonlocal</strong></td>
+<td>Varyab nan fonksyon parent</td>
+<td>Nan fonksyon parent ak child</td>
+</tr>
+</tbody>
+</table>
+<h4 id="egzanp-detaye-scope">🔧 Egzanp Detaye Scope</h4>
+<p><strong>Egzanp 1: Scope Lokal</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: SCOPE LOKAL ===&quot;)
+
+# Varyab global
+non_global = &quot;Global&quot;
+
+def teste_scope_lokal():
+    &quot;&quot;&quot;
+    Teste scope lokal
+    &quot;&quot;&quot;
+    # Varyab lokal
+    non_lokal = &quot;Lokal&quot;
+    print(f&quot;Nan fonksyon - Lokal: {non_lokal}&quot;)
+    print(f&quot;Nan fonksyon - Global: {non_global}&quot;)
+
+# Rele fonksyon an
+teste_scope_lokal()
+
+# Deyò fonksyon an
+print(f&quot;Deyò fonksyon - Global: {non_global}&quot;)
+# print(f&quot;Deyò fonksyon - Lokal: {non_lokal}&quot;)  # ❌ Erè! Varyab lokal pa aksede deyò
+</code></pre>
+
+<p><strong>Egzanp 2: Scope Global</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: SCOPE GLOBAL ===&quot;)
+
+# Varyab global
+kontè = 0
+
+def ogmante_kontè():
+    &quot;&quot;&quot;
+    Ogmante kontè global
+    &quot;&quot;&quot;
+    global kontè  # Enpòtan: Di Python ke se varyab global
+    kontè += 1
+    print(f&quot;Kontè nan fonksyon: {kontè}&quot;)
+
+def afiche_kontè():
+    &quot;&quot;&quot;
+    Afiche kontè global
+    &quot;&quot;&quot;
+    print(f&quot;Kontè nan fonksyon: {kontè}&quot;)
+
+# Teste
+print(f&quot;Kontè kòmanse: {kontè}&quot;)
+ogmante_kontè()
+ogmante_kontè()
+afiche_kontè()
+print(f&quot;Kontè final: {kontè}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Scope Nonlocal</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: SCOPE NONLOCAL ===&quot;)
+
+def fonksyon_parent():
+    &quot;&quot;&quot;
+    Fonksyon parent
+    &quot;&quot;&quot;
+    varyab_parent = &quot;Parent&quot;
+
+    def fonksyon_child():
+        &quot;&quot;&quot;
+        Fonksyon child
+        &quot;&quot;&quot;
+        nonlocal varyab_parent  # Enpòtan: Di Python ke se varyab parent
+        varyab_parent = &quot;Child&quot;
+        print(f&quot;Nan child: {varyab_parent}&quot;)
+
+    print(f&quot;Nan parent (anvan): {varyab_parent}&quot;)
+    fonksyon_child()
+    print(f&quot;Nan parent (apre): {varyab_parent}&quot;)
+
+# Teste
+fonksyon_parent()
+</code></pre>
+
+<hr />
+<h3 id="lambda-fonksyon">🔧 Lambda Fonksyon</h3>
+<h4 id="kisa-se-lambda-fonksyon">🎯 Kisa se "Lambda Fonksyon"?</h4>
+<p><strong>Lambda Fonksyon</strong> se yon fonksyon kout ak anonim ki ka kreye nan yon sèl liy. Yo pi fasil pou sèvi ak yo pou operasyon senp.</p>
+<blockquote>
+<p><strong>💡 TIP:</strong> Lambda se tankou yon fonksyon eksprès - ou ka kreye li rapidman san bay li non.</p>
+</blockquote>
+<h4 id="sentaks-lambda">📋 Sentaks Lambda</h4>
+<pre class="codehilite"><code class="language-python"># Sentaks debaz
+lambda paramèt: ekspresyon
+
+# Egzanp
+kare = lambda x: x ** 2
+print(kare(5))  # 25
+</code></pre>
+
+<h4 id="egzanp-detaye-lambda">🔧 Egzanp Detaye Lambda</h4>
+<p><strong>Egzanp 1: Lambda Debaz</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 1: LAMBDA DEBAZ ===&quot;)
+
+# Lambda pou kalkile kare
+kare = lambda x: x ** 2
+print(f&quot;Kare 5: {kare(5)}&quot;)
+print(f&quot;Kare 7: {kare(7)}&quot;)
+
+# Lambda pou kalkile sòm
+sòm = lambda x, y: x + y
+print(f&quot;Sòm 3 + 4: {sòm(3, 4)}&quot;)
+
+# Lambda pou teste si nimewo pè
+nimewo_pè = lambda x: x % 2 == 0
+print(f&quot;4 se pè: {nimewo_pè(4)}&quot;)
+print(f&quot;7 se pè: {nimewo_pè(7)}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 2: Lambda ak Fonksyon Entegre</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 2: LAMBDA AK FONKSYON ENTEGRE ===&quot;)
+
+# Lis nimewo
+nimewo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Sèvi ak lambda ak map()
+kare_lis = list(map(lambda x: x ** 2, nimewo))
+print(f&quot;Kare lis: {kare_lis}&quot;)
+
+# Sèvi ak lambda ak filter()
+nimewo_pè = list(filter(lambda x: x % 2 == 0, nimewo))
+print(f&quot;Nimewo pè: {nimewo_pè}&quot;)
+
+# Sèvi ak lambda ak sorted()
+lis_string = [&quot;banana&quot;, &quot;apple&quot;, &quot;cherry&quot;, &quot;date&quot;]
+lis_triye = sorted(lis_string, key=lambda x: len(x))
+print(f&quot;Lis triye pa longè: {lis_triye}&quot;)
+</code></pre>
+
+<p><strong>Egzanp 3: Lambda nan Fonksyon</strong></p>
+<pre class="codehilite"><code class="language-python">print(&quot;=== EGZANP 3: LAMBDA NAN FONKSYON ===&quot;)
+
+def aplike_operasyon(nimewo, operasyon):
+    &quot;&quot;&quot;
+    Aplike operasyon sou nimewo
+
+    Args:
+        nimewo (list): Lis nimewo yo
+        operasyon (function): Fonksyon operasyon
+
+    Returns:
+        list: Lis rezilta yo
+    &quot;&quot;&quot;
+    return [operasyon(x) for x in nimewo]
+
+# Lis nimewo
+nimewo = [1, 2, 3, 4, 5]
+
+# Aplike diferan operasyon
+kare_lis = aplike_operasyon(nimewo, lambda x: x ** 2)
+print(f&quot;Kare: {kare_lis}&quot;)
+
+kib_lis = aplike_operasyon(nimewo, lambda x: x ** 3)
+print(f&quot;Kib: {kib_lis}&quot;)
+
+doble_lis = aplike_operasyon(nimewo, lambda x: x * 2)
+print(f&quot;Doble: {doble_lis}&quot;)
+</code></pre>
+
+<hr />
+<h3 id="resime-fonksyon">📊 Resime Fonksyon</h3>
+<h4 id="tem-enpotan-yo_1">🎯 Tèm Enpòtan yo</h4>
+<table>
+<thead>
+<tr>
+<th>Tèm</th>
+<th>Deskripsyon</th>
+<th>Egzanp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Function</strong></td>
+<td>Blòk kòd ki ka reutilize</td>
+<td><code>def fonksyon():</code></td>
+</tr>
+<tr>
+<td><strong>Parameter</strong></td>
+<td>Varyab nan definisyon</td>
+<td><code>def fonksyon(a, b):</code></td>
+</tr>
+<tr>
+<td><strong>Argument</strong></td>
+<td>Valè pase nan fonksyon</td>
+<td><code>fonksyon(1, 2)</code></td>
+</tr>
+<tr>
+<td><strong>Return</strong></td>
+<td>Retounen valè</td>
+<td><code>return rezilta</code></td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Kote varyab ka aksede</td>
+<td><code>local</code>, <code>global</code></td>
+</tr>
+<tr>
+<td><strong>Lambda</strong></td>
+<td>Fonksyon kout</td>
+<td><code>lambda x: x**2</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reg-enpotan_1">🔧 Règ Enpòtan</h4>
+<ol>
+<li><strong>Naming</strong>: Non fonksyon yo dwe deskriptif</li>
+<li><strong>Parameters</strong>: Kòmanse ak paramèt ki pa gen valè defo</li>
+<li><strong>Return</strong>: Toujou retounen yon valè si nesesè</li>
+<li><strong>Scope</strong>: Konprann scope varyab yo</li>
+<li><strong>Documentation</strong>: Toujou ekri docstring</li>
+</ol>
+<h4 id="ere-komen_1">⚠️ Erè Komen</h4>
+<ol>
+<li><strong>Oubliye return</strong> pou fonksyon ki bezwen retounen valè</li>
+<li><strong>Pa respekte scope</strong> varyab yo</li>
+<li><strong>Pa ekri docstring</strong> pou eksplike fonksyon an</li>
+<li><strong>Pa teste fonksyon</strong> yo ak diferan valè</li>
+</ol>
+<hr />
+<h3 id="egzesis-pratik_1">🎮 Egzèsis Pratik</h3>
+<p><strong>Egzèsis 1: Kalkilatris Fonksyon</strong>
+Kreye fonksyon pou tout operasyon matematik.</p>
+<p><strong>Egzèsis 2: Sistèm Validasyon</strong>
+Kreye fonksyon pou valide enfòmasyon.</p>
+<p><strong>Egzèsis 3: Bibliyotèk Matematik</strong>
+Kreye yon koleksyon fonksyon matematik.</p>
+<p><strong>Egzèsis 4: Jwèt ak Fonksyon</strong>
+Kreye yon jwèt ki sèvi ak plizyè fonksyon.
+2. <strong>Reutilizasyon</strong>: Ou pa bezwen ekri menm kòd la plizyè fwa
+3. <strong>Lisibilite</strong>: Kòd la pi fasil pou li ak konprann
+4. <strong>Kenbe</strong>: Pi fasil pou chanje oswa korije erè
+5. <strong>Teste</strong>: Ou ka teste chak fonksyon apa</p>
 <p><strong>Analoji ki fasil konprann:</strong>
 - <strong>Fonksyon</strong> = Tankou yon rejèt nan yon liv kwizin
 - <strong>Rele fonksyon</strong> = Fè rejèt la
@@ -8371,7 +9055,7 @@ sòm = ajoute(5, 3)
 print(f&quot;Sòm: {sòm}&quot;)  # 8
 </code></pre>
 
-<h3 id="paramet-ak-argumant">Paramèt ak Argumant</h3>
+<h3 id="paramet-ak-argumant_2">Paramèt ak Argumant</h3>
 <h4 id="paramet-pozisyonel">Paramèt pozisyonèl</h4>
 <pre class="codehilite"><code class="language-python">def kalkile_zòn_longè_lajè(longè, lajè):
     return longè * lajè
@@ -8532,7 +9216,7 @@ miltiplike = kreye_operasyon(&quot;*&quot;)
 print(miltiplike(5, 3))  # 15
 </code></pre>
 
-<h3 id="lambda-fonksyon">Lambda Fonksyon</h3>
+<h3 id="lambda-fonksyon_1">Lambda Fonksyon</h3>
 <h4 id="lambda-debaz">Lambda debaz</h4>
 <pre class="codehilite"><code class="language-python"># Fonksyon tradisyonèl
 def kare(x):
