@@ -1,0 +1,14 @@
+{
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=y4_sTKVFeSY"
+      "title": "Bib Kreyol Needs your Help!",
+      "featured": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=QZT-eU4pizI&list=RDQZT-eU4pizI&start_radio=1",
+      "title": "Bring It On Home to Me",
+      "featured": false
+    }
+  ]
+}
