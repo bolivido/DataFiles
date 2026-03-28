@@ -2,7 +2,7 @@
   "prompt_enabled": true,
   "target_version_code": 36,
   "force": false,
-  "remind_interval_hours": 0,
+  "remind_interval_hours": 24,
   "message": "Desann Nouvo Update Bib Kreyol",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
   "app_icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
