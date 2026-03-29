@@ -1,45 +1,62 @@
 
 {
   "version": 1,
-  "lastUpdated": "2026-03-10T12:00:00Z",
+  "lastUpdated": "2026-03-29T12:00:00Z",
   "videos": [
     {
       "url": "https://www.youtube.com/watch?v=Q103qUHGPtk",
       "title": "Welcome to Bib Kreyol Medya",
-      "description": "Sermons, music, and more in Haitian Creole.",
-      "channelTitle": "Bib Kreyol",
+      "channelTitle": "Bib Kreyol Medya",
       "category": "sermon",
       "featured": true
     },
     {
-      "url": "https://www.youtube.com/watch?v=g9daIjFn0Xo&t=27s",
-      "title": "Lesson 3 - Start at 27 seconds",
-      "category": "sermon",
+      "url": "https://www.youtube.com/watch?v=Y4fO2MPlFIY&list=PLHvce-kc-eauWz_ioHVUHsVleO6UxX-mu",
+      "title": "Film Jezu en Kreyol",
+      "category": "Film Documentaire",
       "featured": false
     },
     {
-      "url": "https://www.youtube.com/watch?v=QZT-eU4pizI&list=RDQZT-eU4pizI&start_radio=1",
-      "title": "Bring It On Home to Me",
-      "category": "Love",
+      "url": "https://www.youtube.com/watch?v=zXegbNW2OXU",
+      "title": "Passion du Christ - Française!",
+      "category": "Film Documentaire",
       "featured": false
     },
     {
-          "url": "https://www.youtube.com/watch?v=aqkGO9k1qgE",
-          "title": "Bayo- Musicallity",
-          "category": "music",
-          "featured": false
-        },
-        {
-          "url": "https://www.youtube.com/watch?v=g9daIjFn0Xo&t=27s",
-          "title": "Lesson 3 - Start at 27 seconds temp",
-          "category": "sermon",
-          "featured": false
-        },
-        {
-          "url": "https://www.youtube.com/watch?v=QZT-eU4pizI&list=RDQZT-eU4pizI&start_radio=1",
-          "title": "Bring It On Home to Me temp",
-          "category": "Love",
-          "featured": false
-        }
+      "url": "https://www.youtube.com/watch?v=4MqKBCCGSro",
+      "title": "Le Prophète Joseph | Film historique en 4K | Doublé en français",
+      "category": "Film Documentaire",
+      "featured": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=aqkGO9k1qgE",
+      "title": "Bayo- Musicallity",
+      "category": "Gospel Music",
+      "featured": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=62zJ3C-_Of4",
+      "title": "Le Sauveur – Une Représentation Puissante de la Vie de Jésus à Travers l’Évangile de Luc",
+      "category": "Film Documentaire",
+      "featured": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TlAEdv_zPvM",
+      "title": "Jonas Chapitre Un",
+      "category": "Film Documentaire",
+      "featured": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TlAEdv_zPvM",
+      "title": "Jonas Chapitre Un",
+      "category": "Film Documentaire",
+      "featured": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=K9Un3wvoIp4",
+      "title": "NOÉ - Film Complet | La Corruption de la Terre et le Déluge du Jugement",
+      "category": "Film Documentaire",
+      "featured": false
+    }
   ]
 }
