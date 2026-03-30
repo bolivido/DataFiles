@@ -1,0 +1,39 @@
+{
+  "version": 1,
+
+  "thingsYouShouldKnowNote": {
+    "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
+    "en": "Tokens can be used to unlock things in the app in the future."
+  },
+
+  "wallet": {
+    "maxRewardTokensPerDay": 30
+  },
+
+  "weeklyVerse": {
+    "reflectionText": {
+      "ht": "Koute yon ti refleksyon odyo chak semèn sou vèsè jounen an. Odyo a sere pou 24 èdtan pou ekonomize done.",
+      "en": "Listen to a short audio reflection on the verse each week. Audio is cached for 24 hours to save data."
+    },
+    "audioUrl": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_welcome.m4a"
+  },
+
+  "ads": {
+    "bannerMode": "facebook_first",
+    "bannerFallbackEnabled": true,
+    "admobReadingBottomUnitId": "ca-app-pub-4314498081466608/8612154275"
+  },
+
+  "appUpdate": {
+    "promptEnabled": false,
+    "targetVersionCode": 36,
+    "force": false,
+    "remindIntervalHours": 48,
+    "message": {
+      "ht": "Desann Nouvo Version Bib Kreyol la",
+      "en": "Bib Kreyol Latest Version is Here"
+    },
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
+    "iconUrl": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
+  }
+}
