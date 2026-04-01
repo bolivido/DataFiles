@@ -1,39 +1,64 @@
 {
   "version": 1,
-
-  "thingsYouShouldKnowNote": {
-    "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
-    "en": "Tokens can be used to unlock things in the app in the future."
+  "body_strings": {
+    "coming_soon": {
+      "ht": "Byento, nou pral pibliye yon pi bon vèsyon",
+      "en": "Coming soon, we will release a better version"
+    },
+    "must_know_coming_soon": {
+      "ht": "Si w ap li mesaj sa a, tanpri konnen kòmantè sou vèsè jounen yo pa disponib pou kounye a.",
+      "en": "If you see this message, daily verse comments are temporarily unavailable."
+    },
+    "things_you_should_know": {
+      "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
+      "en": "Tokens can be used to unlock things in the app in the future."
+    }
   },
-
   "wallet": {
-    "maxRewardTokensPerDay": 30
+    "max_reward_tokens_per_day": 30
   },
-
-  "weeklyVerse": {
-    "reflectionText": {
-      "ht": "Koute yon ti refleksyon odyo chak semèn sou vèsè jounen an. Odyo a sere pou 24 èdtan pou ekonomize done.",
-      "en": "Listen to a short audio reflection on the verse each week. Audio is cached for 24 hours to save data."
+  "weekly_verse": {
+    "reflection_text": {
+      "ht": "Koute yon ti refleksyon odyo chak semèn sou vèsè jounen an.",
+      "en": "Listen to a short weekly audio reflection on the verse of the day."
     },
-    "audioUrl": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_welcome.m4a"
+    "audio_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_welcome.m4a"
   },
-
   "ads": {
-    "bannerMode": "facebook_first",
-    "bannerFallbackEnabled": true,
-    "admobReadingBottomUnitId": "ca-app-pub-4314498081466608/8612154275"
+    "banner_mode": "facebook_first",
+    "banner_fallback_enabled": true,
+    "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/8612154275"
   },
-
-  "appUpdate": {
-    "promptEnabled": false,
-    "targetVersionCode": 36,
-    "force": false,
-    "remindIntervalHours": 48,
-    "message": {
-      "ht": "Desann Nouvo Version Bib Kreyol la",
-      "en": "Bib Kreyol Latest Version is Here"
+  "start_dialog": {
+    "app_update": {
+      "prompt_enabled": false,
+      "target_version_code": 36,
+      "force": false,
+      "remind_interval_hours": 48,
+      "message": {
+        "ht": "Desann nouvo vèsyon Bib Kreyol la",
+        "en": "Bib Kreyol latest version is here"
+      },
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
+      "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
     },
-    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
-    "iconUrl": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
+    "pop_message": {
+      "prompt_enabled": true,
+      "target_version_code": 36,
+      "remind_interval_hours": 48,
+      "message": {
+        "ht": "Nou lanse nouvo chanèl YouTube nou an. Klike lyen an pou sipòte nou.",
+        "en": "We launched our new YouTube channel. Tap the link to support us."
+      },
+      "link_url": "https://www.youtube.com/@bibkreyol",
+      "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png",
+      "affiliation": {
+        "name": {
+          "ht": "Bolivido LLC kontinye sipòte Bib Kreyol depi 2025.",
+          "en": "Bolivido LLC has supported Bib Kreyol since 2025."
+        },
+        "url": "https://www.youtube.com/@bibkreyol"
+      }
+    }
   }
 }
