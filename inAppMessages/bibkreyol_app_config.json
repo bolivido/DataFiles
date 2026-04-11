@@ -31,8 +31,8 @@
   },
   "start_dialog": {
     "app_update": {
-      "prompt_enabled": false,
-      "target_version_code": 36,
+      "prompt_enabled": true,
+      "target_version_code": 37,
       "force": false,
       "remind_interval_hours": 48,
       "message": {
@@ -44,7 +44,7 @@
     },
     "pop_message": {
       "prompt_enabled": true,
-      "target_version_code": 36,
+      "target_version_code": 37,
       "remind_interval_hours": 48,
       "message": {
         "ht": "Nou lanse nouvo chanèl YouTube nou an. Klike lyen an pou sipòte nou.",
