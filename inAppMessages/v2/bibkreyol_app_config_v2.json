@@ -35,7 +35,7 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 37,
+        "target_version_code": 36,
         "force": false,
         "remind_interval_hours": 48,
         "message": {
@@ -48,7 +48,7 @@
       {
         "id": "legacy_pop",
         "prompt_enabled": true,
-        "target_version_code": 37,
+        "target_version_code": 36,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Nou lanse nouvo chanèl YouTube nou an. Klike lyen an pou sipòte nou.",
