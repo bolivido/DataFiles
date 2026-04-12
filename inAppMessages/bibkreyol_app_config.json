@@ -50,14 +50,14 @@
         "ht": "Nou lanse nouvo chanèl YouTube nou an. Klike lyen an pou sipòte nou.",
         "en": "We launched our new YouTube channel. Tap the link to support us."
       },
-      "link_url": "https://www.youtube.com/@bibkreyol",
+      "link_url": "https://www.youtube.com/watch?v=Q103qUHGPtk",
       "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png",
       "affiliation": {
         "name": {
           "ht": "Bolivido LLC kontinye sipòte Bib Kreyol depi 2025.",
           "en": "Bolivido LLC has supported Bib Kreyol since 2025."
         },
-        "url": "https://www.youtube.com/@bibkreyol"
+        "url": "https://www.youtube.com/watch?v=Q103qUHGPtk"
       }
     }
   }
