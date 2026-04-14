@@ -29,6 +29,14 @@
     "banner_fallback_enabled": true,
     "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/8612154275"
   },
+  "comments_read": {
+    "read_mirrors": [
+      "https://bolividob.github.io/bibkreyol-comments-data",
+      "https://bib-kreyol-99d07.firebaseapp.com",
+      "https://bib-kreyol-99d07.web.app",
+      "https://bibkreyol-comments-read.bolivido02.workers.dev"
+    ]
+  },
   "start_dialog": {
     "pop_messages": [
       {
