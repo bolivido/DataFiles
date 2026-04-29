@@ -32,8 +32,6 @@
   "comments_read": {
     "read_mirrors": [
       "https://bolividob.github.io/bibkreyol-comments-data",
-      "https://bib-kreyol-99d07.firebaseapp.com",
-      "https://bib-kreyol-99d07.web.app",
       "https://bibkreyol-comments-read.bolivido02.workers.dev"
     ]
   },
