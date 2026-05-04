@@ -54,7 +54,9 @@
         "remind_interval_hours": 48,
         "message": {
           "ht": "Desann nouvo vèsyon Bib Kreyol la",
-          "en": "Bib Kreyol latest version is here"
+          "en": "Bib Kreyol latest version is here",
+          "fr": "La dernière version de Bib Kreyol est ici",
+          "es": "La última versión de Bib Kreyol está aquí"
         },
         "link_url": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
         "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
