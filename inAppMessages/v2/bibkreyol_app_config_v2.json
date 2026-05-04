@@ -3,15 +3,21 @@
   "body_strings": {
     "coming_soon": {
       "ht": "Byento, nou pral pibliye yon pi bon vèsyon",
-      "en": "Coming soon, we will release a better version"
+      "en": "Coming soon, we will release a better version",
+      "fr": "Biensur, nous allons publier une meilleure version",
+      "es": "Próximamente, publicaremos una versión mejor"
     },
     "must_know_coming_soon": {
       "ht": "Si w ap li mesaj sa a, tanpri konnen kòmantè sou vèsè jounen yo pa disponib pou kounye a.",
-      "en": "If you see this message, daily verse comments are temporarily unavailable."
+      "en": "If you see this message, daily verse comments are temporarily unavailable.",
+      "fr": "Si vous voyez ce message, les commentaires du verset quotidien sont temporairement indisponibles.",
+      "es": "Si ves este mensaje, los comentarios del versículo diario están temporalmente indisponibles."
     },
     "things_you_should_know": {
       "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
-      "en": "Tokens can be used to unlock things in the app in the future."
+      "en": "Tokens 💰 can be used to unlock things in the app in the future.",
+      "fr": "Les jetons 💰 peuvent être utilisés pour déverrouiller des choses dans l'application dans le futur.",
+      "es": "Los tokens 💰 pueden ser utilizados para desbloquear cosas en la aplicación en el futuro."
     }
   },
   "wallet": {
@@ -20,7 +26,9 @@
   "weekly_verse": {
     "reflection_text": {
       "ht": "Koute yon ti refleksyon odyo chak semèn sou vèsè jounen an avèk pastè Saint Jean.",
-      "en": "Listen to a short weekly audio reflection on the verse of the day with Pastor Saint Jean."
+      "en": "Listen to a short weekly audio reflection on the verse of the day with Pastor Saint Jean.",
+      "fr": "Écoutez une courte réflexion audio hebdomadaire sur le verset du jour avec le pasteur Saint Jean.",
+      "es": "Escuche una breve reflexión semanal en audio sobre el versículo del día con el pastor Saint Jean."
     },
     "audio_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_weekly_verse_audio.m4a"
   },
@@ -41,12 +49,14 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 36,
+        "target_version_code": 37,
         "force": false,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Desann nouvo vèsyon Bib Kreyol la",
-          "en": "Bib Kreyol latest version is here"
+          "en": "Bib Kreyol latest version is here",
+          "fr": "La dernière version de Bib Kreyol est ici",
+          "es": "La última versión de Bib Kreyol está aquí"
         },
         "link_url": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
         "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
@@ -54,18 +64,22 @@
       {
         "id": "legacy_pop",
         "prompt_enabled": true,
-        "target_version_code": 38,
+        "target_version_code": 37,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
-          "en": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)"
+          "en": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
+          "es": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
+          "fr": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)"
         },
         "link_url": "https://www.youtube.com/@bibkreyolmedia",
         "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/Kemi_JahEl.png",
         "affiliation": {
           "name": {
             "ht": "Bolivido LLC kontinye sipòte Bib Kreyol depi 2025.",
-            "en": "Bolivido LLC has supported Bib Kreyol since 2025."
+            "en": "Bolivido LLC has supported Bib Kreyol since 2025.",
+            "es": "Bolivido LLC ha apoyado Bib Kreyol desde 2025.",
+            "fr": "Bolivido LLC a soutenu Bib Kreyol depuis 2025."  
           },
           "url": "https://www.youtube.com/@bibkreyolmedia"
         }
