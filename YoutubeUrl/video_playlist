@@ -5,10 +5,28 @@
   "videos": [
     
     {
+      "url": "https://www.youtube.com/watch?v=GWME4KpCbbM", 
+      "title": "Mèsi Pou Premye 1000 Abonnés Yo! 🙏🎉 | Bib Kreyol Media",
+      "category": "Gospel Music",
+      "featured": true
+    },
+    {
       "url": "https://www.youtube.com/watch?v=OfC275u8ceU",
       "title": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
       "category": "Gospel Music",
-      "featured": true
+      "featured": false
+    },
+    {
+      "url": "https://youtu.be/GN9IrhWjZ9I",
+      "title": "Pr. Saint Jean | Pawol an Mizik | Malachi 1 Vese 5 🎧",
+      "category": "Gospel Music",
+      "featured": false
+    },
+    {
+      "url": "https://youtu.be/CF4SKqw6yMk",
+      "title": "Pr. Saint Jean | Pawol an Mizik | Danyel 2 Vese 1 🎧",
+      "category": "Gospel Music",
+      "featured": false
     },
     {
       "url": "https://www.youtube.com/watch?v=v-6H0EKcSLc",
