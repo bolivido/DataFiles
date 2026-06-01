@@ -4,10 +4,16 @@
   "lastUpdated": "2026-03-29T12:00:00Z",
   "videos": [
     {
+      "url": "https://www.youtube.com/watch?v=SDXvYDVlkB8",
+      "title": "Pr. Saint Jean Feat. Nia Joy | Pawol an Mizik | Neemi 8 Vese 3 🎧",
+      "category": "Gospel Music",
+      "featured": true
+    },
+    {
       "url": "https://www.youtube.com/watch?v=LzxtVkmEEmg&list=RDMMLzxtVkmEEmg&start_radio=1",
       "title": "Pr. Saint Jean Feat. Nia Joy | Pawol an Mizik | Kolos 2 Vese 3 🎧",
       "category": "Gospel Music",
-      "featured": true
+      "featured": false
     },
     {
       "url": "https://www.youtube.com/watch?v=GWME4KpCbbM", 
