@@ -4,10 +4,16 @@
   "lastUpdated": "2026-03-29T12:00:00Z",
   "videos": [
     {
+      "url": "https://www.youtube.com/watch?v=hgoNi2NNI8g",
+      "title": "Pr. Saint Jean | Pawol an Mizik | 1 Timote 3 vese 5 🎧",
+      "category": "Gospel Music",
+      "featured": true
+    },
+    {
       "url": "https://www.youtube.com/watch?v=3r8WZMEGvp4",
       "title": "Pr. Saint Jean | Pawol an Mizik | 2 Jan 1 Vese 4 🎧",
       "category": "Gospel Music",
-      "featured": true
+      "featured": false
     },
     {
       "url": "https://www.youtube.com/watch?v=SDXvYDVlkB8", 
