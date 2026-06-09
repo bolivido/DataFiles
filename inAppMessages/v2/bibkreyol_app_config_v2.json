@@ -25,7 +25,7 @@
     "audio_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_weekly_verse_audio.m4a"
   },
   "ads": {
-    "banner_mode": "facebook_first",
+    "banner_mode": "admob_first",
     "banner_fallback_enabled": true,
     "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/8612154275"
   },

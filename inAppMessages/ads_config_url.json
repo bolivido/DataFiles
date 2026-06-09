@@ -1,4 +1,4 @@
 {
-  "ads_banner_mode": "facebook_only",
+  "ads_banner_mode": "admob_first",
   "ads_banner_fallback_enabled": true
 }
