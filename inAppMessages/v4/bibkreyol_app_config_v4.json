@@ -47,8 +47,7 @@
   "prayer_requests_read": {
     "read_mirrors": [
       "https://bibkreyol-comments-read-static-2.pages.dev",
-      "https://bolividob.github.io/bibkreyol-comments-data",
-      "https://bibkreyol-comments-read.bolivido02.workers.dev"
+      "https://bolividob.github.io/bibkreyol-comments-data"
     ]
   },
   "start_dialog": {
