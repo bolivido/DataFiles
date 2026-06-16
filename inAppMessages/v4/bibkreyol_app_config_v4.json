@@ -35,7 +35,7 @@
   "ads": {
     "banner_mode": "facebook_first",
     "banner_fallback_enabled": true,
-    "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/8612154275"
+    "admob_reading_bottom_unit_id": "ca-app-pub-1348527449927410/7223494832"
   },
   "comments_read": {
     "read_mirrors": [
@@ -56,7 +56,7 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 36,
+        "target_version_code": 40,
         "force": false,
         "remind_interval_hours": 48,
         "message": {
@@ -71,7 +71,7 @@
       {
         "id": "media_channel_promo",
         "prompt_enabled": true,
-        "target_version_code": 38,
+        "target_version_code": 40,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
