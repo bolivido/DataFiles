@@ -1,0 +1,145 @@
+{
+  "version": 5,
+  "body_strings": {
+    "coming_soon": {
+      "ht": "Byento, nou pral pibliye yon pi bon vèsyon",
+      "en": "Coming soon, we will release a better version",
+      "es": "Muy pronto publicaremos una mejor version",
+      "fr": "Bientot, nous publierons une meilleure version de Sainte Bible"
+    },
+    "must_know_coming_soon": {
+      "ht": "Si w ap li mesaj sa a, tanpri konnen kòmantè sou vèsè jounen yo pa disponib pou kounye a.",
+      "en": "If you see this message, daily verse comments are temporarily unavailable.",
+      "es": "Si ves este mensaje, los comentarios del versiculo del dia estan temporalmente no disponibles.",
+      "fr": "Si vous voyez ce message, les commentaires du verset du jour sont temporairement indisponibles."
+    },
+    "things_you_should_know": {
+      "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
+      "en": "Tokens can be used to unlock things in the app in the future.",
+      "es": "Los tokens 💰 podran usarse para desbloquear cosas en la app en el futuro.",
+      "fr": "Les jetons 💰 pourront etre utilises pour debloquer des elements dans l'application a l'avenir."
+    },
+    "must_know": {
+      "ht": "Sa w dwe konnen",
+      "en": "Must Know",
+      "es": "Debes saber",
+      "fr": "À savoir"
+    },
+    "radio_stations_notes": {
+      "ht": "💡 Estasyon radyo yo toujou ap teste, men yo mache san pwoblèm. Koute 24/7 epi pran plezi!",
+      "en": "💡 The radio stations are still undergoing testing, but they're expected to run smoothly. Tune in 24/7 and enjoy!",
+      "es": "💡 Las emisoras de radio siguen en pruebas, pero deberian funcionar bien. Escucha 24/7 y disfruta.",
+      "fr": "💡 Les radios sont encore en test, mais elles devraient bien fonctionner. Ecoutez 24/7 et profitez."
+    },
+    "media_youtube_error_hint": {
+      "ht": "Si w wè \"Videyo pa disponib\" oswa erè 152, peze anba a pou louvri nan aplikasyon YouTube.",
+      "en": "If you see \"Video unavailable\" or error 152, tap below to open in the YouTube app.",
+      "es": "Si el video no está disponible, ábrelo en YouTube.",
+      "fr": "Si la vidéo est indisponible, ouvrez-la dans YouTube."
+    }
+  },
+  "wallet": {
+    "max_reward_tokens_per_day": 30
+  },
+  "weekly_verse": {
+    "reflection_text": {
+      "ht": "Koute yon ti refleksyon odyo chak semèn sou vèsè jounen an avèk pastè Saint Jean.",
+      "en": "Listen to a short weekly audio reflection on the verse of the day with Pastor Saint Jean.",
+      "es": "Escucha una breve reflexion de audio semanal sobre el versiculo del dia con el pastor Saint Jean.",
+      "fr": "Ecoutez une courte reflexion audio hebdomadaire sur le verset du jour avec le pasteur Saint Jean."
+    },
+    "audio_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/bibkreyol_weekly_verse_audio.m4a"
+  },
+  "ads": {
+    "banner_mode": "admob_first",
+    "banner_fallback_enabled": true,
+    "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/2532920299",
+    "admob_app_id": "ca-app-pub-4314498081466608~4277835900",
+    "admob_banners": {
+      "banner1": "ca-app-pub-4314498081466608/3064842497",
+      "banner2": "ca-app-pub-4314498081466608/5371425729",
+      "banner3": "ca-app-pub-4314498081466608/9362657536",
+      "banner4": "ca-app-pub-4314498081466608/9073889634",
+      "banner5": "ca-app-pub-4314498081466608/6992304162",
+      "banner6": "ca-app-pub-4314498081466608/3821562950",
+      "banner7": "ca-app-pub-4314498081466608/9698358552",
+      "banner8": "ca-app-pub-4314498081466608/7457943911",
+      "banner9": "ca-app-pub-4314498081466608/4831780576",
+      "banner10": "ca-app-pub-4314498081466608/6799468367",
+      "banner11": "ca-app-pub-4314498081466608/8579453896",
+      "banner12": "ca-app-pub-4314498081466608/4640208884",
+      "banner13": "ca-app-pub-4314498081466608/1411410313",
+      "banner14": "ca-app-pub-4314498081466608/9098328642",
+      "banner15": "ca-app-pub-4314498081466608/5640253768",
+      "banner16": "ca-app-pub-4314498081466608/3919977981",
+      "banner17": "ca-app-pub-4314498081466608/4327172093",
+      "banner18": "ca-app-pub-4314498081466608/3014090428",
+      "banner19": "ca-app-pub-4314498081466608/1547141682",
+      "banner20": "ca-app-pub-4314498081466608/7200747447",
+      "banner21": "ca-app-pub-4314498081466608/8513829117",
+      "banner22": "ca-app-pub-4314498081466608/6354569637",
+      "banner23": "ca-app-pub-4314498081466608/5159083639",
+      "banner_reading_tab": "ca-app-pub-4314498081466608/2532920299",
+      "reward_a": "ca-app-pub-4314498081466608/5448682072",
+      "reward_b": "ca-app-pub-4314498081466608/2721190771",
+      "reward_c": "ca-app-pub-4314498081466608/2822518733",
+      "reward_d": "ca-app-pub-4314498081466608/1272377736"
+    }
+  },
+  "comments_read": {
+    "read_mirrors": [
+      "https://bibkreyol-comments-read-static-2.pages.dev",
+      "https://bolividob.github.io/bibkreyol-comments-data",
+      "https://bibkreyol-comments-read.bolivido02.workers.dev"
+    ]
+  },
+  "prayer_requests_read": {
+    "read_mirrors": [
+      "https://bibkreyol-comments-read-static-2.pages.dev",
+      "https://bolividob.github.io/bibkreyol-comments-data"
+    ]
+  },
+  "start_dialog": {
+    "pop_messages": [
+      {
+        "id": "app_update",
+        "kind": "app_update",
+        "prompt_enabled": true,
+        "target_version_code": 41,
+        "force": false,
+        "remind_interval_hours": 48,
+        "message": {
+          "ht": "Desann nouvo vèsyon Sainte Bible la",
+          "en": "Sainte Bible latest version is here",
+          "es": "Ya esta disponible la ultima version de Sainte Bible",
+          "fr": "La derniere version de Sainte Bible est disponible"
+        },
+        "link_url": "https://play.google.com/store/apps/details?id=com.bolivido.biblefrancais",
+        "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
+      },
+      {
+        "id": "media_channel_promo",
+        "prompt_enabled": true,
+        "target_version_code": 41,
+        "remind_interval_hours": 48,
+        "message": {
+          "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
+          "en": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
+          "es": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
+          "fr": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)"
+        },
+        "link_url": "https://www.youtube.com/@bibkreyolmedia",
+        "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/Kemi_JahEl.png",
+        "affiliation": {
+          "name": {
+            "ht": "Bolivido LLC kontinye sipòte Sainte Bible depi 2025.",
+            "en": "Bolivido LLC has supported Sainte Bible since 2025.",
+            "es": "Bolivido LLC ha apoyado a Sainte Bible desde 2025.",
+            "fr": "Bolivido LLC soutient Sainte Bible depuis 2025."
+          },
+          "url": "https://www.youtube.com/@bibkreyolmedia"
+        }
+      }
+    ]
+  }
+}
