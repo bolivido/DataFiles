@@ -99,6 +99,41 @@
       "https://bolividob.github.io/bibkreyol-comments-data"
     ]
   },
+  "locale_catalog": {
+    "version": 1,
+    "default_locale_code": "fr",
+    "locales": [
+      {
+        "code": "fr",
+        "display_native": "Français",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleFr"
+      },
+      {
+        "code": "ht",
+        "display_native": "Kreyòl",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibKreyol"
+      },
+      {
+        "code": "en",
+        "display_native": "English",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleEng"
+      },
+      {
+        "code": "es",
+        "display_native": "Español",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleEsp"
+      }
+    ]
+  },
+  "medya": {
+    "playlist_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/YoutubeUrl/video_playlist"
+  },
+  "radio": {
+    "stations_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/Cellection/Music/radio_stations.json"
+  },
+  "daily_verse": {
+    "calendar_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/verse_of_day_2026.json"
+  },
   "start_dialog": {
     "pop_messages": [
       {
