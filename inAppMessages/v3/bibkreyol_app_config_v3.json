@@ -49,7 +49,7 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 37,
+        "target_version_code": 40,
         "force": false,
         "remind_interval_hours": 48,
         "message": {
@@ -64,7 +64,7 @@
       {
         "id": "legacy_pop",
         "prompt_enabled": true,
-        "target_version_code": 38,
+        "target_version_code": 40,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
