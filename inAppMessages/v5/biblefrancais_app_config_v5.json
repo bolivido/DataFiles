@@ -5,7 +5,7 @@
       "ht": "Byento, nou pral pibliye yon pi bon vèsyon",
       "en": "Coming soon, we will release a better version",
       "es": "Muy pronto publicaremos una mejor version",
-      "fr": "Bientot, nous publierons une meilleure version"
+      "fr": "Bientot, nous publierons une meilleure version de Sainte Bible"
     },
     "must_know_coming_soon": {
       "ht": "Si w ap li mesaj sa a, tanpri konnen kòmantè sou vèsè jounen yo pa disponib pou kounye a.",
@@ -14,13 +14,13 @@
       "fr": "Si vous voyez ce message, les commentaires du verset du jour sont temporairement indisponibles."
     },
     "things_you_should_know": {
-      "ht": "Token yo 💰 ka itilize pou achte bagay nan app nan tan kap vini.",
-      "en": "The Tokens 💰 can be used to unlock things in the app in the future.",
+      "ht": "Pwen 💰 yo ka itilize pou achte bagay nan app nan tan kap vini.",
+      "en": "Tokens can be used to unlock things in the app in the future.",
       "es": "Los tokens 💰 podran usarse para desbloquear cosas en la app en el futuro.",
       "fr": "Les jetons 💰 pourront etre utilises pour debloquer des elements dans l'application a l'avenir."
     },
     "must_know": {
-      "ht": "Fok ou konnen",
+      "ht": "Sa w dwe konnen",
       "en": "Must Know",
       "es": "Debes saber",
       "fr": "À savoir"
@@ -53,7 +53,38 @@
   "ads": {
     "banner_mode": "admob_first",
     "banner_fallback_enabled": true,
-    "admob_reading_bottom_unit_id": "ca-app-pub-1348527449927410/7223494832"
+    "admob_reading_bottom_unit_id": "ca-app-pub-4314498081466608/2532920299",
+    "admob_app_id": "ca-app-pub-4314498081466608~4277835900",
+    "admob_banners": {
+      "banner1": "ca-app-pub-4314498081466608/3064842497",
+      "banner2": "ca-app-pub-4314498081466608/5371425729",
+      "banner3": "ca-app-pub-4314498081466608/9362657536",
+      "banner4": "ca-app-pub-4314498081466608/9073889634",
+      "banner5": "ca-app-pub-4314498081466608/6992304162",
+      "banner6": "ca-app-pub-4314498081466608/3821562950",
+      "banner7": "ca-app-pub-4314498081466608/9698358552",
+      "banner8": "ca-app-pub-4314498081466608/7457943911",
+      "banner9": "ca-app-pub-4314498081466608/4831780576",
+      "banner10": "ca-app-pub-4314498081466608/6799468367",
+      "banner11": "ca-app-pub-4314498081466608/8579453896",
+      "banner12": "ca-app-pub-4314498081466608/4640208884",
+      "banner13": "ca-app-pub-4314498081466608/1411410313",
+      "banner14": "ca-app-pub-4314498081466608/9098328642",
+      "banner15": "ca-app-pub-4314498081466608/5640253768",
+      "banner16": "ca-app-pub-4314498081466608/3919977981",
+      "banner17": "ca-app-pub-4314498081466608/4327172093",
+      "banner18": "ca-app-pub-4314498081466608/3014090428",
+      "banner19": "ca-app-pub-4314498081466608/1547141682",
+      "banner20": "ca-app-pub-4314498081466608/7200747447",
+      "banner21": "ca-app-pub-4314498081466608/8513829117",
+      "banner22": "ca-app-pub-4314498081466608/6354569637",
+      "banner23": "ca-app-pub-4314498081466608/5159083639",
+      "banner_reading_tab": "ca-app-pub-4314498081466608/2532920299",
+      "reward_a": "ca-app-pub-4314498081466608/5448682072",
+      "reward_b": "ca-app-pub-4314498081466608/2721190771",
+      "reward_c": "ca-app-pub-4314498081466608/2822518733",
+      "reward_d": "ca-app-pub-4314498081466608/1272377736"
+    }
   },
   "comments_read": {
     "read_mirrors": [
@@ -68,6 +99,41 @@
       "https://bolividob.github.io/bibkreyol-comments-data"
     ]
   },
+  "locale_catalog": {
+    "version": 1,
+    "default_locale_code": "fr",
+    "locales": [
+      {
+        "code": "fr",
+        "display_native": "Français",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleFr"
+      },
+      {
+        "code": "ht",
+        "display_native": "Kreyòl",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibKreyol"
+      },
+      {
+        "code": "en",
+        "display_native": "English",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleEng"
+      },
+      {
+        "code": "es",
+        "display_native": "Español",
+        "bible_books_base_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/BibleEsp"
+      }
+    ]
+  },
+  "medya": {
+    "playlist_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/YoutubeUrl/video_playlist"
+  },
+  "radio": {
+    "stations_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/Cellection/Music/radio_stations.json"
+  },
+  "daily_verse": {
+    "calendar_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/DailyVerse/verse_of_day_2026.json"
+  },
   "start_dialog": {
     "pop_messages": [
       {
@@ -78,18 +144,18 @@
         "force": false,
         "remind_interval_hours": 48,
         "message": {
-          "ht": "Desann nouvo vèsyon Bib Kreyol la",
-          "en": "Bib Kreyol latest version is here",
-          "es": "Ya esta disponible la ultima version de Bib Kreyol",
-          "fr": "La derniere version de Bib Kreyol est disponible"
+          "ht": "Desann nouvo vèsyon Sainte Bible la",
+          "en": "Sainte Bible latest version is here",
+          "es": "Ya esta disponible la ultima version de Sainte Bible",
+          "fr": "La derniere version de Sainte Bible est disponible"
         },
-        "link_url": "https://play.google.com/store/apps/details?id=com.bolivido.bibkreyol",
+        "link_url": "https://play.google.com/store/apps/details?id=com.bolivido.biblefrancais",
         "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/app_update_icon.png"
       },
       {
         "id": "media_channel_promo",
         "prompt_enabled": true,
-        "target_version_code": 40,
+        "target_version_code": 41,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
@@ -101,10 +167,10 @@
         "icon_url": "https://raw.githubusercontent.com/bolivido/DataFiles/main/inAppMessages/Kemi_JahEl.png",
         "affiliation": {
           "name": {
-            "ht": "Bolivido LLC kontinye sipòte Bib Kreyol depi 2025.",
-            "en": "Bolivido LLC has supported Bib Kreyol since 2025.",
-            "es": "Bolivido LLC ha apoyado a Bib Kreyol desde 2025.",
-            "fr": "Bolivido LLC soutient Bib Kreyol depuis 2025."
+            "ht": "Bolivido LLC kontinye sipòte Sainte Bible depi 2025.",
+            "en": "Bolivido LLC has supported Sainte Bible since 2025.",
+            "es": "Bolivido LLC ha apoyado a Sainte Bible desde 2025.",
+            "fr": "Bolivido LLC soutient Sainte Bible depuis 2025."
           },
           "url": "https://www.youtube.com/@bibkreyolmedia"
         }

@@ -49,7 +49,7 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 37,
+        "target_version_code": 40,
         "force": false,
         "remind_interval_hours": 48,
         "message": {
