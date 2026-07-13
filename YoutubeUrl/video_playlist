@@ -3,12 +3,18 @@
   "lastUpdated": "2026-03-29T12:00:00Z",
   "videos": [ 
     {
-      "url": "https://www.youtube.com/watch?v=zxDz-J-OXmY",
-      "title": "Pr. Saint Jean | Pawol an Mizik | Malachi 2:2 🎧",
+      "url": "https://www.youtube.com/watch?v=UG1Q7TeVmQ4",
+      "title": "Pr. Saint Jean | Pawol an Mizik | 3 Jan 1:4 🎧",
       "category": "Gospel Music",
       "featured": true
     },
     {
+      "url": "https://www.youtube.com/watch?v=zxDz-J-OXmY",
+      "title": "Pr. Saint Jean | Pawol an Mizik | Malachi 2:2 🎧",
+      "category": "Gospel Music",
+      "featured": false
+    },
+    { 
       "url": "https://www.youtube.com/watch?v=9yjwdcdI52k",
       "title": "Pr. Saint Jean | Pawol an Mizik | 1 Wa 8: 3 🎧",
       "category": "Gospel Music",
@@ -24,7 +30,7 @@
       "url": "https://www.youtube.com/watch?v=PR6cEYJP7b8",
       "title": "Nia Joy - Jezi, Kenbe M Pre Lakwa | Kouvè Ofisyèl + Lyrics",
       "category": "Gospel Music",
-      "featured": true
+      "featured": false
     },
     {
       "url": "https://www.youtube.com/watch?v=hgoNi2NNI8g",
@@ -60,7 +66,7 @@
       "url": "https://www.youtube.com/watch?v=OfC275u8ceU",
       "title": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
       "category": "Gospel Music",
-      "featured": false
+      "featured": true
     },
     {
       "url": "https://youtu.be/GN9IrhWjZ9I",
