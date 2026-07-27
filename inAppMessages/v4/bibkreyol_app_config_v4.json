@@ -39,13 +39,14 @@
   },
   "comments_read": {
     "read_mirrors": [
+      "https://comments.bibkreyol.com",
       "https://bibkreyol-comments-read-static-2.pages.dev",
-      "https://bolividob.github.io/bibkreyol-comments-data",
-      "https://bibkreyol-comments-read.bolivido02.workers.dev"
+      "https://bolividob.github.io/bibkreyol-comments-data"
     ]
   },
   "prayer_requests_read": {
     "read_mirrors": [
+      "https://comments.bibkreyol.com",
       "https://bibkreyol-comments-read-static-2.pages.dev",
       "https://bolividob.github.io/bibkreyol-comments-data"
     ]
