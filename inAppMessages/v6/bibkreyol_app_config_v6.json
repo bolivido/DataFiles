@@ -1,5 +1,10 @@
 {
   "version": 6,
+  "for_app": {
+    "version_name": "4.2",
+    "version_code": 42,
+    "tagline": "Bib Kreyol 4.2 (versionCode 42) — v6: write_mirrors, church_live"
+  },
   "body_strings": {
     "coming_soon": {
       "ht": "Byento, nou pral pibliye yon pi bon vèsyon",
@@ -90,7 +95,7 @@
       {
         "id": "media_channel_promo",
         "prompt_enabled": true,
-        "target_version_code": 42,
+        "target_version_code": 40,
         "remind_interval_hours": 48,
         "message": {
           "ht": "Kemi Jah-El Feat. Bayo-: Non Jamais Tout Seul (Official Cover)",
