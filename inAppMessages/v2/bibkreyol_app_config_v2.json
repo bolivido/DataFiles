@@ -42,7 +42,7 @@
         "kind": "app_update",
         "prompt_enabled": true,
         "target_version_code": 42,
-        "force": false,
+        "force": true,
         "remind_interval_hours": 4,
         "message": {
           "ht": "Desann nouvo vèsyon Bib Kreyol la",
