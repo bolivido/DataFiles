@@ -75,9 +75,9 @@
         "id": "app_update",
         "kind": "app_update",
         "prompt_enabled": true,
-        "target_version_code": 40,
+        "target_version_code": 42,
         "force": false,
-        "remind_interval_hours": 48,
+        "remind_interval_hours": 24,
         "message": {
           "ht": "Desann nouvo vèsyon Bib Kreyol la",
           "en": "Bib Kreyol latest version is here",
