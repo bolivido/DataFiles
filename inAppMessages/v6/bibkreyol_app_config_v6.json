@@ -130,7 +130,7 @@
     ]
   },
   "church_live": {
-    "enabled": true,
+    "enabled": false,
     "title": {
       "ht": "Legliz an dirèk",
       "en": "Church live",
